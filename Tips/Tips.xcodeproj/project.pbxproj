@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1C119B2B9FF10A00FEAB9E /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C119A2B9FF10A00FEAB9E /* ShareViewController.swift */; };
+		4D1C119D2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C119C2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift */; };
 		4D416FB12B9F398B00333567 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D416FB02B9F398B00333567 /* AppDelegate.swift */; };
 		4D416FB32B9F398B00333567 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D416FB22B9F398B00333567 /* SceneDelegate.swift */; };
-		4D416FB52B9F398B00333567 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D416FB42B9F398B00333567 /* ViewController.swift */; };
+		4D416FB52B9F398B00333567 /* TipsCalulatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D416FB42B9F398B00333567 /* TipsCalulatorViewController.swift */; };
 		4D416FB82B9F398B00333567 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D416FB62B9F398B00333567 /* Main.storyboard */; };
 		4D416FBA2B9F399000333567 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D416FB92B9F399000333567 /* Assets.xcassets */; };
 		4D416FBD2B9F399000333567 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D416FBB2B9F399000333567 /* LaunchScreen.storyboard */; };
@@ -36,10 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D1C119A2B9FF10A00FEAB9E /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		4D1C119C2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteSwiftUIView.swift; sourceTree = "<group>"; };
 		4D416FAD2B9F398B00333567 /* Tips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D416FB02B9F398B00333567 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D416FB22B9F398B00333567 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4D416FB42B9F398B00333567 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4D416FB42B9F398B00333567 /* TipsCalulatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCalulatorViewController.swift; sourceTree = "<group>"; };
 		4D416FB72B9F398B00333567 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D416FB92B9F399000333567 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D416FBC2B9F399000333567 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 			children = (
 				4D416FB62B9F398B00333567 /* Main.storyboard */,
 				4D416FBB2B9F399000333567 /* LaunchScreen.storyboard */,
+				4D1C119C2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -95,7 +100,8 @@
 		4D258AE22B9F4378003B9F8F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4D416FB42B9F398B00333567 /* ViewController.swift */,
+				4D416FB42B9F398B00333567 /* TipsCalulatorViewController.swift */,
+				4D1C119A2B9FF10A00FEAB9E /* ShareViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -298,8 +304,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D416FB52B9F398B00333567 /* ViewController.swift in Sources */,
+				4D416FB52B9F398B00333567 /* TipsCalulatorViewController.swift in Sources */,
+				4D1C119D2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift in Sources */,
 				4D416FB12B9F398B00333567 /* AppDelegate.swift in Sources */,
+				4D1C119B2B9FF10A00FEAB9E /* ShareViewController.swift in Sources */,
 				4D416FB32B9F398B00333567 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
