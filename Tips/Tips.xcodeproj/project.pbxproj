@@ -18,6 +18,9 @@
 		4D416FC82B9F399000333567 /* TipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D416FC72B9F399000333567 /* TipsTests.swift */; };
 		4D416FD22B9F399000333567 /* TipsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D416FD12B9F399000333567 /* TipsUITests.swift */; };
 		4D416FD42B9F399000333567 /* TipsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D416FD32B9F399000333567 /* TipsUITestsLaunchTests.swift */; };
+		4D548F3C2BA007F000D07A9E /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D548F3B2BA007F000D07A9E /* FavouriteViewController.swift */; };
+		4D548F3E2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D548F3D2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift */; };
+		4D548F402BA00BAA00D07A9E /* TipGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D548F3F2BA00BAA00D07A9E /* TipGuideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		4D416FCD2B9F399000333567 /* TipsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D416FD12B9F399000333567 /* TipsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsUITests.swift; sourceTree = "<group>"; };
 		4D416FD32B9F399000333567 /* TipsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4D548F3B2BA007F000D07A9E /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
+		4D548F3D2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipGuideSwiftUIView.swift; sourceTree = "<group>"; };
+		4D548F3F2BA00BAA00D07A9E /* TipGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipGuideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,7 @@
 				4D416FB62B9F398B00333567 /* Main.storyboard */,
 				4D416FBB2B9F399000333567 /* LaunchScreen.storyboard */,
 				4D1C119C2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift */,
+				4D548F3D2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -102,6 +109,8 @@
 			children = (
 				4D416FB42B9F398B00333567 /* TipsCalulatorViewController.swift */,
 				4D1C119A2B9FF10A00FEAB9E /* ShareViewController.swift */,
+				4D548F3B2BA007F000D07A9E /* FavouriteViewController.swift */,
+				4D548F3F2BA00BAA00D07A9E /* TipGuideViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -305,9 +314,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D416FB52B9F398B00333567 /* TipsCalulatorViewController.swift in Sources */,
+				4D548F402BA00BAA00D07A9E /* TipGuideViewController.swift in Sources */,
 				4D1C119D2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift in Sources */,
 				4D416FB12B9F398B00333567 /* AppDelegate.swift in Sources */,
 				4D1C119B2B9FF10A00FEAB9E /* ShareViewController.swift in Sources */,
+				4D548F3E2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift in Sources */,
+				4D548F3C2BA007F000D07A9E /* FavouriteViewController.swift in Sources */,
 				4D416FB32B9F398B00333567 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
