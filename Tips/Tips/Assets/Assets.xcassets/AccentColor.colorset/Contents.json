@@ -1,7 +1,10 @@
 {
   "colors" : [
     {
-      "idiom" : "universal"
+      "idiom" : "iphone"
+    },
+    {
+      "idiom" : "watch"
     }
   ],
   "info" : {

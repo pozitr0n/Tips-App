@@ -9,19 +9,13 @@ import SwiftUI
 
 struct TipGuideSwiftUIView: View {
     
-    let courseArray1: [CourseObject1] = [
-        CourseObject1(courseName:
-                        "Recepit 1", aboutCourse: "Recepit information"),
-        CourseObject1(courseName:
-                        "Recepit 2", aboutCourse: "Recepit information"),
-        CourseObject1(courseName:
-                        "Recepit 3", aboutCourse: "Recepit information"),
-        CourseObject1(courseName:
-                        "Recepit 4", aboutCourse: "Recepit information"),
-        CourseObject1(courseName:
-                        "Recepit 5", aboutCourse: "Recepit information"),
-        CourseObject1(courseName:
-                        "Recepit 6", aboutCourse: "Recepit information")
+    let testArray1: [TestObject1] = [
+        TestObject1(name: "Recepit 1", about: "Recepit information"),
+        TestObject1(name: "Recepit 2", about: "Recepit information"),
+        TestObject1(name: "Recepit 3", about: "Recepit information"),
+        TestObject1(name: "Recepit 4", about: "Recepit information"),
+        TestObject1(name: "Recepit 5", about: "Recepit information"),
+        TestObject1(name: "Recepit 6", about: "Recepit information")
     ]
     
     var body: some View {
@@ -32,12 +26,12 @@ struct TipGuideSwiftUIView: View {
                 
                 Section(header: Text("Bar")) {
                     // create List + array
-                    List(courseArray1) { array in
+                    List(testArray1) { array in
                         
-                        NavigationLink(destination: DetailScreen1(courseItem1: array)) {
+                        NavigationLink(destination: DetailScreen1(testItem1: array)) {
                             
                             VStack {
-                                Text(array.courseName)
+                                Text(array.name)
                                     .padding(.trailing)
                             }
                             
@@ -48,12 +42,12 @@ struct TipGuideSwiftUIView: View {
                 
                 Section(header: Text("Hotel")) {
                     // create List + array
-                    List(courseArray1) { array in
+                    List(testArray1) { array in
                         
-                        NavigationLink(destination: DetailScreen1(courseItem1: array)) {
+                        NavigationLink(destination: DetailScreen1(testItem1: array)) {
                             
                             VStack {
-                                Text(array.courseName)
+                                Text(array.name)
                                     .padding(.trailing)
                             }
                             
@@ -72,37 +66,37 @@ struct TipGuideSwiftUIView: View {
 
 struct DetailScreen1: View {
     
-    let courseItem1: CourseObject1
+    let testItem1: TestObject1
     
     var body: some View {
      
         VStack(alignment: .leading) {
             
             HStack {
-                Text(courseItem1.courseName)
+                Text(testItem1.name)
                     .font(.largeTitle)
                     .bold()
                 
                 Spacer()
             }
             
-            Text(courseItem1.aboutCourse)
+            Text(testItem1.about)
                 .padding(.top)
             
             Spacer()
             
         }
         .padding()
-        .navigationBarTitle(Text(courseItem1.courseName), displayMode: .inline)
+        .navigationBarTitle(Text(testItem1.name), displayMode: .inline)
         
     }
     
 }
 
-struct CourseObject1: Identifiable {
+struct TestObject1: Identifiable {
     let id = UUID()
-    let courseName: String
-    let aboutCourse: String
+    let name: String
+    let about: String
 }
 
 

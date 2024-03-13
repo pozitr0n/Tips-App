@@ -9,19 +9,13 @@ import SwiftUI
 
 struct FavouriteSwiftUIView: View {
     
-    let courseArray: [CourseObject] = [
-        CourseObject(courseName:
-                        "Recepit 1", aboutCourse: "Recepit information"),
-        CourseObject(courseName:
-                        "Recepit 2", aboutCourse: "Recepit information"),
-        CourseObject(courseName:
-                        "Recepit 3", aboutCourse: "Recepit information"),
-        CourseObject(courseName:
-                        "Recepit 4", aboutCourse: "Recepit information"),
-        CourseObject(courseName:
-                        "Recepit 5", aboutCourse: "Recepit information"),
-        CourseObject(courseName:
-                        "Recepit 6", aboutCourse: "Recepit information")
+    let testArray: [TestObject] = [
+        TestObject(name: "Recepit 1", about: "Recepit information"),
+        TestObject(name: "Recepit 2", about: "Recepit information"),
+        TestObject(name: "Recepit 3", about: "Recepit information"),
+        TestObject(name: "Recepit 4", about: "Recepit information"),
+        TestObject(name: "Recepit 5", about: "Recepit information"),
+        TestObject(name: "Recepit 6", about: "Recepit information")
     ]
     
     var body: some View {
@@ -29,12 +23,12 @@ struct FavouriteSwiftUIView: View {
         NavigationView {
             
             // create List + array
-            List(courseArray) { array in
+            List(testArray) { array in
                 
-                NavigationLink(destination: DetailScreen(courseItem: array)) {
+                NavigationLink(destination: DetailScreen(testItem: array)) {
                     
                     VStack {
-                        Text(array.courseName)
+                        Text(array.name)
                             .padding(.trailing)
                     }
                     
@@ -51,37 +45,37 @@ struct FavouriteSwiftUIView: View {
 
 struct DetailScreen: View {
     
-    let courseItem: CourseObject
+    let testItem: TestObject
     
     var body: some View {
      
         VStack(alignment: .leading) {
             
             HStack {
-                Text(courseItem.courseName)
+                Text(testItem.name)
                     .font(.largeTitle)
                     .bold()
                 
                 Spacer()
             }
             
-            Text(courseItem.aboutCourse)
+            Text(testItem.name)
                 .padding(.top)
             
             Spacer()
             
         }
         .padding()
-        .navigationBarTitle(Text(courseItem.courseName), displayMode: .inline)
+        .navigationBarTitle(Text(testItem.name), displayMode: .inline)
         
     }
     
 }
 
-struct CourseObject: Identifiable {
+struct TestObject: Identifiable {
     let id = UUID()
-    let courseName: String
-    let aboutCourse: String
+    let name: String
+    let about: String
 }
 
 #Preview {
