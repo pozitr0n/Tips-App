@@ -9,13 +9,22 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    private var splashPresenter: SplashPresenterDescription? = SplashPresenter()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        splashPresenter?.present()
+        
+        let delay: TimeInterval = 2
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            self.splashPresenter?.dismiss { [weak self] in
+                self?.splashPresenter = nil
+            }
+        }
+        
         return true
     }
-
-    // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.

@@ -8,6 +8,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="E61-ry-lEo">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qqS-E7-rkJ" customClass="SplashViewController" customModule="Tips" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l4G-Xm-mou">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-LaunchScreen-iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="2NF-St-Yn9">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-donate-100" translatesAutoresizingMaskIntoConstraints="NO" id="P1s-M1-AMJ">
+                                <rect key="frame" x="146.66666666666666" y="376" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Rgu-Jq-yVc"/>
+                                    <constraint firstAttribute="width" constant="100" id="hHR-uk-5uK"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f4B-yM-kJ1">
+                                <rect key="frame" x="16" y="640" width="361" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="kRb-PU-shk"/>
+                                    <constraint firstAttribute="width" constant="361" id="zed-f0-L0Y"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pmp-Oo-xzI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f4B-yM-kJ1" firstAttribute="centerX" secondItem="l4G-Xm-mou" secondAttribute="centerX" id="2a0-Xv-b7Y"/>
+                            <constraint firstItem="2NF-St-Yn9" firstAttribute="top" secondItem="l4G-Xm-mou" secondAttribute="top" id="9jZ-rc-0ff"/>
+                            <constraint firstAttribute="bottom" secondItem="2NF-St-Yn9" secondAttribute="bottom" id="JAH-Sj-33Q"/>
+                            <constraint firstItem="P1s-M1-AMJ" firstAttribute="centerX" secondItem="l4G-Xm-mou" secondAttribute="centerX" id="Jqy-tS-tFI"/>
+                            <constraint firstItem="Pmp-Oo-xzI" firstAttribute="bottom" secondItem="f4B-yM-kJ1" secondAttribute="bottom" constant="50" id="KtX-cm-slU"/>
+                            <constraint firstItem="2NF-St-Yn9" firstAttribute="trailing" secondItem="Pmp-Oo-xzI" secondAttribute="trailing" id="juf-hq-RRF"/>
+                            <constraint firstItem="2NF-St-Yn9" firstAttribute="leading" secondItem="Pmp-Oo-xzI" secondAttribute="leading" id="num-es-Sp3"/>
+                            <constraint firstItem="P1s-M1-AMJ" firstAttribute="centerY" secondItem="l4G-Xm-mou" secondAttribute="centerY" id="q3N-L9-mea"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logoImageView" destination="P1s-M1-AMJ" id="akf-qI-V6G"/>
+                        <outlet property="textImageView" destination="f4B-yM-kJ1" id="y4Y-cD-t4s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z0A-4a-006" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-437.40458015267171" y="-70.422535211267615"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="h7e-I8-UVt">
             <objects>
@@ -145,10 +193,12 @@
     </scenes>
     <resources>
         <image name="arrow.clockwise.circle" catalog="system" width="128" height="123"/>
+        <image name="background-LaunchScreen-iPhone" width="1125" height="2436"/>
         <image name="creditcard" catalog="system" width="128" height="88"/>
         <image name="creditcard.fill" catalog="system" width="128" height="88"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="gearshape.fill" catalog="system" width="128" height="123"/>
+        <image name="icons8-donate-100" width="100" height="100"/>
         <image name="plus.circle" catalog="system" width="128" height="123"/>
         <image name="square.and.arrow.up" catalog="system" width="108" height="128"/>
         <image name="star" catalog="system" width="128" height="116"/>
