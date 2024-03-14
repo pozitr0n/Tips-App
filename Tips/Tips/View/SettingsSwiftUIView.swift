@@ -11,10 +11,11 @@ struct SettingsSwiftUIView: View {
     
     let testArrayTheme: [TestObject2] = [
         TestObject2(name: "App Icon", about: "App Icon"),
-        TestObject2(name: "App Tint", about: "App Tint")
+        TestObject2(name: "App Mode", about: "App Mode")
     ]
     
     let testArrayGeneral: [TestObject2] = [
+        TestObject2(name: "Language", about: "Language"),
         TestObject2(name: "Current format", about: "Current format"),
         TestObject2(name: "Default Percentage", about: "Default Percentage")
     ]
@@ -26,14 +27,23 @@ struct SettingsSwiftUIView: View {
             Form {
                 
                 Section(header: Text("Theme")) {
-                    // create List + array
+                    
                     List(testArrayTheme) { array in
                         
                         NavigationLink(destination: DetailScreen2(testItem2: array)) {
                             
                             VStack {
-                                Text(array.name)
-                                    .padding(.trailing)
+                                
+                                if array.name == "App Icon" {
+                                    Label(array.name, systemImage: "photo.stack")
+                                        .padding(.trailing)
+                                }
+                                
+                                if array.name == "App Mode" {
+                                    Label(array.name, systemImage: "moon.circle")
+                                        .padding(.trailing)
+                                }
+                                
                             }
                             
                         }
@@ -42,14 +52,28 @@ struct SettingsSwiftUIView: View {
                 }
                 
                 Section(header: Text("General")) {
-                    // create List + array
+
                     List(testArrayGeneral) { array in
                         
                         NavigationLink(destination: DetailScreen2(testItem2: array)) {
                             
                             VStack {
-                                Text(array.name)
-                                    .padding(.trailing)
+                                
+                                if array.name == "Language" {
+                                    Label(array.name, systemImage: "globe.europe.africa")
+                                        .padding(.trailing)
+                                }
+                                
+                                if array.name == "Current format" {
+                                    Label(array.name, systemImage: "dollarsign.circle")
+                                        .padding(.trailing)
+                                }
+                                
+                                if array.name == "Default Percentage" {
+                                    Label(array.name, systemImage: "percent")
+                                        .padding(.trailing)
+                                }
+                                
                             }
                             
                         }
