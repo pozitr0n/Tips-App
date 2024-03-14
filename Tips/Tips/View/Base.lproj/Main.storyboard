@@ -54,12 +54,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z0A-4a-006" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-437.40458015267171" y="-70.422535211267615"/>
+            <point key="canvasLocation" x="-573" y="-70"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="h7e-I8-UVt">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="sHH-mq-8c9" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sHH-mq-8c9" customClass="TabBarViewController" customModule="Tips" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RoN-OI-43k">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

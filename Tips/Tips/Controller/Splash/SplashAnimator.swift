@@ -21,6 +21,8 @@ final class SplashAnimator: SplashAnimatorDescription {
     private unowned let foregroundSplashViewController: SplashViewController
     private unowned let backgroundSplashViewController: SplashViewController
         
+    // Initialization
+    //
     init(foregroundSplashWindow: UIWindow, backgroundSplashWindow: UIWindow) {
        
         self.foregroundSplashWindow = foregroundSplashWindow
@@ -37,27 +39,31 @@ final class SplashAnimator: SplashAnimatorDescription {
         
     }
         
+    // Appearance method
+    //
     func animateAppearance() {
         
         foregroundSplashWindow.isHidden = false
         
         foregroundSplashViewController.textImageView.transform = CGAffineTransform(translationX: 0, y: 20)
-        UIView.animate(withDuration: 0.3, animations: {
-            self.foregroundSplashViewController.logoImageView.transform = CGAffineTransform(scaleX: 128 / 100, y: 128 / 100)
+        UIView.animate(withDuration: 0.6, animations: {
+            self.foregroundSplashViewController.logoImageView.transform = CGAffineTransform(scaleX: 110 / 100, y: 110 / 100)
             self.foregroundSplashViewController.textImageView.transform = .identity
         })
         
         foregroundSplashViewController.textImageView.alpha = 0
-        UIView.animate(withDuration: 0.15, animations: {
+        UIView.animate(withDuration: 0.3, animations: {
             self.foregroundSplashViewController.textImageView.alpha = 1
         })
         
     }
         
+    // Disappearance method
+    //
     func animateDisappearance(completion: @escaping () -> Void) {
         
         if let currentScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-            let mainWindow = currentScene.keyWindow {
+           let mainWindow = currentScene.windows.first {
             
             // Background splash window provides splash behind the animated logo image instead of black screen
             backgroundSplashWindow.isHidden = false
@@ -83,22 +89,22 @@ final class SplashAnimator: SplashAnimatorDescription {
             CATransaction.begin()
             
             mainWindow.transform = CGAffineTransform(scaleX: 1.05, y: 1.05)
-            UIView.animate(withDuration: 0.6, animations: {
+            UIView.animate(withDuration: 1.2, animations: {
                 mainWindow.transform = .identity
             })
             
             [mask, maskBackgroundView.layer].forEach { layer in
-                addScalingAnimation(to: layer, duration: 0.6)
-                addRotationAnimation(to: layer, duration: 0.6)
+                addScalingAnimation(to: layer, duration: 1.2)
+                addRotationAnimation(to: layer, duration: 1.2)
             }
             
-            UIView.animate(withDuration: 0.1, delay: 0.1, options: [], animations: {
+            UIView.animate(withDuration: 0.2, delay: 0.1, options: [], animations: {
                 maskBackgroundView.alpha = 0
             }) { _ in
                 maskBackgroundView.removeFromSuperview()
             }
             
-            UIView.animate(withDuration: 0.3) {
+            UIView.animate(withDuration: 0.6) {
                 self.backgroundSplashViewController.textImageView.alpha = 0
             }
             
@@ -108,6 +114,8 @@ final class SplashAnimator: SplashAnimatorDescription {
         
     }
 
+    // Adding rotation animation
+    //
     private func addRotationAnimation(to layer: CALayer, duration: TimeInterval, delay: CFTimeInterval = 0) {
         
         let animation = CABasicAnimation()
@@ -127,22 +135,29 @@ final class SplashAnimator: SplashAnimatorDescription {
         
     }
     
+    // Adding scaling animation
+    //
     private func addScalingAnimation(to layer: CALayer, duration: TimeInterval, delay: CFTimeInterval = 0) {
         
         let animation = CAKeyframeAnimation(keyPath: "bounds")
         
         let width = layer.frame.size.width
         let height = layer.frame.size.height
-        let coeficient: CGFloat = 18 / 667
-        let finalScale = UIScreen.main.bounds.height * coeficient
+        let coefficient: CGFloat = 18 / 667
+        let finalScale = UIScreen.main.bounds.height * coefficient
         let scales = [1, 0.85, finalScale]
         
         animation.beginTime = CACurrentMediaTime() + delay
         animation.duration = duration
         animation.keyTimes = [0, 0.2, 1]
-        animation.values = scales.map { NSValue(cgRect: CGRect(x: 0, y: 0, width: width * $0, height: height * $0)) }
+        
+        animation.values = scales.map {
+            NSValue(cgRect: CGRect(x: 0, y: 0, width: width * $0, height: height * $0))
+        }
+        
         animation.timingFunctions = [CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut),
                                      CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)]
+        
         animation.isRemovedOnCompletion = false
         animation.fillMode = CAMediaTimingFillMode.forwards
         

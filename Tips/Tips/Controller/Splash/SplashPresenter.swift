@@ -16,6 +16,12 @@ protocol SplashPresenterDescription: AnyObject {
 
 final class SplashPresenter: SplashPresenterDescription {
     
+    private let scene: UIWindowScene
+    
+    init(scene: UIWindowScene) {
+        self.scene = scene
+    }
+    
     private lazy var animator: SplashAnimatorDescription = SplashAnimator(foregroundSplashWindow: foregroundSplashWindow,
                                                                           backgroundSplashWindow: backgroundSplashWindow)
     
@@ -49,17 +55,22 @@ final class SplashPresenter: SplashPresenterDescription {
         
     }()
     
+    // Method for slpashing window
+    //
     private func splashWindow(windowLevel: UIWindow.Level, rootViewController: SplashViewController?) -> UIWindow {
        
-        let splashWindow = UIWindow(frame: UIScreen.main.bounds)
+        let splashWindow = UIWindow(windowScene: scene)
         
         splashWindow.windowLevel = windowLevel
         splashWindow.rootViewController = rootViewController
+        splashWindow.makeKeyAndVisible()
         
         return splashWindow
         
     }
     
+    // Method for splashing view controller
+    //
     private func splashViewController(with textImage: UIImage?, logoIsHidden: Bool) -> SplashViewController? {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -73,10 +84,14 @@ final class SplashPresenter: SplashPresenterDescription {
         
     }
     
+    // Presenting method
+    //
     func present() {
         animator.animateAppearance()
     }
     
+    // Dismissing method
+    //
     func dismiss(completion: @escaping () -> Void) {
         animator.animateDisappearance(completion: completion)
     }
