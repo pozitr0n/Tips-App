@@ -14,7 +14,7 @@ class SettingsViewController: UIViewController {
         
         super.viewDidLoad()
         loadSwiftUIViewController()
-        
+                
     }
     
     func loadSwiftUIViewController() {

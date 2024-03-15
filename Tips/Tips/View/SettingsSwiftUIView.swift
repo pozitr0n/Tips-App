@@ -9,9 +9,11 @@ import SwiftUI
 
 struct SettingsSwiftUIView: View {
     
+    
+    
     let testArrayTheme: [TestObject2] = [
-        TestObject2(name: "App Icon", about: "App Icon"),
-        TestObject2(name: "App Mode", about: "App Mode")
+        TestObject2(name: "Application Icon", about: "App Icon"),
+        TestObject2(name: "Application Mode", about: "App Mode")
     ]
     
     let testArrayGeneral: [TestObject2] = [
@@ -34,12 +36,12 @@ struct SettingsSwiftUIView: View {
                             
                             VStack {
                                 
-                                if array.name == "App Icon" {
+                                if array.name == "Application Icon" {
                                     Label(array.name, systemImage: "photo.stack")
                                         .padding(.trailing)
                                 }
                                 
-                                if array.name == "App Mode" {
+                                if array.name == "Application Mode" {
                                     Label(array.name, systemImage: "moon.circle")
                                         .padding(.trailing)
                                 }
