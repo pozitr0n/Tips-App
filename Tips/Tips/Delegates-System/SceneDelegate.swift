@@ -31,13 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         splashPresenter = SplashPresenter(scene: scene)
         setupWindow(with: scene)
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        if let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController {
-           window?.rootViewController = tabBarController
-        }
-        
+        initRootView()
         splashPresenter?.present()
         
         let delay: TimeInterval = 1
@@ -64,7 +58,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.makeKeyAndVisible()
         
     }
-
+    
+    func initRootView() {
+        
+        // set appearance of component on basis of language direction
+        let semantic: UISemanticContentAttribute = .forceLeftToRight
+        
+        UITabBar.appearance().semanticContentAttribute          = semantic
+        UIView.appearance().semanticContentAttribute            = semantic
+        UINavigationBar.appearance().semanticContentAttribute   = semantic
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        if let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController {
+           window?.rootViewController = tabBarController
+        }
+                
+    }
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

@@ -103,6 +103,11 @@
                             </barButtonItemGroup>
                         </centerItemGroups>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addToFavourite" destination="Tyb-Nx-A4j" id="3D6-Lw-2qE"/>
+                        <outlet property="refresh" destination="gk0-cT-5Rs" id="h6m-2x-kAQ"/>
+                        <outlet property="share" destination="QAb-0s-j0x" id="UMe-a9-Rdd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXu-WQ-9zm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

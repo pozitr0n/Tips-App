@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  Tips
+
+  Created by Raman Kozar on 18/03/2024.
+  
+*/
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "18x-2K-JfQ"; */
+"18x-2K-JfQ.title" = "Ustawienia";
+
+/* Class = "UIBarButtonItem"; title = "Share"; ObjectID = "QAb-0s-j0x"; */
+"QAb-0s-j0x.title" = "Udostępnij";
+
+/* Class = "UITabBarItem"; title = "Tip Guide"; ObjectID = "Qq1-zl-SnJ"; */
+"Qq1-zl-SnJ.title" = "Przewodnik";
+
+/* Class = "UIBarButtonItem"; title = "Add to Favourite"; ObjectID = "Tyb-Nx-A4j"; */
+"Tyb-Nx-A4j.title" = "Dodaj do ulubionych";
+
+/* Class = "UITabBarItem"; title = "Tip Calculator"; ObjectID = "feV-wK-qce"; */
+"feV-wK-qce.title" = "Kalkulator";
+
+/* Class = "UITabBarItem"; title = "Favoutite"; ObjectID = "fpD-qQ-uGK"; */
+"fpD-qQ-uGK.title" = "Ulubione";
+
+/* Class = "UIBarButtonItem"; title = "Refresh"; ObjectID = "gk0-cT-5Rs"; */
+"gk0-cT-5Rs.title" = "Zaktualizuj";
+
+/* Class = "UINavigationItem"; title = "Tips Calculator"; ObjectID = "hsB-TO-Q61"; */
+"hsB-TO-Q61.title" = "Kalkulator";
+
+"navigationTitlle.Settings.title" = "Ustawienia";

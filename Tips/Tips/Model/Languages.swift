@@ -59,9 +59,15 @@ final class Languages {
     func setCurrentLanguage(lang: LanguageOptions) {
     
         if let encoded = try? JSONEncoder().encode(lang) {
+            
             UserDefaults.standard.set(encoded, forKey: "CurrentLanguage")
+            UserDefaults.standard.synchronize()
         }
         
+        let langCode = languagesValuesWithCodes[lang.rawValue]!
+        let path: String? = Bundle.main.path(forResource: langCode, ofType: "lproj")
+        
+        AppLocalization.sharedInstance.workWithLocalization(currPath: path)
         CurrentLanguage.shared.currentLanguage = lang
         
     }
@@ -70,7 +76,13 @@ final class Languages {
         
         if let languageData = UserDefaults.standard.object(forKey: "CurrentLanguage") as? Data,
            let currentLanguage = try? JSONDecoder().decode(LanguageOptions.self, from: languageData) {
+            
+            let langCode = languagesValuesWithCodes[currentLanguage.rawValue]!
+            let path: String? = Bundle.main.path(forResource: langCode, ofType: "lproj")
+            
+            AppLocalization.sharedInstance.workWithLocalization(currPath: path)
             CurrentLanguage.shared.currentLanguage = currentLanguage
+            
         } else {
             CurrentLanguage.shared.currentLanguage = getDefaultLanguage()
         }

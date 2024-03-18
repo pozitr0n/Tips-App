@@ -101,7 +101,7 @@ struct SettingsSwiftUIView: View {
                 }
                 
             }
-            .navigationTitle("Settings")
+            .navigationTitle(Localize(key: "navigationTitlle.Settings.title", comment: ""))
             
         }
         
@@ -156,7 +156,7 @@ struct DetailLanguages: View {
         .onAppear {
             selectedLanguage = CurrentLanguage.shared.currentLanguage
         }
-        .navigationTitle("Languages")
+        .navigationTitle(Localize(key: "navigationTitlle.Settings.title", comment: ""))
         
     }
     
@@ -182,7 +182,19 @@ struct SelectionLanguageCell: View {
     }
     
     func saveLanguageToUserDefaults() {
+        
         Languages().setCurrentLanguage(lang: self.selectedLanguage)
+        
+        //  Reload application bundle as new selected language
+        DispatchQueue.main.async(execute: {
+        
+            let scene = UIApplication.shared.connectedScenes.first
+            if let sd: SceneDelegate = (scene?.delegate as? SceneDelegate) {
+                sd.initRootView()
+            }
+            
+        })
+    
     }
     
 }
