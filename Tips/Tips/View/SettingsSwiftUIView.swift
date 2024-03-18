@@ -9,14 +9,14 @@ import SwiftUI
 
 struct SettingsSwiftUIView: View {
     
+    @State var allLanguages = LanguagesUISettings().getLanguagesForDetailFormat()
     
-    
-    let testArrayTheme: [TestObject2] = [
+    let blockTheme: [TestObject2] = [
         TestObject2(name: "Application Icon", about: "App Icon"),
         TestObject2(name: "Application Mode", about: "App Mode")
     ]
     
-    let testArrayGeneral: [TestObject2] = [
+    let blockGeneral: [TestObject2] = [
         TestObject2(name: "Language", about: "Language"),
         TestObject2(name: "Current format", about: "Current format"),
         TestObject2(name: "Default Percentage", about: "Default Percentage")
@@ -30,7 +30,7 @@ struct SettingsSwiftUIView: View {
                 
                 Section(header: Text("Theme")) {
                     
-                    List(testArrayTheme) { array in
+                    List(blockTheme) { array in
                         
                         NavigationLink(destination: DetailScreen2(testItem2: array)) {
                             
@@ -55,25 +55,42 @@ struct SettingsSwiftUIView: View {
                 
                 Section(header: Text("General")) {
 
-                    List(testArrayGeneral) { array in
+                    List(blockGeneral) { array in
                         
-                        NavigationLink(destination: DetailScreen2(testItem2: array)) {
-                            
-                            VStack {
+                        if array.name == "Language" {
+                        
+                            NavigationLink(destination: DetailLanguages(languages: allLanguages)) {
                                 
-                                if array.name == "Language" {
+                                VStack {
+                                    
                                     Label(array.name, systemImage: "globe.europe.africa")
                                         .padding(.trailing)
+                                    
                                 }
                                 
-                                if array.name == "Current format" {
-                                    Label(array.name, systemImage: "dollarsign.circle")
-                                        .padding(.trailing)
-                                }
+                            }
+                            
+                        } else {
+                        
+                            NavigationLink(destination: DetailScreen2(testItem2: array)) {
                                 
-                                if array.name == "Default Percentage" {
-                                    Label(array.name, systemImage: "percent")
-                                        .padding(.trailing)
+                                VStack {
+                                    
+                                    if array.name == "Language" {
+                                        Label(array.name, systemImage: "globe.europe.africa")
+                                            .padding(.trailing)
+                                    }
+                                    
+                                    if array.name == "Current format" {
+                                        Label(array.name, systemImage: "dollarsign.circle")
+                                            .padding(.trailing)
+                                    }
+                                    
+                                    if array.name == "Default Percentage" {
+                                        Label(array.name, systemImage: "percent")
+                                            .padding(.trailing)
+                                    }
+                                    
                                 }
                                 
                             }
@@ -88,6 +105,84 @@ struct SettingsSwiftUIView: View {
             
         }
         
+    }
+    
+}
+
+class LanguagesUISettings: ObservableObject {
+    
+    func getLanguagesForDetailFormat() -> [LanguageObject] {
+     
+        var allLanguages: [LanguageObject] = []
+        
+        for lang in Languages().getArrayOfLanguages() {
+        
+            let newLanguage = LanguageObject(language: lang.rawValue, 
+                                             isOn: lang.rawValue == CurrentLanguage.shared.currentLanguage.rawValue)
+            allLanguages.append(newLanguage)
+            
+        }
+        
+        return allLanguages
+        
+    }
+    
+    func getLanguageByName(_ languageName: String) -> LanguageOptions {
+        
+        guard let lang = LanguageOptions(rawValue: languageName) else {
+            return CurrentLanguage.shared.currentLanguage
+        }
+        
+        return lang
+        
+    }
+    
+}
+
+struct DetailLanguages: View {
+    
+    @State var languages: [LanguageObject]
+    @State var selectedLanguage: LanguageOptions = CurrentLanguage.shared.currentLanguage
+    
+    var body: some View {
+        
+        Form {
+            
+            List($languages) { $lang in
+                SelectionLanguageCell(currentLanguage: lang.language, selectedLanguage: self.$selectedLanguage)
+            }
+            
+        }
+        .onAppear {
+            selectedLanguage = CurrentLanguage.shared.currentLanguage
+        }
+        .navigationTitle("Languages")
+        
+    }
+    
+}
+
+struct SelectionLanguageCell: View {
+
+    let currentLanguage: String
+    @Binding var selectedLanguage: LanguageOptions
+
+    var body: some View {
+        
+        HStack {
+            Text(currentLanguage)
+            Spacer()
+            Image(systemName: currentLanguage == selectedLanguage.rawValue ? "checkmark" : "")
+        }
+        .onTapGesture {
+            self.selectedLanguage = LanguagesUISettings().getLanguageByName(self.currentLanguage)
+            self.saveLanguageToUserDefaults()
+        }
+        
+    }
+    
+    func saveLanguageToUserDefaults() {
+        Languages().setCurrentLanguage(lang: self.selectedLanguage)
     }
     
 }
@@ -118,6 +213,14 @@ struct DetailScreen2: View {
         .navigationBarTitle(Text(testItem2.name), displayMode: .inline)
         
     }
+    
+}
+
+struct LanguageObject: Identifiable {
+    
+    let id = UUID()
+    let language: String
+    var isOn: Bool
     
 }
 
