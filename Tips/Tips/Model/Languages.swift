@@ -24,8 +24,6 @@ enum LanguageOptions: String, CaseIterable, Codable {
     
 }
 
-var languagesCodesWithValues: [String: String] = ["en": "English", "pl": "Polska", "ru": "Русский"]
-
 class CurrentLanguage {
     
     static let shared = CurrentLanguage()
@@ -39,6 +37,9 @@ class CurrentLanguage {
 
 final class Languages {
 
+    var languagesCodesWithValues: [String: String] = ["en": "English", "pl": "Polska", "ru": "Русский"]
+    var languagesValuesWithCodes: [String: String] = ["English": "en", "Polska": "pl", "Русский": "ru"]
+    
     func getArrayOfLocalizationCodes() -> [String] {
      
         var languageNames: [String] = []

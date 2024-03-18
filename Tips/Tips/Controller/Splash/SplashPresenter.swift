@@ -44,12 +44,11 @@ final class SplashPresenter: SplashPresenterDescription {
     private lazy var textImage: UIImage? = {
        
         let textCount = 5
-        
-        // Now only for single language.
-        // Later it will be changes here.
+        let currLanguage = CurrentLanguage.shared.currentLanguage
+        let langCode = Languages().languagesValuesWithCodes[currLanguage.rawValue]!
         
         let randomNumber = Int.random(in: 1...textCount)
-        let imageName = "Text-eng-\(randomNumber)"
+        let imageName = "Text-\(langCode)-\(randomNumber)"
         
         return UIImage(named: imageName)
         
