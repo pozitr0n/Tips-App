@@ -27,6 +27,7 @@
 		4D9ACDF12BA3DC2E0075C3F6 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9ACDF02BA3DC2E0075C3F6 /* Languages.swift */; };
 		4D9ACDF72BA7E7FD0075C3F6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D9ACDF52BA7E7FD0075C3F6 /* Localizable.strings */; };
 		4D9ACDF92BA7EAB50075C3F6 /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9ACDF82BA7EAB50075C3F6 /* Localizations.swift */; };
+		4D9E11212BAA4AA600FEDB1D /* ModeChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E11202BAA4AA600FEDB1D /* ModeChangeView.swift */; };
 		4DA44B6E2BA264DB005EC103 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA44B6D2BA264DB005EC103 /* SplashViewController.swift */; };
 		4DA44B742BA26706005EC103 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA44B732BA26706005EC103 /* SplashPresenter.swift */; };
 		4DC8AB832BA27DF9002AB3BF /* SplashAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8AB822BA27DF9002AB3BF /* SplashAnimator.swift */; };
@@ -79,6 +80,7 @@
 		4D9ACDFB2BA8EE0B0075C3F6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4D9ACDFD2BA8F7230075C3F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		4D9ACDFF2BA8F8800075C3F6 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
+		4D9E11202BAA4AA600FEDB1D /* ModeChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeChangeView.swift; sourceTree = "<group>"; };
 		4DA44B6D2BA264DB005EC103 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		4DA44B732BA26706005EC103 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		4DC8AB822BA27DF9002AB3BF /* SplashAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAnimator.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				4D416FBB2B9F399000333567 /* LaunchScreen.storyboard */,
 				4D1C119C2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift */,
 				4D548F3D2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift */,
+				4DBC2EDB2BAA4B2600F6E4AF /* ModeChangeView */,
 				4D9ACDEC2BA389450075C3F6 /* SettingsSwiftUIView.swift */,
 			);
 			path = View;
@@ -228,6 +231,14 @@
 				4DC8AB822BA27DF9002AB3BF /* SplashAnimator.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		4DBC2EDB2BAA4B2600F6E4AF /* ModeChangeView */ = {
+			isa = PBXGroup;
+			children = (
+				4D9E11202BAA4AA600FEDB1D /* ModeChangeView.swift */,
+			);
+			path = ModeChangeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +389,7 @@
 				4D1C119B2B9FF10A00FEAB9E /* ShareViewController.swift in Sources */,
 				4D548F3E2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift in Sources */,
 				4D548F3C2BA007F000D07A9E /* FavouriteViewController.swift in Sources */,
+				4D9E11212BAA4AA600FEDB1D /* ModeChangeView.swift in Sources */,
 				4D416FB32B9F398B00333567 /* SceneDelegate.swift in Sources */,
 				4D9ACDF12BA3DC2E0075C3F6 /* Languages.swift in Sources */,
 			);
@@ -586,7 +598,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -617,7 +629,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

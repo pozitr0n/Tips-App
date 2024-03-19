@@ -31,10 +31,34 @@
 
 "Language.title" = "Язык";
 
+"Language-Choose.title" = "Выберите язык";
+
 "Currency-format.title" = "Формат валюты";
 
-"Default-Percentage.title" = "Процент по-умолчанию";
+"Default-Percentage.title" = "Процент по умолчанию";
 
 "Appearance.title" = "Внешний вид";
 
 "General.title" = "Общие настройки";
+
+"Favourite.title" = "Избранное";
+
+"Tip-Guide.title" = "Гайд";
+
+"Change-Language-Alert.title" = "Изменение языка приложения";
+
+"Change-Language-Alert.message" = "Подтвердить изменение языка приложения?";
+
+"Change-Language.primaryButton" = "Изменить";
+
+"Cancel-Language-Alert.title" = "Отменить";
+
+"Choose-a-mode.title" = "Выберите Режим";
+
+"Choose-a-mode.message" = "День или Ночь.\nНастройте свой интерфейс.";
+
+"Default-Mode.title" = "Авто";
+
+"Light-Mode.title" = "Светлый";
+
+"Dark-Mode.title" = "Темный";
