@@ -157,7 +157,7 @@ struct DetailLanguages: View {
         .onAppear {
             selectedLanguage = CurrentLanguage.shared.currentLanguage
         }
-        .navigationTitle("Language.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+        .navigationTitle("Language-Choose.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
         
     }
     

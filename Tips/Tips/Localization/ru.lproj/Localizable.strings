@@ -38,6 +38,8 @@
 
 "Language.title" = "Язык";
 
+"Language-Choose.title" = "Выберите язык";
+
 "Currency-format.title" = "Формат валюты";
 
 "Default-Percentage.title" = "Процент по-умолчанию";
