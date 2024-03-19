@@ -57,3 +57,15 @@
 "Change-Language-Alert.message" = "Potwierdzić zmianę języka aplikacji?";
 
 "Change-Language.primaryButton" = "Zmiana języka";
+
+"Cancel-Language-Alert.title" = "Anuluj";
+
+"Choose-a-mode.title" = "Wybrać Tryb";
+
+"Choose-a-mode.message" = "Dzień czy Noc.\nDostosuj swój interfejs.";
+
+"Default-Mode.title" = "Domyślny";
+
+"Light-Mode.title" = "Jasny";
+
+"Dark-Mode.title" = "Ciemny";

@@ -77,28 +77,7 @@ struct SettingsSwiftUIView: View {
                             .presentationBackground(.clear)
                             
                     })
-                    
-//                    DispatchQueue.main.async(execute: {
-//                    
-//                        let scene = UIApplication.shared.connectedScenes.first
-//                        if let sd: SceneDelegate = (scene?.delegate as? SceneDelegate) {
-//                            
-//                            var currentStyle = UIUserInterfaceStyle.unspecified
-//                            
-//                            if userTheme.colorScheme == .dark {
-//                                currentStyle = .dark
-//                            } else if userTheme.colorScheme == .light {
-//                                currentStyle = .light
-//                            } else {
-//                                currentStyle = .unspecified
-//                            }
-//                            
-//                            sd.changeDarkLightMode(mode: currentStyle)
-//                            
-//                        }
-//                        
-//                    })
-                    
+                                        
                 }
                 
                 Section(header: Text("General.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
@@ -231,7 +210,7 @@ struct SelectionLanguageCell: View {
                     self.saveLanguageToUserDefaults()
                     
                 },
-                secondaryButton: .cancel()
+                secondaryButton: .cancel(Text("Cancel-Language-Alert.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)))
             )
         }
         

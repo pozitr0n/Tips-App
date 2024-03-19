@@ -9,9 +9,9 @@ import SwiftUI
 
 enum Mode: String, CaseIterable {
     
-    case systemDefaultMode  = "Default"
-    case lightMode          = "Light"
-    case darkMode           = "Dark"
+    case systemDefaultMode  = "Default-Mode.title"
+    case lightMode          = "Light-Mode.title"
+    case darkMode           = "Dark-Mode.title"
     
     // Getting color for mode change view
     //
@@ -39,6 +39,14 @@ enum Mode: String, CaseIterable {
             return .dark
         }
         
+    }
+    
+    func modeLocalizedString() -> String {
+        return Localize(key: self.rawValue, comment: "")
+    }
+    
+    static func getTitleForModeType(mode: Mode) -> String {
+        return mode.modeLocalizedString()
     }
     
 }
@@ -79,18 +87,19 @@ struct ModeChangeView: View {
                     
                 }
             
-            Text("Choose a Mode")
+            Text("Choose-a-mode.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                 .font(.title2.bold())
                 .padding(.top, 25)
             
-            Text("Pop or subtle, Day or Night.\nCustomize your interface.")
+            Text(
+                "Choose-a-mode.message".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                 .multilineTextAlignment(.center)
             
             // Custom segmented picker
             HStack(spacing: 0) {
                 ForEach(Mode.allCases, id: \.rawValue) { mode in
                     
-                    Text(mode.rawValue)
+                    Text(Mode.getTitleForModeType(mode: mode))
                         .padding(.vertical, 10)
                         .frame(width: 100)
                         .background {
@@ -107,7 +116,30 @@ struct ModeChangeView: View {
                         }
                         .contentShape(.rect)
                         .onTapGesture {
+                            
                             userTheme = mode
+                            
+                            DispatchQueue.main.async(execute: {
+                            
+                                let scene = UIApplication.shared.connectedScenes.first
+                                if let sd: SceneDelegate = (scene?.delegate as? SceneDelegate) {
+                                    
+                                    var currentStyle = UIUserInterfaceStyle.unspecified
+                                    
+                                    if userTheme.colorScheme == .dark {
+                                        currentStyle = .dark
+                                    } else if userTheme.colorScheme == .light {
+                                        currentStyle = .light
+                                    } else {
+                                        currentStyle = .unspecified
+                                    }
+                                    
+                                    sd.changeDarkLightMode(mode: currentStyle)
+                                    
+                                }
+                                
+                            })
+                            
                         }
                     
                 }
