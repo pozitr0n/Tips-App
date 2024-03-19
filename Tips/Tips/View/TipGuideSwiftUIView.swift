@@ -57,7 +57,7 @@ struct TipGuideSwiftUIView: View {
                 }
                 
             }
-            .navigationTitle("Tip Guide")
+            .navigationTitle("Tip-Guide.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
             
         }
         

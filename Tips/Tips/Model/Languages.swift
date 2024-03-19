@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum LanguageOptions: String, CaseIterable, Codable {
     
@@ -104,7 +105,44 @@ final class Languages {
             currentLanguageEnum = LanguageOptions(rawValue: languagesCodesWithValues[currentLanguage]!)!
         }
         
+        let langCode = languagesValuesWithCodes[currentLanguageEnum.rawValue]!
+        let path: String? = Bundle.main.path(forResource: langCode, ofType: "lproj")
+        
+        AppLocalization.sharedInstance.workWithLocalization(currPath: path)
+        
         return currentLanguageEnum
+        
+    }
+    
+    // Animating of changing language
+    //
+    func animateChangingLanguage(window: UIWindow?, tabBarController: UITabBarController) {
+    
+        guard let window = window else {
+            return
+        }
+        
+        var snapShot = UIView()
+        
+        if let realSnapShot = window.snapshotView(afterScreenUpdates: true) {
+            snapShot = realSnapShot
+        }
+        
+        tabBarController.view.addSubview(snapShot)
+        window.rootViewController = tabBarController
+        window.makeKeyAndVisible()
+        
+        UIView.transition(
+            with: window,
+            duration: 1.0,
+            options: .transitionFlipFromBottom,
+            animations: {
+                snapShot.transform = CGAffineTransform(translationX: 0, y: snapShot.frame.height)
+            },
+            completion: { status in
+                snapShot.removeFromSuperview()
+            }
+        )
         
     }
     

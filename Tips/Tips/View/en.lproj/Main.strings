@@ -22,3 +22,19 @@
 
 /* Class = "UINavigationItem"; title = "Tips Calculator"; ObjectID = "hsB-TO-Q61"; */
 "hsB-TO-Q61.title" = "Tips Calculator";
+
+"navigationTitlle.Settings.title" = "Settings";
+
+"Application-Icon.title" = "Application Icon";
+
+"Application-Mode.title" = "Application Mode";
+
+"Language.title" = "Language";
+
+"Currency-format.title" = "Currency format";
+
+"Default-Percentage.title" = "Default Percentage";
+
+"Appearance.title" = "Appearance";
+
+"General.title" = "General settings";

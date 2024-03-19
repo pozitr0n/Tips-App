@@ -35,7 +35,7 @@ struct FavouriteSwiftUIView: View {
                 }
                 
             }
-            .navigationTitle("Favourite")
+            .navigationTitle("Favourite.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
             
         }
         

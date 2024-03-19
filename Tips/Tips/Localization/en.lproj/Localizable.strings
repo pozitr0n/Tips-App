@@ -31,3 +31,27 @@
 "hsB-TO-Q61.title" = "Tips Calculator";
 
 "navigationTitlle.Settings.title" = "Settings";
+
+"Application-Icon.title" = "Application Icon";
+
+"Application-Mode.title" = "Application Mode";
+
+"Language.title" = "Language";
+
+"Currency-format.title" = "Currency format";
+
+"Default-Percentage.title" = "Default Percentage";
+
+"Appearance.title" = "Appearance";
+
+"General.title" = "General settings";
+
+"Favourite.title" = "Favourite";
+
+"Tip-Guide.title" = "Tip Guide";
+
+"Change-Language-Alert.title" = "Changing the application language";
+
+"Change-Language-Alert.message" = "Are you sure you want to change the language?";
+
+"Change-Language.primaryButton" = "Change";

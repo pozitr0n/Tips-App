@@ -31,3 +31,27 @@
 "hsB-TO-Q61.title" = "Kalkulator";
 
 "navigationTitlle.Settings.title" = "Ustawienia";
+
+"Application-Icon.title" = "Ikona aplikacji";
+
+"Application-Mode.title" = "Tryb aplikacji";
+
+"Language.title" = "Język";
+
+"Currency-format.title" = "Format waluty";
+
+"Default-Percentage.title" = "Domyślny procent";
+
+"Appearance.title" = "Wygląd";
+
+"General.title" = "Ogólne ustawienia";
+
+"Favourite.title" = "Ulubione";
+
+"Tip-Guide.title" = "Przewodnik";
+
+"Change-Language-Alert.title" = "Zmiana języka aplikacji";
+
+"Change-Language-Alert.message" = "Potwierdzić zmianę języka aplikacji?";
+
+"Change-Language.primaryButton" = "Zmiana języka";
