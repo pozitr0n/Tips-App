@@ -10,17 +10,26 @@ import Foundation
 
 struct SettingsSwiftUIView: View {
     
+    // View properties
+    //
+    
+    // Languages
     @State var allLanguages = LanguagesUISettings().getLanguagesForDetailFormat()
     
-    let blockTheme: [TestObject2] = [
-        TestObject2(name: "Application-Icon.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage), about: ""),
-        TestObject2(name: "Application-Mode.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage), about: "")
+    // Changing mode of application
+    @State private var changeMode: Bool = false
+    @AppStorage("userTheme") private var userTheme: Mode = .systemDefaultMode
+    @Environment(\.colorScheme) private var scheme
+    
+    let blockTheme: [MoreInfoObject] = [
+        MoreInfoObject(title: "Application-Icon.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
+        MoreInfoObject(title: "Application-Mode.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
     ]
     
-    let blockGeneral: [TestObject2] = [
-        TestObject2(name: "Language.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage), about: "Language"),
-        TestObject2(name: "Currency-format.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage), about: "Currency format"),
-        TestObject2(name: "Default-Percentage.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage), about: "Default Percentage")
+    let blockGeneral: [MoreInfoObject] = [
+        MoreInfoObject(title: "Language.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
+        MoreInfoObject(title: "Currency-format.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
+        MoreInfoObject(title: "Default-Percentage.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
     ]
     
     var body: some View {
@@ -33,18 +42,24 @@ struct SettingsSwiftUIView: View {
                     
                     List(blockTheme) { array in
                         
-                        NavigationLink(destination: DetailScreen2(testItem2: array)) {
+                        if array.title == "Application-Mode.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
                             
-                            VStack {
+                            Button(array.title, systemImage: "moon.circle") {
+                                changeMode.toggle()
+                            }
+                            .padding(.trailing)
+                                                        
+                        } else {
+                        
+                            NavigationLink(destination: DetailScreen2(moreInfoItem: array)) {
                                 
-                                if array.name == "Application-Icon.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
-                                    Label(array.name, systemImage: "photo.stack")
-                                        .padding(.trailing)
-                                }
-                                
-                                if array.name == "Application-Mode.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
-                                    Label(array.name, systemImage: "moon.circle")
-                                        .padding(.trailing)
+                                VStack {
+                                    
+                                    if array.title == "Application-Icon.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
+                                        Label(array.title, systemImage: "photo.stack")
+                                            .padding(.trailing)
+                                    }
+                                    
                                 }
                                 
                             }
@@ -52,19 +67,30 @@ struct SettingsSwiftUIView: View {
                         }
                         
                     }
+                    .preferredColorScheme(userTheme.colorScheme)
+                    .sheet(isPresented: $changeMode, content: {
+                        
+                        ModeChangeView(scheme: scheme)
+                        
+                        // Since maximum height is 410
+                            .presentationDetents([.height(410)])
+                            .presentationBackground(.clear)
+                            
+                    })
+                                        
                 }
                 
                 Section(header: Text("General.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
 
                     List(blockGeneral) { array in
                         
-                        if array.name == "Language.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
+                        if array.title == "Language.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
                         
                             NavigationLink(destination: DetailLanguages(languages: allLanguages)) {
                                 
                                 VStack {
                                     
-                                    Label(array.name, systemImage: "globe.europe.africa")
+                                    Label(array.title, systemImage: "globe.europe.africa")
                                         .padding(.trailing)
                                     
                                 }
@@ -73,22 +99,17 @@ struct SettingsSwiftUIView: View {
                             
                         } else {
                         
-                            NavigationLink(destination: DetailScreen2(testItem2: array)) {
+                            NavigationLink(destination: DetailScreen2(moreInfoItem: array)) {
                                 
                                 VStack {
                                     
-                                    if array.name == "Language.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
-                                        Label(array.name, systemImage: "globe.europe.africa")
+                                    if array.title == "Currency-format.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
+                                        Label(array.title, systemImage: "dollarsign.circle")
                                             .padding(.trailing)
                                     }
                                     
-                                    if array.name == "Currency-format.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
-                                        Label(array.name, systemImage: "dollarsign.circle")
-                                            .padding(.trailing)
-                                    }
-                                    
-                                    if array.name == "Default-Percentage.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
-                                        Label(array.name, systemImage: "percent")
+                                    if array.title == "Default-Percentage.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
+                                        Label(array.title, systemImage: "percent")
                                             .padding(.trailing)
                                     }
                                     
@@ -189,7 +210,7 @@ struct SelectionLanguageCell: View {
                     self.saveLanguageToUserDefaults()
                     
                 },
-                secondaryButton: .cancel()
+                secondaryButton: .cancel(Text("Cancel-Language-Alert.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)))
             )
         }
         
@@ -215,28 +236,25 @@ struct SelectionLanguageCell: View {
 
 struct DetailScreen2: View {
     
-    let testItem2: TestObject2
+    let moreInfoItem: MoreInfoObject
     
     var body: some View {
      
         VStack(alignment: .leading) {
             
             HStack {
-                Text(testItem2.name)
+                Text(moreInfoItem.title)
                     .font(.largeTitle)
                     .bold()
                 
                 Spacer()
             }
             
-            Text(testItem2.about)
-                .padding(.top)
-            
             Spacer()
             
         }
         .padding()
-        .navigationBarTitle(Text(testItem2.name), displayMode: .inline)
+        .navigationBarTitle(Text(moreInfoItem.title), displayMode: .inline)
         
     }
     
@@ -250,10 +268,9 @@ struct LanguageObject: Identifiable {
     
 }
 
-struct TestObject2: Identifiable {
+struct MoreInfoObject: Identifiable {
     let id = UUID()
-    let name: String
-    let about: String
+    let title: String
 }
 
 #Preview {

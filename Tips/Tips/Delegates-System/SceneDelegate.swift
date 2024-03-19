@@ -52,7 +52,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         
         let window = UIWindow(windowScene: windowScene)
-        //window.overrideUserInterfaceStyle = .dark
         
         self.window = window
         self.window?.makeKeyAndVisible()
@@ -81,6 +80,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
             
         }
+        
+    }
+    
+    func changeDarkLightMode(mode: UIUserInterfaceStyle) {
+        
+        guard let window = window else {
+            return
+        }
+        
+        window.overrideUserInterfaceStyle = mode
         
     }
     

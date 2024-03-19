@@ -57,3 +57,15 @@
 "Change-Language-Alert.message" = "Are you sure you want to change the language?";
 
 "Change-Language.primaryButton" = "Change";
+
+"Cancel-Language-Alert.title" = "Cancel";
+
+"Choose-a-mode.title" = "Choose a Mode";
+
+"Choose-a-mode.message" = "Day or Night.\nCustomize your interface.";
+
+"Default-Mode.title" = "Default";
+
+"Light-Mode.title" = "Light";
+
+"Dark-Mode.title" = "Dark";
