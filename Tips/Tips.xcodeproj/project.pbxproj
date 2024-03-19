@@ -18,6 +18,7 @@
 		4D416FC82B9F399000333567 /* TipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D416FC72B9F399000333567 /* TipsTests.swift */; };
 		4D416FD22B9F399000333567 /* TipsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D416FD12B9F399000333567 /* TipsUITests.swift */; };
 		4D416FD42B9F399000333567 /* TipsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D416FD32B9F399000333567 /* TipsUITestsLaunchTests.swift */; };
+		4D4A4D012BA9261D001E6CE7 /* ModeChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4A4D002BA9261D001E6CE7 /* ModeChangeView.swift */; };
 		4D548F3C2BA007F000D07A9E /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D548F3B2BA007F000D07A9E /* FavouriteViewController.swift */; };
 		4D548F3E2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D548F3D2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift */; };
 		4D548F402BA00BAA00D07A9E /* TipGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D548F3F2BA00BAA00D07A9E /* TipGuideViewController.swift */; };
@@ -65,6 +66,7 @@
 		4D416FCD2B9F399000333567 /* TipsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D416FD12B9F399000333567 /* TipsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsUITests.swift; sourceTree = "<group>"; };
 		4D416FD32B9F399000333567 /* TipsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4D4A4D002BA9261D001E6CE7 /* ModeChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeChangeView.swift; sourceTree = "<group>"; };
 		4D548F3B2BA007F000D07A9E /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		4D548F3D2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipGuideSwiftUIView.swift; sourceTree = "<group>"; };
 		4D548F3F2BA00BAA00D07A9E /* TipGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipGuideViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				4D1C119C2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift */,
 				4D548F3D2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift */,
 				4D9ACDEC2BA389450075C3F6 /* SettingsSwiftUIView.swift */,
+				4D4A4CFF2BA925F8001E6CE7 /* ModeChangeView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,6 +214,14 @@
 				4D416FD32B9F399000333567 /* TipsUITestsLaunchTests.swift */,
 			);
 			path = TipsUITests;
+			sourceTree = "<group>";
+		};
+		4D4A4CFF2BA925F8001E6CE7 /* ModeChangeView */ = {
+			isa = PBXGroup;
+			children = (
+				4D4A4D002BA9261D001E6CE7 /* ModeChangeView.swift */,
+			);
+			path = ModeChangeView;
 			sourceTree = "<group>";
 		};
 		4D9ACDF42BA7E7EC0075C3F6 /* Localization */ = {
@@ -366,6 +377,7 @@
 			files = (
 				4D416FB52B9F398B00333567 /* TipsCalulatorViewController.swift in Sources */,
 				4DA44B742BA26706005EC103 /* SplashPresenter.swift in Sources */,
+				4D4A4D012BA9261D001E6CE7 /* ModeChangeView.swift in Sources */,
 				4D548F402BA00BAA00D07A9E /* TipGuideViewController.swift in Sources */,
 				4DC8AB832BA27DF9002AB3BF /* SplashAnimator.swift in Sources */,
 				4D9ACDED2BA389450075C3F6 /* SettingsSwiftUIView.swift in Sources */,
@@ -586,7 +598,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -617,7 +629,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
