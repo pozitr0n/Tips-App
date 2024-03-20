@@ -132,6 +132,11 @@ final class Languages {
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()
         
+        if let styleTitle = UserDefaults.standard.string(forKey: "userTheme"),
+           let style = Mode(rawValue: styleTitle)?.style {
+            SceneDelegate().changeDarkLightMode(mode: style)
+        }
+        
         UIView.transition(
             with: window,
             duration: 1.0,

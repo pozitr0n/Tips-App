@@ -197,6 +197,7 @@ struct SelectionLanguageCell: View {
             Spacer()
             Image(systemName: currentLanguage == selectedLanguage.rawValue ? "checkmark" : "")
         }
+        .background(.modeBG)
         .onTapGesture {
             showingAlert = true
         }

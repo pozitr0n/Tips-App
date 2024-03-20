@@ -41,6 +41,20 @@ enum Mode: String, CaseIterable {
         
     }
     
+    var style: UIUserInterfaceStyle? {
+        
+        switch self {
+        case .systemDefaultMode:
+            return .unspecified
+        case .lightMode:
+            return .light
+        case .darkMode:
+            return .dark
+        }
+        
+    }
+
+    
     func modeLocalizedString() -> String {
         return Localize(key: self.rawValue, comment: "")
     }
@@ -97,6 +111,7 @@ struct ModeChangeView: View {
             
             // Custom segmented picker
             HStack(spacing: 0) {
+                
                 ForEach(Mode.allCases, id: \.rawValue) { mode in
                     
                     Text(Mode.getTitleForModeType(mode: mode))

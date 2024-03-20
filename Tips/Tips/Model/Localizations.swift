@@ -16,13 +16,13 @@ func Localize(key: Any, comment: Any) -> String {
 class AppLocalization: NSObject {
     
     static let sharedInstance = AppLocalization()
-    var bundle: Bundle? = nil
+    var bundle: Bundle = Bundle.main
     
     // get localizedString from bundle of selected language
     //
     func localizedString(forKey key: String, value comment: String) -> String {
     
-        let localized = bundle!.localizedString(forKey: key, value: comment, table: nil)
+        let localized = bundle.localizedString(forKey: key, value: comment, table: nil)
         return localized
         
     }
@@ -31,12 +31,12 @@ class AppLocalization: NSObject {
     //
     func workWithLocalization(currPath: String?) {
         
-        if currPath == nil {
+        if let currPath,
+            let bundle = Bundle(path: currPath) {
+            self.bundle = bundle
+        } else {
             // in case the language does not exists
             resetLocalization()
-        }
-        else {
-            bundle = Bundle(path: currPath!)
         }
         
     }
