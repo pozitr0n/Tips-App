@@ -21,7 +21,7 @@ class AppLocalization: NSObject {
     // get localizedString from bundle of selected language
     //
     func localizedString(forKey key: String, value comment: String) -> String {
-       
+    
         let localized = bundle!.localizedString(forKey: key, value: comment, table: nil)
         return localized
         

@@ -51,7 +51,7 @@ struct SettingsSwiftUIView: View {
                                                         
                         } else {
                         
-                            NavigationLink(destination: DetailScreen2(moreInfoItem: array)) {
+                            NavigationLink(destination: DetailScreenMoreInfo(moreInfoItem: array)) {
                                 
                                 VStack {
                                     
@@ -99,7 +99,7 @@ struct SettingsSwiftUIView: View {
                             
                         } else {
                         
-                            NavigationLink(destination: DetailScreen2(moreInfoItem: array)) {
+                            NavigationLink(destination: DetailScreenMoreInfo(moreInfoItem: array)) {
                                 
                                 VStack {
                                     
@@ -234,7 +234,7 @@ struct SelectionLanguageCell: View {
     
 }
 
-struct DetailScreen2: View {
+struct DetailScreenMoreInfo: View {
     
     let moreInfoItem: MoreInfoObject
     

@@ -2,7 +2,7 @@
 //  ModeChangeView.swift
 //  Tips
 //
-//  Created by Raman Kozar on 19/03/2024.
+//  Created by Raman Kozar on 20/03/2024.
 //
 
 import SwiftUI
@@ -175,3 +175,4 @@ struct ModeChangeView: View {
 #Preview {
     SettingsSwiftUIView()
 }
+
