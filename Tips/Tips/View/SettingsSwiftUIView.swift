@@ -238,24 +238,63 @@ struct SelectionLanguageCell: View {
 struct ChangeApplicationIcon: View {
     
     let moreInfoItem: MoreInfoObject
+    @EnvironmentObject var iconSettings: IconNames
     
     var body: some View {
-     
-        VStack(alignment: .leading) {
-            
-            HStack {
-                Text("Application-Mode-Main-Screen.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                    .font(.largeTitle)
-                    .bold()
+        
+        NavigationView {
+          
+            Form {
                 
-                Spacer()
+                Picker(selection: $iconSettings.currentIndex, label: Text("Icons")) {
+                    
+                    ForEach(0 ..< iconSettings.iconNames.count) { i in
+                     
+                        HStack {
+                            Text(self.iconSettings.iconNames[i] ?? "Default")
+                            Image(uiImage: UIImage(named: self.iconSettings.iconNames[i] ?? "Default") ?? UIImage()).resizable().renderingMode(.original).frame(width: 50, height: 50, alignment: .leading)
+                        }
+                        
+                    }
+                    
+                }
+                .onReceive([self.iconSettings.currentIndex].publisher.first()) { value in
+                    
+                    let i = self.iconSettings.iconNames.firstIndex(of: UIApplication.shared.alternateIconName) ?? 0
+                    
+                    if value != i {
+                        
+                        UIApplication.shared.setAlternateIconName(self.iconSettings.iconNames[value]) { error in
+                            
+                            if error != nil {
+                                print(error)
+                            } else {
+                                print("Finished!")
+                            }
+                            
+                        }
+                    }
+                    
+                }
             }
             
-            Spacer()
-            
         }
-        .padding()
-        .navigationBarTitle(Text(moreInfoItem.title), displayMode: .inline)
+        
+//        VStack(alignment: .leading) {
+//            
+//            HStack {
+//                Text("Application-Mode-Main-Screen.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+//                    .font(.largeTitle)
+//                    .bold()
+//                
+//                Spacer()
+//            }
+//            
+//            Spacer()
+//            
+//        }
+//        .padding()
+//        .navigationBarTitle(Text(moreInfoItem.title), displayMode: .inline)
         
     }
     

@@ -17,14 +17,34 @@
 		</dict>
 		<key>CFBundleAlternateIcons</key>
 		<dict>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string></string>
-			</array>
-			<key>UINewsstandBindingType</key>
-			<string>UINewsstandBindingTypeMagazine</string>
-			<key>UINewsstandBindingEdge</key>
-			<string>UINewsstandBindingEdgeLeft</string>
+			<key>yellow</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>yellow</string>
+				</array>
+			</dict>
+			<key>blue</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>blue</string>
+				</array>
+			</dict>
+			<key>orange</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>orange</string>
+				</array>
+			</dict>
+			<key>teal</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>teal</string>
+				</array>
+			</dict>
 		</dict>
 	</dict>
 	<key>UIApplicationSceneManifest</key>

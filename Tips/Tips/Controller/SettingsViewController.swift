@@ -19,7 +19,8 @@ class SettingsViewController: UIViewController {
     
     func loadSwiftUIViewController() {
      
-        let vcSettings = UIHostingController(rootView: SettingsSwiftUIView())
+        let detailView = SettingsSwiftUIView().environmentObject(IconNames())
+        let vcSettings = UIHostingController(rootView: detailView)
         
         let swiftuiView = vcSettings.view!
         swiftuiView.translatesAutoresizingMaskIntoConstraints = false
