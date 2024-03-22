@@ -51,7 +51,7 @@ struct SettingsSwiftUIView: View {
                                                         
                         } else {
                         
-                            NavigationLink(destination: DetailScreenMoreInfo(moreInfoItem: array)) {
+                            NavigationLink(destination: ChangeApplicationIcon(moreInfoItem: array)) {
                                 
                                 VStack {
                                     
@@ -231,6 +231,32 @@ struct SelectionLanguageCell: View {
             
         })
     
+    }
+    
+}
+
+struct ChangeApplicationIcon: View {
+    
+    let moreInfoItem: MoreInfoObject
+    
+    var body: some View {
+     
+        VStack(alignment: .leading) {
+            
+            HStack {
+                Text("Application-Mode-Main-Screen.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                    .font(.largeTitle)
+                    .bold()
+                
+                Spacer()
+            }
+            
+            Spacer()
+            
+        }
+        .padding()
+        .navigationBarTitle(Text(moreInfoItem.title), displayMode: .inline)
+        
     }
     
 }

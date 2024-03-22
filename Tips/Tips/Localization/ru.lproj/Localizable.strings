@@ -34,6 +34,8 @@
 
 "Application-Icon.title" = "Иконка приложения";
 
+"Application-Mode-Main-Screen.title" = "Выберите из списка";
+
 "Application-Mode.title" = "Режим приложения";
 
 "Language.title" = "Язык";
