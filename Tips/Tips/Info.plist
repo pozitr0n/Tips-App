@@ -45,6 +45,20 @@
 					<string>teal</string>
 				</array>
 			</dict>
+			<key>brown</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>brown</string>
+				</array>
+			</dict>
+			<key>green</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>green</string>
+				</array>
+			</dict>
 		</dict>
 	</dict>
 	<key>UIApplicationSceneManifest</key>
