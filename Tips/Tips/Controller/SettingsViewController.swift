@@ -19,6 +19,7 @@ class SettingsViewController: UIViewController {
     
     func loadSwiftUIViewController() {
      
+        print(IconNames().iconNames)
         let detailView = SettingsSwiftUIView().environmentObject(IconNames())
         let vcSettings = UIHostingController(rootView: detailView)
         

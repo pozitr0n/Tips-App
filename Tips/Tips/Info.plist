@@ -24,11 +24,11 @@
 					<string>Yellow</string>
 				</array>
 			</dict>
-			<key>Blue</key>
+			<key>Sea</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>Blue</string>
+					<string>Sea</string>
 				</array>
 			</dict>
 			<key>Orange</key>
@@ -45,11 +45,11 @@
 					<string>Teal</string>
 				</array>
 			</dict>
-			<key>Brown</key>
+			<key>Dark</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>Brown</string>
+					<string>Dark</string>
 				</array>
 			</dict>
 			<key>Green</key>

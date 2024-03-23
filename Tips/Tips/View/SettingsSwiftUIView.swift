@@ -258,7 +258,7 @@ struct ChangeApplicationIcon: View {
                             
                             Text("\(self.iconSettings.iconNames[i] ?? "Default.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)) Tip")
                             Spacer()
-                            Image(uiImage: UIImage(named: self.iconSettings.iconNames[i] ?? "Default.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)) ?? UIImage()).resizable().renderingMode(.original).frame(width: 50, height: 50, alignment: .leading)
+                            Image(uiImage: UIImage(named: self.iconSettings.iconNames[i] ?? "Default") ?? UIImage()).resizable().renderingMode(.original).frame(width: 60, height: 60, alignment: .leading)
                             
                         }
                         
