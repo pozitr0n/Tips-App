@@ -241,18 +241,25 @@ struct ChangeApplicationIcon: View {
     @EnvironmentObject var iconSettings: IconNames
     
     var body: some View {
-        
-        NavigationView {
-          
+       
+        VStack(alignment: .leading) {
+            
+            Text("Application-Mode-Main-Screen.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                .font(.largeTitle)
+                .bold()
+            
             Form {
                 
-                Picker(selection: $iconSettings.currentIndex, label: Text("Icons")) {
+                Picker(selection: $iconSettings.currentIndex, label: Text("Icons.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
                     
                     ForEach(0 ..< iconSettings.iconNames.count) { i in
-                     
+                        
                         HStack {
-                            Text(self.iconSettings.iconNames[i] ?? "Default")
-                            Image(uiImage: UIImage(named: self.iconSettings.iconNames[i] ?? "Default") ?? UIImage()).resizable().renderingMode(.original).frame(width: 50, height: 50, alignment: .leading)
+                            
+                            Text("\(self.iconSettings.iconNames[i] ?? "Default.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)) Tip")
+                            Spacer()
+                            Image(uiImage: UIImage(named: self.iconSettings.iconNames[i] ?? "Default.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)) ?? UIImage()).resizable().renderingMode(.original).frame(width: 50, height: 50, alignment: .leading)
+                            
                         }
                         
                     }
@@ -267,7 +274,7 @@ struct ChangeApplicationIcon: View {
                         UIApplication.shared.setAlternateIconName(self.iconSettings.iconNames[value]) { error in
                             
                             if error != nil {
-                                print(error)
+                                print(error as Any)
                             } else {
                                 print("Finished!")
                             }
@@ -276,26 +283,13 @@ struct ChangeApplicationIcon: View {
                     }
                     
                 }
+                
             }
             
         }
-        
-//        VStack(alignment: .leading) {
-//            
-//            HStack {
-//                Text("Application-Mode-Main-Screen.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-//                    .font(.largeTitle)
-//                    .bold()
-//                
-//                Spacer()
-//            }
-//            
-//            Spacer()
-//            
-//        }
-//        .padding()
-//        .navigationBarTitle(Text(moreInfoItem.title), displayMode: .inline)
-        
+        .padding()
+        .navigationBarTitle(Text(moreInfoItem.title), displayMode: .inline)
+      
     }
     
 }

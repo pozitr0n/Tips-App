@@ -17,46 +17,46 @@
 		</dict>
 		<key>CFBundleAlternateIcons</key>
 		<dict>
-			<key>yellow</key>
+			<key>Yellow</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>yellow</string>
+					<string>Yellow</string>
 				</array>
 			</dict>
-			<key>blue</key>
+			<key>Blue</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>blue</string>
+					<string>Blue</string>
 				</array>
 			</dict>
-			<key>orange</key>
+			<key>Orange</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>orange</string>
+					<string>Orange</string>
 				</array>
 			</dict>
-			<key>teal</key>
+			<key>Teal</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>teal</string>
+					<string>Teal</string>
 				</array>
 			</dict>
-			<key>brown</key>
+			<key>Brown</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>brown</string>
+					<string>Brown</string>
 				</array>
 			</dict>
-			<key>green</key>
+			<key>Green</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>green</string>
+					<string>Green</string>
 				</array>
 			</dict>
 		</dict>
