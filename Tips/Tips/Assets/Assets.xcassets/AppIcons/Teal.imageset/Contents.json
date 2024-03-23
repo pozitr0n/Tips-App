@@ -14,6 +14,21 @@
       "filename" : "Teal@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
+    },
+    {
+      "filename" : "Teal 1.png",
+      "idiom" : "iphone",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Teal@2x 1.png",
+      "idiom" : "iphone",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Teal@3x 1.png",
+      "idiom" : "iphone",
+      "scale" : "3x"
     }
   ],
   "info" : {

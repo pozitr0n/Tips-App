@@ -14,6 +14,21 @@
       "filename" : "Orange@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
+    },
+    {
+      "filename" : "Orange 1.png",
+      "idiom" : "iphone",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Orange@2x 1.png",
+      "idiom" : "iphone",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Orange@3x 1.png",
+      "idiom" : "iphone",
+      "scale" : "3x"
     }
   ],
   "info" : {

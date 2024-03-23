@@ -14,6 +14,21 @@
       "filename" : "Yellow@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
+    },
+    {
+      "filename" : "Yellow 1.png",
+      "idiom" : "iphone",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Yellow@2x 1.png",
+      "idiom" : "iphone",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Yellow@3x 1.png",
+      "idiom" : "iphone",
+      "scale" : "3x"
     }
   ],
   "info" : {
