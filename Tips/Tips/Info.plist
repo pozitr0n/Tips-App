@@ -17,11 +17,11 @@
 		</dict>
 		<key>CFBundleAlternateIcons</key>
 		<dict>
-			<key>Yellow</key>
+			<key>Jaundiced</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>Yellow</string>
+					<string>Jaundiced</string>
 				</array>
 			</dict>
 			<key>Sea</key>

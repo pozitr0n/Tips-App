@@ -16,6 +16,9 @@ struct SettingsSwiftUIView: View {
     // Languages
     @State var allLanguages = LanguagesUISettings().getLanguagesForDetailFormat()
     
+    // Icons
+    @State var allIcons = IconsLocal().getAllIcons()
+    
     // Changing mode of application
     @State private var changeMode: Bool = false
     @AppStorage("userTheme") private var userTheme: Mode = .systemDefaultMode
@@ -51,7 +54,7 @@ struct SettingsSwiftUIView: View {
                                                         
                         } else {
                         
-                            NavigationLink(destination: ChangeApplicationIcon(moreInfoItem: array)) {
+                            NavigationLink(destination: ChangeApplicationIcon(iconsForChanging: allIcons)) {
                                 
                                 VStack {
                                     
@@ -161,6 +164,29 @@ class LanguagesUISettings: ObservableObject {
     
 }
 
+class IconsLocal: ObservableObject {
+    
+    func getAllIcons() -> [IconsForChanging] {
+     
+        var allIcons: [IconsForChanging] = []
+        
+        for icon in IconNames().iconNames {
+        
+            guard let currentIcon = UIApplication.shared.alternateIconName else {
+                return [IconsForChanging]()
+            }
+            
+            let newIcon = IconsForChanging(iconName: icon, isOn: currentIcon == icon)
+            allIcons.append(newIcon)
+            
+        }
+        
+        return allIcons
+        
+    }
+    
+}
+
 struct DetailLanguages: View {
     
     @State var languages: [LanguageObject]
@@ -237,59 +263,32 @@ struct SelectionLanguageCell: View {
 
 struct ChangeApplicationIcon: View {
     
-    let moreInfoItem: MoreInfoObject
-    @EnvironmentObject var iconSettings: IconNames
+    @State var iconsForChanging: [IconsForChanging]
     
     var body: some View {
-       
-        VStack(alignment: .leading) {
-            
-            Text("Application-Mode-Main-Screen.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                .font(.largeTitle)
-                .bold()
-            
-            Form {
+        
+        Form {
+        
+            List($iconsForChanging) { $icon in
                 
-                Picker(selection: $iconSettings.currentIndex, label: Text("Icons.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
-                    
-                    ForEach(0 ..< iconSettings.iconNames.count) { i in
-                        
-                        HStack {
-                            
-                            Text("\(self.iconSettings.iconNames[i] ?? "Default.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)) Tip")
-                            Spacer()
-                            Image(uiImage: UIImage(named: self.iconSettings.iconNames[i] ?? "Default") ?? UIImage()).resizable().renderingMode(.original).frame(width: 60, height: 60, alignment: .leading)
-                            
-                        }
-                        
-                    }
-                    
+                HStack {
+                    Text("\(icon.iconName ?? "Default.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)) Tips Logo")
+                    Spacer()
+                    Image(uiImage: UIImage(named: icon.iconName ?? "AppIcon") ?? UIImage())
+                        .resizable().renderingMode(.original).frame(width: 60, height: 60, alignment: .leading)
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                        .overlay(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(icon.isOn ? Color.red : Color.gray, lineWidth: icon.isOn ? 4 : 2))
                 }
-                .onReceive([self.iconSettings.currentIndex].publisher.first()) { value in
-                    
-                    let i = self.iconSettings.iconNames.firstIndex(of: UIApplication.shared.alternateIconName) ?? 0
-                    
-                    if value != i {
-                        
-                        UIApplication.shared.setAlternateIconName(self.iconSettings.iconNames[value]) { error in
-                            
-                            if error != nil {
-                                print(error as Any)
-                            } else {
-                                print("Finished!")
-                            }
-                            
-                        }
-                    }
-                    
+                .background(.modeBG)
+                .onTapGesture {
+                    UIApplication.shared.setAlternateIconName(icon.iconName)
                 }
                 
             }
             
         }
-        .padding()
-        .navigationBarTitle(Text(moreInfoItem.title), displayMode: .inline)
-      
+        .navigationTitle("Application-Mode-Main-Screen.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+        
     }
     
 }
@@ -321,16 +320,20 @@ struct DetailScreenMoreInfo: View {
 }
 
 struct LanguageObject: Identifiable {
-    
     let id = UUID()
     let language: String
     var isOn: Bool
-    
 }
 
 struct MoreInfoObject: Identifiable {
     let id = UUID()
     let title: String
+}
+
+struct IconsForChanging: Identifiable {
+    let id = UUID()
+    var iconName: String?
+    var isOn: Bool
 }
 
 #Preview {
