@@ -172,16 +172,15 @@ class IconsLocal: ObservableObject {
         
         for icon in IconNames().iconNames {
         
-            guard let currentIcon = UIApplication.shared.alternateIconName else {
-                return [IconsForChanging]()
-            }
+            let currentIcon = UIApplication.shared.alternateIconName
             
             let newIcon = IconsForChanging(iconName: icon, isOn: currentIcon == icon)
             allIcons.append(newIcon)
             
+            
         }
-        
-        return allIcons
+                
+        return allIcons.sorted(by: { $0.id > $1.id })
         
     }
     
@@ -272,16 +271,34 @@ struct ChangeApplicationIcon: View {
             List($iconsForChanging) { $icon in
                 
                 HStack {
+                    
                     Text("\(icon.iconName ?? "Default.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)) Tips Logo")
+                    
                     Spacer()
+                    
                     Image(uiImage: UIImage(named: icon.iconName ?? "AppIcon") ?? UIImage())
                         .resizable().renderingMode(.original).frame(width: 60, height: 60, alignment: .leading)
+                        
                         .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                        .overlay(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(icon.isOn ? Color.red : Color.gray, lineWidth: icon.isOn ? 4 : 2))
+                        .overlay(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(icon.isOn ? Color.blue : Color.gray, 
+                                                                                               lineWidth: icon.isOn ? 5 : 2))
+                    
                 }
                 .background(.modeBG)
                 .onTapGesture {
+                    
                     UIApplication.shared.setAlternateIconName(icon.iconName)
+                    
+                    //  Reload application bundle as new selected language
+                    DispatchQueue.main.async(execute: {
+                    
+                        let scene = UIApplication.shared.connectedScenes.first
+                        if let sd: SceneDelegate = (scene?.delegate as? SceneDelegate) {
+                            sd.initRootView(true)
+                        }
+                        
+                    })
+                    
                 }
                 
             }
