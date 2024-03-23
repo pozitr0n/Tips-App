@@ -1,33 +1,18 @@
 {
   "images" : [
     {
-      "filename" : "green.png",
+      "filename" : "Green.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "green@2x.png",
+      "filename" : "Green@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "green@3x.png",
+      "filename" : "Green@3x.png",
       "idiom" : "universal",
-      "scale" : "3x"
-    },
-    {
-      "filename" : "green 1.png",
-      "idiom" : "iphone",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "green@2x 1.png",
-      "idiom" : "iphone",
-      "scale" : "2x"
-    },
-    {
-      "filename" : "green@3x 1.png",
-      "idiom" : "iphone",
       "scale" : "3x"
     }
   ],
