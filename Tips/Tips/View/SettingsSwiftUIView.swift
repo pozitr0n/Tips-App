@@ -180,7 +180,7 @@ class IconsLocal: ObservableObject {
             
         }
                 
-        return allIcons.sorted(by: { $0.id > $1.id })
+        return allIcons
         
     }
     
