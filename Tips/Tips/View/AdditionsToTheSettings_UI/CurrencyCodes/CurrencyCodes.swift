@@ -57,5 +57,5 @@ struct CurrencyCodes: View {
 }
 
 #Preview {
-    CurrencyCodes()
+    SettingsSwiftUIView()
 }
