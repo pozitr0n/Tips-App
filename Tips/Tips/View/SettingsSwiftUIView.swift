@@ -24,6 +24,9 @@ struct SettingsSwiftUIView: View {
     @AppStorage("userTheme") private var userTheme: Mode = .systemDefaultMode
     @Environment(\.colorScheme) private var scheme
     
+    // Changing currency format
+    @State private var changeCurrency: Bool = false
+    
     let blockTheme: [MoreInfoObject] = [
         MoreInfoObject(title: "Application-Icon.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
         MoreInfoObject(title: "Application-Mode.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
@@ -101,19 +104,23 @@ struct SettingsSwiftUIView: View {
                             }
                             
                         } else {
-                        
-                            NavigationLink(destination: DetailScreenMoreInfo(moreInfoItem: array)) {
+                            
+                            if array.title == "Currency-format.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
                                 
-                                VStack {
-                                    
-                                    if array.title == "Currency-format.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
-                                        Label(array.title, systemImage: "dollarsign.circle")
-                                            .padding(.trailing)
-                                    }
-                                    
-                                    if array.title == "Default-Percentage.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
+                                Button(array.title, systemImage: "dollarsign.circle") {
+                                    changeCurrency.toggle()
+                                }
+                                .padding(.trailing)
+                                
+                            } else if array.title == "Default-Percentage.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
+                                
+                                NavigationLink(destination: DetailScreenMoreInfo(moreInfoItem: array))  {
+                                 
+                                    VStack {
+                                        
                                         Label(array.title, systemImage: "percent")
                                             .padding(.trailing)
+                                        
                                     }
                                     
                                 }
@@ -123,188 +130,22 @@ struct SettingsSwiftUIView: View {
                         }
                         
                     }
+                    .sheet(isPresented: $changeCurrency, content: {
+                        
+                        CurrencyCodes()
+                        
+                        // Since maximum height is 360
+                            .presentationDetents([.height(360)])
+                            .presentationBackground(.clear)
+                            
+                    })
+                    
                 }
                 
             }
             .navigationTitle("navigationTitlle.Settings.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
             
         }
-        
-    }
-    
-}
-
-class LanguagesUISettings: ObservableObject {
-    
-    func getLanguagesForDetailFormat() -> [LanguageObject] {
-     
-        var allLanguages: [LanguageObject] = []
-        
-        for lang in Languages().getArrayOfLanguages() {
-        
-            let newLanguage = LanguageObject(language: lang.rawValue, 
-                                             isOn: lang.rawValue == CurrentLanguage.shared.currentLanguage.rawValue)
-            allLanguages.append(newLanguage)
-            
-        }
-        
-        return allLanguages
-        
-    }
-    
-    func getLanguageByName(_ languageName: String) -> LanguageOptions {
-        
-        guard let lang = LanguageOptions(rawValue: languageName) else {
-            return CurrentLanguage.shared.currentLanguage
-        }
-        
-        return lang
-        
-    }
-    
-}
-
-class IconsLocal: ObservableObject {
-    
-    func getAllIcons() -> [IconsForChanging] {
-     
-        var allIcons: [IconsForChanging] = []
-        
-        for icon in IconNames().iconNames {
-        
-            let currentIcon = UIApplication.shared.alternateIconName
-            
-            let newIcon = IconsForChanging(iconName: icon, isOn: currentIcon == icon)
-            allIcons.append(newIcon)
-            
-            
-        }
-                
-        return allIcons
-        
-    }
-    
-}
-
-struct DetailLanguages: View {
-    
-    @State var languages: [LanguageObject]
-    @State var selectedLanguage: LanguageOptions = CurrentLanguage.shared.currentLanguage
-    
-    var body: some View {
-        
-        Form {
-            
-            List($languages) { $lang in
-                SelectionLanguageCell(currentLanguage: lang.language, selectedLanguage: self.$selectedLanguage)
-            }
-            
-        }
-        .onAppear {
-            selectedLanguage = CurrentLanguage.shared.currentLanguage
-        }
-        .navigationTitle("Language-Choose.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-        
-    }
-    
-}
-
-struct SelectionLanguageCell: View {
-
-    let currentLanguage: String
-    @Binding var selectedLanguage: LanguageOptions
-    @State private var showingAlert = false
-    
-    var body: some View {
-        
-        HStack {
-            Text(currentLanguage)
-            Spacer()
-            Image(systemName: currentLanguage == selectedLanguage.rawValue ? "checkmark" : "")
-        }
-        .background(.modeBG)
-        .onTapGesture {
-            showingAlert = true
-        }
-        .alert(isPresented: $showingAlert) {
-            Alert(
-                title: Text("Change-Language-Alert.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
-                message: Text("Change-Language-Alert.message".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
-                primaryButton: .default(Text("Change-Language.primaryButton".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
-                    
-                    self.selectedLanguage = LanguagesUISettings().getLanguageByName(self.currentLanguage)
-                    self.saveLanguageToUserDefaults()
-                    
-                },
-                secondaryButton: .cancel(Text("Cancel-Language-Alert.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)))
-            )
-        }
-        
-    }
-    
-    func saveLanguageToUserDefaults() {
-        
-        Languages().setCurrentLanguage(lang: self.selectedLanguage)
-        
-        //  Reload application bundle as new selected language
-        DispatchQueue.main.async(execute: {
-        
-            let scene = UIApplication.shared.connectedScenes.first
-            if let sd: SceneDelegate = (scene?.delegate as? SceneDelegate) {
-                sd.initRootView(true)
-            }
-            
-        })
-    
-    }
-    
-}
-
-struct ChangeApplicationIcon: View {
-    
-    @State var iconsForChanging: [IconsForChanging]
-    
-    var body: some View {
-        
-        Form {
-        
-            List($iconsForChanging) { $icon in
-                
-                HStack {
-                    
-                    Text("\(icon.iconName ?? "Default.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)) Tips Logo")
-                    
-                    Spacer()
-                    
-                    Image(uiImage: UIImage(named: icon.iconName ?? "AppIcon") ?? UIImage())
-                        .resizable().renderingMode(.original).frame(width: 60, height: 60, alignment: .leading)
-                        
-                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                        .overlay(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(icon.isOn ? Color.blue : Color.gray, 
-                                                                                               lineWidth: icon.isOn ? 5 : 2))
-                    
-                }
-                .background(.modeBG)
-                .onTapGesture {
-                    
-                    UIApplication.shared.setAlternateIconName(icon.iconName)
-                    
-                    //  Reload application bundle as new selected language
-                    DispatchQueue.main.async(execute: {
-                    
-                        let scene = UIApplication.shared.connectedScenes.first
-                        if let sd: SceneDelegate = (scene?.delegate as? SceneDelegate) {
-                            sd.initRootView(true)
-                        }
-                        
-                    })
-                    
-                }
-                
-            }
-            
-        }
-        .navigationTitle("Application-Mode-Main-Screen.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
         
     }
     
@@ -324,6 +165,7 @@ struct DetailScreenMoreInfo: View {
                     .bold()
                 
                 Spacer()
+            
             }
             
             Spacer()
@@ -331,26 +173,14 @@ struct DetailScreenMoreInfo: View {
         }
         .padding()
         .navigationBarTitle(Text(moreInfoItem.title), displayMode: .inline)
-        
+    
     }
     
-}
-
-struct LanguageObject: Identifiable {
-    let id = UUID()
-    let language: String
-    var isOn: Bool
 }
 
 struct MoreInfoObject: Identifiable {
     let id = UUID()
     let title: String
-}
-
-struct IconsForChanging: Identifiable {
-    let id = UUID()
-    var iconName: String?
-    var isOn: Bool
 }
 
 #Preview {

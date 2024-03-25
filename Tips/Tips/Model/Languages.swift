@@ -153,3 +153,33 @@ final class Languages {
     
 }
 
+class LanguagesUISettings: ObservableObject {
+    
+    func getLanguagesForDetailFormat() -> [LanguageObject] {
+     
+        var allLanguages: [LanguageObject] = []
+        
+        for lang in Languages().getArrayOfLanguages() {
+        
+            let newLanguage = LanguageObject(language: lang.rawValue,
+                                             isOn: lang.rawValue == CurrentLanguage.shared.currentLanguage.rawValue)
+            allLanguages.append(newLanguage)
+            
+        }
+        
+        return allLanguages
+        
+    }
+    
+    func getLanguageByName(_ languageName: String) -> LanguageOptions {
+        
+        guard let lang = LanguageOptions(rawValue: languageName) else {
+            return CurrentLanguage.shared.currentLanguage
+        }
+        
+        return lang
+        
+    }
+    
+}
+

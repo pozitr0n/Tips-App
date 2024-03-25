@@ -1,64 +1,70 @@
 
 /* Class = "UITabBarItem"; title = "Settings"; ObjectID = "18x-2K-JfQ"; */
-"18x-2K-JfQ.title" = "Ustawienia";
+"18x-2K-JfQ.title" = "Settings";
 
 /* Class = "UIBarButtonItem"; title = "Share"; ObjectID = "QAb-0s-j0x"; */
-"QAb-0s-j0x.title" = "Udostępnij";
+"QAb-0s-j0x.title" = "Share";
 
 /* Class = "UITabBarItem"; title = "Tip Guide"; ObjectID = "Qq1-zl-SnJ"; */
-"Qq1-zl-SnJ.title" = "Przewodnik";
+"Qq1-zl-SnJ.title" = "Tip Guide";
 
 /* Class = "UIBarButtonItem"; title = "Add to Favourite"; ObjectID = "Tyb-Nx-A4j"; */
-"Tyb-Nx-A4j.title" = "Dodaj do ulubionych";
+"Tyb-Nx-A4j.title" = "Add to Favourite";
 
 /* Class = "UITabBarItem"; title = "Tip Calculator"; ObjectID = "feV-wK-qce"; */
-"feV-wK-qce.title" = "Kalkulator";
+"feV-wK-qce.title" = "Tip Calculator";
 
 /* Class = "UITabBarItem"; title = "Favoutite"; ObjectID = "fpD-qQ-uGK"; */
-"fpD-qQ-uGK.title" = "Ulubione";
+"fpD-qQ-uGK.title" = "Favoutite";
 
 /* Class = "UIBarButtonItem"; title = "Refresh"; ObjectID = "gk0-cT-5Rs"; */
-"gk0-cT-5Rs.title" = "Zaktualizuj";
+"gk0-cT-5Rs.title" = "Refresh";
 
 /* Class = "UINavigationItem"; title = "Tips Calculator"; ObjectID = "hsB-TO-Q61"; */
-"hsB-TO-Q61.title" = "Kalkulator";
+"hsB-TO-Q61.title" = "Tips Calculator";
 
-"navigationTitlle.Settings.title" = "Ustawienia";
+"navigationTitlle.Settings.title" = "Settings";
 
-"Application-Icon.title" = "Ikona aplikacji";
+"Application-Icon.title" = "Application Icon";
 
-"Application-Mode.title" = "Tryb aplikacji";
+"Application-Mode-Main-Screen.title" = "Choose from a list";
 
-"Language.title" = "Język";
+"Application-Mode.title" = "Application Mode";
 
-"Language-Choose.title" = "Proszę wybrać język";
+"Language.title" = "Language";
 
-"Currency-format.title" = "Format waluty";
+"Language-Choose.title" = "Choose the language";
 
-"Default-Percentage.title" = "Domyślny procent";
+"Currency-format.title" = "Currency format";
 
-"Appearance.title" = "Wygląd";
+"Default-Percentage.title" = "Default Percentage";
 
-"General.title" = "Ogólne ustawienia";
+"Appearance.title" = "Appearance";
 
-"Favourite.title" = "Ulubione";
+"General.title" = "General settings";
 
-"Tip-Guide.title" = "Przewodnik";
+"Favourite.title" = "Favourite";
 
-"Change-Language-Alert.title" = "Zmiana języka aplikacji";
+"Tip-Guide.title" = "Tip Guide";
 
-"Change-Language-Alert.message" = "Potwierdzić zmianę języka aplikacji?";
+"Change-Language-Alert.title" = "Changing the application language";
 
-"Change-Language.primaryButton" = "Zmiana języka";
+"Change-Language-Alert.message" = "Are you sure you want to change the language?";
 
-"Cancel-Language-Alert.title" = "Anuluj";
+"Change-Language.primaryButton" = "Change";
 
-"Choose-a-mode.title" = "Wybrać Tryb";
+"Cancel-Language-Alert.title" = "Cancel";
 
-"Choose-a-mode.message" = "Dzień czy Noc.\nDostosuj swój interfejs.";
+"Choose-a-mode.title" = "Choose a Mode";
 
-"Default-Mode.title" = "Domyślny";
+"Choose-a-mode.message" = "Day or Night.\nCustomize your interface.";
 
-"Light-Mode.title" = "Jasny";
+"Default-Mode.title" = "Default";
 
-"Dark-Mode.title" = "Ciemny";
+"Light-Mode.title" = "Light";
+
+"Dark-Mode.title" = "Dark";
+
+"Icons.title" = "Icons";
+
+"Default.title" = "Default";

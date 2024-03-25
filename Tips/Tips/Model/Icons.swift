@@ -76,3 +76,25 @@ final class IconNames: ObservableObject {
     }
     
 }
+
+class IconsLocal: ObservableObject {
+    
+    func getAllIcons() -> [IconsForChanging] {
+     
+        var allIcons: [IconsForChanging] = []
+        
+        for icon in IconNames().iconNames {
+        
+            let currentIcon = UIApplication.shared.alternateIconName
+            
+            let newIcon = IconsForChanging(iconName: icon, isOn: currentIcon == icon)
+            allIcons.append(newIcon)
+            
+            
+        }
+                
+        return allIcons
+        
+    }
+    
+}

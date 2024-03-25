@@ -48,28 +48,3 @@ class AppLocalization: NSObject {
     }
   
 }
-
-extension String {
-
-    func localizedSwiftUI(_ language: LanguageOptions) -> String {
-        
-        let langCode = Languages().languagesValuesWithCodes[language.rawValue]!
-        let path: String? = Bundle.main.path(forResource: langCode, ofType: "lproj")
-        
-        let bundle: Bundle
-        
-        if let path = path {
-            bundle = Bundle(path: path) ?? .main
-        } else {
-            bundle = .main
-        }
-        
-        return localizedSwiftUIPrivate(bundle: bundle)
-        
-    }
-
-    private func localizedSwiftUIPrivate(bundle: Bundle) -> String {
-        return NSLocalizedString(self, tableName: nil, bundle: bundle, value: "", comment: "")
-    }
-    
-}

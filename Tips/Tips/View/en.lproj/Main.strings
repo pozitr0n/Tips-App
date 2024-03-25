@@ -27,6 +27,8 @@
 
 "Application-Icon.title" = "Application Icon";
 
+"Application-Mode-Main-Screen.title" = "Choose from a list";
+
 "Application-Mode.title" = "Application Mode";
 
 "Language.title" = "Language";
@@ -62,3 +64,7 @@
 "Light-Mode.title" = "Light";
 
 "Dark-Mode.title" = "Dark";
+
+"Icons.title" = "Icons";
+
+"Default.title" = "Default";

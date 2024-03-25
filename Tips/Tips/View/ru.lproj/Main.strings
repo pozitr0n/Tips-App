@@ -27,6 +27,8 @@
 
 "Application-Icon.title" = "Иконка приложения";
 
+"Application-Mode-Main-Screen.title" = "Выберите из списка";
+
 "Application-Mode.title" = "Режим приложения";
 
 "Language.title" = "Язык";
@@ -62,3 +64,7 @@
 "Light-Mode.title" = "Светлый";
 
 "Dark-Mode.title" = "Темный";
+
+"Icons.title" = "Иконки";
+
+"Default.title" = "По-умолчанию";
