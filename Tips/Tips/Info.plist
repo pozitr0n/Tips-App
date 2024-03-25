@@ -4,47 +4,8 @@
 <dict>
 	<key>CFBundleIcons</key>
 	<dict>
-		<key>CFBundlePrimaryIcon</key>
-		<dict>
-			<key>CFBundleIconName</key>
-			<string></string>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string></string>
-			</array>
-			<key>UIPrerenderedIcon</key>
-			<false/>
-		</dict>
 		<key>CFBundleAlternateIcons</key>
 		<dict>
-			<key>Jaundiced</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>Jaundiced</string>
-				</array>
-			</dict>
-			<key>Sea</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>Sea</string>
-				</array>
-			</dict>
-			<key>Orange</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>Orange</string>
-				</array>
-			</dict>
-			<key>Teal</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>Teal</string>
-				</array>
-			</dict>
 			<key>Dark</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -59,6 +20,45 @@
 					<string>Green</string>
 				</array>
 			</dict>
+			<key>Jaundiced</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>Jaundiced</string>
+				</array>
+			</dict>
+			<key>Orange</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>Orange</string>
+				</array>
+			</dict>
+			<key>Sea</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>Sea</string>
+				</array>
+			</dict>
+			<key>Teal</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>Teal</string>
+				</array>
+			</dict>
+		</dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string></string>
+			</array>
+			<key>CFBundleIconName</key>
+			<string></string>
+			<key>UIPrerenderedIcon</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>UIApplicationSceneManifest</key>

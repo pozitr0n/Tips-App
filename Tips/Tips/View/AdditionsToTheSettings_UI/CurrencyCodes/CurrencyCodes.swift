@@ -10,6 +10,8 @@ import SwiftUI
 struct CurrencyCodes: View {
     
     @State private var selectedCurrency = "PLN"
+    @State private var showDetails = false
+    @Environment(\.dismiss) var dismiss
     
     let availableCurrencies: [String] = {
         let locales = Locale.availableIdentifiers.map { Locale(identifier: $0) }
@@ -24,21 +26,44 @@ struct CurrencyCodes: View {
   
                 Picker("Select Currency", selection: $selectedCurrency) {
                     ForEach(availableCurrencies, id: \.self) { currencyCode in
-                        Text("\(currencyName(currencyCode: currencyCode)) (\(currencyCode))")
+                        Text("\(currencyCode)")
                             .tag(currencyCode)
                     }
                 }
                 .pickerStyle(.wheel)
                 
-                Text("\(currencyName(currencyCode: selectedCurrency)) - (\(selectedCurrency))")
+                Text("\(currencyName(currencyCode: selectedCurrency))")
                     .frame(maxWidth: .infinity, alignment: .center)
+                    .font(.system(size: 14))
                 
             }
+            .frame(height: 340)
+            .scrollContentBackground(.hidden)
+            .scrollDisabled(true)
             
+            Group {
+                
+                Button("Choose") {
+                    
+                    showDetails.toggle()
+                    
+                    if showDetails {
+                        
+                        // main logic: saving the currency to the user defaults!!!
+                        dismiss()
+                        
+                    }
+                    
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+                .padding(-20)
+    
+            }
+    
         }
-        // Maximum height = 360
+        // Maximum height = 390
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .frame(height: 360)
+        .frame(height: 390)
         .background(.modeBG)
         .clipShape(.rect(cornerRadius: 30))
         .padding(.horizontal, 15)

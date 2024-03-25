@@ -134,8 +134,8 @@ struct SettingsSwiftUIView: View {
                         
                         CurrencyCodes()
                         
-                        // Since maximum height is 360
-                            .presentationDetents([.height(360)])
+                        // Since maximum height is 390
+                            .presentationDetents([.height(390)])
                             .presentationBackground(.clear)
                             
                     })
