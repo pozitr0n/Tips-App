@@ -56,7 +56,7 @@ struct CurrencyCodes: View {
                     
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
-                .padding(-20)
+                .padding(-15)
     
             }
     
