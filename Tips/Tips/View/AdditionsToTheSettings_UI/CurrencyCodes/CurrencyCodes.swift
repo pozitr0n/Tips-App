@@ -26,8 +26,19 @@ struct CurrencyCodes: View {
   
                 Picker("Select Currency", selection: $selectedCurrency) {
                     ForEach(availableCurrencies, id: \.self) { currencyCode in
-                        Text("\(currencyCode)")
-                            .tag(currencyCode)
+                        
+                        if currencyCode != String(describing: getSymbol(forCurrencyCode: currencyCode)) && !String(describing: getSymbol(forCurrencyCode: currencyCode)).isEmpty {
+                            
+                            Text("\(currencyCode) (\(String(describing: getSymbol(forCurrencyCode: currencyCode))))")
+                                .tag(currencyCode)
+                            
+                        } else {
+                            
+                            Text("\(currencyCode)")
+                                .tag(currencyCode)
+                            
+                        }
+                        
                     }
                 }
                 .pickerStyle(.wheel)
@@ -76,6 +87,30 @@ struct CurrencyCodes: View {
         let buffName = locale.localizedString(forCurrencyCode: currencyCode) ?? currencyCode
         
         return buffName == currencyCode ? buffName : buffName.capitalizingFirstLetter()
+        
+    }
+    
+    func getSymbol(forCurrencyCode code: String) -> String {
+        
+        let locale = NSLocale(localeIdentifier: code)
+        
+        if locale.displayName(forKey: .currencySymbol, value: code) == code {
+            
+            let newlocale = NSLocale(localeIdentifier: code.dropLast() + "_en")
+            
+            guard let _newlocale = newlocale.displayName(forKey: .currencySymbol, value: code) else {
+                return ""
+            }
+            
+            return _newlocale
+            
+        }
+        
+        guard let _newlocale = locale.displayName(forKey: .currencySymbol, value: code) else {
+            return ""
+        }
+        
+        return _newlocale
         
     }
     
