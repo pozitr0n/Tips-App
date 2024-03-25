@@ -170,15 +170,11 @@
 		4D258AE12B9F4371003B9F8F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4DE4D62A2BB1185D00160224 /* CurrencyCodes */,
 				4D416FB62B9F398B00333567 /* Main.storyboard */,
 				4D416FBB2B9F399000333567 /* LaunchScreen.storyboard */,
-				4DE4D6272BB116FA00160224 /* DetailLanguages */,
-				4DE4D6242BB1163800160224 /* ChangeApplicationIcon */,
+				4DE4D62D2BB1199E00160224 /* AdditionsToTheSettings_UI */,
 				4D1C119C2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift */,
 				4D548F3D2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift */,
-				4D9ACDEC2BA389450075C3F6 /* SettingsSwiftUIView.swift */,
-				4D4A4CFF2BA925F8001E6CE7 /* ModeChangeView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -340,6 +336,18 @@
 				4DE4D62B2BB1186700160224 /* CurrencyCodes.swift */,
 			);
 			path = CurrencyCodes;
+			sourceTree = "<group>";
+		};
+		4DE4D62D2BB1199E00160224 /* AdditionsToTheSettings_UI */ = {
+			isa = PBXGroup;
+			children = (
+				4D9ACDEC2BA389450075C3F6 /* SettingsSwiftUIView.swift */,
+				4D4A4CFF2BA925F8001E6CE7 /* ModeChangeView */,
+				4DE4D6242BB1163800160224 /* ChangeApplicationIcon */,
+				4DE4D6272BB116FA00160224 /* DetailLanguages */,
+				4DE4D62A2BB1185D00160224 /* CurrencyCodes */,
+			);
+			path = AdditionsToTheSettings_UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
