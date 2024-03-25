@@ -43,7 +43,7 @@ struct CurrencyCodes: View {
             
             Group {
                 
-                Button("Choose") {
+                Button("Choose-Currency.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)) {
                     
                     showDetails.toggle()
                     
