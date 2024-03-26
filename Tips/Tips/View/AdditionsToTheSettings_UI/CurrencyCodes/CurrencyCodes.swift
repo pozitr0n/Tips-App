@@ -27,9 +27,12 @@ struct CurrencyCodes: View {
                 Picker("Select Currency", selection: $selectedCurrency) {
                     ForEach(availableCurrencies, id: \.self) { currencyCode in
                         
-                        if currencyCode != String(describing: getSymbol(forCurrencyCode: currencyCode)) && !String(describing: getSymbol(forCurrencyCode: currencyCode)).isEmpty {
+                        let currSymbol = String(describing: getSymbol(forCurrencyCode: currencyCode))
+                        
+                        if currencyCode != currSymbol
+                            && !currSymbol.isEmpty {
                             
-                            Text("\(currencyCode) (\(String(describing: getSymbol(forCurrencyCode: currencyCode))))")
+                            Text("\(currencyCode) (\(currSymbol))")
                                 .tag(currencyCode)
                             
                         } else {
