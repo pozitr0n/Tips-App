@@ -74,16 +74,7 @@ struct SettingsSwiftUIView: View {
                         
                     }
                     .preferredColorScheme(userTheme.colorScheme)
-                    .sheet(isPresented: $changeMode, content: {
-                        
-                        ModeChangeView(scheme: scheme)
-                        
-                        // Since maximum height is 410
-                            .presentationDetents([.height(410)])
-                            .presentationBackground(.clear)
-                            
-                    })
-                                        
+                    
                 }
                 
                 Section(header: Text("General.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
@@ -130,21 +121,29 @@ struct SettingsSwiftUIView: View {
                         }
                         
                     }
-                    .sheet(isPresented: $changeCurrency, content: {
-                        
-                        CurrencyCodes()
-                        
-                        // Since maximum height is 390
-                            .presentationDetents([.height(390)])
-                            .presentationBackground(.clear)
-                            
-                    })
-                    
+                
                 }
                 
             }
             .navigationTitle("navigationTitlle.Settings.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-            
+            .sheet(isPresented: $changeCurrency, content: {
+                
+                CurrencyCodes()
+                
+                // Since maximum height is 390
+                    .presentationDetents([.height(390)])
+                    .presentationBackground(.clear)
+                    
+            })
+            .sheet(isPresented: $changeMode, content: {
+                
+                ModeChangeView(scheme: scheme)
+                
+                // Since maximum height is 410
+                    .presentationDetents([.height(410)])
+                    .presentationBackground(.clear)
+                    
+            })
         }
         
     }
