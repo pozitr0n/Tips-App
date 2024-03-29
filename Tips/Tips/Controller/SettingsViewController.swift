@@ -39,7 +39,7 @@ class SettingsViewController: UIViewController {
         
         // Notify the child view controller that the move is complete.
         vcSettings.didMove(toParent: self)
-        
+                
     }
 
 }
