@@ -28,6 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func setupMainSettings(with scene: UIWindowScene) {
         
         Languages().getCurrentLanguage()
+        Currencies().getCurrentCurrency()
         
         splashPresenter = SplashPresenter(scene: scene)
         setupWindow(with: scene)

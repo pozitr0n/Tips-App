@@ -39,9 +39,13 @@ struct SelectionLanguageCell: View {
     var body: some View {
         
         HStack {
+            
             Text(currentLanguage)
             Spacer()
-            Image(systemName: currentLanguage == selectedLanguage.rawValue ? "checkmark" : "")
+            if currentLanguage == selectedLanguage.rawValue {
+                Image(systemName: "checkmark")
+            }
+            
         }
         .background(.modeBG)
         .onTapGesture {

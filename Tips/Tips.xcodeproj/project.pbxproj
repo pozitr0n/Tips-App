@@ -48,6 +48,7 @@
 		4DA44B6E2BA264DB005EC103 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA44B6D2BA264DB005EC103 /* SplashViewController.swift */; };
 		4DA44B742BA26706005EC103 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA44B732BA26706005EC103 /* SplashPresenter.swift */; };
 		4DC8AB832BA27DF9002AB3BF /* SplashAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8AB822BA27DF9002AB3BF /* SplashAnimator.swift */; };
+		4DE4B8892BB9E9A300894158 /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4B8882BB9E9A300894158 /* Currencies.swift */; };
 		4DE4D6212BAFCA5500160224 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4D6202BAFCA5500160224 /* Icons.swift */; };
 		4DE4D6232BB10C2900160224 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4D6222BB10C2900160224 /* Extensions.swift */; };
 		4DE4D6262BB1164E00160224 /* ChangeApplicationIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4D6252BB1164E00160224 /* ChangeApplicationIcon.swift */; };
@@ -124,6 +125,7 @@
 		4DA44B6D2BA264DB005EC103 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		4DA44B732BA26706005EC103 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		4DC8AB822BA27DF9002AB3BF /* SplashAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAnimator.swift; sourceTree = "<group>"; };
+		4DE4B8882BB9E9A300894158 /* Currencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
 		4DE4D6202BAFCA5500160224 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		4DE4D6222BB10C2900160224 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4DE4D6252BB1164E00160224 /* ChangeApplicationIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeApplicationIcon.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				4D9ACDF02BA3DC2E0075C3F6 /* Languages.swift */,
 				4D9ACDF82BA7EAB50075C3F6 /* Localizations.swift */,
 				4DE4D6202BAFCA5500160224 /* Icons.swift */,
+				4DE4B8882BB9E9A300894158 /* Currencies.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE4B8892BB9E9A300894158 /* Currencies.swift in Sources */,
 				4D416FB52B9F398B00333567 /* TipsCalulatorViewController.swift in Sources */,
 				4DA44B742BA26706005EC103 /* SplashPresenter.swift in Sources */,
 				4DE8617D2BAA6F9F002B2475 /* ModeChangeView.swift in Sources */,

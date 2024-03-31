@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CurrencyCodes: View {
     
-    @State private var selectedCurrency = "PLN"
+    @State private var selectedCurrency = CurrentCurrency.shared.currentCurrency
     @State private var showDetails = false
     @Environment(\.dismiss) var dismiss
     
@@ -63,7 +63,7 @@ struct CurrencyCodes: View {
                     
                     if showDetails {
                         
-                        // main logic: saving the currency to the user defaults!!!
+                        Currencies().setCurrentCurrency(currentCode: selectedCurrency)
                         dismiss()
                         
                     }

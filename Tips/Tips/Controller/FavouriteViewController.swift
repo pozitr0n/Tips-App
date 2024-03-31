@@ -19,7 +19,8 @@ class FavouriteViewController: UIViewController {
     
     func loadSwiftUIViewController() {
      
-        let vcFavourite = UIHostingController(rootView: FavouriteSwiftUIView())
+        let favouriteView = FavouriteSwiftUIView()
+        let vcFavourite = UIHostingController(rootView: favouriteView)
         
         let swiftuiView = vcFavourite.view!
         swiftuiView.translatesAutoresizingMaskIntoConstraints = false
