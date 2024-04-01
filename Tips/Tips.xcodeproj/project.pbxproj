@@ -49,6 +49,7 @@
 		4DA44B742BA26706005EC103 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA44B732BA26706005EC103 /* SplashPresenter.swift */; };
 		4DC8AB832BA27DF9002AB3BF /* SplashAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8AB822BA27DF9002AB3BF /* SplashAnimator.swift */; };
 		4DE4B8892BB9E9A300894158 /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4B8882BB9E9A300894158 /* Currencies.swift */; };
+		4DE4B88C2BBA3B1200894158 /* DefaultPercentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4B88B2BBA3B1200894158 /* DefaultPercentage.swift */; };
 		4DE4D6212BAFCA5500160224 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4D6202BAFCA5500160224 /* Icons.swift */; };
 		4DE4D6232BB10C2900160224 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4D6222BB10C2900160224 /* Extensions.swift */; };
 		4DE4D6262BB1164E00160224 /* ChangeApplicationIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4D6252BB1164E00160224 /* ChangeApplicationIcon.swift */; };
@@ -126,6 +127,7 @@
 		4DA44B732BA26706005EC103 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		4DC8AB822BA27DF9002AB3BF /* SplashAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAnimator.swift; sourceTree = "<group>"; };
 		4DE4B8882BB9E9A300894158 /* Currencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
+		4DE4B88B2BBA3B1200894158 /* DefaultPercentage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPercentage.swift; sourceTree = "<group>"; };
 		4DE4D6202BAFCA5500160224 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		4DE4D6222BB10C2900160224 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4DE4D6252BB1164E00160224 /* ChangeApplicationIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeApplicationIcon.swift; sourceTree = "<group>"; };
@@ -317,6 +319,14 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		4DE4B88A2BBA3ADC00894158 /* DefaultPercentage */ = {
+			isa = PBXGroup;
+			children = (
+				4DE4B88B2BBA3B1200894158 /* DefaultPercentage.swift */,
+			);
+			path = DefaultPercentage;
+			sourceTree = "<group>";
+		};
 		4DE4D6242BB1163800160224 /* ChangeApplicationIcon */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				4D9ACDEC2BA389450075C3F6 /* SettingsSwiftUIView.swift */,
+				4DE4B88A2BBA3ADC00894158 /* DefaultPercentage */,
 				4D4A4CFF2BA925F8001E6CE7 /* ModeChangeView */,
 				4DE4D6242BB1163800160224 /* ChangeApplicationIcon */,
 				4DE4D6272BB116FA00160224 /* DetailLanguages */,
@@ -526,6 +537,7 @@
 				4DE4D6292BB1170600160224 /* DetailLanguages.swift in Sources */,
 				4D548F3C2BA007F000D07A9E /* FavouriteViewController.swift in Sources */,
 				4DE4D62C2BB1186700160224 /* CurrencyCodes.swift in Sources */,
+				4DE4B88C2BBA3B1200894158 /* DefaultPercentage.swift in Sources */,
 				4D416FB32B9F398B00333567 /* SceneDelegate.swift in Sources */,
 				4D9ACDF12BA3DC2E0075C3F6 /* Languages.swift in Sources */,
 			);

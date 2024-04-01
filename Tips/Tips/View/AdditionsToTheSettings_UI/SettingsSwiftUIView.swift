@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Foundation
+import Combine
 
 struct SettingsSwiftUIView: View {
     
@@ -26,6 +27,9 @@ struct SettingsSwiftUIView: View {
     
     // Changing currency format
     @State private var changeCurrency: Bool = false
+    
+    // Changing percentage
+    @State private var changePercentage: Bool = false
     
     let blockTheme: [MoreInfoObject] = [
         MoreInfoObject(title: "Application-Icon.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
@@ -105,16 +109,10 @@ struct SettingsSwiftUIView: View {
                                 
                             } else if array.title == "Default-Percentage.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
                                 
-                                NavigationLink(destination: DetailScreenMoreInfo(moreInfoItem: array))  {
-                                 
-                                    VStack {
-                                        
-                                        Label(array.title, systemImage: "percent")
-                                            .padding(.trailing)
-                                        
-                                    }
-                                    
+                                Button(array.title, systemImage: "percent") {
+                                    changePercentage.toggle()
                                 }
+                                .padding(.trailing)
                                 
                             }
                             
@@ -144,35 +142,17 @@ struct SettingsSwiftUIView: View {
                     .presentationBackground(.clear)
                     
             })
+            .sheet(isPresented: $changePercentage, content: {
+                
+                DefaultPercentage()
+                
+                // Since maximum height is 390
+                    .presentationDetents([.height(390)])
+                    .presentationBackground(.clear)
+                    
+            })
         }
         
-    }
-    
-}
-
-struct DetailScreenMoreInfo: View {
-    
-    let moreInfoItem: MoreInfoObject
-    
-    var body: some View {
-     
-        VStack(alignment: .leading) {
-            
-            HStack {
-                Text(moreInfoItem.title)
-                    .font(.largeTitle)
-                    .bold()
-                
-                Spacer()
-            
-            }
-            
-            Spacer()
-            
-        }
-        .padding()
-        .navigationBarTitle(Text(moreInfoItem.title), displayMode: .inline)
-    
     }
     
 }

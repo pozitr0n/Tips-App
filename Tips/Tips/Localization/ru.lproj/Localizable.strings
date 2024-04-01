@@ -77,3 +77,9 @@
 "Default.title" = "По-умолчанию";
 
 "Choose-Currency.title" = "Выбрать";
+
+"Set-the-value" = "Установить Процент";
+
+"Default-%" = "%";
+
+"Change-the-default-percentage" = "Измените процент по-умолчанию";

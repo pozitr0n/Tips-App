@@ -52,3 +52,31 @@ final class Currencies {
     }
     
 }
+
+class CurrentPercentage {
+    
+    static let shared = CurrentPercentage()
+    
+    // Saving/getting using User Defaults
+    var currentPercentage: Int = 0
+    
+    private init () {}
+    
+}
+
+final class Percentage {
+    
+    func setCurrentPercentage(currentPercentage: Int) {
+    
+        UserDefaults.standard.set(currentPercentage, forKey: "CurrentPercentage")
+        UserDefaults.standard.synchronize()
+        
+        CurrentPercentage.shared.currentPercentage = currentPercentage
+        
+    }
+    
+    func getCurrentPercentage() {
+        CurrentPercentage.shared.currentPercentage = UserDefaults.standard.integer(forKey: "CurrentPercentage")
+    }
+    
+}
