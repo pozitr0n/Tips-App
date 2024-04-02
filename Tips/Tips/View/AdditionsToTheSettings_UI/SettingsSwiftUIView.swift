@@ -7,7 +7,6 @@
 
 import SwiftUI
 import Foundation
-import Combine
 
 struct SettingsSwiftUIView: View {
     
@@ -146,8 +145,8 @@ struct SettingsSwiftUIView: View {
                 
                 DefaultPercentage()
                 
-                // Since maximum height is 390
-                    .presentationDetents([.height(390)])
+                // Since maximum height is 350
+                    .presentationDetents([.height(350)])
                     .presentationBackground(.clear)
                     
             })
