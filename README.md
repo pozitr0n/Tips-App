@@ -10,6 +10,12 @@
 
 ### Main tasks for launching the project:
 - [ ] development of functionality and specifying it in the technical specifications
+
+    - [ ] Tip Calculator
+    - [ ] Favourite
+    - [ ] Tip Guide
+    - [x] Settings
+
 - [ ] user interface development
 - [ ] logic extension
 - [ ] testing
