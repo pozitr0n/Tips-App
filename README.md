@@ -13,7 +13,7 @@
 
     - [ ] Tip Calculator
     - [ ] Favourite
-    - [ ] Tip Guide
+    - [ ] Tip Guide (Active working at this moment)
     - [x] Settings
 
 - [ ] user interface development
