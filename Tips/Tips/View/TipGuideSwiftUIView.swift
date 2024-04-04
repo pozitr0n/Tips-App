@@ -13,15 +13,8 @@ struct TipGuideSwiftUIView: View {
     
     @State private var clickedMainPath = PathOfTheInformation()
     @FocusState private var focused: Bool
-   
-    let testArray1: [TestObject1] = [
-        TestObject1(name: "Recepit 1", about: "Recepit information"),
-        TestObject1(name: "Recepit 2", about: "Recepit information"),
-        TestObject1(name: "Recepit 3", about: "Recepit information"),
-        TestObject1(name: "Recepit 4", about: "Recepit information"),
-        TestObject1(name: "Recepit 5", about: "Recepit information"),
-        TestObject1(name: "Recepit 6", about: "Recepit information")
-    ]
+    @ObservedObject var countryInfo = ReadCountryInfoFromJSON()
+    @State var currentLanguageCode: String = Languages().languagesValuesWithCodes[CurrentLanguage.shared.currentLanguage.rawValue]!
     
     var body: some View {
         
@@ -51,13 +44,18 @@ struct TipGuideSwiftUIView: View {
                             .onTapGesture {
                                 
                                 if clickedMainPath != pathInfoData {
+                                    
                                     clickedMainPath = pathInfoData
                                     focused = true
+                                    
                                     print(clickedMainPath.id)
                                     print(clickedMainPath.title)
+                                    
                                 } else {
+                                    
                                     clickedMainPath = PathOfTheInformation()
                                     focused = false
+                                    
                                 }
                                 
                             }
@@ -89,14 +87,23 @@ struct TipGuideSwiftUIView: View {
             
             Form {
                 
-                Section(header: Text("Bar")) {
-                    // create List + array
-                    List(testArray1) { array in
+                Section(header: Text("Country")) {
+                    List(countryInfo.countriesWithTips) { currentCountry in
                         
-                        NavigationLink(destination: DetailScreen1(testItem1: array)) {
+                        VStack {
                             
-                            VStack {
-                                Text(array.name)
+                            if currentLanguageCode == "en" {
+                                Text(currentCountry.countryNameEN)
+                                    .padding(.trailing)
+                            }
+                            
+                            if currentLanguageCode == "pl" {
+                                Text(currentCountry.countryNamePL)
+                                    .padding(.trailing)
+                            }
+                            
+                            if currentLanguageCode == "ru" {
+                                Text(currentCountry.countryNameRU)
                                     .padding(.trailing)
                             }
                             
@@ -105,16 +112,83 @@ struct TipGuideSwiftUIView: View {
                     }
                 }
                 
-                Section(header: Text("Hotel")) {
-                    // create List + array
-                    List(testArray1) { array in
+                Section(header: Text("Continent")) {
+                    List(countryInfo.countriesWithTips) { currentCountry in
                         
-                        NavigationLink(destination: DetailScreen1(testItem1: array)) {
+                        VStack {
                             
-                            VStack {
-                                Text(array.name)
+                            if currentLanguageCode == "en" {
+                                Text(currentCountry.continentEN)
                                     .padding(.trailing)
                             }
+                            
+                            if currentLanguageCode == "pl" {
+                                Text(currentCountry.continentPL)
+                                    .padding(.trailing)
+                            }
+                            
+                            if currentLanguageCode == "ru" {
+                                Text(currentCountry.continentRU)
+                                    .padding(.trailing)
+                            }
+                            
+                        }
+                        
+                    }
+                }
+                
+                Section(header: Text("Country Code")) {
+                    List(countryInfo.countriesWithTips) { currentCountry in
+                        
+                        VStack {
+                            
+                            Text(currentCountry.countryCode)
+                                .padding(.trailing)
+                            
+                        }
+                        
+                    }
+                }
+                
+                Section(header: Text("Restaurant")) {
+                    List(countryInfo.countriesWithTips) { currentCountry in
+                        
+                        VStack {
+                            
+                            Text(currentCountry.restaurantTipInitial)
+                                .padding(.trailing)
+                            Text(currentCountry.restaurantTipFinal)
+                                .padding(.trailing)
+                            
+                        }
+                        
+                    }
+                }
+                
+                Section(header: Text("Hotel")) {
+                    List(countryInfo.countriesWithTips) { currentCountry in
+                        
+                        VStack {
+                            
+                            Text(currentCountry.hotelTipInitialUSD)
+                                .padding(.trailing)
+                            Text(currentCountry.hotelTipFinalUSD)
+                                .padding(.trailing)
+                            
+                        }
+                        
+                    }
+                }
+                
+                Section(header: Text("Driver")) {
+                    List(countryInfo.countriesWithTips) { currentCountry in
+                        
+                        VStack {
+                            
+                            Text(currentCountry.driverTipInitial)
+                                .padding(.trailing)
+                            Text(currentCountry.driverTipLimit)
+                                .padding(.trailing)
                             
                         }
                         
@@ -214,7 +288,9 @@ struct CommonContainerForZoom <Content: View>: View {
             } else if tapLocation != .zero {
                 
                 // Scale in to a specific point
-                uiView.zoom(to: rectangleZoom(for: uiView, scale: uiView.maximumZoomScale, center: tapLocation), animated: true)
+                uiView.zoom(to: rectangleZoom(for: uiView, 
+                                              scale: uiView.maximumZoomScale,
+                                              center: tapLocation), animated: true)
                 
                 // Reset the location to prevent scaling to it in case of a negative scale (manual pinch)
                 // Using the main thread to prevent unexpected behavior
@@ -270,39 +346,69 @@ struct CommonContainerForZoom <Content: View>: View {
     
 }
 
-struct DetailScreen1: View {
+struct CountryInfo: Codable, Identifiable {
     
-    let testItem1: TestObject1
-    
-    var body: some View {
-     
-        VStack(alignment: .leading) {
-            
-            HStack {
-                Text(testItem1.name)
-                    .font(.largeTitle)
-                    .bold()
-                
-                Spacer()
-            }
-            
-            Text(testItem1.about)
-                .padding(.top)
-            
-            Spacer()
-            
-        }
-        .padding()
-        .navigationBarTitle(Text(testItem1.name), displayMode: .inline)
+    enum CodingKeys: CodingKey {
+        case countryNameEN
+        case countryNamePL
+        case countryNameRU
+        case continentEN
+        case continentPL
+        case continentRU
+        case countryCode
+        case restaurantTipInitial
+        case restaurantTipFinal
+        case hotelTipInitialUSD
+        case hotelTipFinalUSD
+        case driverTipInitial
+        case driverTipLimit
         
     }
     
+    var id = UUID()
+    var countryNameEN: String
+    var countryNamePL: String
+    var countryNameRU: String
+    var continentEN: String
+    var continentPL: String
+    var continentRU: String
+    var countryCode: String
+    var restaurantTipInitial: String
+    var restaurantTipFinal: String
+    var hotelTipInitialUSD: String
+    var hotelTipFinalUSD: String
+    var driverTipInitial: String
+    var driverTipLimit: String
+    
 }
 
-struct TestObject1: Identifiable {
-    let id = UUID()
-    let name: String
-    let about: String
+class ReadCountryInfoFromJSON: ObservableObject {
+    
+    @Published var countriesWithTips = [CountryInfo]()
+    
+    init() {
+        parseAndLoadData()
+    }
+    
+    func parseAndLoadData() {
+        
+        guard let localeURL = Bundle.main.url(forResource: "tips-worldwide", withExtension: "json") else {
+            print(".json file is not found")
+            return
+        }
+        
+        guard let info = try? Data(contentsOf: localeURL) else {
+            return
+        }
+        
+        guard let countries = try? JSONDecoder().decode([CountryInfo].self, from: info) else {
+            return
+        }
+        
+        self.countriesWithTips = countries
+        
+    }
+    
 }
 
 #Preview {

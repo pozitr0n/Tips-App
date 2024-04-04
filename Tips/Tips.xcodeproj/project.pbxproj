@@ -44,6 +44,7 @@
 		4D548F3C2BA007F000D07A9E /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D548F3B2BA007F000D07A9E /* FavouriteViewController.swift */; };
 		4D548F3E2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D548F3D2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift */; };
 		4D548F402BA00BAA00D07A9E /* TipGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D548F3F2BA00BAA00D07A9E /* TipGuideViewController.swift */; };
+		4D5E1BC82BBEC9C5003D03F1 /* tips-worldwide.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5E1BC72BBEC9C5003D03F1 /* tips-worldwide.json */; };
 		4D92B8532BAA60A300539710 /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9ACDF82BA7EAB50075C3F6 /* Localizations.swift */; };
 		4D9ACDEB2BA37B340075C3F6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9ACDEA2BA37B340075C3F6 /* TabBarViewController.swift */; };
 		4D9ACDED2BA389450075C3F6 /* SettingsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9ACDEC2BA389450075C3F6 /* SettingsSwiftUIView.swift */; };
@@ -122,6 +123,7 @@
 		4D548F3B2BA007F000D07A9E /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		4D548F3D2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipGuideSwiftUIView.swift; sourceTree = "<group>"; };
 		4D548F3F2BA00BAA00D07A9E /* TipGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipGuideViewController.swift; sourceTree = "<group>"; };
+		4D5E1BC72BBEC9C5003D03F1 /* tips-worldwide.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tips-worldwide.json"; sourceTree = "<group>"; };
 		4D9ACDEA2BA37B340075C3F6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		4D9ACDEC2BA389450075C3F6 /* SettingsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwiftUIView.swift; sourceTree = "<group>"; };
 		4D9ACDEE2BA38A300075C3F6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 		4D47B8562BBC36B5008829DE /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				4D5E1BC62BBEC973003D03F1 /* JSON */,
 				4D47B8572BBC36D4008829DE /* ParseringMap.swift */,
 				4D47B8592BBC36DB008829DE /* DrawingMap.swift */,
 				4D47B85B2BBC36E3008829DE /* ComponentsMap.swift */,
@@ -339,6 +342,14 @@
 				4DE8617C2BAA6F9F002B2475 /* ModeChangeView.swift */,
 			);
 			path = ModeChangeView;
+			sourceTree = "<group>";
+		};
+		4D5E1BC62BBEC973003D03F1 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				4D5E1BC72BBEC9C5003D03F1 /* tips-worldwide.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		4D9ACDF42BA7E7EC0075C3F6 /* Localization */ = {
@@ -510,6 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D3D721C2BAE4CFD00105F89 /* Sea@2x.png in Resources */,
+				4D5E1BC82BBEC9C5003D03F1 /* tips-worldwide.json in Resources */,
 				4D416FBD2B9F399000333567 /* LaunchScreen.storyboard in Resources */,
 				4D47B8642BBC3A1A008829DE /* world-low.svg in Resources */,
 				4D3D721D2BAE4CFD00105F89 /* Dark@3x.png in Resources */,
