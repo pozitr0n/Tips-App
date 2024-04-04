@@ -53,6 +53,8 @@ struct TipGuideSwiftUIView: View {
                                 if clickedMainPath != pathInfoData {
                                     clickedMainPath = pathInfoData
                                     focused = true
+                                    print(clickedMainPath.id)
+                                    print(clickedMainPath.title)
                                 } else {
                                     clickedMainPath = PathOfTheInformation()
                                     focused = false

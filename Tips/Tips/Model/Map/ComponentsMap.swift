@@ -166,6 +166,7 @@ func runCommandForSVGComponents(dataOfTheSVG: PathOfTheInformation, rect: CGRect
 //  Parameters:
 //      - name: province name specified inside the <path> element
 //      - id: identifier of the province that contains the identifier in the <path> element
+//      - title: the name of the country from SVG
 //      - path: an array of ExecutePathCommand's that is parsed from ParserForWorldLowMap
 //
 @available(iOS 17.0, *)
@@ -173,22 +174,25 @@ public struct PathOfTheInformation: Identifiable, Sendable {
     
     public var id: String               = ""
     public var name: String             = ""
+    public var title: String            = ""
     public var boundingFrame: CGRect?   = nil
     public var boundariesOfSVG: CGRect? = nil
     
     var mainPath = [ExecutePathCommand]()
 
-    public init(name: String, id: String, mainPath: [ExecutePathCommand], boundingFrame: CGRect) {
-        self.name = name
-        self.id = id
-        self.mainPath = mainPath
-        self.boundingFrame = boundingFrame
+    public init(name: String, id: String, title: String, mainPath: [ExecutePathCommand], boundingFrame: CGRect) {
+        self.name           = name
+        self.id             = id
+        self.title          = title
+        self.mainPath       = mainPath
+        self.boundingFrame  = boundingFrame
     }
     
-    public init(name: String, id: String, mainPath: [ExecutePathCommand]) {
-        self.name = name
-        self.id = id
-        self.mainPath = mainPath
+    public init(name: String, id: String, title: String, mainPath: [ExecutePathCommand]) {
+        self.name       = name
+        self.id         = id
+        self.title      = title
+        self.mainPath   = mainPath
     }
     
     public init() { }

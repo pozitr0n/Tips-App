@@ -1,0 +1,24 @@
+[
+    {
+        "country-name": "United States of America",
+        "country-code": "John",
+        "restaurant-tip": "Team Lead",
+        "hotel-tip": "john@gmail.com",
+        "driver-tip": "Team Lead",
+   },
+    {
+        "name": "Maria",
+        "designation": "Project Lead",
+        "email": "maria@gmail.com"
+   },
+    {
+        "name": "Martha",
+        "designation": "Trainee",
+        "email": "martha@gmail.com"
+   },
+    {
+        "name": "Susan",
+        "designation": "CEO",
+        "email": "susan@gmail.com"
+   }
+]

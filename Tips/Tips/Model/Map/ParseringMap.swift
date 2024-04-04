@@ -141,7 +141,8 @@ final class ParserForWorldLowMap: NSObject, XMLParserDelegate {
         if elementName == "path" {
             
             var pathInfo = PathOfTheInformation(name: attributeDictionary["name"] ?? attributeDictionary["id"] ?? "undefined",
-                                                id: attributeDictionary["id"] ?? (attributeDictionary["name"] ?? UUID().uuidString),
+                                                id: attributeDictionary["id"] ?? (attributeDictionary["name"] ?? UUID().uuidString), 
+                                                title: attributeDictionary["title"] ?? attributeDictionary["title"] ?? "undefined",
                                                 mainPath: [])
             
             // Empty char
