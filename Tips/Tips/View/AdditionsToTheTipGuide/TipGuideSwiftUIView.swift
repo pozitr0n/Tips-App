@@ -105,7 +105,7 @@ struct TipGuideSwiftUIView: View {
                             .font(.system(size: 19))
                             .clipShape(.rect(cornerRadius: 20))
                             .opacity(0.6)
-                            .transition(.slide)
+
                     }
                     
                 }
@@ -314,7 +314,7 @@ struct CommonContainerForZoom <Content: View>: View {
             // Update the hosting controller's SwiftUI content
             context.coordinator.hostingController.rootView = content
 
-            if uiView.zoomScale > uiView.minimumZoomScale {
+            if uiView.zoomScale >= uiView.minimumZoomScale {
                 
                 // Scale out
                 uiView.setZoomScale(currentScale, animated: true)

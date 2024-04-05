@@ -80,3 +80,21 @@
 "Change-the-default-percentage" = "Измените процент по-умолчанию";
 
 "Choose-country-start" = "Вы можете выбрать страну на карте для получения дополнительной информации о чаевых";
+
+"Rate-your-experience.title" = "Оцените свой опыт";
+
+"Angry.title" = "Злой";
+
+"Confused.title" = "Смущен";
+
+"Happy.title" = "Счастлив";
+
+"Excited.title" = "Восхищен";
+
+"In-Love.title" = "Влюблен";
+
+"Send.title" = "Отправить";
+
+"Application-About.title" = "О приложении";
+
+"Application-Rate.title" = "Оценить приложение";

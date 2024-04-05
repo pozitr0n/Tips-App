@@ -30,6 +30,9 @@ struct SettingsSwiftUIView: View {
     // Changing percentage
     @State private var changePercentage: Bool = false
     
+    // Changing the rating
+    @State private var changeRating: Bool = false
+    
     let blockTheme: [MoreInfoObject] = [
         MoreInfoObject(title: "Application-Icon.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
         MoreInfoObject(title: "Application-Mode.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
@@ -39,6 +42,10 @@ struct SettingsSwiftUIView: View {
         MoreInfoObject(title: "Language.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
         MoreInfoObject(title: "Currency-format.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
         MoreInfoObject(title: "Default-Percentage.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+    ]
+    
+    let blockAbout: [MoreInfoObject] = [
+        MoreInfoObject(title: "Application-Rate.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
     ]
     
     var body: some View {
@@ -121,6 +128,22 @@ struct SettingsSwiftUIView: View {
                 
                 }
                 
+                Section(header: Text("Application-About.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
+                    
+                    List(blockAbout) { array in
+                        
+                        if array.title == "Application-Rate.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
+                            
+                            Button(array.title, systemImage: "heart.circle") {
+                                changeRating.toggle()
+                            }
+                            .padding(.trailing)
+                            
+                        }
+                    }
+                    
+                }
+                
             }
             .navigationTitle("navigationTitlle.Settings.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
             .sheet(isPresented: $changeCurrency, content: {
@@ -150,6 +173,16 @@ struct SettingsSwiftUIView: View {
                     .presentationBackground(.clear)
                     
             })
+            .sheet(isPresented: $changeRating, content: {
+                
+                RatingExperience()
+                
+                // Since maximum height is 150
+                    .presentationDetents([.height(150)])
+                    .presentationBackground(.clear)
+                
+            })
+            
         }
         
     }

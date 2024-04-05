@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D159F852BC025E9003EC231 /* RatingExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D159F842BC025E9003EC231 /* RatingExperience.swift */; };
 		4D1C119B2B9FF10A00FEAB9E /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C119A2B9FF10A00FEAB9E /* ShareViewController.swift */; };
 		4D1C119D2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C119C2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift */; };
 		4D3152382BBD6C7300FB41BE /* ComponentsForTipGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3152372BBD6C7300FB41BE /* ComponentsForTipGuide.swift */; };
@@ -82,6 +83,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D159F842BC025E9003EC231 /* RatingExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingExperience.swift; sourceTree = "<group>"; };
 		4D1C119A2B9FF10A00FEAB9E /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		4D1C119C2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteSwiftUIView.swift; sourceTree = "<group>"; };
 		4D3152372BBD6C7300FB41BE /* ComponentsForTipGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsForTipGuide.swift; sourceTree = "<group>"; };
@@ -173,6 +175,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D159F832BC025D2003EC231 /* RatingExperience */ = {
+			isa = PBXGroup;
+			children = (
+				4D159F842BC025E9003EC231 /* RatingExperience.swift */,
+			);
+			path = RatingExperience;
+			sourceTree = "<group>";
+		};
 		4D258AE02B9F4367003B9F8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				4D9ACDEC2BA389450075C3F6 /* SettingsSwiftUIView.swift */,
+				4D159F832BC025D2003EC231 /* RatingExperience */,
 				4DE4B88A2BBA3ADC00894158 /* DefaultPercentage */,
 				4D4A4CFF2BA925F8001E6CE7 /* ModeChangeView */,
 				4DE4D6242BB1163800160224 /* ChangeApplicationIcon */,
@@ -576,6 +587,7 @@
 				4D548F402BA00BAA00D07A9E /* TipGuideViewController.swift in Sources */,
 				4DC8AB832BA27DF9002AB3BF /* SplashAnimator.swift in Sources */,
 				4D9ACDED2BA389450075C3F6 /* SettingsSwiftUIView.swift in Sources */,
+				4D159F852BC025E9003EC231 /* RatingExperience.swift in Sources */,
 				4DE4D6232BB10C2900160224 /* Extensions.swift in Sources */,
 				4D9ACDEB2BA37B340075C3F6 /* TabBarViewController.swift in Sources */,
 				4D1C119D2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift in Sources */,
