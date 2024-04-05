@@ -8,6 +8,43 @@
 import Foundation
 import SwiftUI
 
+//  A structure containing all path information
+//  Parameters:
+//      - name: province name specified inside the <path> element
+//      - id: identifier of the province that contains the identifier in the <path> element
+//      - title: the name of the country from SVG
+//      - path: an array of ExecutePathCommand's that is parsed from ParserForWorldLowMap
+//
+@available(iOS 17.0, *)
+public struct PathOfTheInformation: Identifiable, Sendable {
+    
+    public var id: String               = ""
+    public var name: String             = ""
+    public var title: String            = ""
+    public var boundingFrame: CGRect?   = nil
+    public var boundariesOfSVG: CGRect? = nil
+    
+    var mainPath = [ExecutePathCommand]()
+
+    public init(name: String, id: String, title: String, mainPath: [ExecutePathCommand], boundingFrame: CGRect) {
+        self.name           = name
+        self.id             = id
+        self.title          = title
+        self.mainPath       = mainPath
+        self.boundingFrame  = boundingFrame
+    }
+    
+    public init(name: String, id: String, title: String, mainPath: [ExecutePathCommand]) {
+        self.name       = name
+        self.id         = id
+        self.title      = title
+        self.mainPath   = mainPath
+    }
+    
+    public init() { }
+    
+}
+
 //  Running command for SVG components
 //
 @available(iOS 17.0, *)
@@ -28,7 +65,7 @@ func runCommandForSVGComponents(dataOfTheSVG: PathOfTheInformation, rect: CGRect
         
         if executePathCommand.command == "m" {
             
-            let point = CGPoint(x: executePathCommand.coordinateXY.x + lastPoint.x, 
+            let point = CGPoint(x: executePathCommand.coordinateXY.x + lastPoint.x,
                                 y: executePathCommand.coordinateXY.y + lastPoint.y)
             
             pathSVG.move(to: point)
@@ -43,7 +80,7 @@ func runCommandForSVGComponents(dataOfTheSVG: PathOfTheInformation, rect: CGRect
         
         if executePathCommand.command == "l" {
             
-            let point = CGPoint(x: executePathCommand.coordinateXY.x + lastPoint.x, 
+            let point = CGPoint(x: executePathCommand.coordinateXY.x + lastPoint.x,
                                 y: executePathCommand.coordinateXY.y + lastPoint.y)
             
             pathSVG.addLine(to: point)
@@ -53,7 +90,7 @@ func runCommandForSVGComponents(dataOfTheSVG: PathOfTheInformation, rect: CGRect
         
         if executePathCommand.command == "h" {
             
-            let point = CGPoint(x: executePathCommand.coordinateXY.x + lastPoint.x, 
+            let point = CGPoint(x: executePathCommand.coordinateXY.x + lastPoint.x,
                                 y: lastPoint.y)
             
             pathSVG.addLine(to: point)
@@ -63,7 +100,7 @@ func runCommandForSVGComponents(dataOfTheSVG: PathOfTheInformation, rect: CGRect
         
         if executePathCommand.command == "H" {
             
-            let point = CGPoint(x: executePathCommand.coordinateXY.x, 
+            let point = CGPoint(x: executePathCommand.coordinateXY.x,
                                 y: lastPoint.y)
             pathSVG.addLine(to: point)
             
@@ -83,7 +120,7 @@ func runCommandForSVGComponents(dataOfTheSVG: PathOfTheInformation, rect: CGRect
         
         if executePathCommand.command == "V" {
             
-            let point = CGPoint(x: lastPoint.x, 
+            let point = CGPoint(x: lastPoint.x,
                                 y: executePathCommand.coordinateXY.y)
             
             pathSVG.addLine(to: point)
@@ -135,7 +172,7 @@ func runCommandForSVGComponents(dataOfTheSVG: PathOfTheInformation, rect: CGRect
             firstControlPoint = nil
             secondControlPoint = nil
             
-            lastPoint = CGPoint(x: executePathCommand.coordinateXY.x + lastPoint.x, 
+            lastPoint = CGPoint(x: executePathCommand.coordinateXY.x + lastPoint.x,
                                 y: executePathCommand.coordinateXY.y + lastPoint.y)
             
         }
@@ -158,44 +195,6 @@ func runCommandForSVGComponents(dataOfTheSVG: PathOfTheInformation, rect: CGRect
     }
     
     return pathSVG
-    
-}
-
-
-//  A structure containing all path information
-//  Parameters:
-//      - name: province name specified inside the <path> element
-//      - id: identifier of the province that contains the identifier in the <path> element
-//      - title: the name of the country from SVG
-//      - path: an array of ExecutePathCommand's that is parsed from ParserForWorldLowMap
-//
-@available(iOS 17.0, *)
-public struct PathOfTheInformation: Identifiable, Sendable {
-    
-    public var id: String               = ""
-    public var name: String             = ""
-    public var title: String            = ""
-    public var boundingFrame: CGRect?   = nil
-    public var boundariesOfSVG: CGRect? = nil
-    
-    var mainPath = [ExecutePathCommand]()
-
-    public init(name: String, id: String, title: String, mainPath: [ExecutePathCommand], boundingFrame: CGRect) {
-        self.name           = name
-        self.id             = id
-        self.title          = title
-        self.mainPath       = mainPath
-        self.boundingFrame  = boundingFrame
-    }
-    
-    public init(name: String, id: String, title: String, mainPath: [ExecutePathCommand]) {
-        self.name       = name
-        self.id         = id
-        self.title      = title
-        self.mainPath   = mainPath
-    }
-    
-    public init() { }
     
 }
 

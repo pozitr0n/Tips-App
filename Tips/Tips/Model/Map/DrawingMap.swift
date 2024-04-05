@@ -8,45 +8,6 @@
 import Foundation
 import SwiftUI
 
-//  A shape that brings together the entire map in combination with other interactive objects
-//  Parameters:
-//  pathInformation - this is a structure that contains everything related to the path (id, name, path, boundingRect and svgBounds)
-//
-@available(iOS 17.0, *)
-public struct ShapeInteractive: Shape {
-    
-    let pathInformation: PathOfTheInformation
-    
-    public func path(in rect: CGRect) -> Path {
-        let currPath = runCommandForSVGComponents(dataOfTheSVG: pathInformation, rect: rect)
-        return currPath
-    }
-    
-    public init (_ pathInformation: PathOfTheInformation) {
-        self.pathInformation = pathInformation
-    }
-    
-}
-
-//  Default attributes for a map
-//
-@available(iOS 17.0, *)
-public struct DefaultAttributes {
-   
-    public var runningWidth: Double
-    public var runningColor: Color
-    public var background: Color
-    
-    public init(runningWidth: Double = 1.2, runningColor: Color = .black, background: Color = Color(.sRGB, white: 0.5, opacity: 1)) {
-        
-        self.runningWidth = runningWidth
-        self.runningColor = runningColor
-        self.background = background
-        
-    }
-    
-}
-
 @available(iOS 17.0, *)
 public struct MapInteractive<Content>: View where Content: View {
     
@@ -87,6 +48,45 @@ public struct MapInteractive<Content>: View where Content: View {
             }
         }
         
+    }
+    
+}
+
+//  Default attributes for a map
+//
+@available(iOS 17.0, *)
+public struct DefaultAttributes {
+   
+    public var runningWidth: Double
+    public var runningColor: Color
+    public var background: Color
+    
+    public init(runningWidth: Double = 1.2, runningColor: Color = .black, background: Color = Color(.sRGB, white: 0.5, opacity: 1)) {
+        
+        self.runningWidth = runningWidth
+        self.runningColor = runningColor
+        self.background = background
+        
+    }
+    
+}
+
+//  A shape that brings together the entire map in combination with other interactive objects
+//  Parameters:
+//  pathInformation - this is a structure that contains everything related to the path (id, name, path, boundingRect and svgBounds)
+//
+@available(iOS 17.0, *)
+public struct ShapeInteractive: Shape {
+    
+    let pathInformation: PathOfTheInformation
+    
+    public func path(in rect: CGRect) -> Path {
+        let currPath = runCommandForSVGComponents(dataOfTheSVG: pathInformation, rect: rect)
+        return currPath
+    }
+    
+    public init (_ pathInformation: PathOfTheInformation) {
+        self.pathInformation = pathInformation
     }
     
 }

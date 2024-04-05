@@ -8,6 +8,23 @@
 import Foundation
 import SwiftUI
 
+public struct ExecutePathCommand: CustomStringConvertible, Identifiable, Sendable {
+    
+    var coordinateXY: CGPoint
+    var command: String
+    
+    public var id = UUID()
+    public var description: String {
+        return "ExecutePathCommand(coordinate: \(coordinateXY), command: \(command))\n"
+    }
+    
+    public init(coordinateXY: CGPoint, command: String) {
+        self.coordinateXY = coordinateXY
+        self.command = command
+    }
+    
+}
+
 // Filename needs for parsing SVG
 // Can be written with or without .svg extension
 //
@@ -35,6 +52,12 @@ final class ParserForWorldLowMap: NSObject, XMLParserDelegate {
         
     }
     
+    // parserDidEndDocument method
+    //
+    public func parserDidEndDocument(_ parser: XMLParser) {
+        self.calculateBoundaries()
+    }
+    
     // Parsing the SVG file
     // Contains checking: if argument has .svg extension inside the name, if not - adding it
     //
@@ -60,65 +83,7 @@ final class ParserForWorldLowMap: NSObject, XMLParserDelegate {
         }
         
     }
-    
-    // Calculating boundaries
-    //
-    public func calculateBoundaries() {
-        
-        var maximumOX = -CGFloat.greatestFiniteMagnitude
-        var maximumOY = -CGFloat.greatestFiniteMagnitude
-        
-        bounds.origin.x = CGFloat.greatestFiniteMagnitude
-        bounds.origin.y = CGFloat.greatestFiniteMagnitude
 
-        for currIndex in 0..<arrayPathInformation.count {
-            
-            var path = arrayPathInformation[currIndex]
-            
-            let currentCxecuteCommand = runCommandForSVGComponents(dataOfTheSVG: path,
-                                                                   rect: CGRect(x: 0, y: 0, width: size.width, height: size.height)).boundingRect;
-            
-            if currentCxecuteCommand.origin.x < bounds.origin.x {
-                bounds.origin.x = currentCxecuteCommand.origin.x
-            }
-            
-            if currentCxecuteCommand.origin.y < bounds.origin.y {
-                bounds.origin.y = currentCxecuteCommand.origin.y
-            }
-            
-            if (currentCxecuteCommand.origin.x + currentCxecuteCommand.size.width > maximumOX) {
-                maximumOX = currentCxecuteCommand.origin.x + currentCxecuteCommand.size.width
-            }
-            
-            if (currentCxecuteCommand.origin.y + currentCxecuteCommand.size.height > maximumOY) {
-                maximumOY = currentCxecuteCommand.origin.y + currentCxecuteCommand.size.height
-            }
-            
-            path.boundingFrame = currentCxecuteCommand
-            arrayPathInformation[currIndex] = path
-            
-        }
-        
-        bounds.size.width = maximumOX - bounds.origin.x;
-        bounds.size.height = maximumOY - bounds.origin.y;
-        
-        for currIndex in 0..<arrayPathInformation.count {
-            
-            var path = arrayPathInformation[currIndex]
-            
-            path.boundariesOfSVG = bounds
-            arrayPathInformation[currIndex] = path
-            
-        }
-        
-    }
-    
-    // parserDidEndDocument method
-    //
-    public func parserDidEndDocument(_ parser: XMLParser) {
-        self.calculateBoundaries()
-    }
-    
     //  Delegate of the XMLParser
     //
     //  Additional: 'd' attribute in paths, known as the `geometry` attribute, contains all the information (coordinates, commands)
@@ -244,21 +209,56 @@ final class ParserForWorldLowMap: NSObject, XMLParserDelegate {
         
     }
     
-}
+    // Calculating boundaries
+    //
+    public func calculateBoundaries() {
+        
+        var maximumOX = -CGFloat.greatestFiniteMagnitude
+        var maximumOY = -CGFloat.greatestFiniteMagnitude
+        
+        bounds.origin.x = CGFloat.greatestFiniteMagnitude
+        bounds.origin.y = CGFloat.greatestFiniteMagnitude
 
-public struct ExecutePathCommand: CustomStringConvertible, Identifiable, Sendable {
-    
-    var coordinateXY: CGPoint
-    var command: String
-    
-    public var id = UUID()
-    public var description: String {
-        return "ExecutePathCommand(coordinate: \(coordinateXY), command: \(command))\n"
-    }
-    
-    public init(coordinateXY: CGPoint, command: String) {
-        self.coordinateXY = coordinateXY
-        self.command = command
+        for currIndex in 0..<arrayPathInformation.count {
+            
+            var path = arrayPathInformation[currIndex]
+            
+            let currentCxecuteCommand = runCommandForSVGComponents(dataOfTheSVG: path,
+                                                                   rect: CGRect(x: 0, y: 0, width: size.width, height: size.height)).boundingRect;
+            
+            if currentCxecuteCommand.origin.x < bounds.origin.x {
+                bounds.origin.x = currentCxecuteCommand.origin.x
+            }
+            
+            if currentCxecuteCommand.origin.y < bounds.origin.y {
+                bounds.origin.y = currentCxecuteCommand.origin.y
+            }
+            
+            if (currentCxecuteCommand.origin.x + currentCxecuteCommand.size.width > maximumOX) {
+                maximumOX = currentCxecuteCommand.origin.x + currentCxecuteCommand.size.width
+            }
+            
+            if (currentCxecuteCommand.origin.y + currentCxecuteCommand.size.height > maximumOY) {
+                maximumOY = currentCxecuteCommand.origin.y + currentCxecuteCommand.size.height
+            }
+            
+            path.boundingFrame = currentCxecuteCommand
+            arrayPathInformation[currIndex] = path
+            
+        }
+        
+        bounds.size.width = maximumOX - bounds.origin.x;
+        bounds.size.height = maximumOY - bounds.origin.y;
+        
+        for currIndex in 0..<arrayPathInformation.count {
+            
+            var path = arrayPathInformation[currIndex]
+            
+            path.boundariesOfSVG = bounds
+            arrayPathInformation[currIndex] = path
+            
+        }
+        
     }
     
 }
