@@ -39,10 +39,10 @@ struct TipGuideSwiftUIView: View {
                             .shadow(color: clickedMainPath == pathInfoData ? .guideFocused : .clear , radius: 3)
                         
                             // filling the shapes
-                            .background(ShapeInteractive(pathInfoData).fill(.guideCountryBackground))
+                            .background(ShapeInteractive(pathInfoData).fill(clickedMainPath == pathInfoData ? .guideFocused : .guideCountryBackground))
                         
                             // for depth
-                            .shadow(color: clickedMainPath == pathInfoData ? .guideFocused : .clear , radius: 5, y: 1)
+                            // .shadow(color: clickedMainPath == pathInfoData ? .guideFocused : .clear , radius: 0.1, y: 0.1)
                         
                             .onTapGesture {
                                 
@@ -102,7 +102,7 @@ struct TipGuideSwiftUIView: View {
                             .foregroundStyle(.guideCountryBackground)
                             .multilineTextAlignment(.center)
                             .bold()
-                            .font(.system(size: 20))
+                            .font(.system(size: 19))
                             .clipShape(.rect(cornerRadius: 20))
                             .opacity(0.6)
                             .transition(.slide)
