@@ -76,3 +76,17 @@
 "Default-%" = "%";
 
 "Change-the-default-percentage" = "Change the default percentage";
+
+"Choose-country-start" = "You can select a country on the map to get more information about tipping";
+
+"Country.title" = "Country";
+
+"Continent.title" = "Continent";
+
+"Country-Code.title" = "Country Code";
+
+"Restaurant.title" = "Restaurant";
+
+"Hotel.title" = "Hotel";
+
+"Driver.title" = "Driver";

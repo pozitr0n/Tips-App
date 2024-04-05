@@ -83,3 +83,17 @@
 "Default-%" = "%";
 
 "Change-the-default-percentage" = "Измените процент по-умолчанию";
+
+"Choose-country-start" = "Вы можете выбрать страну на карте для получения дополнительной информации о чаевых";
+
+"Country.title" = "Страна";
+
+"Continent.title" = "Континент";
+
+"Country-Code.title" = "Код Страны";
+
+"Restaurant.title" = "Ресторан";
+
+"Hotel.title" = "Отель";
+
+"Driver.title" = "Водители";

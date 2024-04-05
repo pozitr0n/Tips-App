@@ -13,7 +13,10 @@ struct TipGuideSwiftUIView: View {
     
     @State private var clickedMainPath = PathOfTheInformation()
     @FocusState private var focused: Bool
+    
     @ObservedObject var countryInfo = ReadCountryInfoFromJSON()
+    @State var clickedCountry: String = ""
+    
     @State var currentLanguageCode: String = Languages().languagesValuesWithCodes[CurrentLanguage.shared.currentLanguage.rawValue]!
     
     var body: some View {
@@ -47,16 +50,17 @@ struct TipGuideSwiftUIView: View {
                                     
                                     clickedMainPath = pathInfoData
                                     focused = true
-                                    
-                                    print(clickedMainPath.id)
-                                    print(clickedMainPath.title)
-                                    
+                                    clickedCountry = clickedMainPath.id
+
                                 } else {
                                     
                                     clickedMainPath = PathOfTheInformation()
                                     focused = false
+                                    clickedCountry = ""
                                     
                                 }
+                                
+                                countryInfo.updateFilteredArray(clickedCountry)
                                 
                             }
                             
@@ -83,120 +87,150 @@ struct TipGuideSwiftUIView: View {
         
         LabelledDivider(label: "☟")
         
-        NavigationView {
-            
-            Form {
+        if clickedCountry.isEmpty {
+        
+            NavigationView {
                 
-                Section(header: Text("Country")) {
-                    List(countryInfo.countriesWithTips) { currentCountry in
-                        
-                        VStack {
-                            
-                            if currentLanguageCode == "en" {
-                                Text(currentCountry.countryNameEN)
-                                    .padding(.trailing)
-                            }
-                            
-                            if currentLanguageCode == "pl" {
-                                Text(currentCountry.countryNamePL)
-                                    .padding(.trailing)
-                            }
-                            
-                            if currentLanguageCode == "ru" {
-                                Text(currentCountry.countryNameRU)
-                                    .padding(.trailing)
-                            }
-                            
-                        }
+                Group {
+                    
+                    VStack {
+                    
+                        Text("Choose-country-start".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                            .frame(width: 300, height: 180, alignment: .center)
+                            .padding([.leading, .trailing], 15)
+                            .background(.guideBackground)
+                            .foregroundStyle(.guideCountryBackground)
+                            .multilineTextAlignment(.center)
+                            .bold()
+                            .font(.system(size: 20))
+                            .clipShape(.rect(cornerRadius: 20))
+                            .opacity(0.6)
                         
                     }
+                    
                 }
-                
-                Section(header: Text("Continent")) {
-                    List(countryInfo.countriesWithTips) { currentCountry in
-                        
-                        VStack {
-                            
-                            if currentLanguageCode == "en" {
-                                Text(currentCountry.continentEN)
-                                    .padding(.trailing)
-                            }
-                            
-                            if currentLanguageCode == "pl" {
-                                Text(currentCountry.continentPL)
-                                    .padding(.trailing)
-                            }
-                            
-                            if currentLanguageCode == "ru" {
-                                Text(currentCountry.continentRU)
-                                    .padding(.trailing)
-                            }
-                            
-                        }
-                        
-                    }
-                }
-                
-                Section(header: Text("Country Code")) {
-                    List(countryInfo.countriesWithTips) { currentCountry in
-                        
-                        VStack {
-                            
-                            Text(currentCountry.countryCode)
-                                .padding(.trailing)
-                            
-                        }
-                        
-                    }
-                }
-                
-                Section(header: Text("Restaurant")) {
-                    List(countryInfo.countriesWithTips) { currentCountry in
-                        
-                        VStack {
-                            
-                            Text(currentCountry.restaurantTipInitial)
-                                .padding(.trailing)
-                            Text(currentCountry.restaurantTipFinal)
-                                .padding(.trailing)
-                            
-                        }
-                        
-                    }
-                }
-                
-                Section(header: Text("Hotel")) {
-                    List(countryInfo.countriesWithTips) { currentCountry in
-                        
-                        VStack {
-                            
-                            Text(currentCountry.hotelTipInitialUSD)
-                                .padding(.trailing)
-                            Text(currentCountry.hotelTipFinalUSD)
-                                .padding(.trailing)
-                            
-                        }
-                        
-                    }
-                }
-                
-                Section(header: Text("Driver")) {
-                    List(countryInfo.countriesWithTips) { currentCountry in
-                        
-                        VStack {
-                            
-                            Text(currentCountry.driverTipInitial)
-                                .padding(.trailing)
-                            Text(currentCountry.driverTipLimit)
-                                .padding(.trailing)
-                            
-                        }
-                        
-                    }
-                }
+                .navigationTitle("Tip-Guide.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                 
             }
-            .navigationTitle("Tip-Guide.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+            
+        } else {
+        
+            NavigationView {
+                
+                Form {
+                    
+                    Section(header: Text("Country.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
+                        List(countryInfo.filteredCountriesWithTips) { currentCountry in
+                            
+                            VStack {
+                                
+                                if currentLanguageCode == "en" {
+                                    Text(currentCountry.countryNameEN)
+                                        .padding(.trailing)
+                                }
+                                
+                                if currentLanguageCode == "pl" {
+                                    Text(currentCountry.countryNamePL)
+                                        .padding(.trailing)
+                                }
+                                
+                                if currentLanguageCode == "ru" {
+                                    Text(currentCountry.countryNameRU)
+                                        .padding(.trailing)
+                                }
+                                
+                            }
+                            
+                        }
+                    }
+                    
+                    Section(header: Text("Continent.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
+                        List(countryInfo.filteredCountriesWithTips) { currentCountry in
+                            
+                            VStack {
+                                
+                                if currentLanguageCode == "en" {
+                                    Text(currentCountry.continentEN)
+                                        .padding(.trailing)
+                                }
+                                
+                                if currentLanguageCode == "pl" {
+                                    Text(currentCountry.continentPL)
+                                        .padding(.trailing)
+                                }
+                                
+                                if currentLanguageCode == "ru" {
+                                    Text(currentCountry.continentRU)
+                                        .padding(.trailing)
+                                }
+                                
+                            }
+                            
+                        }
+                    }
+                    
+                    Section(header: Text("Country-Code.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
+                        List(countryInfo.filteredCountriesWithTips) { currentCountry in
+                            
+                            VStack {
+                                
+                                Text(currentCountry.countryCode)
+                                    .padding(.trailing)
+                                
+                            }
+                            
+                        }
+                    }
+                    
+                    Section(header: Text("Restaurant.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
+                        List(countryInfo.filteredCountriesWithTips) { currentCountry in
+                            
+                            VStack {
+                                
+                                Text(currentCountry.restaurantTipInitial)
+                                    .padding(.trailing)
+                                Text(currentCountry.restaurantTipFinal)
+                                    .padding(.trailing)
+                                
+                            }
+                            
+                        }
+                    }
+                    
+                    Section(header: Text("Hotel.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
+                        List(countryInfo.filteredCountriesWithTips) { currentCountry in
+                            
+                            VStack {
+                                
+                                Text(currentCountry.hotelTipInitialUSD)
+                                    .padding(.trailing)
+                                Text(currentCountry.hotelTipFinalUSD)
+                                    .padding(.trailing)
+                                
+                            }
+                            
+                        }
+                    }
+                    
+                    Section(header: Text("Driver.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
+                        List(countryInfo.filteredCountriesWithTips) { currentCountry in
+                            
+                            VStack {
+                                
+                                Text(currentCountry.driverTipInitial)
+                                    .padding(.trailing)
+                                Text(currentCountry.driverTipLimit)
+                                    .padding(.trailing)
+                                
+                            }
+                            
+                        }
+                    }
+                    
+                }
+                .navigationTitle("Tip-Guide.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                
+            }
             
         }
         
@@ -341,71 +375,6 @@ struct CommonContainerForZoom <Content: View>: View {
             }
             
         }
-        
-    }
-    
-}
-
-struct CountryInfo: Codable, Identifiable {
-    
-    enum CodingKeys: CodingKey {
-        case countryNameEN
-        case countryNamePL
-        case countryNameRU
-        case continentEN
-        case continentPL
-        case continentRU
-        case countryCode
-        case restaurantTipInitial
-        case restaurantTipFinal
-        case hotelTipInitialUSD
-        case hotelTipFinalUSD
-        case driverTipInitial
-        case driverTipLimit
-        
-    }
-    
-    var id = UUID()
-    var countryNameEN: String
-    var countryNamePL: String
-    var countryNameRU: String
-    var continentEN: String
-    var continentPL: String
-    var continentRU: String
-    var countryCode: String
-    var restaurantTipInitial: String
-    var restaurantTipFinal: String
-    var hotelTipInitialUSD: String
-    var hotelTipFinalUSD: String
-    var driverTipInitial: String
-    var driverTipLimit: String
-    
-}
-
-class ReadCountryInfoFromJSON: ObservableObject {
-    
-    @Published var countriesWithTips = [CountryInfo]()
-    
-    init() {
-        parseAndLoadData()
-    }
-    
-    func parseAndLoadData() {
-        
-        guard let localeURL = Bundle.main.url(forResource: "tips-worldwide", withExtension: "json") else {
-            print(".json file is not found")
-            return
-        }
-        
-        guard let info = try? Data(contentsOf: localeURL) else {
-            return
-        }
-        
-        guard let countries = try? JSONDecoder().decode([CountryInfo].self, from: info) else {
-            return
-        }
-        
-        self.countriesWithTips = countries
         
     }
     

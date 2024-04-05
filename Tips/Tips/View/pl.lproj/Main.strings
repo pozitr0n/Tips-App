@@ -76,3 +76,17 @@
 "Default-%" = "%";
 
 "Change-the-default-percentage" = "Zmienić domyślny procent";
+
+"Choose-country-start" = "Można wybrać kraj na mapie, aby uzyskać więcej informacji na temat napiwków";
+
+"Country.title" = "Kraj";
+
+"Continent.title" = "Kontynent";
+
+"Country-Code.title" = "Kod Kraju";
+
+"Restaurant.title" = "Restauracja";
+
+"Hotel.title" = "Hotel";
+
+"Driver.title" = "Kierowcy";

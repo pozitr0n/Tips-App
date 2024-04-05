@@ -189,11 +189,10 @@
 			isa = PBXGroup;
 			children = (
 				4D3152362BBD6BF300FB41BE /* AdditionsToTheTipGuide */,
+				4DE4D62D2BB1199E00160224 /* AdditionsToTheSettings_UI */,
 				4D416FB62B9F398B00333567 /* Main.storyboard */,
 				4D416FBB2B9F399000333567 /* LaunchScreen.storyboard */,
-				4DE4D62D2BB1199E00160224 /* AdditionsToTheSettings_UI */,
 				4D1C119C2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift */,
-				4D548F3D2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,6 +234,7 @@
 		4D3152362BBD6BF300FB41BE /* AdditionsToTheTipGuide */ = {
 			isa = PBXGroup;
 			children = (
+				4D548F3D2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift */,
 				4D3152372BBD6C7300FB41BE /* ComponentsForTipGuide.swift */,
 			);
 			path = AdditionsToTheTipGuide;
