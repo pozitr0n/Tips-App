@@ -47,6 +47,8 @@
 
 "Tip-Guide.title" = "Tip Guide";
 
+"Tip-Guide-Welcome.title" = "Welcome to the Guide";
+
 "Change-Language-Alert.title" = "Changing the application language";
 
 "Change-Language-Alert.message" = "Are you sure you want to change the language?";

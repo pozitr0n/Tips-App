@@ -105,11 +105,11 @@ struct TipGuideSwiftUIView: View {
                             .font(.system(size: 20))
                             .clipShape(.rect(cornerRadius: 20))
                             .opacity(0.6)
-                        
+                            .transition(.slide)
                     }
                     
                 }
-                .navigationTitle("Tip-Guide.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                .navigationTitle("Tip-Guide-Welcome.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                 
             }
             
