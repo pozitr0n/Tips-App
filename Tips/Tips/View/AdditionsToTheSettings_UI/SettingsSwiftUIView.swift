@@ -45,7 +45,8 @@ struct SettingsSwiftUIView: View {
     ]
     
     let blockAbout: [MoreInfoObject] = [
-        MoreInfoObject(title: "Application-Rate.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+        MoreInfoObject(title: "Application-Rate.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
+        MoreInfoObject(title: "Application-Privacy-Policy.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
     ]
     
     var body: some View {
@@ -140,9 +141,57 @@ struct SettingsSwiftUIView: View {
                             .padding(.trailing)
                             
                         }
+                        
+                        if array.title == "Application-Privacy-Policy.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
+                            
+                            Button(array.title, systemImage: "lock.circle") {
+                               
+                                // !!! change the link to privacy policy !!!
+                                if let url = URL(string: "https://www.hackingwithswift.com") {
+                                    UIApplication.shared.open(url)
+                                }
+                                
+                            }
+                            .padding(.trailing)
+                            
+                        }
+                        
                     }
                     
                 }
+                
+                Section {
+                    
+                    HStack(alignment: .center) {
+                        
+                        Spacer()
+                        
+                        VStack(alignment: .center) {
+                            
+                            Image(uiImage: UIImage(named: "AppIcon") ?? UIImage())
+                                .resizable().renderingMode(.original).frame(width: 60, height: 60, alignment: .leading)
+                            
+                                .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                                .overlay(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(Color.gray,
+                                                                                                       lineWidth: 2))
+                            
+                            Text("v1.0")
+                                .font(.subheadline)
+                                .foregroundStyle(.gray)
+                            Text("Made-In-By.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                                .font(.subheadline)
+                                .foregroundStyle(.gray)
+                            Text("Raman Kozar🧑🏻‍💻")
+                                .font(.subheadline)
+                            
+                        }
+                        
+                        Spacer()
+                        
+                    }
+                    
+                }
+                .listRowBackground(Color.clear)
                 
             }
             .navigationTitle("navigationTitlle.Settings.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
