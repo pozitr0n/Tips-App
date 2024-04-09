@@ -50,6 +50,7 @@ struct RatingExperience: View {
                                            mainBodyOfTheMail: """
                                                  Application Name: \(Bundle.main.displayingName)
                                                  iOS: \(UIDevice.current.systemVersion)
+                                                 Device Model: \(UIDevice.currentmModelName)
                                                  App Version: \(Bundle.main.displayingAppVersion)
                                                  App Build: \(Bundle.main.displayingAppBuild)
                                                  \("Feedback-text".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
