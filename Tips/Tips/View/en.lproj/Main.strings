@@ -110,3 +110,9 @@
 "Application-About.title" = "About";
 
 "Application-Rate.title" = "Rate the app";
+
+"Feedback-about" = "Feedback about the application";
+
+"Feedback-text" = "Please describe your experience using the application!";
+
+"Email-text" = "My impressions of using the application";

@@ -65,3 +65,19 @@ extension String {
     // * 2 *
     
 }
+
+extension Bundle {
+    
+    var displayingName: String {
+        object(forInfoDictionaryKey: "CFBundleName") as? String ?? "Couldn't determine the application name"
+    }
+    
+    var displayingAppBuild: String {
+        object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "Couldn't determine the application build number"
+    }
+    
+    var displayingAppVersion: String {
+        object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "Couldn't determine the application version"
+    }
+    
+}

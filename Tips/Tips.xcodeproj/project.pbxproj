@@ -54,6 +54,8 @@
 		4D9ACDF72BA7E7FD0075C3F6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D9ACDF52BA7E7FD0075C3F6 /* Localizable.strings */; };
 		4DA44B6E2BA264DB005EC103 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA44B6D2BA264DB005EC103 /* SplashViewController.swift */; };
 		4DA44B742BA26706005EC103 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA44B732BA26706005EC103 /* SplashPresenter.swift */; };
+		4DB69D2B2BC4B318005B5B68 /* ReviewEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB69D2A2BC4B318005B5B68 /* ReviewEmail.swift */; };
+		4DB69D312BC4B5FE005B5B68 /* MailSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB69D302BC4B5FE005B5B68 /* MailSwiftUIView.swift */; };
 		4DC8AB832BA27DF9002AB3BF /* SplashAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8AB822BA27DF9002AB3BF /* SplashAnimator.swift */; };
 		4DE4B8892BB9E9A300894158 /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4B8882BB9E9A300894158 /* Currencies.swift */; };
 		4DE4B88C2BBA3B1200894158 /* DefaultPercentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4B88B2BBA3B1200894158 /* DefaultPercentage.swift */; };
@@ -139,6 +141,8 @@
 		4D9ACDFF2BA8F8800075C3F6 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
 		4DA44B6D2BA264DB005EC103 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		4DA44B732BA26706005EC103 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		4DB69D2A2BC4B318005B5B68 /* ReviewEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewEmail.swift; sourceTree = "<group>"; };
+		4DB69D302BC4B5FE005B5B68 /* MailSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailSwiftUIView.swift; sourceTree = "<group>"; };
 		4DC8AB822BA27DF9002AB3BF /* SplashAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAnimator.swift; sourceTree = "<group>"; };
 		4DE4B8882BB9E9A300894158 /* Currencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
 		4DE4B88B2BBA3B1200894158 /* DefaultPercentage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPercentage.swift; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 		4D159F832BC025D2003EC231 /* RatingExperience */ = {
 			isa = PBXGroup;
 			children = (
+				4DC2F7F82BC5EB4C00E7E6A5 /* SentEmailView */,
 				4D159F842BC025E9003EC231 /* RatingExperience.swift */,
 			);
 			path = RatingExperience;
@@ -186,6 +191,7 @@
 		4D258AE02B9F4367003B9F8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4DB69D282BC4B2F0005B5B68 /* SentEmailModel */,
 				4D47B8562BBC36B5008829DE /* Map */,
 				4D9ACDF02BA3DC2E0075C3F6 /* Languages.swift */,
 				4D9ACDF82BA7EAB50075C3F6 /* Localizations.swift */,
@@ -377,6 +383,22 @@
 				4DC8AB822BA27DF9002AB3BF /* SplashAnimator.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		4DB69D282BC4B2F0005B5B68 /* SentEmailModel */ = {
+			isa = PBXGroup;
+			children = (
+				4DB69D2A2BC4B318005B5B68 /* ReviewEmail.swift */,
+			);
+			path = SentEmailModel;
+			sourceTree = "<group>";
+		};
+		4DC2F7F82BC5EB4C00E7E6A5 /* SentEmailView */ = {
+			isa = PBXGroup;
+			children = (
+				4DB69D302BC4B5FE005B5B68 /* MailSwiftUIView.swift */,
+			);
+			path = SentEmailView;
 			sourceTree = "<group>";
 		};
 		4DE4B88A2BBA3ADC00894158 /* DefaultPercentage */ = {
@@ -581,6 +603,7 @@
 			files = (
 				4DE4B8892BB9E9A300894158 /* Currencies.swift in Sources */,
 				4D416FB52B9F398B00333567 /* TipsCalulatorViewController.swift in Sources */,
+				4DB69D312BC4B5FE005B5B68 /* MailSwiftUIView.swift in Sources */,
 				4DA44B742BA26706005EC103 /* SplashPresenter.swift in Sources */,
 				4DE8617D2BAA6F9F002B2475 /* ModeChangeView.swift in Sources */,
 				4D92B8532BAA60A300539710 /* Localizations.swift in Sources */,
@@ -597,6 +620,7 @@
 				4D3152382BBD6C7300FB41BE /* ComponentsForTipGuide.swift in Sources */,
 				4DE4D6262BB1164E00160224 /* ChangeApplicationIcon.swift in Sources */,
 				4D47B85C2BBC36E3008829DE /* ComponentsMap.swift in Sources */,
+				4DB69D2B2BC4B318005B5B68 /* ReviewEmail.swift in Sources */,
 				4D1C119B2B9FF10A00FEAB9E /* ShareViewController.swift in Sources */,
 				4D548F3E2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift in Sources */,
 				4D47B85A2BBC36DB008829DE /* DrawingMap.swift in Sources */,

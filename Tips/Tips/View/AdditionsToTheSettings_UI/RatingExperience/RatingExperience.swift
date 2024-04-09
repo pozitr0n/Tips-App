@@ -42,6 +42,20 @@ struct RatingExperience: View {
     private var widthOfSlider: CGFloat = 220.0
     private var spacingOfCircle: CGFloat = 44.0
     
+    @Environment(\.openURL) var open_URL
+    @State private var showEmailAddress = false
+    @State private var email = ReviewEmail(toEmailAddress: "pozitr0n.kozarroman@gmail.com",
+                                           currentsubject: "Feedback-about".localizedSwiftUI(CurrentLanguage.shared.currentLanguage),
+                                           mainMessageHeader: "Feedback-text".localizedSwiftUI(CurrentLanguage.shared.currentLanguage),
+                                           mainBodyOfTheMail: """
+                                                 Application Name: \(Bundle.main.displayingName)
+                                                 iOS: \(UIDevice.current.systemVersion)
+                                                 App Version: \(Bundle.main.displayingAppVersion)
+                                                 App Build: \(Bundle.main.displayingAppBuild)
+                                                 \("Feedback-text".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                                                 --------------------------------------
+                                                 """)
+    
     // Main struct SectionEmojies for emojies info
     //
     struct SectionEmojies {
@@ -142,9 +156,8 @@ struct RatingExperience: View {
                     
                         Button("Send.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)) {
                             
-                            // Sending rate to MY e-mail
-                            // Check if user sent the letter! Write!
-                            print(currentEmojiSection?.emojiDescription ?? "")
+                            email.changeBody(changings: "\("Email-text".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)) -  \(currentEmojiSection?.emojiDescription ?? "") \(currentEmojiSection?.emojiName ?? "")")
+                            email.sendMailUsingURL(open_URL: open_URL)
                             dismiss()
                             
                         }
@@ -161,7 +174,19 @@ struct RatingExperience: View {
             .frame(width: 300, height: 150)
             .padding([.leading, .trailing], 25)
             .background(Color("TextRateColorInvert"), in: RoundedRectangle(cornerRadius: 25, style: .continuous))
-                               
+            .sheet(isPresented: $showEmailAddress, content: {
+            
+                MailSwiftUIView(supportDataIfEmail: $email) { result in
+                    switch result {
+                    case .success:
+                        print("Email sent")
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
+                }
+                
+            })
+            
         }
         
     }
