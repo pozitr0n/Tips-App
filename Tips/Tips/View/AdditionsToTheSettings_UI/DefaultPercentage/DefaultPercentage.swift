@@ -33,49 +33,63 @@ struct DefaultPercentage: View {
     
     var body: some View {
         
-        VStack(spacing: 25) {
-             
-            Text("Change-the-default-percentage".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) + " (%)")
+        HStack(alignment: .center) {
             
-            TextField("Default-%".localizedSwiftUI(CurrentLanguage.shared.currentLanguage), text: $input.value)
-                .keyboardType(.numberPad)
-                .textFieldStyle(.plain)
-                .font(.system(size: 48, weight: .heavy))
-                .multilineTextAlignment(.center)
-                .padding(EdgeInsets(top: 0, leading: 60, bottom: 0, trailing: 60))
-                .onReceive(Just(input.value)) { newValue in
-                    
-                    if newValue.first == "0" {
-                        self.input.value = String(newValue.dropFirst())
+            VStack(spacing: 25) {
+
+                Text("Change-the-default-percentage".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) + " (%)")
+                
+                TextField("Default-%".localizedSwiftUI(CurrentLanguage.shared.currentLanguage), text: $input.value)
+                    .keyboardType(.numberPad)
+                    .textFieldStyle(.plain)
+                    .font(.system(size: 48, weight: .heavy))
+                    .multilineTextAlignment(.center)
+                    .padding(EdgeInsets(top: 0, leading: 60, bottom: 0, trailing: 60))
+                    .onReceive(Just(input.value)) { newValue in
+                        
+                        if newValue.first == "0" {
+                            self.input.value = String(newValue.dropFirst())
+                        }
+                                            
                     }
-                                        
+                    
+                HStack(spacing: 10) {
+                
+                    Button("Set-the-value".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)) {
+                               
+                        var intUnwrappingMain: Int = 0
+                        
+                        if input.value.isEmpty {
+                            Percentage().setCurrentPercentage(currentPercentage: intUnwrappingMain)
+                            dismiss()
+                        }
+                        
+                        guard let intUnwrapping = Int(input.value) else {
+                            return
+                        }
+                        
+                        intUnwrappingMain = intUnwrapping
+                        
+                        if intUnwrappingMain >= 0 && intUnwrappingMain <= 100 {
+                            Percentage().setCurrentPercentage(currentPercentage: intUnwrappingMain)
+                            dismiss()
+                        }
+          
+                    }
+                    .buttonStyle(GrowingButtonPress())
+                
                 }
                 
-            HStack(spacing: 10) {
+            }
+            // Maximum height = 350
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(height: 350)
+            .background(.modeBG)
+            .clipShape(.rect(cornerRadius: 30))
+            .padding(.horizontal, 15)
+         
+            VStack {
             
-                Button("Set-the-value".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)) {
-                           
-                    var intUnwrappingMain: Int = 0
-                    
-                    if input.value.isEmpty {
-                        Percentage().setCurrentPercentage(currentPercentage: intUnwrappingMain)
-                        dismiss()
-                    }
-                    
-                    guard let intUnwrapping = Int(input.value) else {
-                        return
-                    }
-                    
-                    intUnwrappingMain = intUnwrapping
-                    
-                    if intUnwrappingMain >= 0 && intUnwrappingMain <= 100 {
-                        Percentage().setCurrentPercentage(currentPercentage: intUnwrappingMain)
-                        dismiss()
-                    }
-      
-                }
-                .buttonStyle(GrowingButtonPress())
-                
                 Button {
                     input.value = ""
                 } label: {
@@ -84,15 +98,10 @@ struct DefaultPercentage: View {
                 .buttonStyle(GrowingButtonClear())
                 
             }
+            .padding(.trailing, 15)
             
         }
-        // Maximum height = 350
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .frame(height: 350)
-        .background(.modeBG)
-        .clipShape(.rect(cornerRadius: 30))
-        .padding(.horizontal, 15)
-        
+    
     }
     
 }
@@ -122,7 +131,6 @@ struct GrowingButtonClear: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         
         configuration.label
-            .padding()
             .background(exampleColor)
             .foregroundStyle(.white)
             .clipShape(Capsule())

@@ -140,7 +140,7 @@ final class Languages {
         UIView.transition(
             with: window,
             duration: 1.0,
-            options: .transitionFlipFromRight,
+            options: .curveEaseInOut,
             animations: {
                 snapShot.transform = CGAffineTransform(translationX: 0, y: snapShot.frame.height)
             },
