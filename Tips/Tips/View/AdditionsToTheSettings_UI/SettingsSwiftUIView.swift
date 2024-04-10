@@ -163,7 +163,7 @@ struct SettingsSwiftUIView: View {
                                 Button(array.title, systemImage: "lock.circle") {
                                    
                                     // !!! change the link to privacy policy !!!
-                                    if let url = URL(string: "https://about.me/r.kozar") {
+                                    if let url = URL(string: "https://www.testgorilla.com/privacy-policy/") {
                                         UIApplication.shared.open(url)
                                     }
                                     
@@ -199,7 +199,7 @@ struct SettingsSwiftUIView: View {
                             Text("Made-In-By.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                                 .font(.subheadline)
                                 .foregroundStyle(.gray)
-                            Text("Raman Kozar🧑🏻‍💻")
+                            Text("[Raman Kozar🧑🏻‍💻](https://about.me/r.kozar)")
                                 .font(.subheadline)
                             
                         }
