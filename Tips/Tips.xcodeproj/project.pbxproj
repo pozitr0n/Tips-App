@@ -45,6 +45,7 @@
 		4D548F3C2BA007F000D07A9E /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D548F3B2BA007F000D07A9E /* FavouriteViewController.swift */; };
 		4D548F3E2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D548F3D2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift */; };
 		4D548F402BA00BAA00D07A9E /* TipGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D548F3F2BA00BAA00D07A9E /* TipGuideViewController.swift */; };
+		4D5716062BC614C100B0AD1C /* WhatIsNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5716052BC614C100B0AD1C /* WhatIsNew.swift */; };
 		4D5E1BC82BBEC9C5003D03F1 /* tips-worldwide.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5E1BC72BBEC9C5003D03F1 /* tips-worldwide.json */; };
 		4D92B8532BAA60A300539710 /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9ACDF82BA7EAB50075C3F6 /* Localizations.swift */; };
 		4D9ACDEB2BA37B340075C3F6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9ACDEA2BA37B340075C3F6 /* TabBarViewController.swift */; };
@@ -127,6 +128,7 @@
 		4D548F3B2BA007F000D07A9E /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		4D548F3D2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipGuideSwiftUIView.swift; sourceTree = "<group>"; };
 		4D548F3F2BA00BAA00D07A9E /* TipGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipGuideViewController.swift; sourceTree = "<group>"; };
+		4D5716052BC614C100B0AD1C /* WhatIsNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatIsNew.swift; sourceTree = "<group>"; };
 		4D5E1BC72BBEC9C5003D03F1 /* tips-worldwide.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tips-worldwide.json"; sourceTree = "<group>"; };
 		4D9ACDEA2BA37B340075C3F6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		4D9ACDEC2BA389450075C3F6 /* SettingsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwiftUIView.swift; sourceTree = "<group>"; };
@@ -360,6 +362,14 @@
 			path = ModeChangeView;
 			sourceTree = "<group>";
 		};
+		4D5716042BC614B200B0AD1C /* WhatIsNew */ = {
+			isa = PBXGroup;
+			children = (
+				4D5716052BC614C100B0AD1C /* WhatIsNew.swift */,
+			);
+			path = WhatIsNew;
+			sourceTree = "<group>";
+		};
 		4D5E1BC62BBEC973003D03F1 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -437,6 +447,7 @@
 			isa = PBXGroup;
 			children = (
 				4D9ACDEC2BA389450075C3F6 /* SettingsSwiftUIView.swift */,
+				4D5716042BC614B200B0AD1C /* WhatIsNew */,
 				4D159F832BC025D2003EC231 /* RatingExperience */,
 				4DE4B88A2BBA3ADC00894158 /* DefaultPercentage */,
 				4D4A4CFF2BA925F8001E6CE7 /* ModeChangeView */,
@@ -605,6 +616,7 @@
 				4D416FB52B9F398B00333567 /* TipsCalulatorViewController.swift in Sources */,
 				4DB69D312BC4B5FE005B5B68 /* MailSwiftUIView.swift in Sources */,
 				4DA44B742BA26706005EC103 /* SplashPresenter.swift in Sources */,
+				4D5716062BC614C100B0AD1C /* WhatIsNew.swift in Sources */,
 				4DE8617D2BAA6F9F002B2475 /* ModeChangeView.swift in Sources */,
 				4D92B8532BAA60A300539710 /* Localizations.swift in Sources */,
 				4D548F402BA00BAA00D07A9E /* TipGuideViewController.swift in Sources */,

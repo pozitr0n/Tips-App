@@ -45,6 +45,7 @@ struct SettingsSwiftUIView: View {
     ]
     
     let blockAbout: [MoreInfoObject] = [
+        MoreInfoObject(title: "What-New.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
         MoreInfoObject(title: "Application-Rate.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
         MoreInfoObject(title: "Application-Privacy-Policy.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
     ]
@@ -133,26 +134,43 @@ struct SettingsSwiftUIView: View {
                     
                     List(blockAbout) { array in
                         
-                        if array.title == "Application-Rate.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
-                            
-                            Button(array.title, systemImage: "heart.circle") {
-                                changeRating.toggle()
-                            }
-                            .padding(.trailing)
-                            
-                        }
+                        if array.title == "What-New.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
                         
-                        if array.title == "Application-Privacy-Policy.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
-                            
-                            Button(array.title, systemImage: "lock.circle") {
-                               
-                                // !!! change the link to privacy policy !!!
-                                if let url = URL(string: "https://www.hackingwithswift.com") {
-                                    UIApplication.shared.open(url)
+                            NavigationLink(destination: WhatIsNew()) {
+                                
+                                VStack {
+                                    
+                                    Label(array.title, systemImage: "newspaper.circle")
+                                        .padding(.trailing)
+                                    
                                 }
                                 
                             }
-                            .padding(.trailing)
+                            
+                        } else {
+                         
+                            if array.title == "Application-Rate.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
+                                
+                                Button(array.title, systemImage: "heart.circle") {
+                                    changeRating.toggle()
+                                }
+                                .padding(.trailing)
+                                
+                            }
+                            
+                            if array.title == "Application-Privacy-Policy.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
+                                
+                                Button(array.title, systemImage: "lock.circle") {
+                                   
+                                    // !!! change the link to privacy policy !!!
+                                    if let url = URL(string: "https://about.me/r.kozar") {
+                                        UIApplication.shared.open(url)
+                                    }
+                                    
+                                }
+                                .padding(.trailing)
+                                
+                            }
                             
                         }
                         
