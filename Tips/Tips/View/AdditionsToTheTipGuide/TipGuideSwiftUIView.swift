@@ -17,6 +17,8 @@ struct TipGuideSwiftUIView: View {
     @ObservedObject var countryInfo = ReadCountryInfoFromJSON()
     @State var clickedCountry: String = ""
     
+    @State private var searchText = ""
+        
     @State var currentLanguageCode: String = Languages().languagesValuesWithCodes[CurrentLanguage.shared.currentLanguage.rawValue]!
     
     var body: some View {
