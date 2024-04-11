@@ -13,7 +13,7 @@
         "hotelTipFinalUSD": "5.00",
         "driverTipInitial": "15.00",
         "driverTipLimit": "15.00"
-   },
+    },
     {
         "countryNameEN": "Canada",
         "countryNamePL": "Kanada",
@@ -28,8 +28,8 @@
         "hotelTipFinalUSD": "5.00",
         "driverTipInitial": "10.00",
         "driverTipLimit": "10.00"
-   },
-   {
+    },
+    {
         "countryNameEN": "Belize",
         "countryNamePL": "Belize",
         "countryNameRU": "Белиз",
@@ -43,8 +43,8 @@
         "hotelTipFinalUSD": "5.00",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "Mexico",
         "countryNamePL": "Meksyk",
         "countryNameRU": "Мексика",
@@ -58,8 +58,8 @@
         "hotelTipFinalUSD": "5.00",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "Armenia",
         "countryNamePL": "Armenia",
         "countryNameRU": "Армения",
@@ -73,8 +73,8 @@
         "hotelTipFinalUSD": "1.00",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "Dominican Republic",
         "countryNamePL": "Republika Dominikany",
         "countryNameRU": "Доминиканская Республика",
@@ -88,8 +88,8 @@
         "hotelTipFinalUSD": "2.00",
         "driverTipInitial": "10.00",
         "driverTipLimit": "10.00"
-   },
-   {
+    },
+    {
         "countryNameEN": "Norway",
         "countryNamePL": "Norwegia",
         "countryNameRU": "Норвегия",
@@ -103,8 +103,8 @@
         "hotelTipFinalUSD": "NoTip",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "Serbia",
         "countryNamePL": "Serbia",
         "countryNameRU": "Сербия",
@@ -118,8 +118,8 @@
         "hotelTipFinalUSD": "5.00",
         "driverTipInitial": "RoundUp",
         "driverTipLimit": "RoundUp"
-   },
-   {
+    },
+    {
         "countryNameEN": "Jamaica",
         "countryNamePL": "Jamajka",
         "countryNameRU": "Ямайка",
@@ -133,8 +133,8 @@
         "hotelTipFinalUSD": "2.00",
         "driverTipInitial": "10.00",
         "driverTipLimit": "15.00"
-   },
-   {
+    },
+    {
         "countryNameEN": "Mauritania",
         "countryNamePL": "Mauretania",
         "countryNameRU": "Мавритания",
@@ -148,8 +148,8 @@
         "hotelTipFinalUSD": "NoInfo",
         "driverTipInitial": "NoInfo",
         "driverTipLimit": "NoInfo"
-   },
-   {
+    },
+    {
         "countryNameEN": "Algeria",
         "countryNamePL": "Algieria",
         "countryNameRU": "Алжир",
@@ -163,8 +163,8 @@
         "hotelTipFinalUSD": "1.00",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "Argentina",
         "countryNamePL": "Argentyna",
         "countryNameRU": "Аргентина",
@@ -178,8 +178,8 @@
         "hotelTipFinalUSD": "1.00",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "Cameroon",
         "countryNamePL": "Kamerun",
         "countryNameRU": "Камерун",
@@ -193,8 +193,8 @@
         "hotelTipFinalUSD": "2.00",
         "driverTipInitial": "NoInfo",
         "driverTipLimit": "NoInfo"
-   },
-   {
+    },
+    {
         "countryNameEN": "Cuba",
         "countryNamePL": "Kuba",
         "countryNameRU": "Куба",
@@ -208,8 +208,8 @@
         "hotelTipFinalUSD": "5.00",
         "driverTipInitial": "NoInfo",
         "driverTipLimit": "NoInfo"
-   },
-   {
+    },
+    {
         "countryNameEN": "Guyana",
         "countryNamePL": "Gujana",
         "countryNameRU": "Гайана",
@@ -223,8 +223,8 @@
         "hotelTipFinalUSD": "NoInfo",
         "driverTipInitial": "NoInfo",
         "driverTipLimit": "NoInfo"
-   },
-   {
+    },
+    {
         "countryNameEN": "Honduras",
         "countryNamePL": "Honduras",
         "countryNameRU": "Гондурас",
@@ -238,8 +238,8 @@
         "hotelTipFinalUSD": "3.00",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "North Macedonia",
         "countryNamePL": "Macedonia Północna",
         "countryNameRU": "Северная Македония",
@@ -253,8 +253,8 @@
         "hotelTipFinalUSD": "0.50",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "Poland",
         "countryNamePL": "Polska",
         "countryNameRU": "Польша",
@@ -268,8 +268,8 @@
         "hotelTipFinalUSD": "2.00",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "Qatar",
         "countryNamePL": "Katar",
         "countryNameRU": "Катар",
@@ -283,8 +283,8 @@
         "hotelTipFinalUSD": "3.00",
         "driverTipInitial": "NoInfo",
         "driverTipLimit": "NoInfo"
-   },
-   {
+    },
+    {
         "countryNameEN": "Russia",
         "countryNamePL": "Rosja",
         "countryNameRU": "Россия",
@@ -298,8 +298,8 @@
         "hotelTipFinalUSD": "3.00",
         "driverTipInitial": "10.00",
         "driverTipLimit": "10.00"
-   },
-   {
+    },
+    {
         "countryNameEN": "Saudi Arabia",
         "countryNamePL": "Arabia Saudyjska",
         "countryNameRU": "Саудовская Аравия",
@@ -313,8 +313,8 @@
         "hotelTipFinalUSD": "2.00",
         "driverTipInitial": "10.00",
         "driverTipLimit": "10.00"
-   },
-   {
+    },
+    {
         "countryNameEN": "United Arab Emirates",
         "countryNamePL": "Zjednoczone Emiraty Arabskie",
         "countryNameRU": "Объединенные Арабские Эмираты",
@@ -328,8 +328,8 @@
         "hotelTipFinalUSD": "2.00",
         "driverTipInitial": "RoundUp",
         "driverTipLimit": "RoundUp"
-   },
-   {
+    },
+    {
         "countryNameEN": "Israel",
         "countryNamePL": "Izrael",
         "countryNameRU": "Израиль",
@@ -343,8 +343,8 @@
         "hotelTipFinalUSD": "3.00",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "Albania",
         "countryNamePL": "Albania",
         "countryNameRU": "Албания",
@@ -358,8 +358,8 @@
         "hotelTipFinalUSD": "2.00",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "Angola",
         "countryNamePL": "Angola",
         "countryNameRU": "Ангола",
@@ -373,8 +373,8 @@
         "hotelTipFinalUSD": "NoInfo",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "Benin",
         "countryNamePL": "Benin",
         "countryNameRU": "Бенин",
@@ -388,8 +388,8 @@
         "hotelTipFinalUSD": "NoInfo",
         "driverTipInitial": "NoInfo",
         "driverTipLimit": "NoInfo"
-   },
-   {
+    },
+    {
         "countryNameEN": "Bolivia",
         "countryNamePL": "Boliwia",
         "countryNameRU": "Боливия",
@@ -403,8 +403,8 @@
         "hotelTipFinalUSD": "1.00",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "Bosnia and Herzegovina",
         "countryNamePL": "Bośnia i Hercegowina",
         "countryNameRU": "Босния и Герцеговина",
@@ -418,8 +418,8 @@
         "hotelTipFinalUSD": "3.00",
         "driverTipInitial": "8.00",
         "driverTipLimit": "20.00"
-   },
-   {
+    },
+    {
         "countryNameEN": "Botswana",
         "countryNamePL": "Botswana",
         "countryNameRU": "Ботсвана",
@@ -433,8 +433,8 @@
         "hotelTipFinalUSD": "0.50",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "Bulgaria",
         "countryNamePL": "Bułgaria",
         "countryNameRU": "Болгария",
@@ -448,8 +448,8 @@
         "hotelTipFinalUSD": "1.00",
         "driverTipInitial": "10.00",
         "driverTipLimit": "10.00"
-   },
-   {
+    },
+    {
         "countryNameEN": "Democratic Republic of Congo",
         "countryNamePL": "Demokratyczna Republika Konga",
         "countryNameRU": "Демократическая Республика Конго",
@@ -463,8 +463,8 @@
         "hotelTipFinalUSD": "NoInfo",
         "driverTipInitial": "NoInfo",
         "driverTipLimit": "NoInfo"
-   },
-   {
+    },
+    {
         "countryNameEN": "Côte d'Ivoire",
         "countryNamePL": "Wybrzeże Kości Słoniowej",
         "countryNameRU": "Кот-д'Ивуар",
@@ -478,8 +478,8 @@
         "hotelTipFinalUSD": "NoInfo",
         "driverTipInitial": "10.00",
         "driverTipLimit": "10.00"
-   },
-   {
+    },
+    {
         "countryNameEN": "Croatia",
         "countryNamePL": "Chorwacja",
         "countryNameRU": "Хорватия",
@@ -493,8 +493,8 @@
         "hotelTipFinalUSD": "2.50",
         "driverTipInitial": "RoundUp",
         "driverTipLimit": "RoundUp"
-   },
-   {
+    },
+    {
         "countryNameEN": "Cyprus",
         "countryNamePL": "Cypr",
         "countryNameRU": "Кипр",
@@ -508,8 +508,8 @@
         "hotelTipFinalUSD": "3.00",
         "driverTipInitial": "RoundUp",
         "driverTipLimit": "RoundUp"
-   },
-   {
+    },
+    {
         "countryNameEN": "Czech Republic",
         "countryNamePL": "Republika Czeska",
         "countryNameRU": "Чешская Республика",
@@ -523,23 +523,23 @@
         "hotelTipFinalUSD": "2.00",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
-       "countryNameEN": "Dominican Republic",
-       "countryNamePL": "Republika Dominikany",
-       "countryNameRU": "Доминиканская Республика",
-       "continentEN": "North America",
-       "continentPL": "Ameryka Północna",
-       "continentRU": "Северная Америка",
-       "countryCode": "DO",
-       "restaurantTipInitial": "10.00",
-       "restaurantTipFinal": "10.00",
-       "hotelTipInitialUSD": "1.00",
-       "hotelTipFinalUSD": "2.00",
-       "driverTipInitial": "10.00",
-       "driverTipLimit": "10.00"
-  },
-   {
+    },
+    {
+        "countryNameEN": "Dominican Republic",
+        "countryNamePL": "Republika Dominikany",
+        "countryNameRU": "Доминиканская Республика",
+        "continentEN": "North America",
+        "continentPL": "Ameryka Północna",
+        "continentRU": "Северная Америка",
+        "countryCode": "DO",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "10.00",
+        "driverTipLimit": "10.00"
+    },
+    {
         "countryNameEN": "Egypt",
         "countryNamePL": "Egipt",
         "countryNameRU": "Египет",
@@ -553,8 +553,8 @@
         "hotelTipFinalUSD": "0.50",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "Egypt",
         "countryNamePL": "Egipt",
         "countryNameRU": "Египет",
@@ -568,11 +568,11 @@
         "hotelTipFinalUSD": "0.50",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
-        "countryNameEN": "United Kingdom",
-        "countryNamePL": "Wielka Brytania",
-        "countryNameRU": "Великобритания",
+    },
+    {
+        "countryNameEN": "United Kingdom / Scotland / Wales",
+        "countryNamePL": "Wielka Brytania / Szkocja / Walia",
+        "countryNameRU": "Великобритания / Шотландия / Уэльс",
         "continentEN": "Europe",
         "continentPL": "Europa",
         "continentRU": "Европа",
@@ -583,8 +583,8 @@
         "hotelTipFinalUSD": "3.00",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "Equatorial Guinea",
         "countryNamePL": "Gwinea Równikowa",
         "countryNameRU": "Экваториальная Гвинея",
@@ -598,8 +598,8 @@
         "hotelTipFinalUSD": "NoInfo",
         "driverTipInitial": "NoInfo",
         "driverTipLimit": "NoInfo"
-   },
-   {
+    },
+    {
         "countryNameEN": "Eritrea",
         "countryNamePL": "Erytrea",
         "countryNameRU": "Эритрея",
@@ -613,8 +613,8 @@
         "hotelTipFinalUSD": "NoInfo",
         "driverTipInitial": "NoInfo",
         "driverTipLimit": "NoInfo"
-   },
-   {
+    },
+    {
         "countryNameEN": "Estonia",
         "countryNamePL": "Estonia",
         "countryNameRU": "Эстония",
@@ -628,8 +628,8 @@
         "hotelTipFinalUSD": "3.00",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "France",
         "countryNamePL": "Francja",
         "countryNameRU": "Франция",
@@ -643,8 +643,8 @@
         "hotelTipFinalUSD": "2.00",
         "driverTipInitial": "10.00",
         "driverTipLimit": "10.00"
-   },
-   {
+    },
+    {
         "countryNameEN": "Gabon",
         "countryNamePL": "Gabon",
         "countryNameRU": "Габон",
@@ -658,8 +658,8 @@
         "hotelTipFinalUSD": "NoInfo",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "Greece",
         "countryNamePL": "Grecja",
         "countryNameRU": "Греция",
@@ -673,23 +673,23 @@
         "hotelTipFinalUSD": "1.00",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
-       "countryNameEN": "Guatemala",
-       "countryNamePL": "Gwatemala",
-       "countryNameRU": "Гватемала",
-       "continentEN": "North America",
-       "continentPL": "Ameryka Północna",
-       "continentRU": "Северная Америка",
-       "countryCode": "GT",
-       "restaurantTipInitial": "10.00",
-       "restaurantTipFinal": "10.00",
-       "hotelTipInitialUSD": "1.00",
-       "hotelTipFinalUSD": "2.00",
-       "driverTipInitial": "RoundUp",
-       "driverTipLimit": "RoundUp"
-  },
-   {
+    },
+    {
+        "countryNameEN": "Guatemala",
+        "countryNamePL": "Gwatemala",
+        "countryNameRU": "Гватемала",
+        "continentEN": "North America",
+        "continentPL": "Ameryka Północna",
+        "continentRU": "Северная Америка",
+        "countryCode": "GT",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "RoundUp",
+        "driverTipLimit": "RoundUp"
+    },
+    {
         "countryNameEN": "Hungary",
         "countryNamePL": "Węgry",
         "countryNameRU": "Венгрия",
@@ -703,8 +703,8 @@
         "hotelTipFinalUSD": "1.50",
         "driverTipInitial": "10.00",
         "driverTipLimit": "10.00"
-   },
-   {
+    },
+    {
         "countryNameEN": "Ireland",
         "countryNamePL": "Irlandia",
         "countryNameRU": "Ирландия",
@@ -718,8 +718,8 @@
         "hotelTipFinalUSD": "2.00",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "Italy",
         "countryNamePL": "Włochy",
         "countryNameRU": "Италия",
@@ -733,8 +733,8 @@
         "hotelTipFinalUSD": "5.00",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "Kenya",
         "countryNamePL": "Kenia",
         "countryNameRU": "Кения",
@@ -748,8 +748,8 @@
         "hotelTipFinalUSD": "5.00",
         "driverTipInitial": "RoundUp",
         "driverTipLimit": "RoundUp"
-   },
-   {
+    },
+    {
         "countryNameEN": "Kuwait",
         "countryNamePL": "Kuwejt",
         "countryNameRU": "Кувейт",
@@ -763,8 +763,8 @@
         "hotelTipFinalUSD": "1.80",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   },
-   {
+    },
+    {
         "countryNameEN": "Latvia",
         "countryNamePL": "Łotwa",
         "countryNameRU": "Латвия",
@@ -778,5 +778,1295 @@
         "hotelTipFinalUSD": "NoTip",
         "driverTipInitial": "NoTip",
         "driverTipLimit": "NoTip"
-   }
+    },
+    {
+        "countryNameEN": "Lebanon",
+        "countryNamePL": "Liban",
+        "countryNameRU": "Ливан",
+        "continentEN": "Middle East and Central Asia",
+        "continentPL": "Bliski Wschód i Azja Środkowa",
+        "continentRU": "Ближний Восток и Центральная Азия",
+        "countryCode": "LB",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "NoInfo",
+        "hotelTipFinalUSD": "NoInfo",
+        "driverTipInitial": "NoInfo",
+        "driverTipLimit": "NoInfo"
+    },
+    {
+        "countryNameEN": "Latvia",
+        "countryNamePL": "Łotwa",
+        "countryNameRU": "Латвия",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "LV",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Mongolia",
+        "countryNamePL": "Mongolia",
+        "countryNameRU": "Монголия",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "MN",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "0.30",
+        "hotelTipFinalUSD": "0.60",
+        "driverTipInitial": "NoInfo",
+        "driverTipLimit": "NoInfo"
+    },
+    {
+        "countryNameEN": "Montenegro",
+        "countryNamePL": "Czarnogóra",
+        "countryNameRU": "Черногория",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "ME",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "2.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Morocco",
+        "countryNamePL": "Maroko",
+        "countryNameRU": "Марокко",
+        "continentEN": "Africa",
+        "continentPL": "Afryka",
+        "continentRU": "Африка",
+        "countryCode": "MA",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "RoundUp",
+        "driverTipLimit": "RoundUp"
+    },
+    {
+        "countryNameEN": "Myanmar",
+        "countryNamePL": "Myanmar",
+        "countryNameRU": "Мьянма",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "MM",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "3.00",
+        "driverTipInitial": "5.00",
+        "driverTipLimit": "10.00"
+    },
+    {
+        "countryNameEN": "Namibia",
+        "countryNamePL": "Namibia",
+        "countryNameRU": "Намибия",
+        "continentEN": "Africa",
+        "continentPL": "Afryka",
+        "continentRU": "Африка",
+        "countryCode": "NA",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "0.50",
+        "hotelTipFinalUSD": "1.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Nicaragua",
+        "countryNamePL": "Nikaragua",
+        "countryNameRU": "Никарагуа",
+        "continentEN": "North America",
+        "continentPL": "Ameryka Północna",
+        "continentRU": "Северная Америка",
+        "countryCode": "NI",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Oman",
+        "countryNamePL": "Oman",
+        "countryNameRU": "Оман",
+        "continentEN": "Middle East and Central Asia",
+        "continentPL": "Bliski Wschód i Azja Środkowa",
+        "continentRU": "Ближний Восток и Центральная Азия",
+        "countryCode": "OM",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "2.50",
+        "hotelTipFinalUSD": "2.50",
+        "driverTipInitial": "NoInfo",
+        "driverTipLimit": "NoInfo"
+    },
+    {
+        "countryNameEN": "Palestinian Territories",
+        "countryNamePL": "Terytoria Palestyńskie",
+        "countryNameRU": "Территория Палестины",
+        "continentEN": "Middle East and Central Asia",
+        "continentPL": "Bliski Wschód i Azja Środkowa",
+        "continentRU": "Ближний Восток и Центральная Азия",
+        "countryCode": "PS",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "4.00",
+        "hotelTipFinalUSD": "4.00",
+        "driverTipInitial": "15.00",
+        "driverTipLimit": "20.00"
+    },
+    {
+        "countryNameEN": "Panama",
+        "countryNamePL": "Panama",
+        "countryNameRU": "Панама",
+        "continentEN": "North America",
+        "continentPL": "Ameryka Północna",
+        "continentRU": "Северная Америка",
+        "countryCode": "PA",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Paraguay",
+        "countryNamePL": "Paragwaj",
+        "countryNameRU": "Парагвай",
+        "continentEN": "North America",
+        "continentPL": "Ameryka Północna",
+        "continentRU": "Северная Америка",
+        "countryCode": "PY",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "2.00",
+        "hotelTipFinalUSD": "5.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Peru",
+        "countryNamePL": "Peru",
+        "countryNameRU": "Перу",
+        "continentEN": "North America",
+        "continentPL": "Ameryka Północna",
+        "continentRU": "Северная Америка",
+        "countryCode": "PE",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "1.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Philippines",
+        "countryNamePL": "Filipiny",
+        "countryNameRU": "Филиппины",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "PH",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "RoundUp",
+        "driverTipLimit": "RoundUp"
+    },
+    {
+        "countryNameEN": "Portugal",
+        "countryNamePL": "Portugalia",
+        "countryNameRU": "Португалия",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "PT",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "10.00",
+        "driverTipLimit": "10.00"
+    },
+    {
+        "countryNameEN": "Romania",
+        "countryNamePL": "Rumunia",
+        "countryNameRU": "Румыния",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "RO",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "10.00",
+        "driverTipLimit": "10.00"
+    },
+    {
+        "countryNameEN": "Senegal",
+        "countryNamePL": "Senegal",
+        "countryNameRU": "Сенегал",
+        "continentEN": "Africa",
+        "continentPL": "Afryka",
+        "continentRU": "Африка",
+        "countryCode": "SN",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "2.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Slovakia",
+        "countryNamePL": "Słowacja",
+        "countryNameRU": "Словакия",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "SK",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "RoundUp",
+        "driverTipLimit": "RoundUp"
+    },
+    {
+        "countryNameEN": "Slovenia",
+        "countryNamePL": "Słowenia",
+        "countryNameRU": "Словения",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "SI",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "South Africa",
+        "countryNamePL": "Afryka Południowa",
+        "countryNameRU": "ЮАР",
+        "continentEN": "Africa",
+        "continentPL": "Afryka",
+        "continentRU": "Африка",
+        "countryCode": "ZA",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "10.00",
+        "driverTipLimit": "10.00"
+    },
+    {
+        "countryNameEN": "Spain",
+        "countryNamePL": "Hiszpania",
+        "countryNameRU": "Испания",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "ES",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "2.00",
+        "hotelTipFinalUSD": "5.00",
+        "driverTipInitial": "10.00",
+        "driverTipLimit": "10.00"
+    },
+    {
+        "countryNameEN": "Sri Lanka",
+        "countryNamePL": "Sri Lanka",
+        "countryNameRU": "Шри-Ланка",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "LK",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "0.50",
+        "hotelTipFinalUSD": "1.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Swaziland (Eswatini)",
+        "countryNamePL": "Suazi (Eswatini)",
+        "countryNameRU": "Свазиленд (Эсватини)",
+        "continentEN": "Africa",
+        "continentPL": "Afryka",
+        "continentRU": "Африка",
+        "countryCode": "SZ",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "NoInfo",
+        "hotelTipFinalUSD": "NoInfo",
+        "driverTipInitial": "NoInfo",
+        "driverTipLimit": "NoInfo"
+    },
+    {
+        "countryNameEN": "Sweden",
+        "countryNamePL": "Szwecja",
+        "countryNameRU": "Швеция",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "SE",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "RoundUp",
+        "driverTipLimit": "RoundUp"
+    },
+    {
+        "countryNameEN": "Tanzania",
+        "countryNamePL": "Tanzania",
+        "countryNameRU": "Танзания",
+        "continentEN": "Africa",
+        "continentPL": "Afryka",
+        "continentRU": "Африка",
+        "countryCode": "TZ",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Tunisia",
+        "countryNamePL": "Tunezja",
+        "countryNameRU": "Тунис",
+        "continentEN": "Africa",
+        "continentPL": "Afryka",
+        "continentRU": "Африка",
+        "countryCode": "TN",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "NoInfo",
+        "hotelTipFinalUSD": "NoInfo",
+        "driverTipInitial": "NoInfo",
+        "driverTipLimit": "NoInfo"
+    },
+    {
+        "countryNameEN": "Turkey",
+        "countryNamePL": "Turcja",
+        "countryNameRU": "Турция",
+        "continentEN": "Middle East and Central Asia",
+        "continentPL": "Bliski Wschód i Azja Środkowa",
+        "continentRU": "Ближний Восток и Центральная Азия",
+        "countryCode": "TR",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "RoundUp",
+        "driverTipLimit": "RoundUp"
+    },
+    {
+        "countryNameEN": "Uganda",
+        "countryNamePL": "Uganda",
+        "countryNameRU": "Уганда",
+        "continentEN": "Africa",
+        "continentPL": "Afryka",
+        "continentRU": "Африка",
+        "countryCode": "UG",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "NoInfo",
+        "hotelTipFinalUSD": "NoInfo",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Ukraine",
+        "countryNamePL": "Ukraina",
+        "countryNameRU": "Украина",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "UA",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "1.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Uruguay",
+        "countryNamePL": "Urugwaj",
+        "countryNameRU": "Уругвай",
+        "continentEN": "South America",
+        "continentPL": "Ameryka Południowa",
+        "continentRU": "Южная Америка",
+        "countryCode": "UY",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "1.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Zambia",
+        "countryNamePL": "Zambia",
+        "countryNameRU": "Замбия",
+        "continentEN": "Africa",
+        "continentPL": "Afryka",
+        "continentRU": "Африка",
+        "countryCode": "ZM",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "1.00",
+        "driverTipInitial": "10.00",
+        "driverTipLimit": "10.00"
+    },
+    {
+        "countryNameEN": "Zimbabwe",
+        "countryNamePL": "Zimbabwe",
+        "countryNameRU": "Зимбабве",
+        "continentEN": "Africa",
+        "continentPL": "Afryka",
+        "continentRU": "Африка",
+        "countryCode": "ZW",
+        "restaurantTipInitial": "10.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "5.00",
+        "driverTipInitial": "NoInfo",
+        "driverTipLimit": "NoInfo"
+    },
+    {
+        "countryNameEN": "Austria",
+        "countryNamePL": "Austria",
+        "countryNameRU": "Австрия",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "AT",
+        "restaurantTipInitial": "5.00",
+        "restaurantTipFinal": "15.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "10.00",
+        "driverTipLimit": "10.00"
+    },
+    {
+        "countryNameEN": "Lithuania",
+        "countryNamePL": "Litwa",
+        "countryNameRU": "Литва",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "LT",
+        "restaurantTipInitial": "5.00",
+        "restaurantTipFinal": "15.00",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Belarus",
+        "countryNamePL": "Białoruś",
+        "countryNameRU": "Беларусь",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "BY",
+        "restaurantTipInitial": "5.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Gambia",
+        "countryNamePL": "Gambia",
+        "countryNameRU": "Гамбия",
+        "continentEN": "Africa",
+        "continentPL": "Afryka",
+        "continentRU": "Африка",
+        "countryCode": "GM",
+        "restaurantTipInitial": "7.50",
+        "restaurantTipFinal": "7.50",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "India",
+        "countryNamePL": "Indie",
+        "countryNameRU": "Индия",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "IN",
+        "restaurantTipInitial": "7.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "RoundUp",
+        "driverTipLimit": "RoundUp"
+    },
+    {
+        "countryNameEN": "Ethiopia",
+        "countryNamePL": "Etiopia",
+        "countryNameRU": "Эфиопия",
+        "continentEN": "Africa",
+        "continentPL": "Afryka",
+        "continentRU": "Африка",
+        "countryCode": "ET",
+        "restaurantTipInitial": "5.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "0.50",
+        "hotelTipFinalUSD": "0.50",
+        "driverTipInitial": "NoInfo",
+        "driverTipLimit": "NoInfo"
+    },
+    {
+        "countryNameEN": "Germany",
+        "countryNamePL": "Niemcy",
+        "countryNameRU": "Германия",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "DE",
+        "restaurantTipInitial": "5.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "3.00",
+        "hotelTipFinalUSD": "5.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Ghana",
+        "countryNamePL": "Ghana",
+        "countryNameRU": "Гана",
+        "continentEN": "Africa",
+        "continentPL": "Afryka",
+        "continentRU": "Африка",
+        "countryCode": "GH",
+        "restaurantTipInitial": "5.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "0.10",
+        "hotelTipFinalUSD": "0.20",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Indonesia",
+        "countryNamePL": "Indonezja",
+        "countryNameRU": "Индонезия",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "ID",
+        "restaurantTipInitial": "5.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Jordan",
+        "countryNamePL": "Jordania",
+        "countryNameRU": "Иордания",
+        "continentEN": "Middle East and Central Asia",
+        "continentPL": "Bliski Wschód i Azja Środkowa",
+        "continentRU": "Ближний Восток и Центральная Азия",
+        "countryCode": "JO",
+        "restaurantTipInitial": "5.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "3.00",
+        "hotelTipFinalUSD": "7.00",
+        "driverTipInitial": "RoundUp",
+        "driverTipLimit": "RoundUp"
+    },
+    {
+        "countryNameEN": "Madagascar",
+        "countryNamePL": "Madagaskar",
+        "countryNameRU": "Мадагаскар",
+        "continentEN": "Africa",
+        "continentPL": "Afryka",
+        "continentRU": "Африка",
+        "countryCode": "MG",
+        "restaurantTipInitial": "5.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "0.50",
+        "hotelTipFinalUSD": "1.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Netherlands",
+        "countryNamePL": "Holandia",
+        "countryNameRU": "Нидерланды",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "NL",
+        "restaurantTipInitial": "5.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Turkmenistan",
+        "countryNamePL": "Turkmenia",
+        "countryNameRU": "Туркменистан",
+        "continentEN": "Middle East and Central Asia",
+        "continentPL": "Bliski Wschód i Azja Środkowa",
+        "continentRU": "Ближний Восток и Центральная Азия",
+        "countryCode": "TM",
+        "restaurantTipInitial": "5.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "NoInfo",
+        "hotelTipFinalUSD": "NoInfo",
+        "driverTipInitial": "NoInfo",
+        "driverTipLimit": "NoInfo"
+    },
+    {
+        "countryNameEN": "Venezuela",
+        "countryNamePL": "Wenezuela",
+        "countryNameRU": "Венесуэла",
+        "continentEN": "South America",
+        "continentPL": "Ameryka Południowa",
+        "continentRU": "Южная Америка",
+        "countryCode": "VE",
+        "restaurantTipInitial": "5.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "1.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Vietnam",
+        "countryNamePL": "Wietnam",
+        "countryNameRU": "Вьетнам",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "VN",
+        "restaurantTipInitial": "5.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "RoundUp",
+        "driverTipLimit": "RoundUp"
+    },
+    {
+        "countryNameEN": "Bangladesh",
+        "countryNamePL": "Bangladesz",
+        "countryNameRU": "Бангладеш",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "BD",
+        "restaurantTipInitial": "2.00",
+        "restaurantTipFinal": "10.00",
+        "hotelTipInitialUSD": "0.20",
+        "hotelTipFinalUSD": "0.30",
+        "driverTipInitial": "RoundUp",
+        "driverTipLimit": "RoundUp"
+    },
+    {
+        "countryNameEN": "Australia",
+        "countryNamePL": "Australia",
+        "countryNameRU": "Австралия",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "AU",
+        "restaurantTipInitial": "NoTip",
+        "restaurantTipFinal": "NoTip",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Cambodia",
+        "countryNamePL": "Kambodża",
+        "countryNameRU": "Камбоджа",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "KH",
+        "restaurantTipInitial": "NoTip",
+        "restaurantTipFinal": "NoTip",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "China",
+        "countryNamePL": "Chiny",
+        "countryNameRU": "Китай",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "CN",
+        "restaurantTipInitial": "NoTip",
+        "restaurantTipFinal": "NoTip",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Costa Rica",
+        "countryNamePL": "Kostaryka",
+        "countryNameRU": "Коста-Рика",
+        "continentEN": "North America",
+        "continentPL": "Ameryka Północna",
+        "continentRU": "Северная Америка",
+        "countryCode": "CR",
+        "restaurantTipInitial": "NoTip",
+        "restaurantTipFinal": "NoTip",
+        "hotelTipInitialUSD": "2.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "RoundUp",
+        "driverTipLimit": "RoundUp"
+    },
+    {
+        "countryNameEN": "Denmark",
+        "countryNamePL": "Dania",
+        "countryNameRU": "Дания",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "DK",
+        "restaurantTipInitial": "NoTip",
+        "restaurantTipFinal": "NoTip",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Djibouti",
+        "countryNamePL": "Dżibuti",
+        "countryNameRU": "Джибути",
+        "continentEN": "Africa",
+        "continentPL": "Afryka",
+        "continentRU": "Африка",
+        "countryCode": "DJ",
+        "restaurantTipInitial": "NoTip",
+        "restaurantTipFinal": "NoTip",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoInfo",
+        "driverTipLimit": "NoInfo"
+    },
+    {
+        "countryNameEN": "Fiji",
+        "countryNamePL": "Fidżi",
+        "countryNameRU": "Фиджи",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "FJ",
+        "restaurantTipInitial": "NoTip",
+        "restaurantTipFinal": "NoTip",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Japan",
+        "countryNamePL": "Japonia",
+        "countryNameRU": "Япония",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "JP",
+        "restaurantTipInitial": "NoTip",
+        "restaurantTipFinal": "NoTip",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Kosovo",
+        "countryNamePL": "Kosowo",
+        "countryNameRU": "Косово",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "XK",
+        "restaurantTipInitial": "NoTip",
+        "restaurantTipFinal": "NoTip",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Moldova",
+        "countryNamePL": "Moldova",
+        "countryNameRU": "Молдова",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "MD",
+        "restaurantTipInitial": "NoTip",
+        "restaurantTipFinal": "NoTip",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "New Zealand",
+        "countryNamePL": "Nowa Zelandia",
+        "countryNameRU": "Новая Зеландия",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "NZ",
+        "restaurantTipInitial": "NoTip",
+        "restaurantTipFinal": "NoTip",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Nigeria",
+        "countryNamePL": "Nigeria",
+        "countryNameRU": "Нигерия",
+        "continentEN": "Africa",
+        "continentPL": "Afryka",
+        "continentRU": "Африка",
+        "countryCode": "NG",
+        "restaurantTipInitial": "NoTip",
+        "restaurantTipFinal": "NoTip",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "South Korea",
+        "countryNamePL": "Korea Południowa",
+        "countryNameRU": "Южная Корея",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "KR",
+        "restaurantTipInitial": "NoTip",
+        "restaurantTipFinal": "NoTip",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Taiwan",
+        "countryNamePL": "Tajwan",
+        "countryNameRU": "Тайвань",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "TW",
+        "restaurantTipInitial": "NoTip",
+        "restaurantTipFinal": "NoTip",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "1.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Tajikistan",
+        "countryNamePL": "Tadżykistan",
+        "countryNameRU": "Таджикистан",
+        "continentEN": "Middle East and Central Asia",
+        "continentPL": "Bliski Wschód i Azja Środkowa",
+        "continentRU": "Ближний Восток и Центральная Азия",
+        "countryCode": "TJ",
+        "restaurantTipInitial": "NoTip",
+        "restaurantTipFinal": "NoTip",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Vanuatu",
+        "countryNamePL": "Vanuatu",
+        "countryNameRU": "Вануату",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "VU",
+        "restaurantTipInitial": "NoTip",
+        "restaurantTipFinal": "NoTip",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Azerbaijan",
+        "countryNamePL": "Azerbejdżan",
+        "countryNameRU": "Азербайджан",
+        "continentEN": "Middle East and Central Asia",
+        "continentPL": "Bliski Wschód i Azja Środkowa",
+        "continentRU": "Ближний Восток и Центральная Азия",
+        "countryCode": "AZ",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Bahamas",
+        "countryNamePL": "Bahamy",
+        "countryNameRU": "Багамы",
+        "continentEN": "North America",
+        "continentPL": "Ameryka Północna",
+        "continentRU": "Северная Америка",
+        "countryCode": "BS",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "RoundUp",
+        "driverTipLimit": "RoundUp"
+    },
+    {
+        "countryNameEN": "Belgium",
+        "countryNamePL": "Belgia",
+        "countryNameRU": "Бельгия",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "BE",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Bhutan",
+        "countryNamePL": "Bhutan",
+        "countryNameRU": "Бутан",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "BT",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoInfo",
+        "driverTipLimit": "NoInfo"
+    },
+    {
+        "countryNameEN": "Brazil",
+        "countryNamePL": "Brazylia",
+        "countryNameRU": "Бразилия",
+        "continentEN": "South America",
+        "continentPL": "Ameryka Południowa",
+        "continentRU": "Южная Америка",
+        "countryCode": "BR",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Brunei Darussalam",
+        "countryNamePL": "Brunei Darussalam",
+        "countryNameRU": "Бруней-Даруссалам",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "BN",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Chile",
+        "countryNamePL": "Chile",
+        "countryNameRU": "Чили",
+        "continentEN": "South America",
+        "continentPL": "Ameryka Południowa",
+        "continentRU": "Южная Америка",
+        "countryCode": "CL",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Colombia",
+        "countryNamePL": "Kolumbia",
+        "countryNameRU": "Колумбия",
+        "continentEN": "South America",
+        "continentPL": "Ameryka Południowa",
+        "continentRU": "Южная Америка",
+        "countryCode": "CO",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Ecuador",
+        "countryNamePL": "Ekwador",
+        "countryNameRU": "Эквадор",
+        "continentEN": "South America",
+        "continentPL": "Ameryka Południowa",
+        "continentRU": "Южная Америка",
+        "countryCode": "EC",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "1.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "El Salvador",
+        "countryNamePL": "Salwador",
+        "countryNameRU": "Сальвадор",
+        "continentEN": "North America",
+        "continentPL": "Ameryka Północna",
+        "continentRU": "Северная Америка",
+        "countryCode": "SV",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "NoInfo",
+        "hotelTipFinalUSD": "NoInfo",
+        "driverTipInitial": "NoInfo",
+        "driverTipLimit": "NoInfo"
+    },
+    {
+        "countryNameEN": "Finland",
+        "countryNamePL": "Finlandia",
+        "countryNameRU": "Финляндия",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "FI",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "2.00",
+        "hotelTipFinalUSD": "5.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Georgia",
+        "countryNamePL": "Gruzja",
+        "countryNameRU": "Грузия",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "GE",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "0.50",
+        "hotelTipFinalUSD": "1.50",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Iceland",
+        "countryNamePL": "Islandia",
+        "countryNameRU": "Исландия",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "IS",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Iran",
+        "countryNamePL": "Iran",
+        "countryNameRU": "Иран",
+        "continentEN": "Middle East and Central Asia",
+        "continentPL": "Bliski Wschód i Azja Środkowa",
+        "continentRU": "Ближний Восток и Центральная Азия",
+        "countryCode": "IR",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "2.00",
+        "hotelTipFinalUSD": "3.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Kazakhstan",
+        "countryNamePL": "Kazachstan",
+        "countryNameRU": "Казахстан",
+        "continentEN": "Middle East and Central Asia",
+        "continentPL": "Bliski Wschód i Azja Środkowa",
+        "continentRU": "Ближний Восток и Центральная Азия",
+        "countryCode": "KZ",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "NoInfo",
+        "hotelTipFinalUSD": "NoInfo",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Luxembourg",
+        "countryNamePL": "Luksemburg",
+        "countryNameRU": "Люксембург",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "LU",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "1.50",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Malaysia",
+        "countryNamePL": "Malezja",
+        "countryNameRU": "Малайзия",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "MY",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "NoTip",
+        "hotelTipFinalUSD": "NoTip",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Pakistan",
+        "countryNamePL": "Pakistan",
+        "countryNameRU": "Пакистан",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "PK",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "NoInfo",
+        "hotelTipFinalUSD": "NoInfo",
+        "driverTipInitial": "NoInfo",
+        "driverTipLimit": "NoInfo"
+    },
+    {
+        "countryNameEN": "Switzerland",
+        "countryNamePL": "Szwajcaria",
+        "countryNameRU": "Швейцария",
+        "continentEN": "Europe",
+        "continentPL": "Europa",
+        "continentRU": "Европа",
+        "countryCode": "CH",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Thailand",
+        "countryNamePL": "Tajlandia",
+        "countryNameRU": "Таиланд",
+        "continentEN": "Rest of Asia and Oceania",
+        "continentPL": "Reszta Azji i Oceanii",
+        "continentRU": "Остальная Азия и Океания",
+        "countryCode": "TH",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "0.50",
+        "hotelTipFinalUSD": "1.00",
+        "driverTipInitial": "RoundUp",
+        "driverTipLimit": "RoundUp"
+    },
+    {
+        "countryNameEN": "Trinidad and Tobago",
+        "countryNamePL": "Trynidad i Tobago",
+        "countryNameRU": "Тринидад и Тобаго",
+        "continentEN": "North America",
+        "continentPL": "Ameryka Północna",
+        "continentRU": "Северная Америка",
+        "countryCode": "TT",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "1.00",
+        "hotelTipFinalUSD": "2.00",
+        "driverTipInitial": "NoTip",
+        "driverTipLimit": "NoTip"
+    },
+    {
+        "countryNameEN": "Uzbekistan",
+        "countryNamePL": "Uzbekistan",
+        "countryNameRU": "Узбекистан",
+        "continentEN": "Middle East and Central Asia",
+        "continentPL": "Bliski Wschód i Azja Środkowa",
+        "continentRU": "Ближний Восток и Центральная Азия",
+        "countryCode": "UZ",
+        "restaurantTipInitial": "ServiceIncluded",
+        "restaurantTipFinal": "ServiceIncluded",
+        "hotelTipInitialUSD": "NoInfo",
+        "hotelTipFinalUSD": "NoInfo",
+        "driverTipInitial": "NoInfo",
+        "driverTipLimit": "NoInfo"
+    }
 ]
