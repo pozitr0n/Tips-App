@@ -185,12 +185,119 @@ struct TipGuideSwiftUIView: View {
                     Section(header: Text("Restaurant.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
                         List(countryInfo.filteredCountriesWithTips) { currentCountry in
                             
-                            VStack {
+                            if currentCountry.restaurantTipInitial != "NoTip" &&
+                                currentCountry.restaurantTipInitial != "ServiceIncluded" &&
+                                currentCountry.restaurantTipInitial != "NoInfo" {
+                            
+                                if currentCountry.restaurantTipInitial == currentCountry.restaurantTipFinal {
                                 
-                                Text(currentCountry.restaurantTipInitial)
-                                    .padding(.trailing)
-                                Text(currentCountry.restaurantTipFinal)
-                                    .padding(.trailing)
+                                    VStack {
+                                        
+                                        if currentLanguageCode == "en" {
+                                            Text("Restaurant tips are usually \(currentCountry.restaurantTipInitial)% of the order price")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "pl" {
+                                            Text("Napiwki restauracyjne wynoszą zazwyczaj \(currentCountry.restaurantTipInitial)% ceny zamówienia")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "ru" {
+                                            Text("Чаевые в ресторане обычно составляют \(currentCountry.restaurantTipInitial)% от стоимости заказа")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                    }
+                                    
+                                } else {
+                                
+                                    VStack {
+                                        
+                                        if currentLanguageCode == "en" {
+                                            Text("Restaurant tips typically range from \(currentCountry.restaurantTipInitial)% to \(currentCountry.restaurantTipFinal)% of the order price")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "pl" {
+                                            Text("Napiwki dla restauracji zazwyczaj wahają się od \(currentCountry.restaurantTipInitial)% do \(currentCountry.restaurantTipFinal)% ceny zamówienia")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "ru" {
+                                            Text("Чаевые в ресторане обычно составляют от \(currentCountry.restaurantTipInitial)% до \(currentCountry.restaurantTipFinal)% от стоимости заказа")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                    }
+                                    
+                                }
+                                
+                            } else {
+                                
+                                if currentCountry.restaurantTipInitial == "NoTip" {
+                                    VStack {
+                                        
+                                        if currentLanguageCode == "en" {
+                                            Text("In this country, it is not customary to leave tips for restaurants")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "pl" {
+                                            Text("W tym kraju nie ma zwyczaju zostawiania restauracji napiwków")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "ru" {
+                                            Text("В этой стране не принято оставлять чаевые ресторанам")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                    }
+                                    
+                                }
+                                
+                                if currentCountry.restaurantTipInitial == "ServiceIncluded" {
+                                    VStack {
+                                        
+                                        if currentLanguageCode == "en" {
+                                            Text("In this country, everything is included in the price of the service (restaurants)")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "pl" {
+                                            Text("W tym kraju wszystko jest wliczone w cenę usługi (restauracje)")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "ru" {
+                                            Text("В этой стране все включено в стоимость услуги (рестораны)")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                    }
+                                }
+                                
+                                if currentCountry.restaurantTipInitial == "NoInfo" {
+                                    VStack {
+                                        
+                                        if currentLanguageCode == "en" {
+                                            Text("There is no reliable and accurate information on the amount of tips for restaurants located in this country")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "pl" {
+                                            Text("Nie ma wiarygodnych i dokładnych informacji na temat wysokości napiwków dla restauracji znajdujących się w tym kraju")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "ru" {
+                                            Text("Достоверной и точной информации о сумме чаевых в ресторанах, расположенных в этой стране, нет")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                    }
+                                }
                                 
                             }
                             
