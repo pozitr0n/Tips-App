@@ -51,6 +51,30 @@ final class Currencies {
         
     }
     
+    func convertAmountToAnotherCurrency(_ sumByString: String) -> String {
+        
+        var finalResult: String = ""
+        
+        guard let sumByDouble = Double(sumByString) else {
+            return finalResult
+        }
+        
+        let converted = getConvertedAmount(sumByDouble)
+
+        finalResult = String(format: "%.2f", sumByDouble)
+
+        return finalResult
+        
+    }
+    
+    func getConvertedAmount(_ sumByDouble: Double) -> Double {
+        
+        let currentCodeOfCurrency = CurrentCurrency.shared.currentCurrency
+        
+        return 0.0
+        
+    }
+    
 }
 
 class CurrentPercentage {

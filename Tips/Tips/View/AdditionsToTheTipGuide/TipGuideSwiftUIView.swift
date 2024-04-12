@@ -307,12 +307,99 @@ struct TipGuideSwiftUIView: View {
                     Section(header: Text("Hotel.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
                         List(countryInfo.filteredCountriesWithTips) { currentCountry in
                             
-                            VStack {
+                            if currentCountry.hotelTipInitialUSD != "NoTip" &&
+                                currentCountry.hotelTipInitialUSD != "NoInfo" {
                                 
-                                Text(currentCountry.hotelTipInitialUSD)
-                                    .padding(.trailing)
-                                Text(currentCountry.hotelTipFinalUSD)
-                                    .padding(.trailing)
+                                let hotelTipCurrentCurrInitial: String = Currencies().convertAmountToAnotherCurrency(currentCountry.hotelTipInitialUSD)
+                                let hotelTipCurrentCurrFinal: String = Currencies().convertAmountToAnotherCurrency(currentCountry.hotelTipFinalUSD)
+                                
+                                if currentCountry.hotelTipInitialUSD == currentCountry.hotelTipFinalUSD {
+      
+                                    VStack {
+                                        
+                                        if currentLanguageCode == "en" {
+                                            Text("The approximate tip amount in hotels in this country is: $\(currentCountry.hotelTipInitialUSD) or \(hotelTipCurrentCurrInitial) \(CurrentCurrency.shared.currentCurrency)")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "pl" {
+                                            Text("Przybliżona wysokość napiwku w hotelach w tym kraju wynosi: \(currentCountry.hotelTipInitialUSD) dolarów lub \(hotelTipCurrentCurrInitial) \(CurrentCurrency.shared.currentCurrency)")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "ru" {
+                                            Text("Ориентировочная сумма чаевых в отелях данной страны составляет: $\(currentCountry.hotelTipInitialUSD) или \(hotelTipCurrentCurrInitial) \(CurrentCurrency.shared.currentCurrency)")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                    }
+                                    
+                                } else {
+                                
+                                    VStack {
+                                        
+                                        if currentLanguageCode == "en" {
+                                            Text("The approximate tip amount in hotels in this country ranges from $\(currentCountry.hotelTipInitialUSD) to $\(currentCountry.hotelTipFinalUSD) (from \(hotelTipCurrentCurrInitial) \(CurrentCurrency.shared.currentCurrency) to \(hotelTipCurrentCurrFinal) \(CurrentCurrency.shared.currentCurrency))")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "pl" {
+                                            Text("Przybliżona wysokość napiwku w hotelach w tym kraju waha się od \(currentCountry.hotelTipInitialUSD) dolarów do $\(currentCountry.hotelTipFinalUSD) dolarów (od \(hotelTipCurrentCurrInitial) \(CurrentCurrency.shared.currentCurrency) do \(hotelTipCurrentCurrFinal) \(CurrentCurrency.shared.currentCurrency))")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "ru" {
+                                            Text("Ориентировочная сумма чаевых в отелях данной страны находится в диапазоне от $\(currentCountry.hotelTipInitialUSD) до $\(currentCountry.hotelTipFinalUSD) (от \(hotelTipCurrentCurrInitial) \(CurrentCurrency.shared.currentCurrency) до \(hotelTipCurrentCurrFinal) \(CurrentCurrency.shared.currentCurrency))")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                    }
+                                    
+                                }
+                                
+                            } else {
+                                
+                                if currentCountry.hotelTipInitialUSD == "NoTip" {
+                                    VStack {
+                                        
+                                        if currentLanguageCode == "en" {
+                                            Text("In this country, it is not customary to leave tips for hotels")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "pl" {
+                                            Text("W tym kraju nie jest zwyczajem dawanie napiwków w hotelach")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "ru" {
+                                            Text("В этой стране не принято оставлять чаевые в отелях")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                    }
+                                }
+                                
+                                if currentCountry.hotelTipInitialUSD == "NoInfo" {
+                                    VStack {
+                                        
+                                        if currentLanguageCode == "en" {
+                                            Text("There is no reliable and accurate information on the amount of tips for hotels located in this country")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "pl" {
+                                            Text("Nie ma wiarygodnych i dokładnych informacji na temat wysokości napiwków dla hoteli w tym kraju")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "ru" {
+                                            Text("Достоверной и точной информации о сумме чаевых для отелей, расположенных в этой стране, нет")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                    }
+                                }
                                 
                             }
                             
@@ -322,12 +409,118 @@ struct TipGuideSwiftUIView: View {
                     Section(header: Text("Driver.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
                         List(countryInfo.filteredCountriesWithTips) { currentCountry in
                             
-                            VStack {
+                            if currentCountry.driverTipInitial != "NoTip" &&
+                                currentCountry.driverTipInitial != "RoundUp" &&
+                                currentCountry.driverTipInitial != "NoInfo" {
                                 
-                                Text(currentCountry.driverTipInitial)
-                                    .padding(.trailing)
-                                Text(currentCountry.driverTipLimit)
-                                    .padding(.trailing)
+                                if currentCountry.driverTipInitial == currentCountry.driverTipLimit {
+                                
+                                    VStack {
+                                        
+                                        if currentLanguageCode == "en" {
+                                            Text("Driver tips are usually \(currentCountry.driverTipInitial)% of the order price")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "pl" {
+                                            Text("Napiwki dla kierowców wynoszą zazwyczaj \(currentCountry.driverTipInitial)% ceny zamówienia")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "ru" {
+                                            Text("Чаевые водителям обычно составляют \(currentCountry.driverTipInitial)% от стоимости заказа")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                    }
+                                    
+                                } else {
+                                
+                                    VStack {
+                                        
+                                        if currentLanguageCode == "en" {
+                                            Text("Driver tips typically range from \(currentCountry.driverTipInitial)% to \(currentCountry.driverTipLimit)% of the order price")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "pl" {
+                                            Text("Napiwki dla kierowców zazwyczaj wahają się od \(currentCountry.driverTipInitial)% do \(currentCountry.driverTipLimit)% ceny zamówienia")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "ru" {
+                                            Text("Чаевые водителям обычно составляют от \(currentCountry.driverTipInitial)% до \(currentCountry.driverTipLimit)% от стоимости заказа")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                    }
+                                    
+                                }
+                                
+                            } else {
+                                
+                                if currentCountry.driverTipInitial == "NoTip" {
+                                    VStack {
+                                        
+                                        if currentLanguageCode == "en" {
+                                            Text("In this country, it is not customary to leave tips for drivers")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "pl" {
+                                            Text("W tym kraju nie ma zwyczaju dawania kierowcom napiwków")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "ru" {
+                                            Text("В этой стране не принято оставлять чаевые водителям")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                    }
+                                }
+                                
+                                if currentCountry.driverTipInitial == "NoInfo" {
+                                    VStack {
+                                        
+                                        if currentLanguageCode == "en" {
+                                            Text("There is no reliable and accurate information on the amount of tips for drivers located in this country")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "pl" {
+                                            Text("Nie ma wiarygodnych i dokładnych informacji na temat wysokości napiwków dla kierowców w tym kraju")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "ru" {
+                                            Text("Достоверной и точной информации о сумме чаевых для водителей, расположенных в этой стране, нет")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                    }
+                                }
+                                
+                                if currentCountry.driverTipInitial == "RoundUp" {
+                                    VStack {
+                                        
+                                        if currentLanguageCode == "en" {
+                                            Text("In this country, rounding up the order amount is calculated as a tip")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "pl" {
+                                            Text("W tym kraju zaokrąglenie kwoty zamówienia liczone jest jako napiwek")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                        if currentLanguageCode == "ru" {
+                                            Text("В этой стране округление суммы заказа в большую сторону считается чаевыми")
+                                                .padding(.trailing)
+                                        }
+                                        
+                                    }
+                                }
                                 
                             }
                             
