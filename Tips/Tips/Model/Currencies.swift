@@ -7,6 +7,15 @@
 
 import Foundation
 
+struct CurrencyExchangeRatesDataModel {
+    
+    let baseCurrency: String
+    let rateKey: String
+    let rateValue: Double
+    let currencyDate: String
+    
+}
+
 class CurrentCurrency {
     
     static let shared = CurrentCurrency()
@@ -19,6 +28,10 @@ class CurrentCurrency {
 }
 
 final class Currencies {
+    
+    func getCurrentAPI_Key() {
+        CurrentExchangeRatesDataAPI_Key.shared.currentAPI_Key = ProcessInfo.processInfo.environment["EXCHANGE_RATES_API_KEY"] ?? ""
+    }
     
     func getDefaultCurrencyByLocale() -> String {
         
@@ -60,8 +73,7 @@ final class Currencies {
         }
         
         let converted = getConvertedAmount(sumByDouble)
-
-        finalResult = String(format: "%.2f", sumByDouble)
+        finalResult = String(format: "%.2f", converted)
 
         return finalResult
         
@@ -70,8 +82,34 @@ final class Currencies {
     func getConvertedAmount(_ sumByDouble: Double) -> Double {
         
         let currentCodeOfCurrency = CurrentCurrency.shared.currentCurrency
-        
         return 0.0
+        
+    }
+    
+}
+
+class CurrentExchangeRatesDataAPI_Key {
+    
+    static let shared = CurrentExchangeRatesDataAPI_Key()
+    
+    // Saving/getting using Keychain
+    var currentAPI_Key = ""
+    
+    private init () {}
+    
+}
+
+class ExchangeRatesDataAPI {
+    
+    private func getStringURL(_ baseCurrancy: String, _ rateKey: String) -> String {
+        return "https://api.apilayer.com/exchangerates_data/latest?symbols=\(rateKey)&base=\(baseCurrancy)"
+    }
+    
+    public func getRequestFromAPI(_ baseCurrancy: String, _ rateKey: String, _ completion: @escaping (CurrencyExchangeRatesDataModel) -> ()) {
+        
+        let currURLString = getStringURL(baseCurrancy, rateKey)
+        
+        
         
     }
     

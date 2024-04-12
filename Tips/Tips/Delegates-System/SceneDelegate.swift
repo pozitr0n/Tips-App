@@ -29,6 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         Languages().getCurrentLanguage()
         Currencies().getCurrentCurrency()
+        Currencies().getCurrentAPI_Key()
         Percentage().getCurrentPercentage()
         
         splashPresenter = SplashPresenter(scene: scene)
