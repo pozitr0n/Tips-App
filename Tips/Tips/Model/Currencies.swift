@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import Alamofire
 
-struct CurrencyExchangeRatesDataModel {
+struct CurrencyExchangeRatesDataModel: Decodable {
     
     let baseCurrency: String
     let rateKey: String
@@ -109,7 +110,16 @@ class ExchangeRatesDataAPI {
         
         let currURLString = getStringURL(baseCurrancy, rateKey)
         
+        let httpHeader = HTTPHeader(name: "apikey", value: CurrentExchangeRatesDataAPI_Key.shared.currentAPI_Key)
+        let httpHeaders = HTTPHeaders(arrayLiteral: httpHeader)
         
+        AF.request(currURLString, method: .get, headers: httpHeaders).responseDecodable(of: CurrencyExchangeRatesDataModel.self) { response in
+            
+            if let json = try? response.result.get() {
+                print(json)
+            }
+            
+        }
         
     }
     
