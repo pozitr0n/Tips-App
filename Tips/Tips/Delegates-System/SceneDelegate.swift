@@ -32,10 +32,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         Currencies().getCurrentAPI_Key()
         Percentage().getCurrentPercentage()
         
-        ExchangeRatesDataAPI().getRequestFromAPI("USD", "PLN") { cur in
-            print(cur)
-        }
-        
         splashPresenter = SplashPresenter(scene: scene)
         setupWindow(with: scene)
         initRootView()

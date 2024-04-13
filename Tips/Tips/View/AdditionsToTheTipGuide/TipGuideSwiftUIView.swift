@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Alamofire
 
 fileprivate let maximumAllowedScaleForScreen = 8.0
 
@@ -18,7 +19,9 @@ struct TipGuideSwiftUIView: View {
     @State var clickedCountry: String = ""
             
     @State var currentLanguageCode: String = Languages().languagesValuesWithCodes[CurrentLanguage.shared.currentLanguage.rawValue]!
-        
+    
+    @StateObject var exchangeRatesDataAPI = ExchangeRatesDataAPI()
+    
     var body: some View {
         
         CommonContainerForZoom {
@@ -51,7 +54,8 @@ struct TipGuideSwiftUIView: View {
                                     clickedMainPath = pathInfoData
                                     focused = true
                                     clickedCountry = clickedMainPath.id
-
+                                    exchangeRatesDataAPI.getRequestFromAPIView("USD", CurrentCurrency.shared.currentCurrency)
+                                    
                                 } else {
                                     
                                     clickedMainPath = PathOfTheInformation()
@@ -309,27 +313,69 @@ struct TipGuideSwiftUIView: View {
                             
                             if currentCountry.hotelTipInitialUSD != "NoTip" &&
                                 currentCountry.hotelTipInitialUSD != "NoInfo" {
-                                
-                                let hotelTipCurrentCurrInitial: String = Currencies().convertAmountToAnotherCurrency(currentCountry.hotelTipInitialUSD)
-                                let hotelTipCurrentCurrFinal: String = Currencies().convertAmountToAnotherCurrency(currentCountry.hotelTipFinalUSD)
-                                
+                            
                                 if currentCountry.hotelTipInitialUSD == currentCountry.hotelTipFinalUSD {
       
                                     VStack {
                                         
                                         if currentLanguageCode == "en" {
-                                            Text("The approximate tip amount in hotels in this country is: $\(currentCountry.hotelTipInitialUSD) or \(hotelTipCurrentCurrInitial) \(CurrentCurrency.shared.currentCurrency)")
+                                            Spacer()
+                                            
+                                            Text("The approximate tip amount in hotels in this country is: $\(currentCountry.hotelTipInitialUSD) or \(String(format: "%.2f", (Double(currentCountry.hotelTipInitialUSD) ?? 0.0) * exchangeRatesDataAPI._rateValue)) \(CurrentCurrency.shared.currentCurrency)")
                                                 .padding(.trailing)
+                                            
+                                            Spacer()
+                                            
+                                            Text("\(exchangeRatesDataAPI._currencyDate)")
+                                                .background(.guideBackground)
+                                                .foregroundStyle(.guideCountryBackground)
+                                                .multilineTextAlignment(.trailing)
+                                                .bold()
+                                                .font(.system(size: 12))
+                                                .clipShape(.rect(cornerRadius: 15))
+                                                .opacity(0.8)
+                                            
+                                            Spacer()
                                         }
                                         
                                         if currentLanguageCode == "pl" {
-                                            Text("Przybliżona wysokość napiwku w hotelach w tym kraju wynosi: \(currentCountry.hotelTipInitialUSD) dolarów lub \(hotelTipCurrentCurrInitial) \(CurrentCurrency.shared.currentCurrency)")
+                                            Spacer()
+                                            
+                                            Text("Przybliżona wysokość napiwku w hotelach w tym kraju wynosi: \(currentCountry.hotelTipInitialUSD) dolarów lub \(String(format: "%.2f", (Double(currentCountry.hotelTipInitialUSD) ?? 0.0) * exchangeRatesDataAPI._rateValue)) \(CurrentCurrency.shared.currentCurrency)")
                                                 .padding(.trailing)
+                                            
+                                            Spacer()
+                                            
+                                            Text("\(exchangeRatesDataAPI._currencyDate)")
+                                                .background(.guideBackground)
+                                                .foregroundStyle(.guideCountryBackground)
+                                                .multilineTextAlignment(.trailing)
+                                                .bold()
+                                                .font(.system(size: 12))
+                                                .clipShape(.rect(cornerRadius: 15))
+                                                .opacity(0.8)
+                                            
+                                            Spacer()
                                         }
                                         
                                         if currentLanguageCode == "ru" {
-                                            Text("Ориентировочная сумма чаевых в отелях данной страны составляет: $\(currentCountry.hotelTipInitialUSD) или \(hotelTipCurrentCurrInitial) \(CurrentCurrency.shared.currentCurrency)")
+                                            Spacer()
+                                            
+                                            Text("Ориентировочная сумма чаевых в отелях данной страны составляет: $\(currentCountry.hotelTipInitialUSD) или \(String(format: "%.2f", (Double(currentCountry.hotelTipInitialUSD) ?? 0.0) * exchangeRatesDataAPI._rateValue)) \(CurrentCurrency.shared.currentCurrency)")
                                                 .padding(.trailing)
+                                            
+                                            Spacer()
+                                            
+                                            Text("\(exchangeRatesDataAPI._currencyDate)")
+                                                .background(.guideBackground)
+                                                .foregroundStyle(.guideCountryBackground)
+                                                .multilineTextAlignment(.trailing)
+                                                .bold()
+                                                .font(.system(size: 12))
+                                                .clipShape(.rect(cornerRadius: 15))
+                                                .opacity(0.8)
+                                            
+                                            Spacer()
                                         }
                                         
                                     }
@@ -339,18 +385,63 @@ struct TipGuideSwiftUIView: View {
                                     VStack {
                                         
                                         if currentLanguageCode == "en" {
-                                            Text("The approximate tip amount in hotels in this country ranges from $\(currentCountry.hotelTipInitialUSD) to $\(currentCountry.hotelTipFinalUSD) (from \(hotelTipCurrentCurrInitial) \(CurrentCurrency.shared.currentCurrency) to \(hotelTipCurrentCurrFinal) \(CurrentCurrency.shared.currentCurrency))")
+                                            Spacer()
+                                            
+                                            Text("The approximate tip amount in hotels in this country ranges from $\(currentCountry.hotelTipInitialUSD) to $\(currentCountry.hotelTipFinalUSD) (from \(String(format: "%.2f", (Double(currentCountry.hotelTipInitialUSD) ?? 0.0) * exchangeRatesDataAPI._rateValue)) \(CurrentCurrency.shared.currentCurrency) to \(String(format: "%.2f", (Double(currentCountry.hotelTipFinalUSD) ?? 0.0) * exchangeRatesDataAPI._rateValue)) \(CurrentCurrency.shared.currentCurrency))")
                                                 .padding(.trailing)
+                                            
+                                            Spacer()
+                                            
+                                            Text("\(exchangeRatesDataAPI._currencyDate)")
+                                                .background(.guideBackground)
+                                                .foregroundStyle(.guideCountryBackground)
+                                                .multilineTextAlignment(.trailing)
+                                                .bold()
+                                                .font(.system(size: 12))
+                                                .clipShape(.rect(cornerRadius: 15))
+                                                .opacity(0.8)
+                                            
+                                            Spacer()
                                         }
                                         
                                         if currentLanguageCode == "pl" {
-                                            Text("Przybliżona wysokość napiwku w hotelach w tym kraju waha się od \(currentCountry.hotelTipInitialUSD) dolarów do $\(currentCountry.hotelTipFinalUSD) dolarów (od \(hotelTipCurrentCurrInitial) \(CurrentCurrency.shared.currentCurrency) do \(hotelTipCurrentCurrFinal) \(CurrentCurrency.shared.currentCurrency))")
+                                            Spacer()
+                                            
+                                            Text("Przybliżona wysokość napiwku w hotelach w tym kraju waha się od \(currentCountry.hotelTipInitialUSD) dolarów do $\(currentCountry.hotelTipFinalUSD) dolarów (od \(String(format: "%.2f", (Double(currentCountry.hotelTipInitialUSD) ?? 0.0) * exchangeRatesDataAPI._rateValue)) \(CurrentCurrency.shared.currentCurrency) do \(String(format: "%.2f", (Double(currentCountry.hotelTipFinalUSD) ?? 0.0) * exchangeRatesDataAPI._rateValue)) \(CurrentCurrency.shared.currentCurrency))")
                                                 .padding(.trailing)
+                                            
+                                            Spacer()
+                                            
+                                            Text("\(exchangeRatesDataAPI._currencyDate)")
+                                                .background(.guideBackground)
+                                                .foregroundStyle(.guideCountryBackground)
+                                                .multilineTextAlignment(.trailing)
+                                                .bold()
+                                                .font(.system(size: 12))
+                                                .clipShape(.rect(cornerRadius: 15))
+                                                .opacity(0.8)
+                                            
+                                            Spacer()
                                         }
                                         
                                         if currentLanguageCode == "ru" {
-                                            Text("Ориентировочная сумма чаевых в отелях данной страны находится в диапазоне от $\(currentCountry.hotelTipInitialUSD) до $\(currentCountry.hotelTipFinalUSD) (от \(hotelTipCurrentCurrInitial) \(CurrentCurrency.shared.currentCurrency) до \(hotelTipCurrentCurrFinal) \(CurrentCurrency.shared.currentCurrency))")
+                                            Spacer()
+                                            
+                                            Text("Ориентировочная сумма чаевых в отелях данной страны находится в диапазоне от $\(currentCountry.hotelTipInitialUSD) до $\(currentCountry.hotelTipFinalUSD) (от \(String(format: "%.2f", (Double(currentCountry.hotelTipInitialUSD) ?? 0.0) * exchangeRatesDataAPI._rateValue)) \(CurrentCurrency.shared.currentCurrency) до \(String(format: "%.2f", (Double(currentCountry.hotelTipFinalUSD) ?? 0.0) * exchangeRatesDataAPI._rateValue)) \(CurrentCurrency.shared.currentCurrency))")
                                                 .padding(.trailing)
+                                            
+                                            Spacer()
+                                            
+                                            Text("\(exchangeRatesDataAPI._currencyDate)")
+                                                .background(.guideBackground)
+                                                .foregroundStyle(.guideCountryBackground)
+                                                .multilineTextAlignment(.trailing)
+                                                .bold()
+                                                .font(.system(size: 12))
+                                                .clipShape(.rect(cornerRadius: 15))
+                                                .opacity(0.8)
+                                            
+                                            Spacer()
                                         }
                                         
                                     }
@@ -532,10 +623,88 @@ struct TipGuideSwiftUIView: View {
                 .onAppear(perform: {
                     if countryInfo.filteredCountriesWithTips.isEmpty {
                      
-                        // !!!!!!
+                        // Something for user
+                        // hint that you can select a country
+                        // something dynamic, with notifications maybe
+                        // think!
                         
                     }
                 })
+            }
+            
+        }
+        
+    }
+    
+}
+
+struct ResponseDecodable: Decodable {}
+
+struct CurrencyExchangeRatesDataModel {
+    
+    let baseCurrency: String
+    let rateKey: String
+    let rateValue: Double
+    let currencyDate: String
+    
+}
+
+class ExchangeRatesDataAPI: ObservableObject {
+    
+    @Published var _baseCurrency: String    = ""
+    @Published var _rateKey: String         = ""
+    @Published var _rateValue: Double       = 0.0
+    @Published var _currencyDate: String    = ""
+    
+    private func getStringURLView(_ baseCurrancy: String, _ rateKey: String) -> String {
+        return "https://api.apilayer.com/exchangerates_data/latest?symbols=\(rateKey)&base=\(baseCurrancy)"
+    }
+    
+    func getRequestFromAPIView(_ baseCurrancy: String, _ rateKey: String) {
+        
+        let currURLString = getStringURLView(baseCurrancy, rateKey)
+        
+        let httpHeader  = HTTPHeader(name: "apikey", value: CurrentExchangeRatesDataAPI_Key.shared.currentAPI_Key)
+        let httpHeaders = HTTPHeaders(arrayLiteral: httpHeader)
+        
+        AF.request(currURLString, method: .get, headers: httpHeaders).responseDecodable(of: ResponseDecodable.self) { response in
+            
+            if let currentData = response.data {
+                
+                do {
+                    
+                    if let dict = try JSONSerialization.jsonObject(with: currentData, options: []) as? [String : Any] {
+                        
+                        if let dictData = dict["rates"] as? [String: Any] {
+                            
+                            let _rateValueTemp = dictData["\(rateKey)"] as! Double
+                            
+                            let stringFromNumber = String(String(_rateValueTemp).dropLast())
+                            let _rateValue = Double(Int(100 * Double(stringFromNumber)!)) / 100
+                            
+                            let _rateKey = "\(rateKey)"
+                            let _currencyDate = dict["date"] as! String
+                            let _baseCurrency = dict["base"] as! String
+                            
+                            let currentInformation = CurrencyExchangeRatesDataModel(baseCurrency: _baseCurrency,
+                                                                                    rateKey: _rateKey,
+                                                                                    rateValue: _rateValue,
+                                                                                    currencyDate: _currencyDate)
+                            
+                            DispatchQueue.main.async {
+                                self._baseCurrency = currentInformation.baseCurrency
+                                self._rateKey = currentInformation.rateKey
+                                self._rateValue = currentInformation.rateValue
+                                self._currencyDate = currentInformation.currencyDate
+                            }
+                            
+                        }
+                    }
+                    
+                } catch let error as NSError {
+                    print("Failed to load: \(error.localizedDescription)")
+                }
+                
             }
             
         }

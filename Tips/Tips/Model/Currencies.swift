@@ -6,16 +6,6 @@
 //
 
 import Foundation
-import Alamofire
-
-struct CurrencyExchangeRatesDataModel: Decodable {
-    
-    let baseCurrency: String
-    let rateKey: String
-    let rateValue: Double
-    let currencyDate: String
-    
-}
 
 class CurrentCurrency {
     
@@ -29,7 +19,7 @@ class CurrentCurrency {
 }
 
 final class Currencies {
-    
+        
     func getCurrentAPI_Key() {
         CurrentExchangeRatesDataAPI_Key.shared.currentAPI_Key = ProcessInfo.processInfo.environment["EXCHANGE_RATES_API_KEY"] ?? ""
     }
@@ -65,28 +55,6 @@ final class Currencies {
         
     }
     
-    func convertAmountToAnotherCurrency(_ sumByString: String) -> String {
-        
-        var finalResult: String = ""
-        
-        guard let sumByDouble = Double(sumByString) else {
-            return finalResult
-        }
-        
-        let converted = getConvertedAmount(sumByDouble)
-        finalResult = String(format: "%.2f", converted)
-
-        return finalResult
-        
-    }
-    
-    func getConvertedAmount(_ sumByDouble: Double) -> Double {
-        
-        let currentCodeOfCurrency = CurrentCurrency.shared.currentCurrency
-        return 0.0
-        
-    }
-    
 }
 
 class CurrentExchangeRatesDataAPI_Key {
@@ -97,31 +65,6 @@ class CurrentExchangeRatesDataAPI_Key {
     var currentAPI_Key = ""
     
     private init () {}
-    
-}
-
-class ExchangeRatesDataAPI {
-    
-    private func getStringURL(_ baseCurrancy: String, _ rateKey: String) -> String {
-        return "https://api.apilayer.com/exchangerates_data/latest?symbols=\(rateKey)&base=\(baseCurrancy)"
-    }
-    
-    public func getRequestFromAPI(_ baseCurrancy: String, _ rateKey: String, _ completion: @escaping (CurrencyExchangeRatesDataModel) -> ()) {
-        
-        let currURLString = getStringURL(baseCurrancy, rateKey)
-        
-        let httpHeader = HTTPHeader(name: "apikey", value: CurrentExchangeRatesDataAPI_Key.shared.currentAPI_Key)
-        let httpHeaders = HTTPHeaders(arrayLiteral: httpHeader)
-        
-        AF.request(currURLString, method: .get, headers: httpHeaders).responseDecodable(of: CurrencyExchangeRatesDataModel.self) { response in
-            
-            if let json = try? response.result.get() {
-                print(json)
-            }
-            
-        }
-        
-    }
     
 }
 
