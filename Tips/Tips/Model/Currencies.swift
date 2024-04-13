@@ -21,7 +21,8 @@ class CurrentCurrency {
 final class Currencies {
         
     func getCurrentAPI_Key() {
-        CurrentExchangeRatesDataAPI_Key.shared.currentAPI_Key = ProcessInfo.processInfo.environment["EXCHANGE_RATES_API_KEY"] ?? ""
+        // CORRECT!!!!
+        CurrentExchangeRatesDataAPI_Key.shared.currentAPI_Key = ProcessInfo.processInfo.environment["EXCHANGE_RATES_API_KEY"] ?? "iqXG4pKkez10Y6YHB0nd6g5BgWfazQjU"
     }
     
     func getDefaultCurrencyByLocale() -> String {
