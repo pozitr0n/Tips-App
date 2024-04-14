@@ -47,6 +47,9 @@
 		4D548F402BA00BAA00D07A9E /* TipGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D548F3F2BA00BAA00D07A9E /* TipGuideViewController.swift */; };
 		4D5716062BC614C100B0AD1C /* WhatIsNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5716052BC614C100B0AD1C /* WhatIsNew.swift */; };
 		4D5E1BC82BBEC9C5003D03F1 /* tips-worldwide.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5E1BC72BBEC9C5003D03F1 /* tips-worldwide.json */; };
+		4D90AD2A2BCB7678000C373E /* Debug-Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D90AD292BCB7678000C373E /* Debug-Keys.plist */; };
+		4D90AD2C2BCB76BA000C373E /* Prod-Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D90AD2B2BCB76BA000C373E /* Prod-Keys.plist */; };
+		4D90AD2F2BCB7721000C373E /* SecureSavingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90AD2E2BCB7721000C373E /* SecureSavingAPI.swift */; };
 		4D92B8532BAA60A300539710 /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9ACDF82BA7EAB50075C3F6 /* Localizations.swift */; };
 		4D9ACDEB2BA37B340075C3F6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9ACDEA2BA37B340075C3F6 /* TabBarViewController.swift */; };
 		4D9ACDED2BA389450075C3F6 /* SettingsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9ACDEC2BA389450075C3F6 /* SettingsSwiftUIView.swift */; };
@@ -137,6 +140,9 @@
 		4D548F3F2BA00BAA00D07A9E /* TipGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipGuideViewController.swift; sourceTree = "<group>"; };
 		4D5716052BC614C100B0AD1C /* WhatIsNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatIsNew.swift; sourceTree = "<group>"; };
 		4D5E1BC72BBEC9C5003D03F1 /* tips-worldwide.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tips-worldwide.json"; sourceTree = "<group>"; };
+		4D90AD292BCB7678000C373E /* Debug-Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Debug-Keys.plist"; sourceTree = "<group>"; };
+		4D90AD2B2BCB76BA000C373E /* Prod-Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Prod-Keys.plist"; sourceTree = "<group>"; };
+		4D90AD2E2BCB7721000C373E /* SecureSavingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureSavingAPI.swift; sourceTree = "<group>"; };
 		4D9ACDEA2BA37B340075C3F6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		4D9ACDEC2BA389450075C3F6 /* SettingsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwiftUIView.swift; sourceTree = "<group>"; };
 		4D9ACDEE2BA38A300075C3F6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -331,6 +337,7 @@
 				4D258AE12B9F4371003B9F8F /* View */,
 				4D258AE22B9F4378003B9F8F /* Controller */,
 				4D416FBE2B9F399000333567 /* Info.plist */,
+				4D90AD2D2BCB76E7000C373E /* API-Keys */,
 			);
 			path = Tips;
 			sourceTree = "<group>";
@@ -393,6 +400,16 @@
 				4D5E1BC72BBEC9C5003D03F1 /* tips-worldwide.json */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		4D90AD2D2BCB76E7000C373E /* API-Keys */ = {
+			isa = PBXGroup;
+			children = (
+				4D90AD292BCB7678000C373E /* Debug-Keys.plist */,
+				4D90AD2B2BCB76BA000C373E /* Prod-Keys.plist */,
+				4D90AD2E2BCB7721000C373E /* SecureSavingAPI.swift */,
+			);
+			path = "API-Keys";
 			sourceTree = "<group>";
 		};
 		4D9ACDF42BA7E7EC0075C3F6 /* Localization */ = {
@@ -618,11 +635,13 @@
 				4D3D721F2BAE4CFD00105F89 /* Teal@3x.png in Resources */,
 				4D3D72182BAE4CFD00105F89 /* Jaundiced@2x.png in Resources */,
 				4D3D72112BAE4CFD00105F89 /* Green@2x.png in Resources */,
+				4D90AD2C2BCB76BA000C373E /* Prod-Keys.plist in Resources */,
 				4D3D72172BAE4CFD00105F89 /* Jaundiced@3x.png in Resources */,
 				4D3D721B2BAE4CFD00105F89 /* Orange@2x.png in Resources */,
 				4D3D72222BAE4CFD00105F89 /* Orange@3x.png in Resources */,
 				4D9ACDF72BA7E7FD0075C3F6 /* Localizable.strings in Resources */,
 				4D3D72192BAE4CFD00105F89 /* Sea.png in Resources */,
+				4D90AD2A2BCB7678000C373E /* Debug-Keys.plist in Resources */,
 				4D3D72132BAE4CFD00105F89 /* Green@3x.png in Resources */,
 				4D3D721A2BAE4CFD00105F89 /* Dark.png in Resources */,
 				4D3D72212BAE4CFD00105F89 /* Jaundiced.png in Resources */,
@@ -787,6 +806,7 @@
 				4DE4D6212BAFCA5500160224 /* Icons.swift in Sources */,
 				4DE4D6292BB1170600160224 /* DetailLanguages.swift in Sources */,
 				4D548F3C2BA007F000D07A9E /* FavouriteViewController.swift in Sources */,
+				4D90AD2F2BCB7721000C373E /* SecureSavingAPI.swift in Sources */,
 				4DE4D62C2BB1186700160224 /* CurrencyCodes.swift in Sources */,
 				4D47B8582BBC36D4008829DE /* ParseringMap.swift in Sources */,
 				4DE4B88C2BBA3B1200894158 /* DefaultPercentage.swift in Sources */,

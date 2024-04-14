@@ -80,11 +80,6 @@
             value = "YES"
             isEnabled = "YES">
          </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "EXCHANGE_RATES_API_KEY"
-            value = "iqXG4pKkez10Y6YHB0nd6g5BgWfazQjU"
-            isEnabled = "YES">
-         </EnvironmentVariable>
       </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction

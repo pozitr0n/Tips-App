@@ -22,3 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
 }
+
+var thisIsEnvironment: API_Keyable {
+    
+    #if DEBUG
+        return DebugEnvironment()
+    #else
+        return ProdEnvironment()
+    #endif
+    
+}
