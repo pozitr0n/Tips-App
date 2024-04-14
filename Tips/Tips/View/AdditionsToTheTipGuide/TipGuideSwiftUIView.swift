@@ -13,12 +13,12 @@ fileprivate let maximumAllowedScaleForScreen = 8.0
 struct TipGuideSwiftUIView: View {
     
     @State private var clickedMainPath = PathOfTheInformation()
+    @State var clickedCountry: String = ""
+    @State var currentLanguageCode: String = Languages().languagesValuesWithCodes[CurrentLanguage.shared.currentLanguage.rawValue]!
+    
     @FocusState private var focused: Bool
     
     @ObservedObject var countryInfo = ReadCountryInfoFromJSON()
-    @State var clickedCountry: String = ""
-            
-    @State var currentLanguageCode: String = Languages().languagesValuesWithCodes[CurrentLanguage.shared.currentLanguage.rawValue]!
     
     @StateObject var exchangeRatesDataAPI = ExchangeRatesDataAPI()
     
@@ -54,6 +54,7 @@ struct TipGuideSwiftUIView: View {
                                     clickedMainPath = pathInfoData
                                     focused = true
                                     clickedCountry = clickedMainPath.id
+                                    
                                     exchangeRatesDataAPI.getRequestFromAPIView("USD", CurrentCurrency.shared.currentCurrency)
                                     
                                 } else {
@@ -61,6 +62,11 @@ struct TipGuideSwiftUIView: View {
                                     clickedMainPath = PathOfTheInformation()
                                     focused = false
                                     clickedCountry = ""
+                                    
+                                    exchangeRatesDataAPI._rateValue = 0.0
+                                    exchangeRatesDataAPI._currencyDate = ""
+                                    exchangeRatesDataAPI._baseCurrency = ""
+                                    exchangeRatesDataAPI._rateKey = ""
                                     
                                 }
                                 
