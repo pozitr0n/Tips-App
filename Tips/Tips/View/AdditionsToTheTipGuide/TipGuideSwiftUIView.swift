@@ -106,8 +106,8 @@ struct TipGuideSwiftUIView: View {
                     VStack {
                     
                         Text("Choose-country-start".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                            .frame(width: 300, height: 180, alignment: .center)
-                            .padding([.leading, .trailing], 15)
+                            .frame(width: 300, height: 150, alignment: .center)
+                            .padding([.leading, .trailing], 10)
                             .background(.guideBackground)
                             .foregroundStyle(.guideCountryBackground)
                             .multilineTextAlignment(.center)
