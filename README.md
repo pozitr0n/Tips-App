@@ -12,9 +12,9 @@
 - [ ] development of functionality and specifying it in the technical specifications
 
     - [ ] Tip Calculator
-    - [ ] Favourite
-    - [ ] Tip Guide (Active working at this moment)
-    - [x] Settings
+    - [ ] Favourite (Active working at this moment)
+    - [x] Tip Guide
+    - [x] Settings (All that remains is to add the What's New and Privacy Policy section.)
 
 - [ ] user interface development
 - [ ] logic extension
