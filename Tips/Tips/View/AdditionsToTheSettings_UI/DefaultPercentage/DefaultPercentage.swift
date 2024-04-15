@@ -39,19 +39,23 @@ struct DefaultPercentage: View {
 
                 Text("Change-the-default-percentage".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) + " (%)")
                 
-                TextField("Default-%".localizedSwiftUI(CurrentLanguage.shared.currentLanguage), text: $input.value)
-                    .keyboardType(.numberPad)
-                    .textFieldStyle(.plain)
-                    .font(.system(size: 48, weight: .heavy))
-                    .multilineTextAlignment(.center)
-                    .padding(EdgeInsets(top: 0, leading: 60, bottom: 0, trailing: 60))
-                    .onReceive(Just(input.value)) { newValue in
-                        
-                        if newValue.first == "0" {
-                            self.input.value = String(newValue.dropFirst())
+                HStack {
+                 
+                    TextField("Default-%".localizedSwiftUI(CurrentLanguage.shared.currentLanguage), text: $input.value)
+                        .keyboardType(.numberPad)
+                        .textFieldStyle(.plain)
+                        .font(.system(size: 48, weight: .heavy))
+                        .multilineTextAlignment(.center)
+                        .padding(EdgeInsets(top: 0, leading: 60, bottom: 0, trailing: 60))
+                        .onReceive(Just(input.value)) { newValue in
+                            
+                            if newValue.first == "0" {
+                                self.input.value = String(newValue.dropFirst())
+                            }
+                                                
                         }
-                                            
-                    }
+                    
+                }
                     
                 HStack(spacing: 10) {
                 
@@ -77,6 +81,13 @@ struct DefaultPercentage: View {
           
                     }
                     .buttonStyle(GrowingButtonPress())
+                    
+                    Button {
+                        input.value = ""
+                    } label: {
+                        Image(systemName: "multiply.circle.fill")
+                    }
+                    .buttonStyle(GrowingButtonClear())
                 
                 }
                 
@@ -88,18 +99,6 @@ struct DefaultPercentage: View {
             .clipShape(.rect(cornerRadius: 30))
             .padding(.horizontal, 15)
          
-            VStack {
-            
-                Button {
-                    input.value = ""
-                } label: {
-                    Image(systemName: "multiply.circle.fill")
-                }
-                .buttonStyle(GrowingButtonClear())
-                
-            }
-            .padding(.trailing, 15)
-            
         }
     
     }

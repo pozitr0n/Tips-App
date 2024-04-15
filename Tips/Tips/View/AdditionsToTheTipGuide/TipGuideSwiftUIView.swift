@@ -184,7 +184,7 @@ struct TipGuideSwiftUIView: View {
                             
                             VStack {
                                 
-                                Text(currentCountry.countryCode)
+                                Text("\(currentCountry.countryCode) ▶ \(Languages().getFlagByCountryCode(country: currentCountry.countryCode))")
                                     .padding(.trailing)
                                 
                             }

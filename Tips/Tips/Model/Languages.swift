@@ -151,6 +151,17 @@ final class Languages {
         
     }
     
+    func getFlagByCountryCode(country: String) -> String {
+        
+        let base : UInt32 = 127397
+        var s = ""
+        for v in country.unicodeScalars {
+            s.unicodeScalars.append(UnicodeScalar(base + v.value)!)
+        }
+        return String(s)
+        
+    }
+    
 }
 
 class LanguagesUISettings: ObservableObject {
@@ -180,6 +191,6 @@ class LanguagesUISettings: ObservableObject {
         return lang
         
     }
-    
+        
 }
 
