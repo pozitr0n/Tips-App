@@ -6,6 +6,150 @@
 //
 
 import SwiftUI
+import SwiftMessages
+
+struct MessageStruct: Identifiable {
+    
+    let title: String
+    let body: String
+    let style: MessageView.Style
+
+    var id: String {
+        title + body
+    }
+    
+}
+
+// A message view with a title and message
+//
+struct MessageView: View {
+
+    enum Style {
+        case standard
+        case card
+        case tab
+    }
+
+    let message: MessageStruct
+    let style: Style
+
+    var body: some View {
+        
+        switch style {
+        case .standard:
+            content()
+                // Mask the content and extend background into the safe area
+                .mask {
+                    Rectangle()
+                        .edgesIgnoringSafeArea(.top)
+                }
+        case .card:
+            content()
+                // Mask the content with a rounded rectangle
+                .mask {
+                    RoundedRectangle(cornerRadius: 15)
+                }
+                // External padding around the card
+                .padding(10)
+        case .tab:
+            content()
+                // Mask the content with rounded bottom edge and extend background into the safe area
+                .mask {
+                    UnevenRoundedRectangle(bottomLeadingRadius: 15, bottomTrailingRadius: 15)
+                        .edgesIgnoringSafeArea(.top)
+                }
+        }
+    }
+    
+    @ViewBuilder private func content() -> some View {
+       
+        VStack(alignment: .leading) {
+            Text(message.title).font(.system(size: 20, weight: .bold))
+            Text(message.body)
+        }
+        .multilineTextAlignment(.leading)
+        // Internal padding of the card
+        .padding(30)
+        // Greedy width
+        .frame(maxWidth: .infinity)
+        .background(.white)
+        
+    }
+    
+}
+
+// A message view with a title, message and button
+//
+struct MessageWithButtonView<Button>: View where Button: View {
+
+    enum Style {
+        case standard
+        case card
+        case tab
+    }
+
+    init(message: MessageStruct, style: Style, @ViewBuilder button: @escaping () -> Button) {
+        self.message = message
+        self.style = style
+        self.button = button
+    }
+
+    let message: MessageStruct
+    let style: Style
+    @ViewBuilder let button: () -> Button
+
+    var body: some View {
+        switch style {
+        case .standard:
+            content()
+                // Mask the content and extend background into the safe area.
+                .mask {
+                    Rectangle()
+                        .edgesIgnoringSafeArea(.top)
+                }
+        case .card:
+            content()
+                // Mask the content with a rounded rectangle
+                .mask {
+                    RoundedRectangle(cornerRadius: 15)
+                }
+                // External padding around the card
+                .padding(10)
+        case .tab:
+            content()
+                // Mask the content with rounded bottom edge and extend background into the safe area.
+                .mask {
+                    UnevenRoundedRectangle(bottomLeadingRadius: 15, bottomTrailingRadius: 15)
+                        .edgesIgnoringSafeArea(.top)
+                }
+        }
+    }
+
+    @ViewBuilder private func content() -> some View {
+        
+        VStack() {
+            Text(message.title).font(.system(size: 20, weight: .bold))
+            Text(message.body)
+            button()
+        }
+        .multilineTextAlignment(.center)
+        // Internal padding of the card
+        .padding(30)
+        // Greedy width
+        .frame(maxWidth: .infinity)
+        .background(.white)
+        
+    }
+    
+}
+
+extension MessageStruct: MessageViewConvertible {
+    
+    func asMessageView() -> MessageView {
+        MessageView(message: self, style: style)
+    }
+    
+}
 
 struct LabelledDivider: View {
 
@@ -48,7 +192,7 @@ struct LabelledDivider: View {
 }
 
 struct CountryInfo: Codable, Identifiable {
-    
+
     enum CodingKeys: CodingKey {
         case countryNameEN
         case countryNamePL
@@ -66,7 +210,8 @@ struct CountryInfo: Codable, Identifiable {
         
     }
     
-    var id = UUID()
+    //var id = UUID()
+    var id: String = UUID().uuidString
     var countryNameEN: String
     var countryNamePL: String
     var countryNameRU: String

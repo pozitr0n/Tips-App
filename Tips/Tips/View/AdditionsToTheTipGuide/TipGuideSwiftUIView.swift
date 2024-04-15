@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Alamofire
+import SwiftMessages
 
 fileprivate let maximumAllowedScaleForScreen = 8.0
 
@@ -15,13 +16,14 @@ struct TipGuideSwiftUIView: View {
     @State private var clickedMainPath = PathOfTheInformation()
     @State var clickedCountry: String = ""
     @State var currentLanguageCode: String = Languages().languagesValuesWithCodes[CurrentLanguage.shared.currentLanguage.rawValue]!
+    @State var messageWithButton: MessageStruct?
     
     @FocusState private var focused: Bool
     
     @ObservedObject var countryInfo = ReadCountryInfoFromJSON()
     
     @StateObject var exchangeRatesDataAPI = ExchangeRatesDataAPI()
-    
+
     var body: some View {
         
         CommonContainerForZoom {
@@ -55,8 +57,6 @@ struct TipGuideSwiftUIView: View {
                                     focused = true
                                     clickedCountry = clickedMainPath.id
                                     
-                                    exchangeRatesDataAPI.getRequestFromAPIView("USD", CurrentCurrency.shared.currentCurrency)
-                                    
                                 } else {
                                     
                                     clickedMainPath = PathOfTheInformation()
@@ -71,6 +71,10 @@ struct TipGuideSwiftUIView: View {
                                 }
                                 
                                 countryInfo.updateFilteredArray(clickedCountry)
+                                
+                                if !countryInfo.filteredCountriesWithTips.isEmpty {
+                                    exchangeRatesDataAPI.getRequestFromAPIView("USD", CurrentCurrency.shared.currentCurrency)
+                                }
                                 
                             }
                             
@@ -130,7 +134,7 @@ struct TipGuideSwiftUIView: View {
                 Form {
                     
                     Section(header: Text("Country.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
-                        List(countryInfo.filteredCountriesWithTips) { currentCountry in
+                        List(countryInfo.filteredCountriesWithTips, id: \.id) { currentCountry in
                             
                             VStack {
                                 
@@ -155,7 +159,7 @@ struct TipGuideSwiftUIView: View {
                     }
                     
                     Section(header: Text("Continent.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
-                        List(countryInfo.filteredCountriesWithTips) { currentCountry in
+                        List(countryInfo.filteredCountriesWithTips, id: \.id) { currentCountry in
                             
                             VStack {
                                 
@@ -180,7 +184,7 @@ struct TipGuideSwiftUIView: View {
                     }
                     
                     Section(header: Text("Country-Code.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
-                        List(countryInfo.filteredCountriesWithTips) { currentCountry in
+                        List(countryInfo.filteredCountriesWithTips, id: \.id) { currentCountry in
                             
                             VStack {
                                 
@@ -193,7 +197,7 @@ struct TipGuideSwiftUIView: View {
                     }
                     
                     Section(header: Text("Restaurant.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
-                        List(countryInfo.filteredCountriesWithTips) { currentCountry in
+                        List(countryInfo.filteredCountriesWithTips, id: \.id) { currentCountry in
                             
                             if currentCountry.restaurantTipInitial != "NoTip" &&
                                 currentCountry.restaurantTipInitial != "ServiceIncluded" &&
@@ -315,7 +319,7 @@ struct TipGuideSwiftUIView: View {
                     }
                     
                     Section(header: Text("Hotel.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
-                        List(countryInfo.filteredCountriesWithTips) { currentCountry in
+                        List(countryInfo.filteredCountriesWithTips, id: \.id) { currentCountry in
                             
                             if currentCountry.hotelTipInitialUSD != "NoTip" &&
                                 currentCountry.hotelTipInitialUSD != "NoInfo" {
@@ -504,7 +508,7 @@ struct TipGuideSwiftUIView: View {
                     }
                     
                     Section(header: Text("Driver.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
-                        List(countryInfo.filteredCountriesWithTips) { currentCountry in
+                        List(countryInfo.filteredCountriesWithTips, id: \.id) { currentCountry in
                             
                             if currentCountry.driverTipInitial != "NoTip" &&
                                 currentCountry.driverTipInitial != "RoundUp" &&
@@ -629,13 +633,34 @@ struct TipGuideSwiftUIView: View {
                 .onAppear(perform: {
                     if countryInfo.filteredCountriesWithTips.isEmpty {
                      
-                        // Something for user
-                        // hint that you can select a country
-                        // something dynamic, with notifications maybe
-                        // think!
+                        messageWithButton = MessageStruct(
+                            title: "\("Oops.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)) \u{1F625}",
+                            body: "Oops.body".localizedSwiftUI(CurrentLanguage.shared.currentLanguage),
+                            style: .card
+                        )
                         
                     }
                 })
+                .swiftMessage(message: $messageWithButton) { message in
+                    MessageWithButtonView(message: message, style: .card) {
+                        Button("Okay.button.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)) {
+                            
+                            clickedMainPath = PathOfTheInformation()
+                            focused = false
+                            clickedCountry = ""
+                            
+                            exchangeRatesDataAPI._rateValue = 0.0
+                            exchangeRatesDataAPI._currencyDate = ""
+                            exchangeRatesDataAPI._baseCurrency = ""
+                            exchangeRatesDataAPI._rateKey = ""
+                            
+                            SwiftMessages.hide(animated: true)
+                            
+                        }
+                        .buttonStyle(.bordered)
+                    }
+                }
+                
             }
             
         }
