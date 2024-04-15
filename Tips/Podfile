@@ -7,6 +7,7 @@ target 'Tips' do
 
   # Pods for Tips
   pod 'Alamofire'
+  pod 'SwiftMessages'
 
   target 'TipsTests' do
     inherit! :search_paths
