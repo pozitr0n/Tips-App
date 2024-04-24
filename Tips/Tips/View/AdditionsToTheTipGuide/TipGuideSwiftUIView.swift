@@ -723,10 +723,12 @@ class ExchangeRatesDataAPI: ObservableObject {
                                                                                     currencyDate: _currencyDate)
                             
                             DispatchQueue.main.async {
-                                self._baseCurrency = currentInformation.baseCurrency
-                                self._rateKey = currentInformation.rateKey
-                                self._rateValue = currentInformation.rateValue
-                                self._currencyDate = currentInformation.currencyDate
+                                
+                                self._baseCurrency  = currentInformation.baseCurrency
+                                self._rateKey       = currentInformation.rateKey
+                                self._rateValue     = currentInformation.rateValue
+                                self._currencyDate  = currentInformation.currencyDate
+                                
                             }
                             
                         }
