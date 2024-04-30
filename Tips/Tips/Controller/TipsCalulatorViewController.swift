@@ -38,18 +38,17 @@ extension TipsCalulatorViewController {
     
     func initializeHideKeyboard(){
         
-        //  Declare a Tap Gesture Recognizer which will trigger our dismissMyKeyboard() function
+        // Declaring a Tap Gesture Recognizer, which will trigger dismissMyKeyboard() function
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissMyKeyboard))
         
-        //  Add this tap gesture recognizer to the parent view
+        // Adding this Tap Gesture Recognizer to the parent view
         view.addGestureRecognizer(tap)
         
     }
     
     @objc func dismissMyKeyboard(){
         
-        //  endEditing causes the view (or one of its embedded text fields) to resign the first responder status
-        //  In short - Dismiss the active keyboard
+        // Dismissing the active keyboard
         view.endEditing(true)
         
     }
