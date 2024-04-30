@@ -18,7 +18,8 @@ class TipsCalulatorViewController: UIViewController {
         super.viewDidLoad()
         
         localizeInterface()
-        //  We make a call to our keyboard handling function as soon as the view is loaded
+        
+        // Calling keyboard handling function as soon as the view is loaded
         initializeHideKeyboard()
         
     }
