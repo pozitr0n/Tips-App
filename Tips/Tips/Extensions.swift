@@ -66,6 +66,12 @@ extension String {
     }
     // * 2 *
     
+    // * 3 *
+    var decimal: Decimal {
+        Decimal(string: digits) ?? 0
+    }
+    // * 3 *
+    
 }
 
 extension Bundle {
@@ -207,14 +213,6 @@ extension StringProtocol where Self: RangeReplaceableCollection {
     
     var digits: Self {
         filter (\.isWholeNumber)
-    }
-    
-}
-
-extension String {
-    
-    var decimal: Decimal {
-        Decimal(string: digits) ?? 0
     }
     
 }
