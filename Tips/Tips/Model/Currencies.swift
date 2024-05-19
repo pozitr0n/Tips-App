@@ -66,9 +66,7 @@ final class MappingCurrencyToRegion {
         let localesWithCode = self.locales.filter { locale in
             locale.currency?.identifier == currencyCode
         }
-        
-        print(localesWithCode)
-        
+                
         return Set(localesWithCode)
         
     }

@@ -136,4 +136,6 @@
 
 "Okay.button.title" = "Окей, я понял";
 
-"Bill-Total.title" = "Счет Всего";
+"Bill-Total.title" = "СЧЕТ ВСЕГО";
+
+"Done-Numpad.title" = "Готово";

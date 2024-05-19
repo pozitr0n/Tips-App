@@ -23,6 +23,7 @@ protocol FormatterNumberProtocol: Any {
 struct TipsCalulatorUI: View {
     
     @State private var value = 0
+    
     private var formatterOfNumber: FormatterNumberProtocol
     
     init(formatterOfNumber: FormatterNumberProtocol = NumberFormatter()) {
@@ -60,8 +61,6 @@ struct TipsCalulatorUI: View {
     }
     
 }
-
-extension NumberFormatter: FormatterNumberProtocol { }
 
 class PreviewNumberFormatter: FormatterNumberProtocol {
     
@@ -117,6 +116,7 @@ class PreviewNumberFormatter: FormatterNumberProtocol {
     func string(for obj: Any?) -> String? {
         formatterOfNumber.string(for: obj)
     }
+    
 }
 
 #Preview {

@@ -19,6 +19,7 @@ struct CurrencyTipsTextField: UIViewRepresentable {
         
         self.formatterOfNumber = formatterOfNumber
         currencyField = CurrencyTipsUITextField(formatter: formatterOfNumber, value: value)
+        currencyField.doneButtonOnNumpad()
         
     }
 
