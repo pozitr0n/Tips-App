@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sHH-mq-8c9">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -84,29 +84,8 @@
                     <view key="view" contentMode="scaleToFill" id="MSI-xB-fbL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill-Total.title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4a-R0-T90">
-                                <rect key="frame" x="16" y="137" width="361" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cff-lZ-mIv">
-                                <rect key="frame" x="16" y="166" width="361" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="awE-YM-H23"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="awE-YM-H23" firstAttribute="trailing" secondItem="cff-lZ-mIv" secondAttribute="trailing" constant="16" id="DYL-Ic-lPS"/>
-                            <constraint firstItem="f4a-R0-T90" firstAttribute="leading" secondItem="awE-YM-H23" secondAttribute="leading" constant="16" id="WPH-6V-L9A"/>
-                            <constraint firstItem="awE-YM-H23" firstAttribute="trailing" secondItem="f4a-R0-T90" secondAttribute="trailing" constant="16" id="XPK-Ba-KPV"/>
-                            <constraint firstItem="cff-lZ-mIv" firstAttribute="top" secondItem="f4a-R0-T90" secondAttribute="bottom" constant="8" symbolic="YES" id="Z4L-cm-DVD"/>
-                            <constraint firstItem="cff-lZ-mIv" firstAttribute="leading" secondItem="awE-YM-H23" secondAttribute="leading" constant="16" id="ZTX-cd-PGc"/>
-                            <constraint firstItem="f4a-R0-T90" firstAttribute="top" secondItem="awE-YM-H23" secondAttribute="top" constant="34" id="wJZ-bM-npx"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tips Calculator" id="hsB-TO-Q61">
                         <barButtonItem key="leftBarButtonItem" title="Share" image="square.and.arrow.up" catalog="system" id="QAb-0s-j0x">
@@ -125,7 +104,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addToFavourite" destination="Tyb-Nx-A4j" id="3D6-Lw-2qE"/>
-                        <outlet property="billTotalTitle" destination="f4a-R0-T90" id="JgC-2A-P8B"/>
                         <outlet property="refresh" destination="gk0-cT-5Rs" id="h6m-2x-kAQ"/>
                         <outlet property="share" destination="QAb-0s-j0x" id="UMe-a9-Rdd"/>
                     </connections>

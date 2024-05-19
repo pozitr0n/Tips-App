@@ -47,6 +47,9 @@
 		4D548F402BA00BAA00D07A9E /* TipGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D548F3F2BA00BAA00D07A9E /* TipGuideViewController.swift */; };
 		4D5716062BC614C100B0AD1C /* WhatIsNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5716052BC614C100B0AD1C /* WhatIsNew.swift */; };
 		4D5E1BC82BBEC9C5003D03F1 /* tips-worldwide.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5E1BC72BBEC9C5003D03F1 /* tips-worldwide.json */; };
+		4D6576DC2BF8C8A700A222C4 /* TipsCalulatorUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6576DB2BF8C8A700A222C4 /* TipsCalulatorUI.swift */; };
+		4D6576DF2BF8CD1600A222C4 /* CurrencyTipsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6576DE2BF8CD1600A222C4 /* CurrencyTipsTextField.swift */; };
+		4D6576E12BF8CD5000A222C4 /* CurrencyTipsUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6576E02BF8CD5000A222C4 /* CurrencyTipsUITextField.swift */; };
 		4D90AD2A2BCB7678000C373E /* Debug-Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D90AD292BCB7678000C373E /* Debug-Keys.plist */; };
 		4D90AD2C2BCB76BA000C373E /* Prod-Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D90AD2B2BCB76BA000C373E /* Prod-Keys.plist */; };
 		4D90AD2F2BCB7721000C373E /* SecureSavingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90AD2E2BCB7721000C373E /* SecureSavingAPI.swift */; };
@@ -140,6 +143,9 @@
 		4D548F3F2BA00BAA00D07A9E /* TipGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipGuideViewController.swift; sourceTree = "<group>"; };
 		4D5716052BC614C100B0AD1C /* WhatIsNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatIsNew.swift; sourceTree = "<group>"; };
 		4D5E1BC72BBEC9C5003D03F1 /* tips-worldwide.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tips-worldwide.json"; sourceTree = "<group>"; };
+		4D6576DB2BF8C8A700A222C4 /* TipsCalulatorUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCalulatorUI.swift; sourceTree = "<group>"; };
+		4D6576DE2BF8CD1600A222C4 /* CurrencyTipsTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTipsTextField.swift; sourceTree = "<group>"; };
+		4D6576E02BF8CD5000A222C4 /* CurrencyTipsUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTipsUITextField.swift; sourceTree = "<group>"; };
 		4D90AD292BCB7678000C373E /* Debug-Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Debug-Keys.plist"; sourceTree = "<group>"; };
 		4D90AD2B2BCB76BA000C373E /* Prod-Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Prod-Keys.plist"; sourceTree = "<group>"; };
 		4D90AD2E2BCB7721000C373E /* SecureSavingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureSavingAPI.swift; sourceTree = "<group>"; };
@@ -227,6 +233,7 @@
 		4D258AE12B9F4371003B9F8F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4D6576DD2BF8CAB100A222C4 /* TipsCalulatorUI */,
 				4D3152362BBD6BF300FB41BE /* AdditionsToTheTipGuide */,
 				4DE4D62D2BB1199E00160224 /* AdditionsToTheSettings_UI */,
 				4D416FB62B9F398B00333567 /* Main.storyboard */,
@@ -400,6 +407,16 @@
 				4D5E1BC72BBEC9C5003D03F1 /* tips-worldwide.json */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		4D6576DD2BF8CAB100A222C4 /* TipsCalulatorUI */ = {
+			isa = PBXGroup;
+			children = (
+				4D6576DB2BF8C8A700A222C4 /* TipsCalulatorUI.swift */,
+				4D6576DE2BF8CD1600A222C4 /* CurrencyTipsTextField.swift */,
+				4D6576E02BF8CD5000A222C4 /* CurrencyTipsUITextField.swift */,
+			);
+			path = TipsCalulatorUI;
 			sourceTree = "<group>";
 		};
 		4D90AD2D2BCB76E7000C373E /* API-Keys */ = {
@@ -789,9 +806,11 @@
 				4D548F402BA00BAA00D07A9E /* TipGuideViewController.swift in Sources */,
 				4DC8AB832BA27DF9002AB3BF /* SplashAnimator.swift in Sources */,
 				4D9ACDED2BA389450075C3F6 /* SettingsSwiftUIView.swift in Sources */,
+				4D6576DF2BF8CD1600A222C4 /* CurrencyTipsTextField.swift in Sources */,
 				4D159F852BC025E9003EC231 /* RatingExperience.swift in Sources */,
 				4DE4D6232BB10C2900160224 /* Extensions.swift in Sources */,
 				4D9ACDEB2BA37B340075C3F6 /* TabBarViewController.swift in Sources */,
+				4D6576DC2BF8C8A700A222C4 /* TipsCalulatorUI.swift in Sources */,
 				4D1C119D2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift in Sources */,
 				4DA44B6E2BA264DB005EC103 /* SplashViewController.swift in Sources */,
 				4D416FB12B9F398B00333567 /* AppDelegate.swift in Sources */,
@@ -811,6 +830,7 @@
 				4D47B8582BBC36D4008829DE /* ParseringMap.swift in Sources */,
 				4DE4B88C2BBA3B1200894158 /* DefaultPercentage.swift in Sources */,
 				4D416FB32B9F398B00333567 /* SceneDelegate.swift in Sources */,
+				4D6576E12BF8CD5000A222C4 /* CurrencyTipsUITextField.swift in Sources */,
 				4D9ACDF12BA3DC2E0075C3F6 /* Languages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

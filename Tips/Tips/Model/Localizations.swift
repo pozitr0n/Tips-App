@@ -48,3 +48,66 @@ class AppLocalization: NSObject {
     }
   
 }
+
+class CurrentLocale {
+    
+    static let shared = CurrentLocale()
+    
+    var currentLocale = Locale()
+    
+    private init () {}
+    
+}
+
+final class CurrentLocales {
+        
+    func getDefaultCurrentLocale() -> Locale {
+
+        guard let defaultCurrentLocale = MappingCurrencyToRegion.locales(currencyCode: CurrentCurrency.shared.currentCurrency).first else {
+            return Locale()
+        }
+        
+        return defaultCurrentLocale
+        
+    }
+    
+    func setCurrentLocale(currentLocale: Locale) {
+    
+        do {
+            
+            let encoder = JSONEncoder()
+            let data = try encoder.encode(currentLocale)
+            
+            UserDefaults.standard.set(data, forKey: "CurrentLocale")
+            UserDefaults.standard.synchronize()
+            
+            CurrentLocale.shared.currentLocale = currentLocale
+            
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+    }
+    
+    func getCurrentLocale() {
+        
+        guard let data = UserDefaults.standard.data(forKey: "CurrentLocale") else {
+            CurrentLocale.shared.currentLocale = getDefaultCurrentLocale()
+            return
+        }
+        
+        do {
+            
+            let decoder = JSONDecoder()
+            let currentLocale = try decoder.decode(Locale.self, from: data)
+            
+            CurrentLocale.shared.currentLocale = currentLocale
+            
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+    }
+    
+}
+

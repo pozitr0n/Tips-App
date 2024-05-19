@@ -6,21 +6,19 @@
 //
 
 import UIKit
+import SwiftUI
 
 class TipsCalulatorViewController: UIViewController {
     
     @IBOutlet weak var share: UIBarButtonItem!
     @IBOutlet weak var refresh: UIBarButtonItem!
     @IBOutlet weak var addToFavourite: UIBarButtonItem!
-    @IBOutlet weak var billTotalTitle: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         localizeInterface()
-        
-        // Calling keyboard handling function as soon as the view is loaded
-        initializeHideKeyboard()
+        loadSwiftUIViewController()
         
     }
     
@@ -29,28 +27,29 @@ class TipsCalulatorViewController: UIViewController {
         share.title             = Localize(key: "QAb-0s-j0x.title", comment: "")
         refresh.title           = Localize(key: "gk0-cT-5Rs.title", comment: "")
         addToFavourite.title    = Localize(key: "Tyb-Nx-A4j.title", comment: "")
-        billTotalTitle.text     = Localize(key: "f4a-R0-T90.title", comment: "")
         
     }
     
-}
-
-extension TipsCalulatorViewController {
-    
-    func initializeHideKeyboard(){
+    func loadSwiftUIViewController() {
+       
+        let vcTipsCalulator = UIHostingController(rootView: TipsCalulatorUI())
+        let swiftuiView = vcTipsCalulator.view!
+        swiftuiView.translatesAutoresizingMaskIntoConstraints = false
         
-        // Declaring a Tap Gesture Recognizer, which will trigger dismissMyKeyboard() function
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissMyKeyboard))
+        // Add the view controller to the destination view controller.
+        addChild(vcTipsCalulator)
+        view.addSubview(swiftuiView)
         
-        // Adding this Tap Gesture Recognizer to the parent view
-        view.addGestureRecognizer(tap)
+        // Create and activate the constraints for the swiftui's view.
+        NSLayoutConstraint.activate([
+            swiftuiView.topAnchor.constraint(equalTo: view.topAnchor),
+            swiftuiView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            swiftuiView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            swiftuiView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
         
-    }
-    
-    @objc func dismissMyKeyboard(){
-        
-        // Dismissing the active keyboard
-        view.endEditing(true)
+        // Notify the child view controller that the move is complete.
+        vcTipsCalulator.didMove(toParent: self)
         
     }
     

@@ -64,6 +64,12 @@ struct CurrencyCodes: View {
                     if showDetails {
                         
                         Currencies().setCurrentCurrency(currentCode: selectedCurrency)
+                        
+                        guard let defaultCurrentLocale = MappingCurrencyToRegion.locales(currencyCode: CurrentCurrency.shared.currentCurrency).first else {
+                            return
+                        }
+                        
+                        CurrentLocales().setCurrentLocale(currentLocale: defaultCurrentLocale)
                         dismiss()
                         
                     }
