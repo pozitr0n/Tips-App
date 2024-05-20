@@ -18,8 +18,10 @@ struct CurrencyTipsTextField: UIViewRepresentable {
     init(formatterOfNumber: FormatterNumberProtocol, value: Binding<Int>) {
         
         self.formatterOfNumber = formatterOfNumber
+        
         currencyField = CurrencyTipsUITextField(formatter: formatterOfNumber, value: value)
         currencyField.doneButtonOnNumpad()
+        currencyField.maximumLength = MaximumBillTotalLength.shared.maxBillLength
         
     }
 

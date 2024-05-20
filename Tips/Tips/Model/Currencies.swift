@@ -161,7 +161,7 @@ final class Percentage {
 class MaximumBillTotalLength {
     
     static let shared = MaximumBillTotalLength()
-    let maxBillLength: Decimal = 100000000
+    let maxBillLength: Int = 19
     private init () {}
     
 }
