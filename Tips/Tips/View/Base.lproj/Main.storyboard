@@ -96,7 +96,11 @@
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="WnG-Fu-4XH">
                                 <barButtonItems>
-                                    <barButtonItem title="Refresh" image="arrow.clockwise.circle" catalog="system" id="gk0-cT-5Rs"/>
+                                    <barButtonItem title="Refresh" image="arrow.clockwise.circle" catalog="system" id="gk0-cT-5Rs">
+                                        <connections>
+                                            <action selector="refreshView:" destination="dz7-Mm-QqH" id="Dgd-CZ-Vn0"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="Add to Favourite" image="plus.circle" catalog="system" id="Tyb-Nx-A4j"/>
                                 </barButtonItems>
                             </barButtonItemGroup>

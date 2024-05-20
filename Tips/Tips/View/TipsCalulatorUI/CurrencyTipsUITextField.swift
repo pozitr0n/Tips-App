@@ -41,9 +41,7 @@ class CurrencyTipsUITextField: UITextField {
         
     }
 
-    override func removeFromSuperview() {
-        print(#function)
-    }
+    override func removeFromSuperview() { }
 
     override func deleteBackward() {
         
@@ -51,11 +49,11 @@ class CurrencyTipsUITextField: UITextField {
         sendActions(for: .editingChanged)
         
     }
-
+    
     private func setupViews() {
         
         tintColor = .clear
-        font = .systemFont(ofSize: 40, weight: .regular)
+        font = .systemFont(ofSize: 35, weight: .regular)
         
         setInitialValue()
         
@@ -64,20 +62,20 @@ class CurrencyTipsUITextField: UITextField {
     private func setInitialValue() {
         
         if value > 0 {
-            
+           
             let currentValue = Double(value)
             let currentDecimalValue = Decimal(currentValue / 100.0)
             
             text = currency(from: currentDecimalValue)
-            
+    
         }
         
     }
 
     @objc private func editingChanged() {
-        
+    
         text = currency(from: decimal)
-       
+
         resetSelection()
         updateValue()
         

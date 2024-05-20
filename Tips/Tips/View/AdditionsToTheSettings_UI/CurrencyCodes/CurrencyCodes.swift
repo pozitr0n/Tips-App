@@ -71,7 +71,8 @@ struct CurrencyCodes: View {
                         
                         CurrentLocales().setCurrentLocale(currentLocale: defaultCurrentLocale)
                         dismiss()
-                        
+                        reloadApplicationBundle()
+                       
                     }
                     
                 }
@@ -87,6 +88,21 @@ struct CurrencyCodes: View {
         .background(.modeBG)
         .clipShape(.rect(cornerRadius: 30))
         .padding(.horizontal, 15)
+        
+    }
+    
+    //  Reload application bundle as new selected language
+    //
+    func reloadApplicationBundle() {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+        
+            let scene = UIApplication.shared.connectedScenes.first
+            if let sd: SceneDelegate = (scene?.delegate as? SceneDelegate) {
+                sd.initRootView(true)
+            }
+            
+        })
         
     }
     

@@ -116,7 +116,7 @@ final class Languages {
     
     // Animating of changing language
     //
-    func animateChangingLanguage(window: UIWindow?, tabBarController: UITabBarController) {
+    func animateChangingLanguage(window: UIWindow?, tabBarController: UITabBarController, animationOption: UIView.AnimationOptions) {
     
         guard let window = window else {
             return
@@ -140,7 +140,7 @@ final class Languages {
         UIView.transition(
             with: window,
             duration: 1.0,
-            options: .curveEaseInOut,
+            options: animationOption,
             animations: {
                 snapShot.transform = CGAffineTransform(translationX: 0, y: snapShot.frame.height)
             },

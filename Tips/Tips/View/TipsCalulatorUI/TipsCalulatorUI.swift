@@ -55,7 +55,7 @@ struct TipsCalulatorUI: View {
             Spacer()
             
         }
-        .padding(.top, 30)
+        .padding(.top, 20)
         .padding(.horizontal, 20)
         
     }
@@ -63,7 +63,7 @@ struct TipsCalulatorUI: View {
 }
 
 class PreviewNumberFormatter: FormatterNumberProtocol {
-    
+   
     let formatterOfNumber: NumberFormatter
     
     init(locale: Locale) {

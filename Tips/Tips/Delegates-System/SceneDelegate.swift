@@ -64,7 +64,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     // init() of root view
     //
-    func initRootView(_ withAnimation: Bool = false) {
+    func initRootView(_ withAnimation: Bool = false, _ animationOption: UIView.AnimationOptions = .curveEaseInOut) {
         
         // set appearance of component on basis of language direction
         let semantic: UISemanticContentAttribute = .forceLeftToRight
@@ -78,7 +78,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController {
            
             if withAnimation {
-                Languages().animateChangingLanguage(window: window, tabBarController: tabBarController)
+                Languages().animateChangingLanguage(window: window, tabBarController: tabBarController, animationOption: animationOption)
             } else {
                 
                 window?.rootViewController = tabBarController

@@ -53,5 +53,11 @@ class TipsCalulatorViewController: UIViewController {
         
     }
     
+    @IBAction func refreshView(_ sender: Any) {
+        
+        // refresh view/data/all information
+        
+    }
+    
 }
 
