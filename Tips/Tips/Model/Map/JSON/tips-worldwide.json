@@ -1110,21 +1110,6 @@
         "driverTipLimit": "NoInfo"
     },
     {
-        "countryNameEN": "Latvia",
-        "countryNamePL": "Łotwa",
-        "countryNameRU": "Латвия",
-        "continentEN": "Europe",
-        "continentPL": "Europa",
-        "continentRU": "Европа",
-        "countryCode": "LV",
-        "restaurantTipInitial": "10.00",
-        "restaurantTipFinal": "10.00",
-        "hotelTipInitialUSD": "NoTip",
-        "hotelTipFinalUSD": "NoTip",
-        "driverTipInitial": "NoTip",
-        "driverTipLimit": "NoTip"
-    },
-    {
         "countryNameEN": "Mongolia",
         "countryNamePL": "Mongolia",
         "countryNameRU": "Монголия",

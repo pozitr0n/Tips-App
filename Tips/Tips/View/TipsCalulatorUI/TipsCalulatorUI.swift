@@ -46,7 +46,7 @@ struct TipsCalulatorUI: View {
             CurrencyTipsTextField(formatterOfNumber: formatterOfNumber, value: $value)
                 .padding(20)
                 .overlay(RoundedRectangle(cornerRadius: 20)
-                            .stroke(Color.gray.opacity(0.3), lineWidth: 2))
+                            .stroke(Color.gray.opacity(0.6), lineWidth: 3))
                 .frame(height: 100)
             
             Rectangle()
