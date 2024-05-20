@@ -101,7 +101,11 @@
                                             <action selector="refreshView:" destination="dz7-Mm-QqH" id="Dgd-CZ-Vn0"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Add to Favourite" image="plus.circle" catalog="system" id="Tyb-Nx-A4j"/>
+                                    <barButtonItem title="Add to Favourite" image="plus.circle" catalog="system" id="Tyb-Nx-A4j">
+                                        <connections>
+                                            <action selector="addToFavourite:" destination="dz7-Mm-QqH" id="PKm-Ws-92E"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
