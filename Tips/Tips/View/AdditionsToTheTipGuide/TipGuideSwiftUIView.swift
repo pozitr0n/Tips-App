@@ -113,7 +113,7 @@ struct TipGuideSwiftUIView: View {
                             .frame(width: 300, height: 150, alignment: .center)
                             .padding([.leading, .trailing], 10)
                             .background(.guideBackground)
-                            .foregroundStyle(.guideCountryBackground)
+                            .foregroundStyle(.textButtonColorBackground)
                             .multilineTextAlignment(.center)
                             .bold()
                             .font(.system(size: 19))
@@ -337,8 +337,7 @@ struct TipGuideSwiftUIView: View {
                                             Spacer()
                                             
                                             Text("\(exchangeRatesDataAPI._currencyDate)")
-                                                .background(.guideBackground)
-                                                .foregroundStyle(.guideCountryBackground)
+                                                .foregroundStyle(.textButtonColorBackground)
                                                 .multilineTextAlignment(.trailing)
                                                 .bold()
                                                 .font(.system(size: 12))
@@ -357,8 +356,7 @@ struct TipGuideSwiftUIView: View {
                                             Spacer()
                                             
                                             Text("\(exchangeRatesDataAPI._currencyDate)")
-                                                .background(.guideBackground)
-                                                .foregroundStyle(.guideCountryBackground)
+                                                .foregroundStyle(.textButtonColorBackground)
                                                 .multilineTextAlignment(.trailing)
                                                 .bold()
                                                 .font(.system(size: 12))
@@ -377,8 +375,7 @@ struct TipGuideSwiftUIView: View {
                                             Spacer()
                                             
                                             Text("\(exchangeRatesDataAPI._currencyDate)")
-                                                .background(.guideBackground)
-                                                .foregroundStyle(.guideCountryBackground)
+                                                .foregroundStyle(.textButtonColorBackground)
                                                 .multilineTextAlignment(.trailing)
                                                 .bold()
                                                 .font(.system(size: 12))
@@ -403,8 +400,7 @@ struct TipGuideSwiftUIView: View {
                                             Spacer()
                                             
                                             Text("\(exchangeRatesDataAPI._currencyDate)")
-                                                .background(.guideBackground)
-                                                .foregroundStyle(.guideCountryBackground)
+                                                .foregroundStyle(.textButtonColorBackground)
                                                 .multilineTextAlignment(.trailing)
                                                 .bold()
                                                 .font(.system(size: 12))
@@ -423,8 +419,7 @@ struct TipGuideSwiftUIView: View {
                                             Spacer()
                                             
                                             Text("\(exchangeRatesDataAPI._currencyDate)")
-                                                .background(.guideBackground)
-                                                .foregroundStyle(.guideCountryBackground)
+                                                .foregroundStyle(.textButtonColorBackground)
                                                 .multilineTextAlignment(.trailing)
                                                 .bold()
                                                 .font(.system(size: 12))
@@ -443,8 +438,7 @@ struct TipGuideSwiftUIView: View {
                                             Spacer()
                                             
                                             Text("\(exchangeRatesDataAPI._currencyDate)")
-                                                .background(.guideBackground)
-                                                .foregroundStyle(.guideCountryBackground)
+                                                .foregroundStyle(.textButtonColorBackground)
                                                 .multilineTextAlignment(.trailing)
                                                 .bold()
                                                 .font(.system(size: 12))

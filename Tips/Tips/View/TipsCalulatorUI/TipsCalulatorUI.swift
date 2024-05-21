@@ -37,22 +37,92 @@ struct TipsCalulatorUI: View {
 
     var body: some View {
     
-        VStack(spacing: 15) {
+        VStack(spacing: 20) {
             
             Text("Bill-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                 .font(.title)
-                .bold()
+                .foregroundStyle(.textButtonColorBackground)
             
             CurrencyTipsTextField(formatterOfNumber: formatterOfNumber, value: $value)
                 .padding(20)
                 .overlay(RoundedRectangle(cornerRadius: 20)
-                            .stroke(Color.gray.opacity(0.6), lineWidth: 3))
-                .frame(height: 100)
+                    .stroke(Color.gray.opacity(0.4), lineWidth: 3)
+                    .frame(height: 70))
+                .frame(height: 70)
+             
+            VStack(spacing: 5) {
             
-            Rectangle()
-                .frame(width: 0, height: 0)
-            
-            Spacer()
+                Text("Quick-Tips.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                    .font(.title2)
+                    .foregroundStyle(.textButtonColorBackground)
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    
+                    LazyHStack {
+                        
+                        Button("5%") {
+                            print("Test")
+                        }
+                        .frame(width: 70, height: 8)
+                        .padding()
+                        .foregroundStyle(.textButtonColorBackground)
+                        .background(.percentColorBackground)
+                        .cornerRadius(20)
+                        
+                        Button("10%") {
+                            print("Test")
+                        }
+                        .frame(width: 70, height: 8)
+                        .padding()
+                        .foregroundStyle(.textButtonColorBackground)
+                        .background(.percentColorBackground)
+                        .cornerRadius(20)
+                        
+                        Button("15%") {
+                            print("Test")
+                        }
+                        .frame(width: 70, height: 8)
+                        .padding()
+                        .foregroundStyle(.textButtonColorBackground)
+                        .background(.percentColorBackground)
+                        .cornerRadius(20)
+                        
+                        Button("20%") {
+                            print("Test")
+                        }
+                        .frame(width: 70, height: 8)
+                        .padding()
+                        .foregroundStyle(.textButtonColorBackground)
+                        .background(.percentColorBackground)
+                        .cornerRadius(20)
+                        
+                        Button("25%") {
+                            print("Test")
+                        }
+                        .frame(width: 70, height: 8)
+                        .padding()
+                        .foregroundStyle(.textButtonColorBackground)
+                        .background(.percentColorBackground)
+                        .cornerRadius(20)
+                        
+                        Button("30%") {
+                            print("Test")
+                        }
+                        .frame(width: 70, height: 8)
+                        .padding()
+                        .foregroundStyle(.textButtonColorBackground)
+                        .background(.percentColorBackground)
+                        .cornerRadius(20)
+                        
+                    }
+                    .padding()
+                    
+                }
+                .frame(height: 60)
+                
+                Spacer()
+                
+            }
             
         }
         .padding(.top, 20)
@@ -121,7 +191,7 @@ class PreviewNumberFormatter: FormatterNumberProtocol {
 
 #Preview {
     
-    TipsCalulatorUI(formatterOfNumber: PreviewNumberFormatter(locale: Locale(identifier: "us_US")))
-    // TipsCalulatorUI()
+    TipsCalulatorUI(formatterOfNumber: PreviewNumberFormatter(locale: Locale(identifier: "pl_PL")))
+    //TipsCalulatorUI()
     
 }

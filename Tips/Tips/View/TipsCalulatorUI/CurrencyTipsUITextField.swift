@@ -53,7 +53,7 @@ class CurrencyTipsUITextField: UITextField {
     private func setupViews() {
         
         tintColor = .clear
-        font = .systemFont(ofSize: 35, weight: .regular)
+        font = .systemFont(ofSize: 30, weight: .regular)
         
         setInitialValue()
         
