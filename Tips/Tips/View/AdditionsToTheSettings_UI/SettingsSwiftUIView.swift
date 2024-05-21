@@ -220,8 +220,8 @@ struct SettingsSwiftUIView: View {
                 
                 CurrencyCodes()
                 
-                // Since maximum height is 390
-                    .presentationDetents([.height(390)])
+                // Since maximum height is 390 + 10
+                    .presentationDetents([.height(400)])
                     .presentationBackground(.clear)
                     
             })
@@ -229,8 +229,8 @@ struct SettingsSwiftUIView: View {
                 
                 ModeChangeView(scheme: scheme)
                 
-                // Since maximum height is 410
-                    .presentationDetents([.height(410)])
+                // Since maximum height is 410 + 10
+                    .presentationDetents([.height(420)])
                     .presentationBackground(.clear)
                     
             })
@@ -238,8 +238,8 @@ struct SettingsSwiftUIView: View {
                 
                 DefaultPercentage()
                 
-                // Since maximum height is 350
-                    .presentationDetents([.height(350)])
+                // Since maximum height is 350 + 10
+                    .presentationDetents([.height(360)])
                     .presentationBackground(.clear)
                     
             })
@@ -247,8 +247,8 @@ struct SettingsSwiftUIView: View {
                 
                 RatingExperience()
                 
-                // Since maximum height is 150
-                    .presentationDetents([.height(150)])
+                // Since maximum height is 150 + 10
+                    .presentationDetents([.height(160)])
                     .presentationBackground(.clear)
                 
             })
