@@ -24,6 +24,9 @@ struct SettingsSwiftUIView: View {
     @AppStorage("userTheme") private var userTheme: Mode = .systemDefaultMode
     @Environment(\.colorScheme) private var scheme
     
+    // Blur (settings)
+    @State var blurRadius: CGFloat = 5
+    
     // Changing currency format
     @State private var changeCurrency: Bool = false
     
@@ -251,7 +254,7 @@ struct SettingsSwiftUIView: View {
             })
             
         }
-        
+        .blur(radius: changeMode || changeCurrency || changePercentage || changeRating ? blurRadius : 0)
     }
     
 }
