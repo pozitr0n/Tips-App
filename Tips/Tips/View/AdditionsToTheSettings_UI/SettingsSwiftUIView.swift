@@ -24,9 +24,6 @@ struct SettingsSwiftUIView: View {
     @AppStorage("userTheme") private var userTheme: Mode = .systemDefaultMode
     @Environment(\.colorScheme) private var scheme
     
-    // Blur (settings)
-    @State var blurRadius: CGFloat = 15
-    
     // Changing currency format
     @State private var changeCurrency: Bool = false
     
@@ -69,9 +66,9 @@ struct SettingsSwiftUIView: View {
                                 changeMode.toggle()
                             }
                             .padding(.trailing)
-                                                        
+                            
                         } else {
-                        
+                            
                             NavigationLink(destination: ChangeApplicationIcon(iconsForChanging: allIcons)) {
                                 
                                 VStack {
@@ -93,11 +90,11 @@ struct SettingsSwiftUIView: View {
                 }
                 
                 Section(header: Text("General.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
-
+                    
                     List(blockGeneral) { array in
                         
                         if array.title == "Language.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
-                        
+                            
                             NavigationLink(destination: DetailLanguages(languages: allLanguages)) {
                                 
                                 VStack {
@@ -130,7 +127,7 @@ struct SettingsSwiftUIView: View {
                         }
                         
                     }
-                
+                    
                 }
                 
                 Section(header: Text("Application-About.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))) {
@@ -138,7 +135,7 @@ struct SettingsSwiftUIView: View {
                     List(blockAbout) { array in
                         
                         if array.title == "What-New.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
-                        
+                            
                             NavigationLink(destination: WhatIsNew()) {
                                 
                                 VStack {
@@ -151,7 +148,7 @@ struct SettingsSwiftUIView: View {
                             }
                             
                         } else {
-                         
+                            
                             if array.title == "Application-Rate.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
                                 
                                 Button(array.title, systemImage: "heart.circle") {
@@ -164,7 +161,7 @@ struct SettingsSwiftUIView: View {
                             if array.title == "Application-Privacy-Policy.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) {
                                 
                                 Button(array.title, systemImage: "lock.circle") {
-                                   
+                                    
                                     // !!! change the link to privacy policy !!!
                                     if let url = URL(string: "https://www.testgorilla.com/privacy-policy/") {
                                         UIApplication.shared.open(url)
@@ -223,7 +220,7 @@ struct SettingsSwiftUIView: View {
                 // Since maximum height is 390 + 10
                     .presentationDetents([.height(400)])
                     .presentationBackground(.clear)
-                    
+                
             })
             .sheet(isPresented: $changeMode, content: {
                 
@@ -232,7 +229,7 @@ struct SettingsSwiftUIView: View {
                 // Since maximum height is 410 + 10
                     .presentationDetents([.height(420)])
                     .presentationBackground(.clear)
-                    
+                
             })
             .sheet(isPresented: $changePercentage, content: {
                 
@@ -241,7 +238,7 @@ struct SettingsSwiftUIView: View {
                 // Since maximum height is 350 + 10
                     .presentationDetents([.height(360)])
                     .presentationBackground(.clear)
-                    
+                
             })
             .sheet(isPresented: $changeRating, content: {
                 
@@ -254,8 +251,7 @@ struct SettingsSwiftUIView: View {
             })
             
         }
-        .blur(radius: changeMode || changeCurrency || changePercentage || changeRating ? blurRadius : 0)
-        // add animation!!!
+        
     }
     
 }

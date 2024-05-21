@@ -23,6 +23,7 @@ protocol FormatterNumberProtocol: Any {
 struct TipsCalulatorUI: View {
     
     @State private var value = 0
+    @State private var percent: Double = 0.00
     
     private var formatterOfNumber: FormatterNumberProtocol
     
@@ -37,31 +38,41 @@ struct TipsCalulatorUI: View {
 
     var body: some View {
     
-        VStack(spacing: 20) {
+        VStack(spacing: 30) {
             
-            Text("Bill-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                .font(.title)
-                .foregroundStyle(.textButtonColorBackground)
+            VStack(spacing: 10) {
             
-            CurrencyTipsTextField(formatterOfNumber: formatterOfNumber, value: $value)
-                .padding(20)
-                .overlay(RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.gray.opacity(0.4), lineWidth: 3)
-                    .frame(width: UIScreen.main.bounds.size.width - 30, height: 70))
-                .frame(width: UIScreen.main.bounds.size.width - 30, height: 70)
-             
+                Text("Bill-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                    .fontWeight(.medium)
+                    .font(.system(size: 35))
+                    .foregroundStyle(
+                        LinearGradient(colors: [.textButtonColorBackground, .percentColorBackground], startPoint: .topTrailing, endPoint: .bottomTrailing)
+                    )
+                
+                CurrencyTipsTextField(formatterOfNumber: formatterOfNumber, value: $value)
+                    .padding(20)
+                    .overlay(RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.gray.opacity(0.4), lineWidth: 3)
+                        .frame(width: UIScreen.main.bounds.size.width - 30, height: 70))
+                    .frame(width: UIScreen.main.bounds.size.width - 30, height: 70)
+                
+            }
+            
             VStack(spacing: 5) {
             
                 Text("Quick-Tips.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                    .font(.title2)
-                    .foregroundStyle(.textButtonColorBackground)
+                    .fontWeight(.medium)
+                    .font(.system(size: 25))
+                    .foregroundStyle(
+                        LinearGradient(colors: [.textButtonColorBackground, .percentColorBackground], startPoint: .topTrailing, endPoint: .bottomTrailing)
+                    )
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     
                     LazyHStack {
                         
                         Button("5%") {
-                            print("Test")
+                            percent = 5.0
                         }
                         .frame(width: 70, height: 8)
                         .padding()
@@ -70,7 +81,7 @@ struct TipsCalulatorUI: View {
                         .cornerRadius(20)
                         
                         Button("10%") {
-                            print("Test")
+                            percent = 10.0
                         }
                         .frame(width: 70, height: 8)
                         .padding()
@@ -79,7 +90,7 @@ struct TipsCalulatorUI: View {
                         .cornerRadius(20)
                         
                         Button("15%") {
-                            print("Test")
+                            percent = 15.0
                         }
                         .frame(width: 70, height: 8)
                         .padding()
@@ -88,7 +99,7 @@ struct TipsCalulatorUI: View {
                         .cornerRadius(20)
                         
                         Button("20%") {
-                            print("Test")
+                            percent = 20.0
                         }
                         .frame(width: 70, height: 8)
                         .padding()
@@ -97,7 +108,7 @@ struct TipsCalulatorUI: View {
                         .cornerRadius(20)
                         
                         Button("25%") {
-                            print("Test")
+                            percent = 25.0
                         }
                         .frame(width: 70, height: 8)
                         .padding()
@@ -106,7 +117,7 @@ struct TipsCalulatorUI: View {
                         .cornerRadius(20)
                         
                         Button("30%") {
-                            print("Test")
+                            percent = 30.0
                         }
                         .frame(width: 70, height: 8)
                         .padding()
@@ -120,9 +131,19 @@ struct TipsCalulatorUI: View {
                 }
                 .frame(width: UIScreen.main.bounds.size.width, height: 60)
                 
-                Spacer()
+            }
+            
+            VStack {
+            
+                HStack(spacing: 10) {
+                    Slider(value: $percent, in: 0...100, step: 1.0)
+                        .accentColor(.percentColorBackground)
+                    Text("\(percent, specifier: "%.0f")%")
+                }
                 
             }
+            
+            Spacer()
             
         }
         .padding(.top, 20)
