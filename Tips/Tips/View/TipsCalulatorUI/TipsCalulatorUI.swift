@@ -47,8 +47,8 @@ struct TipsCalulatorUI: View {
                 .padding(20)
                 .overlay(RoundedRectangle(cornerRadius: 20)
                     .stroke(Color.gray.opacity(0.4), lineWidth: 3)
-                    .frame(height: 70))
-                .frame(height: 70)
+                    .frame(width: UIScreen.main.bounds.size.width - 30, height: 70))
+                .frame(width: UIScreen.main.bounds.size.width - 30, height: 70)
              
             VStack(spacing: 5) {
             
@@ -118,7 +118,7 @@ struct TipsCalulatorUI: View {
                     .padding()
                     
                 }
-                .frame(height: 60)
+                .frame(width: UIScreen.main.bounds.size.width, height: 60)
                 
                 Spacer()
                 
