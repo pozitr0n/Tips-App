@@ -25,7 +25,7 @@ struct SettingsSwiftUIView: View {
     @Environment(\.colorScheme) private var scheme
     
     // Blur (settings)
-    @State var blurRadius: CGFloat = 5
+    @State var blurRadius: CGFloat = 15
     
     // Changing currency format
     @State private var changeCurrency: Bool = false
@@ -255,6 +255,7 @@ struct SettingsSwiftUIView: View {
             
         }
         .blur(radius: changeMode || changeCurrency || changePercentage || changeRating ? blurRadius : 0)
+        // add animation!!!
     }
     
 }
