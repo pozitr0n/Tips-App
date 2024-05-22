@@ -193,7 +193,7 @@ struct SettingsSwiftUIView: View {
                                 .overlay(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(Color.gray,
                                                                                                        lineWidth: 2))
                             
-                            Text("v1.0")
+                            Text("v1.0.1")
                                 .font(.subheadline)
                                 .foregroundStyle(.gray)
                             Text("Made-In-By.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
