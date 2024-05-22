@@ -24,7 +24,7 @@ struct TipsCalulatorUI: View {
     
     @State private var value = 0
     @State private var percent: Double = 0.00
-    @State private(set) var numberOfPersons: Int = 0
+    @State private(set) var numberOfPersons: Int = 1
     
     private var formatterOfNumber: FormatterNumberProtocol
     
@@ -47,7 +47,7 @@ struct TipsCalulatorUI: View {
                     .fontWeight(.medium)
                     .font(.system(size: 35))
                     .foregroundStyle(
-                        LinearGradient(colors: [.textButtonColorBackground, .textHeader], startPoint: .bottom, endPoint: .top)
+                        .textButtonColorBackground
                     )
                 
                 CurrencyTipsTextField(formatterOfNumber: formatterOfNumber, value: $value)
@@ -65,7 +65,7 @@ struct TipsCalulatorUI: View {
                     .fontWeight(.medium)
                     .font(.system(size: 25))
                     .foregroundStyle(
-                        LinearGradient(colors: [.textButtonColorBackground, .textHeader], startPoint: .bottom, endPoint: .top)
+                        .textButtonColorBackground
                     )
                 
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -152,7 +152,7 @@ struct TipsCalulatorUI: View {
                         .fontWeight(.medium)
                         .font(.system(size: 25))
                         .foregroundStyle(
-                            LinearGradient(colors: [.textButtonColorBackground, .textHeader], startPoint: .bottom, endPoint: .top)
+                            .textButtonColorBackground
                         )
                     
                     Spacer()
@@ -161,6 +161,93 @@ struct TipsCalulatorUI: View {
                     
                 }
                 
+            }
+            
+            VStack {
+                
+                HStack {
+                    VStack {
+                        Text("Bill Summary")
+                        Image(systemName: "dollarsign.circle")
+                            .renderingMode(.original)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 40, height: 40)
+                            .clipped()
+                    }
+                    Spacer()
+                    HStack(spacing: 20) {
+                        VStack(alignment: .trailing) {
+                            Text("Bill")
+                                .font(.system(.title2, weight: .bold))
+                                .foregroundStyle(.secondary)
+                            Text("Tip")
+                                .font(.system(.title2, weight: .bold))
+                                .foregroundStyle(.secondary)
+                            Text("Total")
+                                .font(.system(.title2, weight: .bold))
+                                .foregroundStyle(.secondary)
+                        }
+                        VStack(alignment: .trailing) {
+                            Text("$0.00")
+                                .font(.system(.title2, weight: .semibold))
+                                .foregroundStyle(.primary)
+                            Text("$0.00")
+                                .font(.system(.title2, weight: .semibold))
+                                .foregroundStyle(.primary)
+                            Text("$0.00")
+                                .font(.system(.title2, weight: .semibold))
+                                .foregroundStyle(.primary)
+                        }
+                    }
+                }
+                .padding(30)
+                
+                if numberOfPersons > 1 {
+                 
+                    HStack {
+                        VStack {
+                            Text("Per person")
+                            HStack {
+                                Image(systemName: "figure.2.arms.open")
+                                    .renderingMode(.original)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 20, height: 20)
+                                    .clipped()
+                                Text("x 2")
+                            }
+                        }
+                        Spacer()
+                        HStack(spacing: 20) {
+                            VStack(alignment: .trailing) {
+                                Text("Bill")
+                                    .font(.system(.title2, weight: .bold))
+                                    .foregroundStyle(.secondary)
+                                Text("Tip")
+                                    .font(.system(.title2, weight: .bold))
+                                    .foregroundStyle(.secondary)
+                                Text("Total")
+                                    .font(.system(.title2, weight: .bold))
+                                    .foregroundStyle(.secondary)
+                            }
+                            VStack(alignment: .trailing) {
+                                Text("$0.00")
+                                    .font(.system(.title2, weight: .semibold))
+                                    .foregroundStyle(.primary)
+                                Text("$0.00")
+                                    .font(.system(.title2, weight: .semibold))
+                                    .foregroundStyle(.primary)
+                                Text("$0.00")
+                                    .font(.system(.title2, weight: .semibold))
+                                    .foregroundStyle(.primary)
+                            }
+                        }
+                    }
+                    .padding(30)
+                    
+                }
+            
             }
             
             Spacer()

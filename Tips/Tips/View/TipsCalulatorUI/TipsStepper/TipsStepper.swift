@@ -11,7 +11,7 @@ struct TipsStepper: View {
     
     // Main properties
     var currentWidth: CGFloat = 150
-    var minimumValue: Int = 0
+    var minimumValue: Int = 1
     var maximumValue: Int = 50
     
     @Binding var value: Int
@@ -203,7 +203,7 @@ private extension TipsStepper {
     }
     
     private func doReset() {
-        self.value = 0
+        self.value = 1
     }
     
 }
