@@ -168,11 +168,12 @@ struct TipsCalulatorUI: View {
                 HStack {
                     VStack {
                         Text("Bill Summary")
-                        Image(systemName: "dollarsign.circle")
+                            .bold()
+                        Image("icon-bill")
                             .renderingMode(.original)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 40, height: 40)
+                            .frame(width: 70, height: 70)
                             .clipped()
                     }
                     Spacer()
@@ -189,13 +190,13 @@ struct TipsCalulatorUI: View {
                                 .foregroundStyle(.secondary)
                         }
                         VStack(alignment: .trailing) {
-                            Text("$0.00")
+                            Text("0.00")
                                 .font(.system(.title2, weight: .semibold))
                                 .foregroundStyle(.primary)
-                            Text("$0.00")
+                            Text("0.00")
                                 .font(.system(.title2, weight: .semibold))
                                 .foregroundStyle(.primary)
-                            Text("$0.00")
+                            Text("0.00")
                                 .font(.system(.title2, weight: .semibold))
                                 .foregroundStyle(.primary)
                         }
@@ -205,17 +206,20 @@ struct TipsCalulatorUI: View {
                 
                 if numberOfPersons > 1 {
                  
+                    Divider()
                     HStack {
                         VStack {
                             Text("Per person")
+                                .bold()
                             HStack {
-                                Image(systemName: "figure.2.arms.open")
+                                Image("icon-persons")
                                     .renderingMode(.original)
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                    .frame(width: 20, height: 20)
+                                    .frame(width: 50, height: 50)
                                     .clipped()
-                                Text("x 2")
+                                Text("x \(numberOfPersons)")
+                                    .bold()
                             }
                         }
                         Spacer()
@@ -232,13 +236,13 @@ struct TipsCalulatorUI: View {
                                     .foregroundStyle(.secondary)
                             }
                             VStack(alignment: .trailing) {
-                                Text("$0.00")
+                                Text("0.00")
                                     .font(.system(.title2, weight: .semibold))
                                     .foregroundStyle(.primary)
-                                Text("$0.00")
+                                Text("0.00")
                                     .font(.system(.title2, weight: .semibold))
                                     .foregroundStyle(.primary)
-                                Text("$0.00")
+                                Text("0.00")
                                     .font(.system(.title2, weight: .semibold))
                                     .foregroundStyle(.primary)
                             }
