@@ -24,6 +24,7 @@ struct TipsCalulatorUI: View {
     
     @State private var value = 0
     @State private var percent: Double = 0.00
+    @State private(set) var numberOfPersons: Int = 0
     
     private var formatterOfNumber: FormatterNumberProtocol
     
@@ -46,7 +47,7 @@ struct TipsCalulatorUI: View {
                     .fontWeight(.medium)
                     .font(.system(size: 35))
                     .foregroundStyle(
-                        LinearGradient(colors: [.textButtonColorBackground, .percentColorBackground], startPoint: .topTrailing, endPoint: .bottomTrailing)
+                        LinearGradient(colors: [.textButtonColorBackground, .textHeader], startPoint: .bottom, endPoint: .top)
                     )
                 
                 CurrencyTipsTextField(formatterOfNumber: formatterOfNumber, value: $value)
@@ -64,7 +65,7 @@ struct TipsCalulatorUI: View {
                     .fontWeight(.medium)
                     .font(.system(size: 25))
                     .foregroundStyle(
-                        LinearGradient(colors: [.textButtonColorBackground, .percentColorBackground], startPoint: .topTrailing, endPoint: .bottomTrailing)
+                        LinearGradient(colors: [.textButtonColorBackground, .textHeader], startPoint: .bottom, endPoint: .top)
                     )
                 
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -139,6 +140,25 @@ struct TipsCalulatorUI: View {
                     Slider(value: $percent, in: 0...100, step: 1.0)
                         .accentColor(.percentColorBackground)
                     Text("\(percent, specifier: "%.0f")%")
+                }
+                
+            }
+            
+            VStack {
+                
+                HStack {
+                    
+                    Text("Number-of-Persons.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                        .fontWeight(.medium)
+                        .font(.system(size: 25))
+                        .foregroundStyle(
+                            LinearGradient(colors: [.textButtonColorBackground, .textHeader], startPoint: .bottom, endPoint: .top)
+                        )
+                    
+                    Spacer()
+                    
+                    TipsStepper(value: $numberOfPersons)
+                    
                 }
                 
             }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D015CB02BFD5BAE00B095BF /* TipsStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D015CAF2BFD5BAE00B095BF /* TipsStepper.swift */; };
+		4D015CB22BFD5BE700B095BF /* TipsStepper+MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D015CB12BFD5BE700B095BF /* TipsStepper+MainButton.swift */; };
 		4D159F852BC025E9003EC231 /* RatingExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D159F842BC025E9003EC231 /* RatingExperience.swift */; };
 		4D1C119B2B9FF10A00FEAB9E /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C119A2B9FF10A00FEAB9E /* ShareViewController.swift */; };
 		4D1C119D2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C119C2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift */; };
@@ -99,6 +101,8 @@
 		3B8E570A366829CD6EED06F7 /* Pods_Tips.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tips.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E009FA8CB229BF8AEEB2E12 /* Pods-TipsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TipsTests.release.xcconfig"; path = "Target Support Files/Pods-TipsTests/Pods-TipsTests.release.xcconfig"; sourceTree = "<group>"; };
 		455A1802E26CA90E47975432 /* Pods-TipsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TipsTests.debug.xcconfig"; path = "Target Support Files/Pods-TipsTests/Pods-TipsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D015CAF2BFD5BAE00B095BF /* TipsStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsStepper.swift; sourceTree = "<group>"; };
+		4D015CB12BFD5BE700B095BF /* TipsStepper+MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TipsStepper+MainButton.swift"; sourceTree = "<group>"; };
 		4D159F842BC025E9003EC231 /* RatingExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingExperience.swift; sourceTree = "<group>"; };
 		4D1C119A2B9FF10A00FEAB9E /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		4D1C119C2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteSwiftUIView.swift; sourceTree = "<group>"; };
@@ -208,6 +212,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D015CAE2BFD5A6E00B095BF /* TipsStepper */ = {
+			isa = PBXGroup;
+			children = (
+				4D015CAF2BFD5BAE00B095BF /* TipsStepper.swift */,
+				4D015CB12BFD5BE700B095BF /* TipsStepper+MainButton.swift */,
+			);
+			path = TipsStepper;
+			sourceTree = "<group>";
+		};
 		4D159F832BC025D2003EC231 /* RatingExperience */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +425,7 @@
 		4D6576DD2BF8CAB100A222C4 /* TipsCalulatorUI */ = {
 			isa = PBXGroup;
 			children = (
+				4D015CAE2BFD5A6E00B095BF /* TipsStepper */,
 				4D6576DB2BF8C8A700A222C4 /* TipsCalulatorUI.swift */,
 				4D6576DE2BF8CD1600A222C4 /* CurrencyTipsTextField.swift */,
 				4D6576E02BF8CD5000A222C4 /* CurrencyTipsUITextField.swift */,
@@ -811,8 +825,10 @@
 				4DE4D6232BB10C2900160224 /* Extensions.swift in Sources */,
 				4D9ACDEB2BA37B340075C3F6 /* TabBarViewController.swift in Sources */,
 				4D6576DC2BF8C8A700A222C4 /* TipsCalulatorUI.swift in Sources */,
+				4D015CB02BFD5BAE00B095BF /* TipsStepper.swift in Sources */,
 				4D1C119D2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift in Sources */,
 				4DA44B6E2BA264DB005EC103 /* SplashViewController.swift in Sources */,
+				4D015CB22BFD5BE700B095BF /* TipsStepper+MainButton.swift in Sources */,
 				4D416FB12B9F398B00333567 /* AppDelegate.swift in Sources */,
 				4D9ACDEF2BA38A300075C3F6 /* SettingsViewController.swift in Sources */,
 				4D3152382BBD6C7300FB41BE /* ComponentsForTipGuide.swift in Sources */,

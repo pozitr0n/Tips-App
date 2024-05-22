@@ -322,3 +322,69 @@ extension UITextField {
 }
 
 extension NumberFormatter: FormatterNumberProtocol { }
+
+// TipsStepper PART-BEGIN
+
+extension TipsStepper {
+   
+    enum ButtonDirection {
+        
+        case none
+        case left
+        case right
+        case down
+        
+    }
+    
+    var animationSpring: Animation {
+        .interpolatingSpring(stiffness: 350, damping: 15)
+    }
+    
+    var controlsOpacityByDefault: Double { 0.4 }
+    var elementsSpacing: CGFloat { currentWidth / 10 }
+    
+    var containerHeigthForControls: CGFloat { currentWidth / 3.0 }
+    var containerCornerRadiusForControls: CGFloat { currentWidth / 4.9 }
+    var containerOffsetForControls: CGSize {
+        
+        .init(
+            width:  offsetOfLabel.width / 6,
+            height: offsetOfLabel.height / 6
+        )
+        
+    }
+    var containerOpacityForControls: Double { opacityForControls * 0.2 + abs(labelOffsetXInPercents) * 0.25 }
+    var opacityForControls: Double { labelOffsetYInPercents }
+    
+    var frameSizeForControls: CGFloat { currentWidth / 4.2 }
+    
+    var leftOpacityForControls: Double {
+        
+        if offsetOfLabel.width < 0 {
+            return -Double(offsetOfLabel.width / (labelOffsetXLimit * 0.65)) + controlsOpacityByDefault
+        } else {
+            return controlsOpacityByDefault - opacityForControls - labelOffsetXInPercents / 3.5
+        }
+        
+    }
+    var rightOpacityForControls: Double {
+        
+        if offsetOfLabel.width > 0 {
+            return Double(offsetOfLabel.width / (labelOffsetXLimit * 0.65)) + controlsOpacityByDefault
+        } else {
+            return controlsOpacityByDefault - opacityForControls + labelOffsetXInPercents / 3.5
+        }
+        
+    }
+    
+    var labelSize: CGFloat { currentWidth / 3.7 }
+    var labelFontSize: CGFloat { labelSize / 2.5 }
+    var labelOffsetXLimit: CGFloat { currentWidth / 3 + elementsSpacing }
+    var labelOffsetYLimit: CGFloat { containerHeigthForControls / 1.2 }
+    var labelOffsetXInPercents: Double { Double(offsetOfLabel.width / labelOffsetXLimit) }
+    var labelOffsetYInPercents: Double { Double(offsetOfLabel.height / labelOffsetYLimit) }
+    var addWidth: CGFloat { 15.0 }
+    
+}
+
+// TipsStepper PART-END
