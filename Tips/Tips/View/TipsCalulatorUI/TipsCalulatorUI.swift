@@ -166,6 +166,7 @@ struct TipsCalulatorUI: View {
             VStack {
                 
                 HStack {
+                    
                     VStack {
                         Text("Bill Summary")
                             .bold()
@@ -176,8 +177,11 @@ struct TipsCalulatorUI: View {
                             .frame(width: 70, height: 70)
                             .clipped()
                     }
+                    
                     Spacer()
+                    
                     HStack(spacing: 20) {
+                        
                         VStack(alignment: .trailing) {
                             Text("Bill")
                                 .font(.system(.title2, weight: .bold))
@@ -200,14 +204,18 @@ struct TipsCalulatorUI: View {
                                 .font(.system(.title2, weight: .semibold))
                                 .foregroundStyle(.primary)
                         }
+                        
                     }
+                    
                 }
                 .padding(30)
                 
                 if numberOfPersons > 1 {
                  
                     Divider()
+                    
                     HStack {
+                        
                         VStack {
                             Text("Per person")
                                 .bold()
@@ -222,8 +230,11 @@ struct TipsCalulatorUI: View {
                                     .bold()
                             }
                         }
+                        
                         Spacer()
+                        
                         HStack(spacing: 20) {
+                            
                             VStack(alignment: .trailing) {
                                 Text("Bill")
                                     .font(.system(.title2, weight: .bold))
@@ -246,6 +257,7 @@ struct TipsCalulatorUI: View {
                                     .font(.system(.title2, weight: .semibold))
                                     .foregroundStyle(.primary)
                             }
+                            
                         }
                     }
                     .padding(30)
