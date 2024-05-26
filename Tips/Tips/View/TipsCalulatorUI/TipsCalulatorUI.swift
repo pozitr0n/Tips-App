@@ -168,6 +168,7 @@ struct TipsCalulatorUI: View {
                 HStack {
                     
                     VStack {
+                        
                         Text("Bill Summary")
                             .bold()
                         Image("icon-bill")
@@ -176,6 +177,7 @@ struct TipsCalulatorUI: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 70, height: 70)
                             .clipped()
+                        
                     }
                     
                     Spacer()
@@ -193,6 +195,7 @@ struct TipsCalulatorUI: View {
                                 .font(.system(.title2, weight: .bold))
                                 .foregroundStyle(.secondary)
                         }
+                        
                         VStack(alignment: .trailing) {
                             Text("0.00")
                                 .font(.system(.title2, weight: .semibold))
@@ -217,6 +220,7 @@ struct TipsCalulatorUI: View {
                     HStack {
                         
                         VStack {
+                            
                             Text("Per person")
                                 .bold()
                             HStack {
@@ -229,6 +233,7 @@ struct TipsCalulatorUI: View {
                                 Text("x \(numberOfPersons)")
                                     .bold()
                             }
+                            
                         }
                         
                         Spacer()
@@ -246,6 +251,7 @@ struct TipsCalulatorUI: View {
                                     .font(.system(.title2, weight: .bold))
                                     .foregroundStyle(.secondary)
                             }
+                            
                             VStack(alignment: .trailing) {
                                 Text("0.00")
                                     .font(.system(.title2, weight: .semibold))
