@@ -9,6 +9,8 @@ import SwiftUI
 import Combine
 import Foundation
 
+// FormatterNumberProtocol - main protocol for all the operations of formatterng numbers
+//
 protocol FormatterNumberProtocol: Any {
     
     func string(for obj: Any?) -> String?
