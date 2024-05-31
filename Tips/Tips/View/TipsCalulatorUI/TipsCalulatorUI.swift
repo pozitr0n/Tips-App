@@ -22,6 +22,8 @@ protocol FormatterNumberProtocol: Any {
     
 }
 
+// Main struct of main screen UI - TipsCalulatorUI
+//
 struct TipsCalulatorUI: View {
     
     @State private var value = 0
