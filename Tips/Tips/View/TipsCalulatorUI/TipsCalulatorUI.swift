@@ -74,6 +74,7 @@ struct TipsCalulatorUI: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     
+                    // Main LazyHStack with all the percents
                     LazyHStack {
                         
                         Button("5%") {
