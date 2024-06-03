@@ -174,7 +174,7 @@ struct TipsCalulatorUI: View {
                     
                     VStack {
                         
-                        Text("Bill Summary")
+                        Text("Bill-Summary.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                             .bold()
                         Image("icon-bill")
                             .renderingMode(.original)
@@ -190,13 +190,13 @@ struct TipsCalulatorUI: View {
                     HStack(spacing: 20) {
                         
                         VStack(alignment: .trailing) {
-                            Text("Bill")
+                            Text("Bill-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                                 .font(.system(.title2, weight: .bold))
                                 .foregroundStyle(.secondary)
-                            Text("Tip")
+                            Text("Tip-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                                 .font(.system(.title2, weight: .bold))
                                 .foregroundStyle(.secondary)
-                            Text("Total")
+                            Text("Total-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                                 .font(.system(.title2, weight: .bold))
                                 .foregroundStyle(.secondary)
                         }
@@ -226,7 +226,7 @@ struct TipsCalulatorUI: View {
                         
                         VStack {
                             
-                            Text("Per person")
+                            Text("Per-person.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                                 .bold()
                             HStack {
                                 Image("icon-persons")
@@ -246,13 +246,13 @@ struct TipsCalulatorUI: View {
                         HStack(spacing: 20) {
                             
                             VStack(alignment: .trailing) {
-                                Text("Bill")
+                                Text("Bill-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                                     .font(.system(.title2, weight: .bold))
                                     .foregroundStyle(.secondary)
-                                Text("Tip")
+                                Text("Tip-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                                     .font(.system(.title2, weight: .bold))
                                     .foregroundStyle(.secondary)
-                                Text("Total")
+                                Text("Total-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                                     .font(.system(.title2, weight: .bold))
                                     .foregroundStyle(.secondary)
                             }

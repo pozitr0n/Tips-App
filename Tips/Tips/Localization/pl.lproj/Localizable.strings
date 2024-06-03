@@ -136,6 +136,8 @@
 
 "Okay.button.title" = "Okay, rozumiem";
 
+"f4a-R0-T90.title" = "Razem (rachunek)";
+
 "Bill-Total.title" = "Rachunek";
 
 "Done-Numpad.title" = "Gotowe";
@@ -143,3 +145,11 @@
 "Quick-Tips.title" = "Szybki Napiwek";
 
 "Number-of-Persons.title" = "Osób";
+
+"Bill-Summary.title" = "Suma pośrednia";
+
+"Per-person.title" = "Za osobę";
+
+"Tip-Total.title" = "Napiwek";
+
+"Total-Total.title" = "Razem";

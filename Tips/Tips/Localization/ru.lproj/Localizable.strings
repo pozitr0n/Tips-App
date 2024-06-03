@@ -136,6 +136,8 @@
 
 "Okay.button.title" = "Окей, я понял";
 
+"f4a-R0-T90.title" = "Счет (всего)";
+
 "Bill-Total.title" = "Счет";
 
 "Done-Numpad.title" = "Готово";
@@ -143,3 +145,11 @@
 "Quick-Tips.title" = "Быстрые Чаевые";
 
 "Number-of-Persons.title" = "Количество";
+
+"Bill-Summary.title" = "Общий итог";
+
+"Per-person.title" = "На человека";
+
+"Tip-Total.title" = "Чаевые";
+
+"Total-Total.title" = "Всего";
