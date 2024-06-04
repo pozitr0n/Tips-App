@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 import Foundation
+import Device
 
 // FormatterNumberProtocol - main protocol for all the operations of formatterng numbers
 //
@@ -30,6 +31,9 @@ struct TipsCalulatorUI: View {
     @State private var percent: Double = 0.00
     @State private(set) var numberOfPersons: Int = 1
     
+    @State private var currentInch = Device.size()
+    @State private var changeFactor: Double = 0.00
+    
     private var formatterOfNumber: FormatterNumberProtocol
     
     init(formatterOfNumber: FormatterNumberProtocol = NumberFormatter()) {
@@ -42,7 +46,7 @@ struct TipsCalulatorUI: View {
     }
 
     var body: some View {
-    
+        
         GeometryReader { reader in
             
             VStack(spacing: 10) {

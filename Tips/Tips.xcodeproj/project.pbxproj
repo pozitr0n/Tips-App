@@ -65,6 +65,7 @@
 		4DA44B742BA26706005EC103 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA44B732BA26706005EC103 /* SplashPresenter.swift */; };
 		4DB69D2B2BC4B318005B5B68 /* ReviewEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB69D2A2BC4B318005B5B68 /* ReviewEmail.swift */; };
 		4DB69D312BC4B5FE005B5B68 /* MailSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB69D302BC4B5FE005B5B68 /* MailSwiftUIView.swift */; };
+		4DB7C8FA2C0F75A9004049F0 /* AdditionsToMainUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB7C8F92C0F75A9004049F0 /* AdditionsToMainUI.swift */; };
 		4DC8AB832BA27DF9002AB3BF /* SplashAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8AB822BA27DF9002AB3BF /* SplashAnimator.swift */; };
 		4DE4B8892BB9E9A300894158 /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4B8882BB9E9A300894158 /* Currencies.swift */; };
 		4DE4B88C2BBA3B1200894158 /* DefaultPercentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4B88B2BBA3B1200894158 /* DefaultPercentage.swift */; };
@@ -168,6 +169,7 @@
 		4DA44B732BA26706005EC103 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		4DB69D2A2BC4B318005B5B68 /* ReviewEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewEmail.swift; sourceTree = "<group>"; };
 		4DB69D302BC4B5FE005B5B68 /* MailSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailSwiftUIView.swift; sourceTree = "<group>"; };
+		4DB7C8F92C0F75A9004049F0 /* AdditionsToMainUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionsToMainUI.swift; sourceTree = "<group>"; };
 		4DC8AB822BA27DF9002AB3BF /* SplashAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAnimator.swift; sourceTree = "<group>"; };
 		4DE4B8882BB9E9A300894158 /* Currencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
 		4DE4B88B2BBA3B1200894158 /* DefaultPercentage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPercentage.swift; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 				4D6576DB2BF8C8A700A222C4 /* TipsCalulatorUI.swift */,
 				4D6576DE2BF8CD1600A222C4 /* CurrencyTipsTextField.swift */,
 				4D6576E02BF8CD5000A222C4 /* CurrencyTipsUITextField.swift */,
+				4DB7C8F92C0F75A9004049F0 /* AdditionsToMainUI.swift */,
 			);
 			path = TipsCalulatorUI;
 			sourceTree = "<group>";
@@ -820,6 +823,7 @@
 				4D548F402BA00BAA00D07A9E /* TipGuideViewController.swift in Sources */,
 				4DC8AB832BA27DF9002AB3BF /* SplashAnimator.swift in Sources */,
 				4D9ACDED2BA389450075C3F6 /* SettingsSwiftUIView.swift in Sources */,
+				4DB7C8FA2C0F75A9004049F0 /* AdditionsToMainUI.swift in Sources */,
 				4D6576DF2BF8CD1600A222C4 /* CurrencyTipsTextField.swift in Sources */,
 				4D159F852BC025E9003EC231 /* RatingExperience.swift in Sources */,
 				4DE4D6232BB10C2900160224 /* Extensions.swift in Sources */,
