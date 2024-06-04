@@ -1,22 +1,26 @@
 PODS:
   - Alamofire (5.9.1)
+  - Device (3.6.0)
   - SwiftMessages (10.0.0):
     - SwiftMessages/App (= 10.0.0)
   - SwiftMessages/App (10.0.0)
 
 DEPENDENCIES:
   - Alamofire
+  - Device (~> 3.6.0)
   - SwiftMessages
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Device
     - SwiftMessages
 
 SPEC CHECKSUMS:
   Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
+  Device: bd1978b3885a7a83d542f2ae0877f723be7d4ec1
   SwiftMessages: d3540f0f981dfbac25bd2ae9a662effa48f76f92
 
-PODFILE CHECKSUM: ac9710b7133c7feabc488734ec5e1c3313d41093
+PODFILE CHECKSUM: 6f7abc91ee1c8b63df04761d886ff72b915137f3
 
 COCOAPODS: 1.15.2

@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-Tips/Pods-Tips-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Device/Device.framework
 ${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework
