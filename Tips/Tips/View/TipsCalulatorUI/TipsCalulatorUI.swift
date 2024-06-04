@@ -43,201 +43,149 @@ struct TipsCalulatorUI: View {
 
     var body: some View {
     
-        VStack(spacing: 30) {
+        GeometryReader { reader in
             
             VStack(spacing: 10) {
-            
-                Text("Bill-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                    .fontWeight(.medium)
-                    .font(.system(size: 35))
-                    .foregroundStyle(
-                        .textButtonColorBackground
-                    )
                 
-                CurrencyTipsTextField(formatterOfNumber: formatterOfNumber, value: $value)
-                    .padding(20)
-                    .overlay(RoundedRectangle(cornerRadius: 20)
-                        .stroke(Color.gray.opacity(0.4), lineWidth: 3)
-                        .frame(width: UIScreen.main.bounds.size.width - 30, height: 70))
-                    .frame(width: UIScreen.main.bounds.size.width - 30, height: 70)
+                VStack(spacing: 10) {
                 
-            }
-            
-            VStack(spacing: 5) {
-            
-                Text("Quick-Tips.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                    .fontWeight(.medium)
-                    .font(.system(size: 25))
-                    .foregroundStyle(
-                        .textButtonColorBackground
-                    )
-                
-                ScrollView(.horizontal, showsIndicators: false) {
+                    Text("Bill-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                        .fontWeight(.medium)
+                        .font(.system(size: 35))
+                        .foregroundStyle(
+                            .textButtonColorBackground
+                        )
                     
-                    // Main LazyHStack with all the percents
-                    LazyHStack {
-                        
-                        Button("5%") {
-                            percent = 5.0
-                        }
-                        .frame(width: 70, height: 8)
-                        .padding()
-                        .foregroundStyle(.textButtonColorBackground)
-                        .background(.percentColorBackground)
-                        .cornerRadius(20)
-                        
-                        Button("10%") {
-                            percent = 10.0
-                        }
-                        .frame(width: 70, height: 8)
-                        .padding()
-                        .foregroundStyle(.textButtonColorBackground)
-                        .background(.percentColorBackground)
-                        .cornerRadius(20)
-                        
-                        Button("15%") {
-                            percent = 15.0
-                        }
-                        .frame(width: 70, height: 8)
-                        .padding()
-                        .foregroundStyle(.textButtonColorBackground)
-                        .background(.percentColorBackground)
-                        .cornerRadius(20)
-                        
-                        Button("20%") {
-                            percent = 20.0
-                        }
-                        .frame(width: 70, height: 8)
-                        .padding()
-                        .foregroundStyle(.textButtonColorBackground)
-                        .background(.percentColorBackground)
-                        .cornerRadius(20)
-                        
-                        Button("25%") {
-                            percent = 25.0
-                        }
-                        .frame(width: 70, height: 8)
-                        .padding()
-                        .foregroundStyle(.textButtonColorBackground)
-                        .background(.percentColorBackground)
-                        .cornerRadius(20)
-                        
-                        Button("30%") {
-                            percent = 30.0
-                        }
-                        .frame(width: 70, height: 8)
-                        .padding()
-                        .foregroundStyle(.textButtonColorBackground)
-                        .background(.percentColorBackground)
-                        .cornerRadius(20)
-                        
-                    }
-                    .padding()
+                    CurrencyTipsTextField(formatterOfNumber: formatterOfNumber, value: $value)
+                        .padding(20)
+                        .overlay(RoundedRectangle(cornerRadius: 20)
+                            .stroke(Color.gray.opacity(0.4), lineWidth: 3)
+                            .frame(width: reader.size.width - 30, height: 70))
+                        .frame(width: reader.size.width - 30, height: 70)
                     
                 }
-                .frame(width: UIScreen.main.bounds.size.width, height: 60)
                 
-            }
-            
-            VStack {
-            
-                HStack(spacing: 10) {
-                    Slider(value: $percent, in: 0...100, step: 1.0)
-                        .accentColor(.percentColorBackground)
-                    Text("\(percent, specifier: "%.0f")%")
-                }
+                VStack(spacing: 5) {
                 
-            }
-            
-            VStack {
-                
-                HStack {
-                    
-                    Text("Number-of-Persons.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                    Text("Quick-Tips.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                         .fontWeight(.medium)
                         .font(.system(size: 25))
                         .foregroundStyle(
                             .textButtonColorBackground
                         )
                     
-                    Spacer()
-                    
-                    TipsStepper(value: $numberOfPersons)
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        
+                        // Main LazyHStack with all the percents
+                        LazyHStack {
+                                
+                            Button("5%") {
+                                percent = 5.0
+                            }
+                            .frame(width: 70, height: 8)
+                            .padding()
+                            .foregroundStyle(.textButtonColorBackground)
+                            .background(.percentColorBackground)
+                            .cornerRadius(20)
+                            
+                            Button("10%") {
+                                percent = 10.0
+                            }
+                            .frame(width: 70, height: 8)
+                            .padding()
+                            .foregroundStyle(.textButtonColorBackground)
+                            .background(.percentColorBackground)
+                            .cornerRadius(20)
+                            
+                            Button("15%") {
+                                percent = 15.0
+                            }
+                            .frame(width: 70, height: 8)
+                            .padding()
+                            .foregroundStyle(.textButtonColorBackground)
+                            .background(.percentColorBackground)
+                            .cornerRadius(20)
+                            
+                            Button("20%") {
+                                percent = 20.0
+                            }
+                            .frame(width: 70, height: 8)
+                            .padding()
+                            .foregroundStyle(.textButtonColorBackground)
+                            .background(.percentColorBackground)
+                            .cornerRadius(20)
+                            
+                            Button("25%") {
+                                percent = 25.0
+                            }
+                            .frame(width: 70, height: 8)
+                            .padding()
+                            .foregroundStyle(.textButtonColorBackground)
+                            .background(.percentColorBackground)
+                            .cornerRadius(20)
+                            
+                            Button("30%") {
+                                percent = 30.0
+                            }
+                            .frame(width: 70, height: 8)
+                            .padding()
+                            .foregroundStyle(.textButtonColorBackground)
+                            .background(.percentColorBackground)
+                            .cornerRadius(20)
+                            
+                        }
+                        .padding()
+                        
+                    }
+                    .frame(width: reader.size.width, height: 60)
                     
                 }
                 
-            }
-            
-            VStack {
+                VStack {
                 
-                HStack {
-                    
-                    VStack {
-                        
-                        Text("Bill-Summary.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                            .bold()
-                        Image("icon-bill")
-                            .renderingMode(.original)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 70, height: 70)
-                            .clipped()
-                        
+                    HStack(spacing: 10) {
+                        Slider(value: $percent, in: 0...100, step: 1.0)
+                            .accentColor(.percentColorBackground)
+                        Text("\(percent, specifier: "%.0f")%")
                     }
                     
-                    Spacer()
+                }
+                .padding([.leading, .trailing], 20)
+                
+                VStack {
                     
-                    HStack(spacing: 20) {
+                    HStack {
                         
-                        VStack(alignment: .trailing) {
-                            Text("Bill-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                                .font(.system(.title2, weight: .bold))
-                                .foregroundStyle(.secondary)
-                            Text("Tip-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                                .font(.system(.title2, weight: .bold))
-                                .foregroundStyle(.secondary)
-                            Text("Total-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                                .font(.system(.title2, weight: .bold))
-                                .foregroundStyle(.secondary)
-                        }
+                        Text("Number-of-Persons.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                            .fontWeight(.medium)
+                            .font(.system(size: 25))
+                            .foregroundStyle(
+                                .textButtonColorBackground
+                            )
                         
-                        VStack(alignment: .trailing) {
-                            Text("0.00")
-                                .font(.system(.title2, weight: .semibold))
-                                .foregroundStyle(.primary)
-                            Text("0.00")
-                                .font(.system(.title2, weight: .semibold))
-                                .foregroundStyle(.primary)
-                            Text("0.00")
-                                .font(.system(.title2, weight: .semibold))
-                                .foregroundStyle(.primary)
-                        }
+                        Spacer()
+                        
+                        TipsStepper(value: $numberOfPersons)
                         
                     }
                     
                 }
-                .padding(30)
+                .padding([.leading, .trailing], 20)
                 
-                if numberOfPersons > 1 {
-                 
-                    Divider()
+                VStack {
                     
                     HStack {
                         
                         VStack {
                             
-                            Text("Per-person.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                            Text("Bill-Summary.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                                 .bold()
-                            HStack {
-                                Image("icon-persons")
-                                    .renderingMode(.original)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 50, height: 50)
-                                    .clipped()
-                                Text("x \(numberOfPersons)")
-                                    .bold()
-                            }
+                            Image("icon-bill")
+                                .renderingMode(.original)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 70, height: 70)
+                                .clipped()
                             
                         }
                         
@@ -270,19 +218,75 @@ struct TipsCalulatorUI: View {
                             }
                             
                         }
+                        
                     }
-                    .padding(30)
+                    .padding([.leading, .trailing], 20)
                     
+                    if numberOfPersons > 1 {
+                     
+                        Divider()
+                        
+                        HStack {
+                            
+                            VStack {
+                                
+                                Text("Per-person.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                                    .bold()
+                                HStack {
+                                    Image("icon-persons")
+                                        .renderingMode(.original)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 50, height: 50)
+                                        .clipped()
+                                    Text("x \(numberOfPersons)")
+                                        .bold()
+                                }
+                                
+                            }
+                            
+                            Spacer()
+                            
+                            HStack(spacing: 20) {
+                                
+                                VStack(alignment: .trailing) {
+                                    Text("Bill-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                                        .font(.system(.title2, weight: .bold))
+                                        .foregroundStyle(.secondary)
+                                    Text("Tip-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                                        .font(.system(.title2, weight: .bold))
+                                        .foregroundStyle(.secondary)
+                                    Text("Total-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                                        .font(.system(.title2, weight: .bold))
+                                        .foregroundStyle(.secondary)
+                                }
+                                
+                                VStack(alignment: .trailing) {
+                                    Text("0.00")
+                                        .font(.system(.title2, weight: .semibold))
+                                        .foregroundStyle(.primary)
+                                    Text("0.00")
+                                        .font(.system(.title2, weight: .semibold))
+                                        .foregroundStyle(.primary)
+                                    Text("0.00")
+                                        .font(.system(.title2, weight: .semibold))
+                                        .foregroundStyle(.primary)
+                                }
+                                
+                            }
+                        }
+                        .padding([.leading, .trailing], 20)
+                        
+                    }
+                
                 }
-            
+                
+                Spacer()
+                
             }
             
-            Spacer()
-            
         }
-        .padding(.top, 20)
-        .padding(.horizontal, 20)
-        
+    
     }
     
 }
@@ -348,5 +352,5 @@ class PreviewNumberFormatter: FormatterNumberProtocol {
     
     TipsCalulatorUI(formatterOfNumber: PreviewNumberFormatter(locale: Locale(identifier: "pl_PL")))
     //TipsCalulatorUI()
-    
+
 }
