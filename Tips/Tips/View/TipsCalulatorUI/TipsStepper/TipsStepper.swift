@@ -15,6 +15,7 @@ struct TipsStepper: View {
     var maximumValue: Int = 50
     
     @Binding var value: Int
+    @Binding var sum: Int
     @State private(set) var offsetOfLabel: CGSize = .zero
     @State private(set) var directionDrag: ButtonDirection = .none
 
@@ -197,7 +198,7 @@ private extension TipsStepper {
     }
     
     private func doIncreaseValue() {
-        if self.value < maximumValue {
+        if self.value < maximumValue && self.sum != 0 {
             self.value += 1
         }
     }

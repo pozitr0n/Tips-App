@@ -27,10 +27,20 @@ protocol FormatterNumberProtocol: Any {
 //
 struct TipsCalulatorUI: View {
     
+    // values for calculations of the tips
     @State private var value = 0
     @State private var percent: Double = 0.00
     @State private(set) var numberOfPersons: Int = 1
     
+    @State private var billSummary: Double = 0.00
+    @State private var tipSummary: Double = 0.00
+    @State private var totalSummary: Double = 0.00
+    
+    @State private var billPerPerson: Double = 0.00
+    @State private var tipPerPerson: Double = 0.00
+    @State private var totalPerPerson: Double = 0.00
+    
+    // default/calculated values for UI
     @State private var currentVStackSpacing: CGFloat = FactorValuesForMainUI().getVStackSpacing(currentInch: Device.size())
     @State private var currentHStackSpacing: CGFloat = FactorValuesForMainUI().getHStackSpacing(currentInch: Device.size())
     @State private var currentPadding: CGFloat = FactorValuesForMainUI().getCurrentPadding(currentInch: Device.size())
@@ -174,7 +184,7 @@ struct TipsCalulatorUI: View {
                         
                         Spacer()
                         
-                        TipsStepper(value: $numberOfPersons)
+                        TipsStepper(value: $numberOfPersons, sum: $value)
                         
                     }
                     
@@ -215,13 +225,13 @@ struct TipsCalulatorUI: View {
                             }
                             
                             VStack(alignment: .trailing) {
-                                Text("1000.00")
+                                Text(String(format: "%0.2f", billSummary))
                                     .font(.system(currentCurrencyTipsMainFont, weight: .semibold))
                                     .foregroundStyle(.primary)
-                                Text("1000.00")
+                                Text(String(format: "%0.2f", tipSummary))
                                     .font(.system(currentCurrencyTipsMainFont, weight: .semibold))
                                     .foregroundStyle(.primary)
-                                Text("1000.00")
+                                Text(String(format: "%0.2f", totalSummary))
                                     .font(.system(currentCurrencyTipsMainFont, weight: .semibold))
                                     .foregroundStyle(.primary)
                             }
@@ -271,13 +281,13 @@ struct TipsCalulatorUI: View {
                                 }
                                 
                                 VStack(alignment: .trailing) {
-                                    Text("1000.00")
+                                    Text(String(format: "%0.2f", billPerPerson))
                                         .font(.system(currentCurrencyTipsMainFont, weight: .semibold))
                                         .foregroundStyle(.primary)
-                                    Text("1000.00")
+                                    Text(String(format: "%0.2f", tipPerPerson))
                                         .font(.system(currentCurrencyTipsMainFont, weight: .semibold))
                                         .foregroundStyle(.primary)
-                                    Text("1000.00")
+                                    Text(String(format: "%0.2f", totalPerPerson))
                                         .font(.system(currentCurrencyTipsMainFont, weight: .semibold))
                                         .foregroundStyle(.primary)
                                 }
