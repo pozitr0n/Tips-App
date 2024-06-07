@@ -48,6 +48,19 @@
 import Device
 import SwiftUI
 
+final class ValuesForCalculations {
+    
+    func getDoubleCount(value: Int, maximumFractionDigits: Int) -> Double {
+        
+        let currentValue = Double(value)
+        let currentDecimalValue = Decimal(currentValue / 100.0)
+        
+        return NSDecimalNumber(decimal: currentDecimalValue / pow(10, maximumFractionDigits) * 100).doubleValue
+        
+    }
+    
+}
+
 final class ConstantsFactorValuesForMainUI {
     
     static let shared = ConstantsFactorValuesForMainUI()

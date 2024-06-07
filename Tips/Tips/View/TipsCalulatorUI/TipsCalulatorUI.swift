@@ -32,13 +32,41 @@ struct TipsCalulatorUI: View {
     @State private var percent: Double = 0.00
     @State private(set) var numberOfPersons: Int = 1
     
-    @State private var billSummary: Double = 0.00
-    @State private var tipSummary: Double = 0.00
-    @State private var totalSummary: Double = 0.00
+    var billSummary: Double {
+        get {
+            return value == 0 ? 0.00 : ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits) / 2
+        }
+    }
     
-    @State private var billPerPerson: Double = 0.00
-    @State private var tipPerPerson: Double = 0.00
-    @State private var totalPerPerson: Double = 0.00
+    var tipSummary: Double {
+        get {
+            return value == 0 ? 0.00 : ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits) / 2
+        }
+    }
+    
+    var totalSummary: Double {
+        get {
+            return value == 0 ? 0.00 : ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits) / 2
+        }
+    }
+    
+    var billPerPerson: Double {
+        get {
+            return value == 0 ? 0.00 : (numberOfPersons == 1 ? 0.00 : ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits) / 3)
+        }
+    }
+    
+    var tipPerPerson: Double {
+        get {
+            return value == 0 ? 0.00 : (numberOfPersons == 1 ? 0.00 : ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits) / 3)
+        }
+    }
+    
+    var totalPerPerson: Double {
+        get {
+            return value == 0 ? 0.00 : (numberOfPersons == 1 ? 0.00 : ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits) / 3)
+        }
+    }
     
     // default/calculated values for UI
     @State private var currentVStackSpacing: CGFloat = FactorValuesForMainUI().getVStackSpacing(currentInch: Device.size())
@@ -82,21 +110,7 @@ struct TipsCalulatorUI: View {
                         .onReceive(Just(value)) { value in
                             
                             if value == 0 {
-                            
                                 numberOfPersons = 1
-                                
-                                billSummary = 0.00
-                                tipSummary = 0.00
-                                totalSummary = 0.00
-                                
-                                billPerPerson = 0.00
-                                tipPerPerson = 0.00
-                                totalPerPerson = 0.00
-                                
-                            } else {
-                            
-                                
-                                
                             }
                             
                         }
