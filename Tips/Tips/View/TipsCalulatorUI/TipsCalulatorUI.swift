@@ -31,8 +31,11 @@ struct TipsCalulatorUI: View {
     @State private var percent: Double = 0.00
     @State private(set) var numberOfPersons: Int = 1
     
-    @State private var currentInch = Device.size()
-    @State private var changeFactor: Double = 0.00
+    @State private var currentVStackSpacing: CGFloat = FactorValuesForMainUI().getVStackSpacing(currentInch: Device.size())
+    @State private var currentHStackSpacing: CGFloat = FactorValuesForMainUI().getHStackSpacing(currentInch: Device.size())
+    @State private var currentPadding: CGFloat = FactorValuesForMainUI().getCurrentPadding(currentInch: Device.size())
+    @State private var currentCurrencyTipsTextFieldHeight: CGFloat = FactorValuesForMainUI().getCurrencyTipsTextFieldHeight(currentInch: Device.size())
+    @State private var currentCurrencyTipsMainFont: Font.TextStyle = FactorValuesForMainUI().getCurrencyTipsMainFont(currentInch: Device.size())
     
     private var formatterOfNumber: FormatterNumberProtocol
     
@@ -49,9 +52,9 @@ struct TipsCalulatorUI: View {
         
         GeometryReader { reader in
             
-            VStack(spacing: 10) {
+            VStack(spacing: currentVStackSpacing) {
                 
-                VStack(spacing: 10) {
+                VStack(spacing: currentVStackSpacing) {
                 
                     Text("Bill-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                         .fontWeight(.medium)
@@ -61,15 +64,16 @@ struct TipsCalulatorUI: View {
                         )
                     
                     CurrencyTipsTextField(formatterOfNumber: formatterOfNumber, value: $value)
-                        .padding(20)
+                        .padding(currentPadding)
                         .overlay(RoundedRectangle(cornerRadius: 20)
                             .stroke(Color.gray.opacity(0.4), lineWidth: 3)
-                            .frame(width: reader.size.width - 30, height: 70))
-                        .frame(width: reader.size.width - 30, height: 70)
+                            .frame(width: reader.size.width - currentCurrencyTipsTextFieldHeight / 2, height: currentCurrencyTipsTextFieldHeight))
+                        .frame(width: reader.size.width - currentCurrencyTipsTextFieldHeight / 2, height: currentCurrencyTipsTextFieldHeight)
                     
                 }
+                .padding(.top, currentVStackSpacing)
                 
-                VStack(spacing: 5) {
+                VStack(spacing: currentVStackSpacing) {
                 
                     Text("Quick-Tips.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                         .fontWeight(.medium)
@@ -86,7 +90,7 @@ struct TipsCalulatorUI: View {
                             Button("5%") {
                                 percent = 5.0
                             }
-                            .frame(width: 70, height: 8)
+                            .frame(width: ConstantsFactorValuesForMainUI.shared.scrollViewButtonWidth, height: ConstantsFactorValuesForMainUI.shared.scrollViewButtonHeight)
                             .padding()
                             .foregroundStyle(.textButtonColorBackground)
                             .background(.percentColorBackground)
@@ -95,7 +99,7 @@ struct TipsCalulatorUI: View {
                             Button("10%") {
                                 percent = 10.0
                             }
-                            .frame(width: 70, height: 8)
+                            .frame(width: ConstantsFactorValuesForMainUI.shared.scrollViewButtonWidth, height: ConstantsFactorValuesForMainUI.shared.scrollViewButtonHeight)
                             .padding()
                             .foregroundStyle(.textButtonColorBackground)
                             .background(.percentColorBackground)
@@ -104,7 +108,7 @@ struct TipsCalulatorUI: View {
                             Button("15%") {
                                 percent = 15.0
                             }
-                            .frame(width: 70, height: 8)
+                            .frame(width: ConstantsFactorValuesForMainUI.shared.scrollViewButtonWidth, height: ConstantsFactorValuesForMainUI.shared.scrollViewButtonHeight)
                             .padding()
                             .foregroundStyle(.textButtonColorBackground)
                             .background(.percentColorBackground)
@@ -113,7 +117,7 @@ struct TipsCalulatorUI: View {
                             Button("20%") {
                                 percent = 20.0
                             }
-                            .frame(width: 70, height: 8)
+                            .frame(width: ConstantsFactorValuesForMainUI.shared.scrollViewButtonWidth, height: ConstantsFactorValuesForMainUI.shared.scrollViewButtonHeight)
                             .padding()
                             .foregroundStyle(.textButtonColorBackground)
                             .background(.percentColorBackground)
@@ -122,7 +126,7 @@ struct TipsCalulatorUI: View {
                             Button("25%") {
                                 percent = 25.0
                             }
-                            .frame(width: 70, height: 8)
+                            .frame(width: ConstantsFactorValuesForMainUI.shared.scrollViewButtonWidth, height: ConstantsFactorValuesForMainUI.shared.scrollViewButtonHeight)
                             .padding()
                             .foregroundStyle(.textButtonColorBackground)
                             .background(.percentColorBackground)
@@ -131,7 +135,7 @@ struct TipsCalulatorUI: View {
                             Button("30%") {
                                 percent = 30.0
                             }
-                            .frame(width: 70, height: 8)
+                            .frame(width: ConstantsFactorValuesForMainUI.shared.scrollViewButtonWidth, height: ConstantsFactorValuesForMainUI.shared.scrollViewButtonHeight)
                             .padding()
                             .foregroundStyle(.textButtonColorBackground)
                             .background(.percentColorBackground)
@@ -141,20 +145,21 @@ struct TipsCalulatorUI: View {
                         .padding()
                         
                     }
-                    .frame(width: reader.size.width, height: 60)
+                    .frame(width: reader.size.width, height: ConstantsFactorValuesForMainUI.shared.scrollViewHeight)
                     
                 }
+                .padding(.top, currentVStackSpacing)
                 
                 VStack {
                 
-                    HStack(spacing: 10) {
+                    HStack(spacing: currentHStackSpacing) {
                         Slider(value: $percent, in: 0...100, step: 1.0)
                             .accentColor(.percentColorBackground)
                         Text("\(percent, specifier: "%.0f")%")
                     }
                     
                 }
-                .padding([.leading, .trailing], 20)
+                .padding([.leading, .trailing], currentPadding)
                 
                 VStack {
                     
@@ -174,7 +179,7 @@ struct TipsCalulatorUI: View {
                     }
                     
                 }
-                .padding([.leading, .trailing], 20)
+                .padding([.leading, .trailing], currentPadding)
                 
                 VStack {
                     
@@ -195,36 +200,36 @@ struct TipsCalulatorUI: View {
                         
                         Spacer()
                         
-                        HStack(spacing: 20) {
+                        HStack(spacing: currentHStackSpacing) {
                             
                             VStack(alignment: .trailing) {
                                 Text("Bill-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                                    .font(.system(.title2, weight: .bold))
+                                    .font(.system(currentCurrencyTipsMainFont, weight: .bold))
                                     .foregroundStyle(.secondary)
                                 Text("Tip-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                                    .font(.system(.title2, weight: .bold))
+                                    .font(.system(currentCurrencyTipsMainFont, weight: .bold))
                                     .foregroundStyle(.secondary)
                                 Text("Total-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                                    .font(.system(.title2, weight: .bold))
+                                    .font(.system(currentCurrencyTipsMainFont, weight: .bold))
                                     .foregroundStyle(.secondary)
                             }
                             
                             VStack(alignment: .trailing) {
-                                Text("0.00")
-                                    .font(.system(.title2, weight: .semibold))
+                                Text("1000.00")
+                                    .font(.system(currentCurrencyTipsMainFont, weight: .semibold))
                                     .foregroundStyle(.primary)
-                                Text("0.00")
-                                    .font(.system(.title2, weight: .semibold))
+                                Text("1000.00")
+                                    .font(.system(currentCurrencyTipsMainFont, weight: .semibold))
                                     .foregroundStyle(.primary)
-                                Text("0.00")
-                                    .font(.system(.title2, weight: .semibold))
+                                Text("1000.00")
+                                    .font(.system(currentCurrencyTipsMainFont, weight: .semibold))
                                     .foregroundStyle(.primary)
                             }
                             
                         }
                         
                     }
-                    .padding([.leading, .trailing], 20)
+                    .padding([.leading, .trailing], currentPadding)
                     
                     if numberOfPersons > 1 {
                      
@@ -241,7 +246,7 @@ struct TipsCalulatorUI: View {
                                         .renderingMode(.original)
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
-                                        .frame(width: 50, height: 50)
+                                        .frame(width: 60, height: 60)
                                         .clipped()
                                     Text("x \(numberOfPersons)")
                                         .bold()
@@ -251,35 +256,35 @@ struct TipsCalulatorUI: View {
                             
                             Spacer()
                             
-                            HStack(spacing: 20) {
+                            HStack(spacing: currentHStackSpacing) {
                                 
                                 VStack(alignment: .trailing) {
                                     Text("Bill-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                                        .font(.system(.title2, weight: .bold))
+                                        .font(.system(currentCurrencyTipsMainFont, weight: .bold))
                                         .foregroundStyle(.secondary)
                                     Text("Tip-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                                        .font(.system(.title2, weight: .bold))
+                                        .font(.system(currentCurrencyTipsMainFont, weight: .bold))
                                         .foregroundStyle(.secondary)
                                     Text("Total-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                                        .font(.system(.title2, weight: .bold))
+                                        .font(.system(currentCurrencyTipsMainFont, weight: .bold))
                                         .foregroundStyle(.secondary)
                                 }
                                 
                                 VStack(alignment: .trailing) {
-                                    Text("0.00")
-                                        .font(.system(.title2, weight: .semibold))
+                                    Text("1000.00")
+                                        .font(.system(currentCurrencyTipsMainFont, weight: .semibold))
                                         .foregroundStyle(.primary)
-                                    Text("0.00")
-                                        .font(.system(.title2, weight: .semibold))
+                                    Text("1000.00")
+                                        .font(.system(currentCurrencyTipsMainFont, weight: .semibold))
                                         .foregroundStyle(.primary)
-                                    Text("0.00")
-                                        .font(.system(.title2, weight: .semibold))
+                                    Text("1000.00")
+                                        .font(.system(currentCurrencyTipsMainFont, weight: .semibold))
                                         .foregroundStyle(.primary)
                                 }
                                 
                             }
                         }
-                        .padding([.leading, .trailing], 20)
+                        .padding([.leading, .trailing], currentPadding)
                         
                     }
                 
