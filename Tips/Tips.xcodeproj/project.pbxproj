@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D015CB02BFD5BAE00B095BF /* TipsStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D015CAF2BFD5BAE00B095BF /* TipsStepper.swift */; };
 		4D015CB22BFD5BE700B095BF /* TipsStepper+MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D015CB12BFD5BE700B095BF /* TipsStepper+MainButton.swift */; };
+		4D074C8B2C13CAE400AFEFD8 /* TipsCalculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D074C8A2C13CAE400AFEFD8 /* TipsCalculations.swift */; };
 		4D159F852BC025E9003EC231 /* RatingExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D159F842BC025E9003EC231 /* RatingExperience.swift */; };
 		4D1C119B2B9FF10A00FEAB9E /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C119A2B9FF10A00FEAB9E /* ShareViewController.swift */; };
 		4D1C119D2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C119C2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift */; };
@@ -104,6 +105,7 @@
 		455A1802E26CA90E47975432 /* Pods-TipsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TipsTests.debug.xcconfig"; path = "Target Support Files/Pods-TipsTests/Pods-TipsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4D015CAF2BFD5BAE00B095BF /* TipsStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsStepper.swift; sourceTree = "<group>"; };
 		4D015CB12BFD5BE700B095BF /* TipsStepper+MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TipsStepper+MainButton.swift"; sourceTree = "<group>"; };
+		4D074C8A2C13CAE400AFEFD8 /* TipsCalculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCalculations.swift; sourceTree = "<group>"; };
 		4D159F842BC025E9003EC231 /* RatingExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingExperience.swift; sourceTree = "<group>"; };
 		4D1C119A2B9FF10A00FEAB9E /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		4D1C119C2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteSwiftUIView.swift; sourceTree = "<group>"; };
@@ -223,6 +225,14 @@
 			path = TipsStepper;
 			sourceTree = "<group>";
 		};
+		4D074C8C2C13CAED00AFEFD8 /* TipsCalculations */ = {
+			isa = PBXGroup;
+			children = (
+				4D074C8A2C13CAE400AFEFD8 /* TipsCalculations.swift */,
+			);
+			path = TipsCalculations;
+			sourceTree = "<group>";
+		};
 		4D159F832BC025D2003EC231 /* RatingExperience */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +245,7 @@
 		4D258AE02B9F4367003B9F8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4D074C8C2C13CAED00AFEFD8 /* TipsCalculations */,
 				4DB69D282BC4B2F0005B5B68 /* SentEmailModel */,
 				4D47B8562BBC36B5008829DE /* Map */,
 				4D9ACDF02BA3DC2E0075C3F6 /* Languages.swift */,
@@ -840,6 +851,7 @@
 				4D47B85C2BBC36E3008829DE /* ComponentsMap.swift in Sources */,
 				4DB69D2B2BC4B318005B5B68 /* ReviewEmail.swift in Sources */,
 				4D1C119B2B9FF10A00FEAB9E /* ShareViewController.swift in Sources */,
+				4D074C8B2C13CAE400AFEFD8 /* TipsCalculations.swift in Sources */,
 				4D548F3E2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift in Sources */,
 				4D47B85A2BBC36DB008829DE /* DrawingMap.swift in Sources */,
 				4DE4D6212BAFCA5500160224 /* Icons.swift in Sources */,
