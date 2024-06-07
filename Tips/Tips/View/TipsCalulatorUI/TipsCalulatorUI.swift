@@ -79,6 +79,27 @@ struct TipsCalulatorUI: View {
                             .stroke(Color.gray.opacity(0.4), lineWidth: 3)
                             .frame(width: reader.size.width - currentCurrencyTipsTextFieldHeight / 2, height: currentCurrencyTipsTextFieldHeight))
                         .frame(width: reader.size.width - currentCurrencyTipsTextFieldHeight / 2, height: currentCurrencyTipsTextFieldHeight)
+                        .onReceive(Just(value)) { value in
+                            
+                            if value == 0 {
+                            
+                                numberOfPersons = 1
+                                
+                                billSummary = 0.00
+                                tipSummary = 0.00
+                                totalSummary = 0.00
+                                
+                                billPerPerson = 0.00
+                                tipPerPerson = 0.00
+                                totalPerPerson = 0.00
+                                
+                            } else {
+                            
+                                
+                                
+                            }
+                            
+                        }
                     
                 }
                 .padding(.top, currentVStackSpacing)
