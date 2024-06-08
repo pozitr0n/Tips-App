@@ -34,37 +34,37 @@ struct TipsCalulatorUI: View {
     
     var billSummary: Double {
         get {
-            return value == 0 ? 0.00 : ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits) / 2
+            return TipsCalculations().calculateBillSummary(startSum: ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits))
         }
     }
     
     var tipSummary: Double {
         get {
-            return value == 0 ? 0.00 : ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits) / 2
+            return TipsCalculations().calculateTipSummary(startSum: ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits), percent: percent)
         }
     }
     
     var totalSummary: Double {
         get {
-            return value == 0 ? 0.00 : ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits) / 2
+            return TipsCalculations().calculateTotalSummary(startSum: ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits), percent: percent)
         }
     }
     
     var billPerPerson: Double {
         get {
-            return value == 0 ? 0.00 : (numberOfPersons == 1 ? 0.00 : ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits) / 3)
+            return TipsCalculations().calculateBillPerPerson(startSum: ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits), numberOfPersons: numberOfPersons)
         }
     }
     
     var tipPerPerson: Double {
         get {
-            return value == 0 ? 0.00 : (numberOfPersons == 1 ? 0.00 : ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits) / 3)
+            TipsCalculations().calculateTipPerPerson(startSum: ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits), percent: percent, numberOfPersons: numberOfPersons)
         }
     }
     
     var totalPerPerson: Double {
         get {
-            return value == 0 ? 0.00 : (numberOfPersons == 1 ? 0.00 : ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits) / 3)
+            TipsCalculations().calculateTotalPerPerson(startSum: ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits), percent: percent, numberOfPersons: numberOfPersons)
         }
     }
     

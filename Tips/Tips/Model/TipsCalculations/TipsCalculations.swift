@@ -10,29 +10,71 @@ import Foundation
 final class TipsCalculations {
 
     // Summary Part
-    func calculateBillSummary() -> Double {
-        return 0.00
+    // ============
+    
+    // Calculating bill summary
+    //
+    func calculateBillSummary(startSum: Double) -> Double {
+        return startSum == 0 ? 0.00 : startSum
     }
     
-    func calculateTipSummary() -> Double {
-        return 0.00
+    // Calculating tip summary
+    //
+    func calculateTipSummary(startSum: Double, percent: Double) -> Double {
+        
+        var calcTipSummary: Double = 0.00
+        
+        if startSum == 0 || percent == 0 {
+            calcTipSummary = 0.00
+        } else {
+            calcTipSummary = startSum * percent / 100
+        }
+        
+        return calcTipSummary
+        
     }
     
-    func calculateTotalSummary() -> Double {
-        return 0.00
+    // Calculating total summary
+    //
+    func calculateTotalSummary(startSum: Double, percent: Double) -> Double {
+        
+        var calcTotalSummary: Double = 0.00
+        
+        if startSum == 0 {
+            calcTotalSummary = 0.00
+        } else {
+            
+            if percent == 0 {
+                calcTotalSummary = startSum
+            } else {
+                calcTotalSummary = startSum * (1 + percent / 100)
+            }
+            
+        }
+        
+        return calcTotalSummary
+        
     }
     
     // Per Person Part
-    func calculateBillPerPerson() -> Double {
-        return 0.00
+    // ===============
+    
+    // Calculating bill per person
+    //
+    func calculateBillPerPerson(startSum: Double, numberOfPersons: Int) -> Double {
+        return startSum == 0 ? 0.00 : startSum / Double(numberOfPersons)
     }
     
-    func calculateTipPerPerson() -> Double {
-        return 0.00
+    // Calculating tip per person
+    //
+    func calculateTipPerPerson(startSum: Double, percent: Double, numberOfPersons: Int) -> Double {
+        return startSum == 0 ? 0.00 : (startSum * (percent / 100)) / Double(numberOfPersons)
     }
     
-    func calculateTotalPerPerson() -> Double {
-        return 0.00
+    // Calculating total per person
+    //
+    func calculateTotalPerPerson(startSum: Double, percent: Double, numberOfPersons: Int) -> Double {
+        startSum == 0 ? 0.00 : (startSum + (startSum * (percent / 100))) / Double(numberOfPersons)
     }
     
 }
