@@ -68,6 +68,7 @@ final class ConstantsFactorValuesForMainUI {
     let scrollViewButtonWidth: CGFloat = 70
     let scrollViewButtonHeight: CGFloat = 8
     let scrollViewHeight: CGFloat = 60
+    let paddingAddingCGFloat: CGFloat = 5
     
     private init () {}
     

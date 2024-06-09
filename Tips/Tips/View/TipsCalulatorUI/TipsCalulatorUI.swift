@@ -207,22 +207,7 @@ struct TipsCalulatorUI: View {
                 .padding([.leading, .trailing], currentPadding)
                 
                 VStack {
-                    
-                    HStack {
-                        
-                        Text("Number-of-Persons.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                            .fontWeight(.medium)
-                            .font(.system(size: 25))
-                            .foregroundStyle(
-                                .textButtonColorBackground
-                            )
-                        
-                        Spacer()
-                        
-                        TipsStepper(value: $numberOfPersons, sum: $value)
-                        
-                    }
-                    
+                    TipsStepper(value: $numberOfPersons, sum: $value)
                 }
                 .padding([.leading, .trailing], currentPadding)
                 
@@ -274,12 +259,13 @@ struct TipsCalulatorUI: View {
                         }
                         
                     }
-                    .padding([.leading, .trailing], currentPadding)
+                    .padding([.leading, .trailing], currentPadding + ConstantsFactorValuesForMainUI.shared.paddingAddingCGFloat)
                     
                     if numberOfPersons > 1 {
                      
                         Divider()
-                        
+                            .frame(width: 200)
+
                         HStack {
                             
                             VStack {
@@ -329,7 +315,8 @@ struct TipsCalulatorUI: View {
                                 
                             }
                         }
-                        .padding([.leading, .trailing], currentPadding)
+                        .padding([.leading, .trailing], currentPadding + ConstantsFactorValuesForMainUI.shared.paddingAddingCGFloat)
+                        .padding(.top, ConstantsFactorValuesForMainUI.shared.paddingAddingCGFloat)
                         
                     }
                 

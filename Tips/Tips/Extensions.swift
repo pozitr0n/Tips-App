@@ -383,7 +383,7 @@ extension TipsStepper {
     var labelOffsetYLimit: CGFloat { containerHeigthForControls / 1.2 }
     var labelOffsetXInPercents: Double { Double(offsetOfLabel.width / labelOffsetXLimit) }
     var labelOffsetYInPercents: Double { Double(offsetOfLabel.height / labelOffsetYLimit) }
-    var addWidth: CGFloat { 15.0 }
+    var addWidth: CGFloat { 35.0 }
     
 }
 
