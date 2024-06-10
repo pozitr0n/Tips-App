@@ -156,6 +156,6 @@
 
 "Alert-Refreshing.message" = "Вы действительно хотите очистить и обновить данные?";
 
-"Alert-Refreshing.primaryButton" = "Очистить и Обновить";
+"Alert-Refreshing.primaryButton" = "Очистить и обновить";
 
 "Alert-Refreshing.cancelButton" = "Отменить";

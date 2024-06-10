@@ -156,6 +156,6 @@
 
 "Alert-Refreshing.message" = "Are you sure you want to clear and refresh your data?";
 
-"Alert-Refreshing.primaryButton" = "Clear and Refresh";
+"Alert-Refreshing.primaryButton" = "Clear and refresh";
 
 "Alert-Refreshing.cancelButton" = "Cancel";

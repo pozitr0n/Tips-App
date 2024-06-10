@@ -353,7 +353,7 @@ class PreviewNumberFormatter: FormatterNumberProtocol {
     let formatterOfNumber: NumberFormatter
     
     init(locale: Locale) {
-        
+        	
         formatterOfNumber = NumberFormatter()
         formatterOfNumber.locale = locale
         

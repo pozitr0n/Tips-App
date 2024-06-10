@@ -149,6 +149,6 @@
 
 "Alert-Refreshing.message" = "Czy na pewno chcesz wyczyścić i zaktualizować swoje dane?";
 
-"Alert-Refreshing.primaryButton" = "Wyczyścić and Zaktualizować";
+"Alert-Refreshing.primaryButton" = "Wyczyścić and zaktualizować";
 
 "Alert-Refreshing.cancelButton" = "Anuluj";
