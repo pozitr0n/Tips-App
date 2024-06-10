@@ -7,8 +7,13 @@
 
 import UIKit
 import SwiftUI
+import Combine
 
 class TipsCalulatorViewController: UIViewController {
+    
+    var vcTipsCalulator: UIHostingController<AnyView>?
+    private var valObject = ValuesObject()
+    private var cancellable: AnyCancellable?
     
     @IBOutlet weak var share: UIBarButtonItem!
     @IBOutlet weak var refresh: UIBarButtonItem!
@@ -31,14 +36,17 @@ class TipsCalulatorViewController: UIViewController {
     }
     
     func loadSwiftUIViewController() {
-       
-        let vcTipsCalulator = UIHostingController(rootView: TipsCalulatorUI())
-        let swiftuiView = vcTipsCalulator.view!
+               
+        vcTipsCalulator = UIHostingController(rootView: AnyView(ValuesViewContainer(valObject: valObject)))
+        
+        guard let vcTipsCalulator = vcTipsCalulator,
+              let swiftuiView = vcTipsCalulator.view else { return }
+    
         swiftuiView.translatesAutoresizingMaskIntoConstraints = false
         
         // Add the view controller to the destination view controller.
-        addChild(vcTipsCalulator)
-        view.addSubview(swiftuiView)
+        self.addChild(vcTipsCalulator)
+        self.view.addSubview(swiftuiView)
         
         // Create and activate the constraints for the swiftui's view.
         NSLayoutConstraint.activate([
@@ -55,8 +63,50 @@ class TipsCalulatorViewController: UIViewController {
     
     @IBAction func refreshView(_ sender: Any) {
         
-        // refresh view/data/all information
-        // !!!!!
+        // Refresh view/data/all information
+        //
+        cancellable = valObject.$value.sink(receiveValue: { value in
+            
+            let currentValue = ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: 2)
+            
+            if currentValue != 0 {
+                
+                let alert = UIAlertController(title: "Alert-Refreshing.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage), message: "Alert-Refreshing.message".localizedSwiftUI(CurrentLanguage.shared.currentLanguage), preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Alert-Refreshing.primaryButton".localizedSwiftUI(CurrentLanguage.shared.currentLanguage), style: .default, handler: { action in
+                    
+                    self.valObject.value = 0
+                    
+                    self.vcTipsCalulator = UIHostingController(rootView: AnyView(ValuesViewContainer(valObject: self.valObject)))
+                    
+                    guard let vcTipsCalulator = self.vcTipsCalulator,
+                          let swiftuiView = vcTipsCalulator.view else { return }
+                
+                    swiftuiView.translatesAutoresizingMaskIntoConstraints = false
+                    
+                    // Add the view controller to the destination view controller.
+                    self.addChild(vcTipsCalulator)
+                    self.view.addSubview(swiftuiView)
+                    
+                    // Create and activate the constraints for the swiftui's view.
+                    NSLayoutConstraint.activate([
+                        swiftuiView.topAnchor.constraint(equalTo: self.view.topAnchor),
+                        swiftuiView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+                        swiftuiView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+                        swiftuiView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
+                    ])
+                    
+                    // Notify the child view controller that the move is complete.
+                    vcTipsCalulator.didMove(toParent: self)
+                    
+                }))
+                alert.addAction(UIAlertAction(title: "Alert-Refreshing.cancelButton".localizedSwiftUI(CurrentLanguage.shared.currentLanguage), style: UIAlertAction.Style.cancel, handler: nil))
+                
+                self.present(alert, animated: true, completion: nil)
+                
+            }
+            
+        })
+        
     }
     
     @IBAction func addToFavourite(_ sender: Any) {

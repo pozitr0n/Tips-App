@@ -168,17 +168,17 @@ final class FactorValuesForMainUI {
         
     }
     
-    func getCurrencyTipsMainFont(currentInch: Size) -> Font.TextStyle {
+    func getCurrencyTipsMainFont(currentInch: Size) -> CGFloat {
         
-        var currentTipsMainFont: Font.TextStyle = .title3
+        var currentTipsMainFont: CGFloat = 16
         
         if currentInch == .screen4_7Inch || currentInch == .screen5_4Inch || currentInch == .screen5_8Inch {
-            currentTipsMainFont = .title3
+            currentTipsMainFont = 16
         }
         else if currentInch == .screen6_1Inch || currentInch == .screen6_1Inch_2 || currentInch == .screen6_5Inch || currentInch == .screen6_7Inch || currentInch == .screen6_7Inch_2 {
-            currentTipsMainFont = .title2
+            currentTipsMainFont = 18
         } else {
-            currentTipsMainFont = .title3
+            currentTipsMainFont = 16
         }
         
         return currentTipsMainFont

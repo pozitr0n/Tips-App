@@ -151,3 +151,11 @@
 "Tip-Total.title" = "Napiwek";
 
 "Total-Total.title" = "Razem";
+
+"Alert-Refreshing.title" = "Zaktualizować";
+
+"Alert-Refreshing.message" = "Czy na pewno chcesz wyczyścić i zaktualizować swoje dane?";
+
+"Alert-Refreshing.primaryButton" = "Wyczyścić and Zaktualizować";
+
+"Alert-Refreshing.cancelButton" = "Anuluj";

@@ -132,3 +132,11 @@
 "Tip-Total.title" = "Чаевые";
 
 "Total-Total.title" = "Всего";
+
+"Alert-Refreshing.title" = "Обновить";
+
+"Alert-Refreshing.message" = "Вы действительно хотите очистить и обновить данные?";
+
+"Alert-Refreshing.primaryButton" = "Очистить и Обновить";
+
+"Alert-Refreshing.cancelButton" = "Отменить";

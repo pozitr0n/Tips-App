@@ -23,12 +23,27 @@ protocol FormatterNumberProtocol: Any {
     
 }
 
+class ValuesObject: ObservableObject {
+    @Published var value: Int = 0
+}
+
+struct ValuesViewContainer: View {
+    
+    @ObservedObject var valObject: ValuesObject
+    
+    var body: some View {
+        TipsCalulatorUI(valueNew: $valObject.value)
+    }
+    
+}
+
 // Main struct of main screen UI - TipsCalulatorUI
 //
 struct TipsCalulatorUI: View {
-    
+        
     // values for calculations of the tips
-    @State private var value = 0
+    @Binding var value: Int
+    
     @State private var percent: Double = 0.00
     @State private(set) var numberOfPersons: Int = 1
     
@@ -58,13 +73,13 @@ struct TipsCalulatorUI: View {
     
     var tipPerPerson: Double {
         get {
-            TipsCalculations().calculateTipPerPerson(startSum: ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits), percent: percent, numberOfPersons: numberOfPersons)
+            return TipsCalculations().calculateTipPerPerson(startSum: ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits), percent: percent, numberOfPersons: numberOfPersons)
         }
     }
     
     var totalPerPerson: Double {
         get {
-            TipsCalculations().calculateTotalPerPerson(startSum: ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits), percent: percent, numberOfPersons: numberOfPersons)
+            return TipsCalculations().calculateTotalPerPerson(startSum: ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits), percent: percent, numberOfPersons: numberOfPersons)
         }
     }
     
@@ -73,16 +88,17 @@ struct TipsCalulatorUI: View {
     @State private var currentHStackSpacing: CGFloat = FactorValuesForMainUI().getHStackSpacing(currentInch: Device.size())
     @State private var currentPadding: CGFloat = FactorValuesForMainUI().getCurrentPadding(currentInch: Device.size())
     @State private var currentCurrencyTipsTextFieldHeight: CGFloat = FactorValuesForMainUI().getCurrencyTipsTextFieldHeight(currentInch: Device.size())
-    @State private var currentCurrencyTipsMainFont: Font.TextStyle = FactorValuesForMainUI().getCurrencyTipsMainFont(currentInch: Device.size())
+    @State private var currentCurrencyTipsMainFont: CGFloat = FactorValuesForMainUI().getCurrencyTipsMainFont(currentInch: Device.size())
     
     private var formatterOfNumber: FormatterNumberProtocol
     
-    init(formatterOfNumber: FormatterNumberProtocol = NumberFormatter()) {
+    init(formatterOfNumber: FormatterNumberProtocol = NumberFormatter(), valueNew: Binding<Int>) {
         
         self.formatterOfNumber = formatterOfNumber
         self.formatterOfNumber.numberStyle = .currency
         self.formatterOfNumber.maximumFractionDigits = 2
         self.formatterOfNumber.locale = CurrentLocale.shared.currentLocale
+        self._value = valueNew
         
     }
 
@@ -234,32 +250,32 @@ struct TipsCalulatorUI: View {
                             
                             VStack(alignment: .trailing) {
                                 Text("Bill-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                                    .font(.system(currentCurrencyTipsMainFont, weight: .bold))
+                                    .font(.system(size: currentCurrencyTipsMainFont, weight: .bold))
                                     .foregroundStyle(.secondary)
                                 Text("Tip-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                                    .font(.system(currentCurrencyTipsMainFont, weight: .bold))
+                                    .font(.system(size: currentCurrencyTipsMainFont, weight: .bold))
                                     .foregroundStyle(.secondary)
                                 Text("Total-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                                    .font(.system(currentCurrencyTipsMainFont, weight: .bold))
+                                    .font(.system(size: currentCurrencyTipsMainFont, weight: .bold))
                                     .foregroundStyle(.secondary)
                             }
                             
                             VStack(alignment: .trailing) {
                                 Text(String(format: "%0.2f", billSummary))
-                                    .font(.system(currentCurrencyTipsMainFont, weight: .semibold))
+                                    .font(.system(size: currentCurrencyTipsMainFont, weight: .semibold))
                                     .foregroundStyle(.primary)
                                 Text(String(format: "%0.2f", tipSummary))
-                                    .font(.system(currentCurrencyTipsMainFont, weight: .semibold))
+                                    .font(.system(size: currentCurrencyTipsMainFont, weight: .semibold))
                                     .foregroundStyle(.primary)
                                 Text(String(format: "%0.2f", totalSummary))
-                                    .font(.system(currentCurrencyTipsMainFont, weight: .semibold))
+                                    .font(.system(size: currentCurrencyTipsMainFont, weight: .semibold))
                                     .foregroundStyle(.primary)
                             }
                             
                         }
                         
                     }
-                    .padding([.leading, .trailing], currentPadding + ConstantsFactorValuesForMainUI.shared.paddingAddingCGFloat)
+                    .padding([.leading, .trailing], currentPadding - ConstantsFactorValuesForMainUI.shared.paddingAddingCGFloat)
                     
                     if numberOfPersons > 1 {
                      
@@ -291,31 +307,31 @@ struct TipsCalulatorUI: View {
                                 
                                 VStack(alignment: .trailing) {
                                     Text("Bill-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                                        .font(.system(currentCurrencyTipsMainFont, weight: .bold))
+                                        .font(.system(size: currentCurrencyTipsMainFont, weight: .bold))
                                         .foregroundStyle(.secondary)
                                     Text("Tip-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                                        .font(.system(currentCurrencyTipsMainFont, weight: .bold))
+                                        .font(.system(size: currentCurrencyTipsMainFont, weight: .bold))
                                         .foregroundStyle(.secondary)
                                     Text("Total-Total.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                                        .font(.system(currentCurrencyTipsMainFont, weight: .bold))
+                                        .font(.system(size: currentCurrencyTipsMainFont, weight: .bold))
                                         .foregroundStyle(.secondary)
                                 }
                                 
                                 VStack(alignment: .trailing) {
                                     Text(String(format: "%0.2f", billPerPerson))
-                                        .font(.system(currentCurrencyTipsMainFont, weight: .semibold))
+                                        .font(.system(size: currentCurrencyTipsMainFont, weight: .semibold))
                                         .foregroundStyle(.primary)
                                     Text(String(format: "%0.2f", tipPerPerson))
-                                        .font(.system(currentCurrencyTipsMainFont, weight: .semibold))
+                                        .font(.system(size: currentCurrencyTipsMainFont, weight: .semibold))
                                         .foregroundStyle(.primary)
                                     Text(String(format: "%0.2f", totalPerPerson))
-                                        .font(.system(currentCurrencyTipsMainFont, weight: .semibold))
+                                        .font(.system(size: currentCurrencyTipsMainFont, weight: .semibold))
                                         .foregroundStyle(.primary)
                                 }
                                 
                             }
                         }
-                        .padding([.leading, .trailing], currentPadding + ConstantsFactorValuesForMainUI.shared.paddingAddingCGFloat)
+                        .padding([.leading, .trailing], currentPadding - ConstantsFactorValuesForMainUI.shared.paddingAddingCGFloat)
                         .padding(.top, ConstantsFactorValuesForMainUI.shared.paddingAddingCGFloat)
                         
                     }
@@ -391,7 +407,7 @@ class PreviewNumberFormatter: FormatterNumberProtocol {
 
 #Preview {
     
-    TipsCalulatorUI(formatterOfNumber: PreviewNumberFormatter(locale: Locale(identifier: "pl_PL")))
+    TipsCalulatorUI(formatterOfNumber: PreviewNumberFormatter(locale: Locale(identifier: "pl_PL")), valueNew: .constant(0))
     //TipsCalulatorUI()
 
 }
