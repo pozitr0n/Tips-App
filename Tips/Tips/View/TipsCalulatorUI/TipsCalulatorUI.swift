@@ -231,10 +231,10 @@ struct TipsCalulatorUI: View {
                     
                     HStack {
                         
-                        VStack {
+                        VStack(alignment: .center, spacing: -5) {
                             
                             Text("Bill-Summary.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                                .bold()
+                                .font(.system(size: currentCurrencyTipsMainFont, weight: .bold))
                             Image("icon-bill")
                                 .renderingMode(.original)
                                 .resizable()
@@ -284,10 +284,10 @@ struct TipsCalulatorUI: View {
 
                         HStack {
                             
-                            VStack {
+                            VStack(alignment: .center, spacing: 0) {
                                 
                                 Text("Per-person.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
-                                    .bold()
+                                    .font(.system(size: currentCurrencyTipsMainFont, weight: .bold))
                                 HStack {
                                     Image("icon-persons")
                                         .renderingMode(.original)
