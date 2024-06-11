@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -124,17 +125,44 @@
         <scene sceneID="JGC-mX-nou">
             <objects>
                 <viewController id="9mp-fQ-rvj" customClass="ShareViewController" customModule="Tips" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aKF-iV-DA4">
+                    <view key="view" contentMode="scaleAspectFit" id="aKF-iV-DA4">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="702-oa-VLN">
+                                <rect key="frame" x="10" y="10" width="80" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="rZP-zJ-M96"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonAction:" destination="9mp-fQ-rvj" eventType="touchUpInside" id="Q41-El-dEb"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0yb-nO-0jv">
+                                <rect key="frame" x="16" y="62" width="361" height="271"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="labelBackground"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="KBR-6F-5PN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KBR-6F-5PN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="702-oa-VLN" secondAttribute="trailing" symbolic="YES" id="bqV-pj-04z"/>
+                            <constraint firstItem="702-oa-VLN" firstAttribute="leading" secondItem="KBR-6F-5PN" secondAttribute="leading" constant="10" id="gso-Jq-1tL"/>
+                            <constraint firstItem="702-oa-VLN" firstAttribute="top" secondItem="KBR-6F-5PN" secondAttribute="top" constant="10" id="qZC-38-Bzc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sAd-a7-MIc"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="702-oa-VLN" id="TL7-YJ-nA6"/>
+                        <outlet property="mainImageView" destination="0yb-nO-0jv" id="blY-it-9AM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a57-qQ-DqK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4137" y="-1685"/>
+            <point key="canvasLocation" x="4136.6412213740459" y="-1685.2112676056338"/>
         </scene>
         <!--Favoutite-->
         <scene sceneID="A4T-nw-nuD">
@@ -218,6 +246,9 @@
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="text.book.closed" catalog="system" width="115" height="128"/>
         <image name="text.book.closed.fill" catalog="system" width="115" height="128"/>
+        <namedColor name="labelBackground">
+            <color red="0.70588235294117652" green="0.63921568627450975" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
