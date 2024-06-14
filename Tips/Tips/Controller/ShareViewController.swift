@@ -20,7 +20,12 @@ class ShareViewController: UIViewController, UISheetPresentationControllerDelega
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        setUI_Settings()
+    
+    }
+    
+    func setUI_Settings() {
+     
         view.backgroundColor = .percentColorBackground
         cancelButton.tintColor = .textButtonColorBackground
        
