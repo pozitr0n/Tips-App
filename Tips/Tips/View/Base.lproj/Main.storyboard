@@ -130,9 +130,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="702-oa-VLN">
-                                <rect key="frame" x="10" y="10" width="80" height="35"/>
+                                <rect key="frame" x="16" y="10.333333333333336" width="105" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="rZP-zJ-M96"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="105" id="XYN-cM-cxH"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
@@ -140,23 +140,40 @@
                                     <action selector="cancelButtonAction:" destination="9mp-fQ-rvj" eventType="touchUpInside" id="Q41-El-dEb"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0yb-nO-0jv">
-                                <rect key="frame" x="16" y="62" width="361" height="271"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tT-QF-MMy">
+                                <rect key="frame" x="140" y="15.333333333333336" width="118" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0yb-nO-0jv">
+                                <rect key="frame" x="16" y="69" width="361" height="260"/>
                                 <color key="backgroundColor" name="labelBackground"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="361" id="3y7-Xf-Moa"/>
+                                    <constraint firstAttribute="height" constant="260" id="61q-ta-R8X"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KBR-6F-5PN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="KBR-6F-5PN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="702-oa-VLN" secondAttribute="trailing" symbolic="YES" id="bqV-pj-04z"/>
-                            <constraint firstItem="702-oa-VLN" firstAttribute="leading" secondItem="KBR-6F-5PN" secondAttribute="leading" constant="10" id="gso-Jq-1tL"/>
-                            <constraint firstItem="702-oa-VLN" firstAttribute="top" secondItem="KBR-6F-5PN" secondAttribute="top" constant="10" id="qZC-38-Bzc"/>
+                            <constraint firstItem="KBR-6F-5PN" firstAttribute="trailing" secondItem="0yb-nO-0jv" secondAttribute="trailing" constant="16" id="AFz-uj-dus"/>
+                            <constraint firstItem="0yb-nO-0jv" firstAttribute="leading" secondItem="KBR-6F-5PN" secondAttribute="leading" constant="16" id="UyA-hr-DEI"/>
+                            <constraint firstItem="0yb-nO-0jv" firstAttribute="top" secondItem="KBR-6F-5PN" secondAttribute="top" constant="69" id="W6n-as-Oyv"/>
+                            <constraint firstItem="702-oa-VLN" firstAttribute="top" secondItem="KBR-6F-5PN" secondAttribute="top" constant="10.333333333333336" id="bO9-eY-B48"/>
+                            <constraint firstItem="KBR-6F-5PN" firstAttribute="bottom" secondItem="702-oa-VLN" secondAttribute="bottom" constant="797.66666666666663" id="eXg-Xj-pI3"/>
+                            <constraint firstItem="3tT-QF-MMy" firstAttribute="leading" secondItem="KBR-6F-5PN" secondAttribute="leading" constant="140" id="iQW-et-gmr"/>
+                            <constraint firstItem="702-oa-VLN" firstAttribute="leading" secondItem="KBR-6F-5PN" secondAttribute="leading" constant="16" id="mLG-0M-cax"/>
+                            <constraint firstItem="KBR-6F-5PN" firstAttribute="trailing" secondItem="702-oa-VLN" secondAttribute="trailing" constant="272" id="rfA-25-7yV"/>
+                            <constraint firstItem="3tT-QF-MMy" firstAttribute="top" secondItem="KBR-6F-5PN" secondAttribute="top" constant="15.333333333333336" id="wqo-WO-Fc7"/>
+                            <constraint firstItem="KBR-6F-5PN" firstAttribute="trailing" secondItem="3tT-QF-MMy" secondAttribute="trailing" constant="135" id="xRI-AT-s4G"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sAd-a7-MIc"/>
                     <connections>
                         <outlet property="cancelButton" destination="702-oa-VLN" id="TL7-YJ-nA6"/>
+                        <outlet property="detailsLabel" destination="3tT-QF-MMy" id="gw2-lF-VRT"/>
                         <outlet property="mainImageView" destination="0yb-nO-0jv" id="blY-it-9AM"/>
                     </connections>
                 </viewController>

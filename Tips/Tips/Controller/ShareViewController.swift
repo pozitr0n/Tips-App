@@ -16,10 +16,12 @@ class ShareViewController: UIViewController, UISheetPresentationControllerDelega
     
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var mainImageView: UIImageView!
+    @IBOutlet weak var detailsLabel: UILabel!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        localizeInterface()
         setUI_Settings()
     
     }
@@ -40,6 +42,11 @@ class ShareViewController: UIViewController, UISheetPresentationControllerDelega
             .large()
         ]
         
+    }
+    
+    func localizeInterface() {
+        detailsLabel.text = Localize(key: "3tT-QF-MMy.title", comment: "")
+        cancelButton.setTitle(Localize(key: "702-oa-VLN.title", comment: ""), for: .normal)
     }
     
     @IBAction func cancelButtonAction(_ sender: Any) {
