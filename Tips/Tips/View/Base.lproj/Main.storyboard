@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -309,15 +310,31 @@
                                     <action selector="shareAction:" destination="9mp-fQ-rvj" eventType="touchUpInside" id="C6A-aF-s98"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsM-4w-CJ3">
+                                <rect key="frame" x="16" y="438" width="361" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IOp-it-ffl"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="tinted" title="Add to" subtitle="Apple Wallet" imagePadding="5" titleAlignment="automatic">
+                                    <imageReference key="image" image="icons8-wallet-48" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="light"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="appleWalletAction:" destination="9mp-fQ-rvj" eventType="touchUpInside" id="EMj-wU-zf8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KBR-6F-5PN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KBR-6F-5PN" firstAttribute="trailing" secondItem="0yb-nO-0jv" secondAttribute="trailing" constant="16" id="AFz-uj-dus"/>
+                            <constraint firstItem="KBR-6F-5PN" firstAttribute="trailing" secondItem="rsM-4w-CJ3" secondAttribute="trailing" constant="16" id="GEp-Qq-gxw"/>
+                            <constraint firstItem="rsM-4w-CJ3" firstAttribute="leading" secondItem="KBR-6F-5PN" secondAttribute="leading" constant="16" id="JNV-PL-FTR"/>
                             <constraint firstItem="1zV-Mp-8QV" firstAttribute="trailing" secondItem="0yb-nO-0jv" secondAttribute="trailing" id="Rmr-w2-cwS"/>
                             <constraint firstItem="dO6-yl-jlk" firstAttribute="centerX" secondItem="0yb-nO-0jv" secondAttribute="centerX" id="T5l-Nz-kG8"/>
                             <constraint firstItem="0yb-nO-0jv" firstAttribute="leading" secondItem="KBR-6F-5PN" secondAttribute="leading" constant="16" id="UyA-hr-DEI"/>
                             <constraint firstItem="0yb-nO-0jv" firstAttribute="top" secondItem="KBR-6F-5PN" secondAttribute="top" constant="69" id="W6n-as-Oyv"/>
+                            <constraint firstItem="rsM-4w-CJ3" firstAttribute="top" secondItem="1zV-Mp-8QV" secondAttribute="bottom" constant="8" symbolic="YES" id="b30-cT-8tJ"/>
                             <constraint firstItem="1zV-Mp-8QV" firstAttribute="leading" secondItem="0yb-nO-0jv" secondAttribute="leading" id="d7I-a9-OSL"/>
                             <constraint firstItem="0P4-GE-cML" firstAttribute="centerX" secondItem="aKF-iV-DA4" secondAttribute="centerX" id="eD3-aq-fg8"/>
                             <constraint firstItem="3tT-QF-MMy" firstAttribute="leading" secondItem="KBR-6F-5PN" secondAttribute="leading" constant="137" id="iQW-et-gmr"/>
@@ -330,6 +347,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="sAd-a7-MIc"/>
                     <connections>
+                        <outlet property="appleWallet" destination="rsM-4w-CJ3" id="Rtn-jx-yEd"/>
                         <outlet property="detailsLabel" destination="3tT-QF-MMy" id="gw2-lF-VRT"/>
                         <outlet property="eachPayLabel" destination="qeQ-Lf-lwt" id="u9V-y9-VSc"/>
                         <outlet property="eachPayValue" destination="DED-by-D0M" id="DDX-Kg-kUr"/>
@@ -427,6 +445,7 @@
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <image name="icons8-donate-100" width="100" height="100"/>
+        <image name="icons8-wallet-48" width="48" height="48"/>
         <image name="plus.circle" catalog="system" width="128" height="123"/>
         <image name="square.and.arrow.up" catalog="system" width="108" height="128"/>
         <image name="star" catalog="system" width="128" height="116"/>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PassKit
 
 class ShareViewController: UIViewController, UISheetPresentationControllerDelegate {
 
@@ -38,6 +39,7 @@ class ShareViewController: UIViewController, UISheetPresentationControllerDelega
     @IBOutlet weak var eachPayValue: UILabel!
     
     @IBOutlet weak var shareButtonMain: UIButton!
+    @IBOutlet weak var appleWallet: UIButton!
     
     override func viewDidLoad() {
         
@@ -102,6 +104,11 @@ class ShareViewController: UIViewController, UISheetPresentationControllerDelega
         shareButtonMain.layer.cornerRadius = 15.0
         shareButtonMain.clipsToBounds = true
         
+        appleWallet.backgroundColor = .textButtonColorBackground
+        appleWallet.tintColor = .percentColorBackground
+        appleWallet.layer.cornerRadius = 15.0
+        appleWallet.clipsToBounds = true
+                
     }
     
     func localizeInterface() {
@@ -136,29 +143,10 @@ class ShareViewController: UIViewController, UISheetPresentationControllerDelega
         
     }
     
-}
-
-extension UIView {
-    
-    func screenshot() -> UIImage {
+    @IBAction func appleWalletAction(_ sender: Any) {
         
-        if #available(iOS 10.0, *) {
-            
-            return UIGraphicsImageRenderer(size: bounds.size).image { _ in
-                drawHierarchy(in: CGRect(origin: .zero, size: bounds.size), afterScreenUpdates: true)
-            }
-            
-        } else {
-            
-            UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main.scale)
-            drawHierarchy(in: self.bounds, afterScreenUpdates: true)
-            
-            let image = UIGraphicsGetImageFromCurrentImageContext() ?? UIImage()
-            UIGraphicsEndImageContext()
-            
-            return image
-            
-        }
+        // !!!
+        // Add the functionality!
         
     }
     

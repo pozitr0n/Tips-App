@@ -388,3 +388,29 @@ extension TipsStepper {
 }
 
 // TipsStepper PART-END
+
+extension UIView {
+    
+    func screenshot() -> UIImage {
+        
+        if #available(iOS 10.0, *) {
+            
+            return UIGraphicsImageRenderer(size: bounds.size).image { _ in
+                drawHierarchy(in: CGRect(origin: .zero, size: bounds.size), afterScreenUpdates: true)
+            }
+            
+        } else {
+            
+            UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main.scale)
+            drawHierarchy(in: self.bounds, afterScreenUpdates: true)
+            
+            let image = UIGraphicsGetImageFromCurrentImageContext() ?? UIImage()
+            UIGraphicsEndImageContext()
+            
+            return image
+            
+        }
+        
+    }
+    
+}
