@@ -116,5 +116,39 @@ class TipsCalulatorViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let vcShare = segue.destination as? ShareViewController {
+            
+            var formatterOfNumber: FormatterNumberProtocol = NumberFormatter()
+            
+            formatterOfNumber.numberStyle = .currency
+            formatterOfNumber.maximumFractionDigits = 2
+            formatterOfNumber.locale = CurrentLocale.shared.currentLocale
+            
+            vcShare.valueDouble = TipsCalculations().calculateBillSummary(
+                startSum: ValuesForCalculations().getDoubleCount(value: valObject.value,
+                                                                 maximumFractionDigits: formatterOfNumber.maximumFractionDigits)
+            )
+            
+            vcShare.tipDouble = TipsCalculations().calculateTipSummary(
+                startSum: ValuesForCalculations().getDoubleCount(value: valObject.value,
+                                                                 maximumFractionDigits: formatterOfNumber.maximumFractionDigits),
+                percent: valObject.percent
+            )
+            
+            vcShare.tipPercent = valObject.percent
+            vcShare.numberOfPersonsInt = valObject.numberOfPersons
+            
+            vcShare.eachPayDouble = TipsCalculations().calculateTotalPerPerson(
+                startSum: ValuesForCalculations().getDoubleCount(value: valObject.value, 
+                                                                 maximumFractionDigits: formatterOfNumber.maximumFractionDigits), percent: valObject.percent,
+                numberOfPersons: valObject.numberOfPersons
+            )
+            
+        }
+        
+    }
+    
 }
 

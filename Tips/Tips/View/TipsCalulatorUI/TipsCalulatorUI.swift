@@ -25,6 +25,8 @@ protocol FormatterNumberProtocol: Any {
 
 class ValuesObject: ObservableObject {
     @Published var value: Int = 0
+    @Published var percent: Double = 0.00
+    @Published var numberOfPersons: Int = 1
 }
 
 struct ValuesViewContainer: View {
@@ -32,7 +34,7 @@ struct ValuesViewContainer: View {
     @ObservedObject var valObject: ValuesObject
     
     var body: some View {
-        TipsCalulatorUI(valueNew: $valObject.value)
+        TipsCalulatorUI(valueNew: $valObject.value, percentNew: $valObject.percent, numberOfPersonsNew: $valObject.numberOfPersons)
     }
     
 }
@@ -44,9 +46,12 @@ struct TipsCalulatorUI: View {
     // values for calculations of the tips
     @Binding var value: Int
     
-    @State private var percent: Double = 0.00
-    @State private(set) var numberOfPersons: Int = 1
+    @State var percent: Double = 0.00
+    @State var numberOfPersons: Int = 1
     
+    @Binding var percentFixed: Double
+    @Binding var numberOfPersonsFixed: Int
+
     var billSummary: Double {
         get {
             return TipsCalculations().calculateBillSummary(startSum: ValuesForCalculations().getDoubleCount(value: value, maximumFractionDigits: formatterOfNumber.maximumFractionDigits))
@@ -92,13 +97,16 @@ struct TipsCalulatorUI: View {
     
     private var formatterOfNumber: FormatterNumberProtocol
     
-    init(formatterOfNumber: FormatterNumberProtocol = NumberFormatter(), valueNew: Binding<Int>) {
+    init(formatterOfNumber: FormatterNumberProtocol = NumberFormatter(), valueNew: Binding<Int>, percentNew: Binding<Double>, numberOfPersonsNew: Binding<Int>) {
         
         self.formatterOfNumber = formatterOfNumber
         self.formatterOfNumber.numberStyle = .currency
         self.formatterOfNumber.maximumFractionDigits = 2
         self.formatterOfNumber.locale = CurrentLocale.shared.currentLocale
+        
         self._value = valueNew
+        self._percentFixed = percentNew
+        self._numberOfPersonsFixed = numberOfPersonsNew
         
     }
 
@@ -150,6 +158,7 @@ struct TipsCalulatorUI: View {
                                 
                             Button("5%") {
                                 percent = 5.0
+                                percentFixed = 5.0
                             }
                             .frame(width: ConstantsFactorValuesForMainUI.shared.scrollViewButtonWidth, height: ConstantsFactorValuesForMainUI.shared.scrollViewButtonHeight)
                             .padding()
@@ -159,6 +168,7 @@ struct TipsCalulatorUI: View {
                             
                             Button("10%") {
                                 percent = 10.0
+                                percentFixed = 10.0
                             }
                             .frame(width: ConstantsFactorValuesForMainUI.shared.scrollViewButtonWidth, height: ConstantsFactorValuesForMainUI.shared.scrollViewButtonHeight)
                             .padding()
@@ -168,6 +178,7 @@ struct TipsCalulatorUI: View {
                             
                             Button("15%") {
                                 percent = 15.0
+                                percentFixed = 15.0
                             }
                             .frame(width: ConstantsFactorValuesForMainUI.shared.scrollViewButtonWidth, height: ConstantsFactorValuesForMainUI.shared.scrollViewButtonHeight)
                             .padding()
@@ -177,6 +188,7 @@ struct TipsCalulatorUI: View {
                             
                             Button("20%") {
                                 percent = 20.0
+                                percentFixed = 20.0
                             }
                             .frame(width: ConstantsFactorValuesForMainUI.shared.scrollViewButtonWidth, height: ConstantsFactorValuesForMainUI.shared.scrollViewButtonHeight)
                             .padding()
@@ -186,6 +198,7 @@ struct TipsCalulatorUI: View {
                             
                             Button("25%") {
                                 percent = 25.0
+                                percentFixed = 25.0
                             }
                             .frame(width: ConstantsFactorValuesForMainUI.shared.scrollViewButtonWidth, height: ConstantsFactorValuesForMainUI.shared.scrollViewButtonHeight)
                             .padding()
@@ -195,6 +208,7 @@ struct TipsCalulatorUI: View {
                             
                             Button("30%") {
                                 percent = 30.0
+                                percentFixed = 30.0
                             }
                             .frame(width: ConstantsFactorValuesForMainUI.shared.scrollViewButtonWidth, height: ConstantsFactorValuesForMainUI.shared.scrollViewButtonHeight)
                             .padding()
@@ -214,9 +228,12 @@ struct TipsCalulatorUI: View {
                 VStack {
                 
                     HStack(spacing: currentHStackSpacing) {
-                        Slider(value: $percent, in: 0...100, step: 1.0)
+                        
+                        Slider(value: $percent, in: 0...100, step: 1.0, onEditingChanged: { _ in percentFixed = percent })
                             .accentColor(.percentColorBackground)
+                        
                         Text("\(percent, specifier: "%.0f")%")
+                        
                     }
                     
                 }
@@ -224,6 +241,9 @@ struct TipsCalulatorUI: View {
                 
                 VStack {
                     TipsStepper(value: $numberOfPersons, sum: $value)
+                        .onChange(of: numberOfPersons) {
+                            numberOfPersonsFixed = numberOfPersons
+                        }
                 }
                 .padding([.leading, .trailing], currentPadding)
                 
@@ -407,7 +427,7 @@ class PreviewNumberFormatter: FormatterNumberProtocol {
 
 #Preview {
     
-    TipsCalulatorUI(formatterOfNumber: PreviewNumberFormatter(locale: Locale(identifier: "pl_PL")), valueNew: .constant(0))
+    TipsCalulatorUI(formatterOfNumber: PreviewNumberFormatter(locale: Locale(identifier: "pl_PL")), valueNew: .constant(0), percentNew: .constant(0.00), numberOfPersonsNew: .constant(0))
     //TipsCalulatorUI()
 
 }
