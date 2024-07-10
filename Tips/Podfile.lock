@@ -1,11 +1,11 @@
 PODS:
   - Alamofire (5.9.1)
   - Device (3.6.0)
-  - Realm (10.50.1):
-    - Realm/Headers (= 10.50.1)
-  - Realm/Headers (10.50.1)
-  - RealmSwift (10.50.1):
-    - Realm (= 10.50.1)
+  - Realm (10.52.1):
+    - Realm/Headers (= 10.52.1)
+  - Realm/Headers (10.52.1)
+  - RealmSwift (10.52.1):
+    - Realm (= 10.52.1)
   - SwiftMessages (10.0.0):
     - SwiftMessages/App (= 10.0.0)
   - SwiftMessages/App (10.0.0)
@@ -27,8 +27,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
   Device: bd1978b3885a7a83d542f2ae0877f723be7d4ec1
-  Realm: 36bc9fe2681d7cf234aa487e7990821c772206a2
-  RealmSwift: 84a370d3d4f191d327a9f8ade1f064a274f79847
+  Realm: 5b0f6fe519911831fff94e6e6fba8fd404fa20ed
+  RealmSwift: 6963a458f4f5f3f0df5cca69dece5c802c7b7cad
   SwiftMessages: d3540f0f981dfbac25bd2ae9a662effa48f76f92
 
 PODFILE CHECKSUM: d803969d86bb39821b68da21537c74283d5be145

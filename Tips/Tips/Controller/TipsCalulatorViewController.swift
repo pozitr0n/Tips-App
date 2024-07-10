@@ -112,7 +112,7 @@ class TipsCalulatorViewController: UIViewController {
     @IBAction func addToFavourite(_ sender: Any) {
         
         // adding to favourite (realm database)
-        // !!!!!
+        
         
     }
     
