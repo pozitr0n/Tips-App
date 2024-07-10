@@ -39,7 +39,6 @@ class ShareViewController: UIViewController, UISheetPresentationControllerDelega
     @IBOutlet weak var eachPayValue: UILabel!
     
     @IBOutlet weak var shareButtonMain: UIButton!
-    @IBOutlet weak var appleWallet: UIButton!
     
     override func viewDidLoad() {
         
@@ -103,11 +102,6 @@ class ShareViewController: UIViewController, UISheetPresentationControllerDelega
         shareButtonMain.tintColor = .percentColorBackground
         shareButtonMain.layer.cornerRadius = 15.0
         shareButtonMain.clipsToBounds = true
-        
-        appleWallet.backgroundColor = .textButtonColorBackground
-        appleWallet.tintColor = .percentColorBackground
-        appleWallet.layer.cornerRadius = 15.0
-        appleWallet.clipsToBounds = true
                 
     }
     
@@ -142,12 +136,5 @@ class ShareViewController: UIViewController, UISheetPresentationControllerDelega
         self.present(activityViewController, animated: true, completion: nil)
         
     }
-    
-    @IBAction func appleWalletAction(_ sender: Any) {
-        
-        // !!!
-        // Add the functionality!
-        
-    }
-    
+
 }
