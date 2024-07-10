@@ -9,6 +9,7 @@ target 'Tips' do
   pod 'Alamofire'
   pod 'SwiftMessages'
   pod "Device", '~> 3.6.0'
+  pod ‘RealmSwift’
 
   target 'TipsTests' do
     inherit! :search_paths
