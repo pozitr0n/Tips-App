@@ -71,9 +71,18 @@ final class TipsModel {
         
         for element in allTheInfoTips {
             
-            let newElement = FavouriteObject(idDateString: element.idDateString, tipDate: element.tipDate, tipCurrency: element.tipCurrency, tipBill: element.tipBill, tipPercent: element.tipPercent, tipTips: element.tipTips, tipTotal: element.tipTotal, tipPeople: element.tipPeople, tipEachPay: element.tipEachPay)
+            let newElement = FavouriteObject(idDateString: element.idDateString, 
+                                             tipDate: element.tipDate,
+                                             tipCurrency: element.tipCurrency,
+                                             tipBill: element.tipBill, 
+                                             tipPercent: element.tipPercent,
+                                             tipTips: element.tipTips,
+                                             tipTotal: element.tipTotal,
+                                             tipPeople: element.tipPeople,
+                                             tipEachPay: element.tipEachPay)
             
             favouriteArray.append(newElement)
+            
         }
         
         return favouriteArray
