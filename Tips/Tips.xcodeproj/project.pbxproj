@@ -57,6 +57,8 @@
 		4D90AD2C2BCB76BA000C373E /* Prod-Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D90AD2B2BCB76BA000C373E /* Prod-Keys.plist */; };
 		4D90AD2F2BCB7721000C373E /* SecureSavingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90AD2E2BCB7721000C373E /* SecureSavingAPI.swift */; };
 		4D92B8532BAA60A300539710 /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9ACDF82BA7EAB50075C3F6 /* Localizations.swift */; };
+		4D942A542C3F5BFC0030138B /* TipsModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D942A532C3F5BFC0030138B /* TipsModelObject.swift */; };
+		4D942A562C3F5EEB0030138B /* TipsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D942A552C3F5EEB0030138B /* TipsModel.swift */; };
 		4D9ACDEB2BA37B340075C3F6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9ACDEA2BA37B340075C3F6 /* TabBarViewController.swift */; };
 		4D9ACDED2BA389450075C3F6 /* SettingsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9ACDEC2BA389450075C3F6 /* SettingsSwiftUIView.swift */; };
 		4D9ACDEF2BA38A300075C3F6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9ACDEE2BA38A300075C3F6 /* SettingsViewController.swift */; };
@@ -156,6 +158,8 @@
 		4D90AD292BCB7678000C373E /* Debug-Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Debug-Keys.plist"; sourceTree = "<group>"; };
 		4D90AD2B2BCB76BA000C373E /* Prod-Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Prod-Keys.plist"; sourceTree = "<group>"; };
 		4D90AD2E2BCB7721000C373E /* SecureSavingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureSavingAPI.swift; sourceTree = "<group>"; };
+		4D942A532C3F5BFC0030138B /* TipsModelObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsModelObject.swift; sourceTree = "<group>"; };
+		4D942A552C3F5EEB0030138B /* TipsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsModel.swift; sourceTree = "<group>"; };
 		4D9ACDEA2BA37B340075C3F6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		4D9ACDEC2BA389450075C3F6 /* SettingsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwiftUIView.swift; sourceTree = "<group>"; };
 		4D9ACDEE2BA38A300075C3F6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 		4D258AE02B9F4367003B9F8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4D942A522C3F5BE20030138B /* RealmSwiftDatabase */,
 				4D074C8C2C13CAED00AFEFD8 /* TipsCalculations */,
 				4DB69D282BC4B2F0005B5B68 /* SentEmailModel */,
 				4D47B8562BBC36B5008829DE /* Map */,
@@ -455,6 +460,15 @@
 				4D90AD2E2BCB7721000C373E /* SecureSavingAPI.swift */,
 			);
 			path = "API-Keys";
+			sourceTree = "<group>";
+		};
+		4D942A522C3F5BE20030138B /* RealmSwiftDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				4D942A532C3F5BFC0030138B /* TipsModelObject.swift */,
+				4D942A552C3F5EEB0030138B /* TipsModel.swift */,
+			);
+			path = RealmSwiftDatabase;
 			sourceTree = "<group>";
 		};
 		4D9ACDF42BA7E7EC0075C3F6 /* Localization */ = {
@@ -846,12 +860,14 @@
 				4D416FB12B9F398B00333567 /* AppDelegate.swift in Sources */,
 				4D9ACDEF2BA38A300075C3F6 /* SettingsViewController.swift in Sources */,
 				4D3152382BBD6C7300FB41BE /* ComponentsForTipGuide.swift in Sources */,
+				4D942A562C3F5EEB0030138B /* TipsModel.swift in Sources */,
 				4DE4D6262BB1164E00160224 /* ChangeApplicationIcon.swift in Sources */,
 				4D47B85C2BBC36E3008829DE /* ComponentsMap.swift in Sources */,
 				4DB69D2B2BC4B318005B5B68 /* ReviewEmail.swift in Sources */,
 				4D1C119B2B9FF10A00FEAB9E /* ShareViewController.swift in Sources */,
 				4D074C8B2C13CAE400AFEFD8 /* TipsCalculations.swift in Sources */,
 				4D548F3E2BA00A8A00D07A9E /* TipGuideSwiftUIView.swift in Sources */,
+				4D942A542C3F5BFC0030138B /* TipsModelObject.swift in Sources */,
 				4D47B85A2BBC36DB008829DE /* DrawingMap.swift in Sources */,
 				4DE4D6212BAFCA5500160224 /* Icons.swift in Sources */,
 				4DE4D6292BB1170600160224 /* DetailLanguages.swift in Sources */,

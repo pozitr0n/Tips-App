@@ -8,6 +8,7 @@
 import UIKit
 import SwiftUI
 import Combine
+//import RealmSwift
 
 class TipsCalulatorViewController: UIViewController {
     
@@ -24,6 +25,9 @@ class TipsCalulatorViewController: UIViewController {
         
         localizeInterface()
         loadSwiftUIViewController()
+        
+        //let realm = try? Realm()
+        //print(realm?.configuration.fileURL)
         
     }
     
@@ -110,9 +114,57 @@ class TipsCalulatorViewController: UIViewController {
     }
     
     @IBAction func addToFavourite(_ sender: Any) {
+    
+        var formatterOfNumber: FormatterNumberProtocol = NumberFormatter()
         
-        // adding to favourite (realm database)
+        formatterOfNumber.numberStyle = .currency
+        formatterOfNumber.maximumFractionDigits = 2
+        formatterOfNumber.locale = CurrentLocale.shared.currentLocale
         
+        let valueDouble = TipsCalculations().calculateBillSummary(
+            startSum: ValuesForCalculations().getDoubleCount(value: valObject.value,
+                                                             maximumFractionDigits: formatterOfNumber.maximumFractionDigits)
+        )
+        
+        let tipDouble = TipsCalculations().calculateTipSummary(
+            startSum: ValuesForCalculations().getDoubleCount(value: valObject.value,
+                                                             maximumFractionDigits: formatterOfNumber.maximumFractionDigits),
+            percent: valObject.percent
+        )
+        
+        let tipPercent = valObject.percent
+        let numberOfPersonsInt = valObject.numberOfPersons
+        
+        let eachPayDouble = TipsCalculations().calculateTotalPerPerson(
+            startSum: ValuesForCalculations().getDoubleCount(value: valObject.value,
+                                                             maximumFractionDigits: formatterOfNumber.maximumFractionDigits), percent: valObject.percent,
+            numberOfPersons: valObject.numberOfPersons
+        )
+        
+        let tipTotal = valueDouble + tipDouble
+        
+        let currentDateTime = Date()
+
+        let formatterShort = DateFormatter()
+        formatterShort.timeStyle = .none
+        formatterShort.dateStyle = .medium
+        
+        let formatterLong = DateFormatter()
+        formatterLong.timeStyle = .medium
+        formatterLong.dateStyle = .medium
+
+        let currentShortDateTimeString = formatterShort.string(from: currentDateTime)
+        let currentLongDateTimeString  = formatterLong.string(from: currentDateTime)
+        
+        TipsModel().addTipsInfoToFavourite(currentLongDateTimeString,
+                                           currentShortDateTimeString,
+                                           CurrentCurrency.shared.currentCurrency,
+                                           valueDouble,
+                                           tipPercent,
+                                           tipDouble,
+                                           tipTotal,
+                                           numberOfPersonsInt,
+                                           eachPayDouble)
         
     }
     
@@ -141,7 +193,7 @@ class TipsCalulatorViewController: UIViewController {
             vcShare.numberOfPersonsInt = valObject.numberOfPersons
             
             vcShare.eachPayDouble = TipsCalculations().calculateTotalPerPerson(
-                startSum: ValuesForCalculations().getDoubleCount(value: valObject.value, 
+                startSum: ValuesForCalculations().getDoubleCount(value: valObject.value,
                                                                  maximumFractionDigits: formatterOfNumber.maximumFractionDigits), percent: valObject.percent,
                 numberOfPersons: valObject.numberOfPersons
             )
