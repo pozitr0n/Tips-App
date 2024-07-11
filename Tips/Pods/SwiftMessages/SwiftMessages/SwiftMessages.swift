@@ -875,8 +875,7 @@ extension SwiftMessages {
         globalInstance.show(viewProvider: viewProvider)
     }
     
-    // it was: nonisolated public static func show(config: Config, viewProvider: @escaping ViewProvider) {
-    public static func show(config: Config, viewProvider: @escaping ViewProvider) {
+    nonisolated public static func show(config: Config, viewProvider: @escaping ViewProvider) {
         globalInstance.show(config: config, viewProvider: viewProvider)
     }
     
