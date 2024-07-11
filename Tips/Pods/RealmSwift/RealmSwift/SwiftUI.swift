@@ -1595,8 +1595,8 @@ private class ObservableAsyncOpenStorage: ObservableObject {
                 // Do not change state to progress if the realm file is already opened or there is an error
                 switch self.asyncOpenState {
                 case .connecting, .waitingForUser, .progress:
-                    let progress = Progress(totalUnitCount: Int64(asyncProgress.transferredBytes))
-                    progress.completedUnitCount = Int64(asyncProgress.transferredBytes)
+                    let progress = Progress(totalUnitCount: Int64(asyncProgress.progressEstimate))
+                    progress.completedUnitCount = Int64(asyncProgress.progressEstimate)
                     self.asyncOpenState = .progress(progress)
                 default: break
                 }
