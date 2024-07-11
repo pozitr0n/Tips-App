@@ -2362,6 +2362,7 @@
 		};
 		EEE171D050415490EABE5B7B4F32C265 /* Create Symlinks to Header Folders */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -2859,11 +2860,12 @@
 				MODULEMAP_FILE = "Target Support Files/Realm/Realm.modulemap";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-Wl,-unexported_symbols_list,${PODS_ROOT}/Realm/Configuration/Realm/PrivateSymbols.txt",
+					"\"-Wl,-unexported_symbols_list,${PODS_ROOT}/Realm/Configuration/Realm/PrivateSymbols.txt\"",
 					"-framework",
 					"\"Security\"",
 					"-weak_framework",
 					"\"UIKit\"",
+					"\"-Wl,-no_warn_duplicate_libraries\"",
 				);
 				PRODUCT_MODULE_NAME = Realm;
 				PRODUCT_NAME = Realm;
@@ -2939,11 +2941,12 @@
 				MODULEMAP_FILE = "Target Support Files/Realm/Realm.modulemap";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-Wl,-unexported_symbols_list,${PODS_ROOT}/Realm/Configuration/Realm/PrivateSymbols.txt",
+					"\"-Wl,-unexported_symbols_list,${PODS_ROOT}/Realm/Configuration/Realm/PrivateSymbols.txt\"",
 					"-framework",
 					"\"Security\"",
 					"-weak_framework",
 					"\"UIKit\"",
+					"\"-Wl,-no_warn_duplicate_libraries\"",
 				);
 				PRODUCT_MODULE_NAME = Realm;
 				PRODUCT_NAME = Realm;
