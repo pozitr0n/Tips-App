@@ -6,29 +6,110 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct FavouriteSwiftUIView: View {
     
-    var favouriteArray = TipsModel().getAllTheInfoTips()
+    @ObservedResults(TipsModelObject.self) var myFavouriteTips
+    @State private var searchText = ""
     
     var body: some View {
         
-        NavigationView {
-            
-            // create List + array
-            List(favouriteArray) { array in
+        if myFavouriteTips.isEmpty {
+      
+            NavigationView {
                 
-                NavigationLink(destination: DetailScreen(favouriteItem: array)) {
-                    
+                Group {
+                
                     VStack {
-                        Text(array.idDateString)
-                            .padding(.trailing)
+                    
+                        Text("Favourite-start".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                            .frame(width: 300, height: 150, alignment: .center)
+                            .padding([.leading, .trailing], 10)
+                            .background(.guideBackground)
+                            .foregroundStyle(.textButtonColorBackground)
+                            .multilineTextAlignment(.center)
+                            .bold()
+                            .font(.system(size: 19))
+                            .clipShape(.rect(cornerRadius: 20))
+                            .opacity(0.6)
+
                     }
+                    
+                }
+                .navigationTitle("Favourite.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                
+            }
+            
+        } else {
+            
+            NavigationView {
+                
+                VStack {
+                    
+                    SearchBar(text: $searchText, placeholder: "Search-Text".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+                        .padding(.horizontal)
+                    
+                    // create List + array
+                    List {
+                        
+                        ForEach(filteredTips) { tip in
+                            
+                            NavigationLink(destination: DetailScreen(favouriteItem: tip)) {
+                                
+                                VStack {
+                                    Text(tip.idDateString)
+                                        .padding(.trailing)
+                                }
+                                
+                            }
+                            
+                        }
+                        .onDelete(perform: deleteItems)
+                        
+                    }
+                    .navigationBarTitle("Favourite.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                     
                 }
                 
             }
-            .navigationTitle("Favourite.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
+            
+        }
+    
+    }
+    
+    var filteredTips: Results<TipsModelObject> {
+        
+        if searchText.isEmpty {
+            return myFavouriteTips
+        } else {
+            return myFavouriteTips.filter("tipDate CONTAINS[c] %@", searchText)
+        }
+        
+    }
+    
+    private func deleteItems(at offsets: IndexSet) {
+        TipsModel().deleteTipsInfoFromFavourite(offsets, myFavouriteTips)
+    }
+    
+}
+
+// SearchBar component to use for search functionality
+struct SearchBar: View {
+    
+    @Binding var text: String
+    var placeholder: String
+
+    var body: some View {
+        
+        HStack {
+            
+            TextField(placeholder, text: $text)
+                .padding(.vertical, 10)
+                .padding(.horizontal, 20)
+                .background(Color(.systemGray6))
+                .cornerRadius(10)
+                .padding(.horizontal, -5)
             
         }
         
@@ -38,7 +119,7 @@ struct FavouriteSwiftUIView: View {
 
 struct DetailScreen: View {
     
-    let favouriteItem: FavouriteObject
+    let favouriteItem: TipsModelObject
     
     var body: some View {
      
@@ -47,14 +128,14 @@ struct DetailScreen: View {
             Spacer()
             
             HStack {
-                Text(favouriteItem.tipDate)
-                    .font(.largeTitle)
+                Text("💵 " + "Operation-At".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) + (favouriteItem.tipDate))
+                    .font(.title3)
                     .bold()
             }
             
-            VStack {
+            VStack(spacing: 1.0) {
             
-                HStack {
+                HStack(spacing: 1.0) {
                     
                     Text(Localize(key: "sMR-W3-hJp.title", comment: ""))
                         .font(.body.bold())
@@ -74,7 +155,7 @@ struct DetailScreen: View {
                 }
                 .padding(.horizontal)
                 
-                HStack {
+                HStack(spacing: 1.0) {
                     
                     Text(Localize(key: "DYB-h6-QW8.title", comment: "") + " (\(String(format: "%.0f", favouriteItem.tipPercent))%)")
                         .font(.body.bold())
@@ -94,7 +175,7 @@ struct DetailScreen: View {
                 }
                 .padding(.horizontal)
                 
-                HStack {
+                HStack(spacing: 1.0) {
                     
                     Text(Localize(key: "gl0-kh-bjo.title", comment: ""))
                         .font(.body.bold())
@@ -114,7 +195,7 @@ struct DetailScreen: View {
                 }
                 .padding(.horizontal)
                 
-                HStack {
+                HStack(spacing: 1.0) {
                     
                     Text(Localize(key: "1EH-gv-upV.title", comment: ""))
                         .font(.body.bold())
@@ -134,7 +215,7 @@ struct DetailScreen: View {
                 }
                 .padding(.horizontal)
                 
-                HStack {
+                HStack(spacing: 1.0) {
                     
                     Text(Localize(key: "qeQ-Lf-lwt.title", comment: ""))
                         .font(.body.bold())
@@ -201,5 +282,32 @@ struct FavouriteObject: Identifiable {
 }
 
 #Preview {
+    
     FavouriteSwiftUIView()
+    
+        .environment(\.realmConfiguration, Realm.preview.configuration)
+        .onAppear {
+            
+            let realm = Realm.preview
+            try? realm.write {
+                
+                realm.deleteAll()
+                
+                let tip = TipsModelObject()
+                
+                tip.idDateString = "2023-07-12"
+                tip.tipDate = "2023-07-12"
+                tip.tipCurrency = "PLN"
+                tip.tipBill = 100.0
+                tip.tipPercent = 10.0
+                tip.tipTips = 10.0
+                tip.tipTotal = 110.0
+                tip.tipPeople = 2
+                tip.tipEachPay = 55.0
+                
+                realm.add(tip)
+                
+            }
+        }
+    
 }

@@ -1,75 +1,75 @@
 
 /* Class = "UITabBarItem"; title = "Settings"; ObjectID = "18x-2K-JfQ"; */
-"18x-2K-JfQ.title" = "Settings";
+"18x-2K-JfQ.title" = "Ustawienia";
 
 /* Class = "UIBarButtonItem"; title = "Share"; ObjectID = "QAb-0s-j0x"; */
-"QAb-0s-j0x.title" = "Share";
+"QAb-0s-j0x.title" = "Udostępnij";
 
 /* Class = "UITabBarItem"; title = "Tip Guide"; ObjectID = "Qq1-zl-SnJ"; */
-"Qq1-zl-SnJ.title" = "Tip Guide";
+"Qq1-zl-SnJ.title" = "Przewodnik";
 
 /* Class = "UIBarButtonItem"; title = "Add to Favourite"; ObjectID = "Tyb-Nx-A4j"; */
-"Tyb-Nx-A4j.title" = "Add to Favourite";
+"Tyb-Nx-A4j.title" = "Dodaj do ulubionych";
 
 /* Class = "UITabBarItem"; title = "Tip Calculator"; ObjectID = "feV-wK-qce"; */
-"feV-wK-qce.title" = "Tip Calculator";
+"feV-wK-qce.title" = "Kalkulator";
 
 /* Class = "UITabBarItem"; title = "Favoutite"; ObjectID = "fpD-qQ-uGK"; */
-"fpD-qQ-uGK.title" = "Favoutite";
+"fpD-qQ-uGK.title" = "Ulubione";
 
 /* Class = "UIBarButtonItem"; title = "Refresh"; ObjectID = "gk0-cT-5Rs"; */
-"gk0-cT-5Rs.title" = "Refresh";
+"gk0-cT-5Rs.title" = "Zaktualizuj";
 
 /* Class = "UINavigationItem"; title = "Tips Calculator"; ObjectID = "hsB-TO-Q61"; */
-"hsB-TO-Q61.title" = "Tips Calculator";
+"hsB-TO-Q61.title" = "Kalkulator";
 
-"navigationTitlle.Settings.title" = "Settings";
+"navigationTitlle.Settings.title" = "Ustawienia";
 
-"Application-Icon.title" = "Application Icon";
+"Application-Icon.title" = "Ikona aplikacji";
 
-"Application-Mode-Main-Screen.title" = "Choose from a list";
+"Application-Mode-Main-Screen.title" = "Wybrać z listy";
 
-"Application-Mode.title" = "Application Mode";
+"Application-Mode.title" = "Tryb aplikacji";
 
-"Language.title" = "Language";
+"Language.title" = "Język";
 
-"Language-Choose.title" = "Choose the language";
+"Language-Choose.title" = "Proszę wybrać język";
 
-"Currency-format.title" = "Currency format";
+"Currency-format.title" = "Format waluty";
 
-"Default-Percentage.title" = "Default Percentage";
+"Default-Percentage.title" = "Domyślny procent";
 
-"Appearance.title" = "Appearance";
+"Appearance.title" = "Wygląd";
 
-"General.title" = "General settings";
+"General.title" = "Ogólne ustawienia";
 
-"Favourite.title" = "Favourite";
+"Favourite.title" = "Ulubione";
 
-"Tip-Guide.title" = "Tip Guide";
+"Tip-Guide.title" = "Przewodnik";
 
 "Tip-Guide-Welcome.title" = "Witamy!";
 
-"Change-Language-Alert.title" = "Changing the application language";
+"Change-Language-Alert.title" = "Zmiana języka aplikacji";
 
-"Change-Language-Alert.message" = "Are you sure you want to change the language?";
+"Change-Language-Alert.message" = "Potwierdzić zmianę języka aplikacji?";
 
-"Change-Language.primaryButton" = "Change";
+"Change-Language.primaryButton" = "Zmiana języka";
 
-"Cancel-Language-Alert.title" = "Cancel";
+"Cancel-Language-Alert.title" = "Anuluj";
 
-"Choose-a-mode.title" = "Choose a Mode";
+"Choose-a-mode.title" = "Wybrać Tryb";
 
-"Choose-a-mode.message" = "Day or Night.\nCustomize your interface.";
+"Choose-a-mode.message" = "Dzień czy Noc.\nDostosuj swój interfejs.";
 
-"Default-Mode.title" = "Default";
+"Default-Mode.title" = "Domyślny";
 
-"Light-Mode.title" = "Light";
+"Light-Mode.title" = "Jasny";
 
-"Dark-Mode.title" = "Dark";
+"Dark-Mode.title" = "Ciemny";
 
-"Icons.title" = "Icons";
+"Icons.title" = "Ikony";
 
-"Default.title" = "Default";
+"Default.title" = "Domyślna";
 
 "Choose-Currency.title" = "Wybrać";
 
@@ -161,7 +161,7 @@
 
 "DYB-h6-QW8.title" = "Napiwek";
 
-"gl0-kh-bjo.title" = "Razem (rachunek)";
+"gl0-kh-bjo.title" = "Razem";
 
 "1EH-gv-upV.title" = "Ilość osób";
 
@@ -170,3 +170,9 @@
 "b1G-Tw-DDZ.title" = "Udostępnić";
 
 "Favourite-Description" = "Tutaj wyświetlane są zapisane dane napiwków";
+
+"Operation-At" = "Naliczanie w dniu ";
+
+"Favourite-start" = "Obecnie nie masz zapisanych żadnych danych napiwków 🥺";
+
+"Search-Text" = "Szukaj...";

@@ -46,7 +46,7 @@ struct TipsCalulatorUI: View {
     // values for calculations of the tips
     @Binding var value: Int
     
-    @State var percent: Double = 0.00
+    @State var percent: Double = CurrentPercentage.shared.currentPercentage == 0 ? 0.00 : Double(CurrentPercentage.shared.currentPercentage)
     @State var numberOfPersons: Int = 1
     
     @Binding var percentFixed: Double
@@ -428,6 +428,5 @@ class PreviewNumberFormatter: FormatterNumberProtocol {
 #Preview {
     
     TipsCalulatorUI(formatterOfNumber: PreviewNumberFormatter(locale: Locale(identifier: "pl_PL")), valueNew: .constant(0), percentNew: .constant(0.00), numberOfPersonsNew: .constant(0))
-    //TipsCalulatorUI()
 
 }

@@ -8,7 +8,6 @@
 import UIKit
 import SwiftUI
 import Combine
-//import RealmSwift
 
 class TipsCalulatorViewController: UIViewController {
     
@@ -25,9 +24,6 @@ class TipsCalulatorViewController: UIViewController {
         
         localizeInterface()
         loadSwiftUIViewController()
-        
-        //let realm = try? Realm()
-        //print(realm?.configuration.fileURL)
         
     }
     
@@ -78,8 +74,8 @@ class TipsCalulatorViewController: UIViewController {
                 let alert = UIAlertController(title: "Alert-Refreshing.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage), message: "Alert-Refreshing.message".localizedSwiftUI(CurrentLanguage.shared.currentLanguage), preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Alert-Refreshing.primaryButton".localizedSwiftUI(CurrentLanguage.shared.currentLanguage), style: .default, handler: { action in
                     
+                    self.cancellable = nil
                     self.valObject.value = 0
-                    
                     self.vcTipsCalulator = UIHostingController(rootView: AnyView(ValuesViewContainer(valObject: self.valObject)))
                     
                     guard let vcTipsCalulator = self.vcTipsCalulator,
@@ -103,7 +99,7 @@ class TipsCalulatorViewController: UIViewController {
                     vcTipsCalulator.didMove(toParent: self)
                     
                 }))
-                alert.addAction(UIAlertAction(title: "Alert-Refreshing.cancelButton".localizedSwiftUI(CurrentLanguage.shared.currentLanguage), style: UIAlertAction.Style.cancel, handler: nil))
+                alert.addAction(UIAlertAction(title: "Alert-Refreshing.cancelButton".localizedSwiftUI(CurrentLanguage.shared.currentLanguage), style: UIAlertAction.Style.cancel, handler: { action in self.cancellable = nil }))
                 
                 self.present(alert, animated: true, completion: nil)
                 
@@ -156,16 +152,42 @@ class TipsCalulatorViewController: UIViewController {
         let currentShortDateTimeString = formatterShort.string(from: currentDateTime)
         let currentLongDateTimeString  = formatterLong.string(from: currentDateTime)
         
-        TipsModel().addTipsInfoToFavourite(currentLongDateTimeString,
-                                           currentShortDateTimeString,
-                                           CurrentCurrency.shared.currentCurrency,
-                                           valueDouble,
-                                           tipPercent,
-                                           tipDouble,
-                                           tipTotal,
-                                           numberOfPersonsInt,
-                                           eachPayDouble)
+        if TipsModel().addTipsInfoToFavourite(currentLongDateTimeString,
+                                              currentShortDateTimeString,
+                                              CurrentCurrency.shared.currentCurrency,
+                                              valueDouble,
+                                              tipPercent,
+                                              tipDouble,
+                                              tipTotal,
+                                              numberOfPersonsInt,
+                                              eachPayDouble) {
+            
+            self.valObject.value = 0
+            
+            self.vcTipsCalulator = UIHostingController(rootView: AnyView(ValuesViewContainer(valObject: self.valObject)))
+            
+            guard let vcTipsCalulator = self.vcTipsCalulator,
+                  let swiftuiView = vcTipsCalulator.view else { return }
         
+            swiftuiView.translatesAutoresizingMaskIntoConstraints = false
+            
+            // Add the view controller to the destination view controller.
+            self.addChild(vcTipsCalulator)
+            self.view.addSubview(swiftuiView)
+            
+            // Create and activate the constraints for the swiftui's view.
+            NSLayoutConstraint.activate([
+                swiftuiView.topAnchor.constraint(equalTo: self.view.topAnchor),
+                swiftuiView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+                swiftuiView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+                swiftuiView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
+            ])
+            
+            // Notify the child view controller that the move is complete.
+            vcTipsCalulator.didMove(toParent: self)
+            
+        }
+                        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import SwiftUI
+import RealmSwift
 
 extension Array where Element: Hashable {
     
@@ -411,6 +412,19 @@ extension UIView {
             
         }
         
+    }
+    
+}
+
+extension Realm {
+    
+    static var preview: Realm {
+        do {
+            let configuration = Realm.Configuration(inMemoryIdentifier: "PreviewRealm")
+            return try Realm(configuration: configuration)
+        } catch {
+            fatalError("Failed to open Realm for preview: \(error)")
+        }
     }
     
 }

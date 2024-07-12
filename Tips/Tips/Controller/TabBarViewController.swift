@@ -7,11 +7,13 @@
 
 import UIKit
 
-class TabBarViewController: UITabBarController {
+class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        self.delegate = self
         
         setTabViewControllerParams(index: 0, tabBarItemTitle: Localize(key: "feV-wK-qce.title", comment: ""), navigationItemTitle: Localize(key: "hsB-TO-Q61.title", comment: ""))
         setTabViewControllerParams(index: 1, tabBarItemTitle: Localize(key: "fpD-qQ-uGK.title", comment: ""), navigationItemTitle: "")

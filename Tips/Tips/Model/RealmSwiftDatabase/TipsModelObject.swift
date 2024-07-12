@@ -8,11 +8,13 @@
 import Foundation
 import RealmSwift
 
-final class TipsModelObject: Object {
+final class TipsModelObject: Object, Identifiable {
     
-    @objc dynamic var idDateString = ""
-    @objc dynamic var tipDate = ""
-    @objc dynamic var tipCurrency = ""
+    @objc dynamic var id = UUID().uuidString
+    
+    @objc dynamic var idDateString: String = ""
+    @objc dynamic var tipDate: String = ""
+    @objc dynamic var tipCurrency: String = ""
     @objc dynamic var tipBill: Double = 0.0
     @objc dynamic var tipPercent: Double = 0.0
     @objc dynamic var tipTips: Double = 0.0
@@ -21,7 +23,7 @@ final class TipsModelObject: Object {
     @objc dynamic var tipEachPay: Double = 0.0
     
     override class func primaryKey() -> String? {
-        return "idDateString"
+        return "id"
     }
     
 }

@@ -13,10 +13,6 @@ final class TipsModel {
     // Realm object
     let realm = try? Realm()
     
-    var allTheInfoTips: Results<TipsModelObject>? {
-        return realm?.objects(TipsModelObject.self)
-    }
-    
     func addTipsInfoToFavourite(_ idDate: String,
                                 _ tipDate: String,
                                 _ tipCurrency: String,
@@ -25,7 +21,9 @@ final class TipsModel {
                                 _ tipTips: Double,
                                 _ tipTotal: Double,
                                 _ tipPeople: Int,
-                                _ tipEachPay: Double) {
+                                _ tipEachPay: Double) -> Bool {
+        
+        var result = false
     
         do {
             
@@ -45,48 +43,40 @@ final class TipsModel {
                 
                 realm?.add(object, update: .all)
                 
+                result = true
+                
             })
             
         } catch {
             print("Error saving done status, \(error)")
         }
         
-    }
-    
-    func deleteTipsInfoFromFavourite() {
+        return result
         
     }
     
-    func searchInfoInFavourite() {
-        
-    }
+    func deleteTipsInfoFromFavourite(_ offsets: IndexSet, _ myFavouriteTips: Results<TipsModelObject>) {
     
-    func getAllTheInfoTips() -> [FavouriteObject] {
-        
-        var favouriteArray: [FavouriteObject] = []
-        
-        guard let allTheInfoTips = allTheInfoTips else {
-            return [FavouriteObject]()
+        do {
+            
+            try realm?.write ({
+                
+                for index in offsets {
+                    
+                    // Checking the presence of an object in the array and its belonging to Realm
+                    let itemToDelete = myFavouriteTips[index]
+                    if let realmObject = realm?.object(ofType: TipsModelObject.self, forPrimaryKey: itemToDelete.id) {
+                        realm?.delete(realmObject)
+                    }
+                    
+                }
+                
+            })
+            
+        } catch {
+            print("Error deleting done status, \(error)")
         }
         
-        for element in allTheInfoTips {
-            
-            let newElement = FavouriteObject(idDateString: element.idDateString, 
-                                             tipDate: element.tipDate,
-                                             tipCurrency: element.tipCurrency,
-                                             tipBill: element.tipBill, 
-                                             tipPercent: element.tipPercent,
-                                             tipTips: element.tipTips,
-                                             tipTotal: element.tipTotal,
-                                             tipPeople: element.tipPeople,
-                                             tipEachPay: element.tipEachPay)
-            
-            favouriteArray.append(newElement)
-            
-        }
-        
-        return favouriteArray
-        
     }
-
+    
 }

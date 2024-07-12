@@ -168,7 +168,7 @@
 
 "DYB-h6-QW8.title" = "Napiwek";
 
-"gl0-kh-bjo.title" = "Razem (rachunek)";
+"gl0-kh-bjo.title" = "Razem";
 
 "1EH-gv-upV.title" = "Ilość osób";
 
@@ -177,3 +177,9 @@
 "b1G-Tw-DDZ.title" = "Udostępnić";
 
 "Favourite-Description" = "Tutaj wyświetlane są zapisane dane napiwków";
+
+"Operation-At" = "Naliczanie w dniu ";
+
+"Favourite-start" = "Obecnie nie masz zapisanych żadnych danych napiwków 🥺";
+
+"Search-Text" = "Szukaj...";

@@ -12,10 +12,17 @@
 - [ ] development of functionality and specifying it in the technical specifications
 
     - [x] Tip Calculator
-    - [ ] Favourite (Active working at this moment)
+    - [x] Favourite
     - [x] Tip Guide
     - [x] Settings (All that remains is to add the What's New and Privacy Policy section.)
 
-- [ ] user interface development
-- [ ] logic extension
-- [ ] testing
+- [x] user interface development
+- [x] logic extension
+- [ ] testing (Active working!)
+
+### Another addiction tasks:
+- [ ] Write Privacy Policy
+- [ ] Add description to What's New section
+- [ ] Check all the code/design before sending to production to AppStore
+- [ ] Buy subscription (API of currencies)
+- [ ] Ready all the description at GitHub
