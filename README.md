@@ -26,3 +26,4 @@
 - [ ] Check all the code/design before sending to production to AppStore
 - [ ] Buy subscription (API of currencies)
 - [ ] Ready all the description at GitHub
+- [ ] Add test cases (Unit/UI)
