@@ -27,3 +27,5 @@
 - [ ] Buy subscription (API of currencies)
 - [ ] Ready all the description at GitHub
 - [ ] Add test cases (Unit/UI)
+- [ ] Run the application source code through OpenAI to check for errors before uploading it to the AppStore (possibly with a subscription)
+- [ ] Buy a subscription to take screenshots of an application before uploading in the AppStore
