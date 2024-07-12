@@ -9,7 +9,7 @@
 `The project is at the initial stage of development`
 
 ### Main tasks for launching the project:
-- [ ] development of functionality and specifying it in the technical specifications
+- [x] development of functionality and specifying it in the technical specifications
 
     - [x] Tip Calculator
     - [x] Favourite
