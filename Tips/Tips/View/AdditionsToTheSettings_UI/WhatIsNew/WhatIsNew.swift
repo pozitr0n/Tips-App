@@ -11,36 +11,45 @@ struct WhatIsNew: View {
     
     // Add all the new information about the logic of the application
     //
-    @State var whatIsNewArray: [WhatIsNewObject] = [WhatIsNewObject(whatNew: "New 1"),
-                                                    WhatIsNewObject(whatNew: "New 2"),
-                                                    WhatIsNewObject(whatNew: "New 3"),
-                                                    WhatIsNewObject(whatNew: "New 4"),
-                                                    WhatIsNewObject(whatNew: "New 5"),
-                                                    WhatIsNewObject(whatNew: "New 6"),
-                                                    WhatIsNewObject(whatNew: "New 7")]
+    @State var whatIsNewArray: [WhatIsNewObject] = [WhatIsNewObject(whatNew: "WhatIsNewObject-Item-1".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
+                                                    WhatIsNewObject(whatNew: "WhatIsNewObject-Item-2".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
+                                                    WhatIsNewObject(whatNew: "WhatIsNewObject-Item-3".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
+                                                    WhatIsNewObject(whatNew: "WhatIsNewObject-Item-4".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
+                                                    WhatIsNewObject(whatNew: "WhatIsNewObject-Item-5".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
+                                                    WhatIsNewObject(whatNew: "WhatIsNewObject-Item-6".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
+                                                    WhatIsNewObject(whatNew: "WhatIsNewObject-Item-7".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
+                                                    WhatIsNewObject(whatNew: "WhatIsNewObject-Item-8".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))]
     
     var body: some View {
         
-        Form {
-            
-            Section("Version: 1.0") {
+        VStack {
+        
+            Form {
                 
-                List($whatIsNewArray) { $currentNew in
+                Section {
                     
-                    HStack {
+                    List($whatIsNewArray) { $currentNew in
                         
-                        Image(systemName: "checkmark.circle")
-                            .foregroundStyle(.blue)
-                        Text(currentNew.whatNew)
+                        HStack {
+                            
+                            Image(systemName: "checkmark.circle")
+                                .foregroundStyle(.blue)
+                            Text(currentNew.whatNew)
+                            
+                        }
                         
                     }
                     
+                } header: {
+                    Text("Version-title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) + " 1.0.1")
+                } footer: {
+                    Text("Main-Text-Footer.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) + " 🤍")
                 }
                 
             }
             
         }
-    
+        
         .navigationTitle("What-New.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
         
     }

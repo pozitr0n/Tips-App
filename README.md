@@ -22,7 +22,7 @@
 
 ### Another addiction tasks:
 - [ ] Write Privacy Policy
-- [ ] Add description to What's New section
+- [x] Add description to What's New section
 - [ ] Check all the code/design before sending to production to AppStore
 - [ ] Buy subscription (API of currencies)
 - [ ] Ready all the description at GitHub

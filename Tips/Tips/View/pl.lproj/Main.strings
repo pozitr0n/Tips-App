@@ -176,3 +176,27 @@
 "Favourite-start" = "Obecnie nie masz zapisanych żadnych danych napiwków 🥺";
 
 "Search-Text" = "Szukaj...";
+
+"Version-title" = "Wersja:";
+
+"Main-Text-Footer.title" = "
+Mam nadzieję, że spodoba Ci się nie tylko aktualizacja, ale cała aplikacja!
+- Raman";
+
+// Description What's New - BEGIN
+"WhatIsNewObject-Item-1" = "Obliczanie napiwków, drukowanie i zapisywanie informacji o napiwkach w notatkach, przypomnieniach itp";
+
+"WhatIsNewObject-Item-2" = "Zapisywanie wskazówek w ulubionych + wyszukiwanie lub usuwanie informacji";
+
+"WhatIsNewObject-Item-3" = "Przewodnik z informacjami o napiwkach ze wszystkich krajów świata";
+
+"WhatIsNewObject-Item-4" = "Zmiana ikony aplikacji";
+
+"WhatIsNewObject-Item-5" = "Zmiana trybu aplikacji (jasny, ciemny lub automatyczny)";
+
+"WhatIsNewObject-Item-6" = "Wybór języka lokalizacji aplikacji";
+
+"WhatIsNewObject-Item-7" = "Wybór domyślnej waluty + przeliczenie napiwków na wybraną walutę po aktualnym kursie";
+
+"WhatIsNewObject-Item-8" = "Wybór procentu napiwków";
+// Description What's New - END

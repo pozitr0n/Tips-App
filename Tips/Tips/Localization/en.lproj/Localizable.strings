@@ -183,3 +183,27 @@
 "Favourite-start" = "You currently have no tip data saved 🥺";
 
 "Search-Text" = "Search...";
+
+"Version-title" = "Version:";
+
+"Main-Text-Footer.title" = "
+I hope that you'll enjoy not only the update, but the app as a whole!
+- Raman";
+
+// Description What's New - BEGIN
+"WhatIsNewObject-Item-1" = "Calculating tips, print and save tip information in notes or reminders, etc";
+
+"WhatIsNewObject-Item-2" = "Saving tips to favorites + searching or deleting information";
+
+"WhatIsNewObject-Item-3" = "Guide with information on tipping from all countries of the world";
+
+"WhatIsNewObject-Item-4" = "Changing the application icon";
+
+"WhatIsNewObject-Item-5" = "Changing application mode (light or dark, or automatic)";
+
+"WhatIsNewObject-Item-6" = "Selecting the application localization language";
+
+"WhatIsNewObject-Item-7" = "Selecting the default currency + recalculate tips into the selected currency at the current exchange rate";
+
+"WhatIsNewObject-Item-8" = "Selecting the default tip percentage";
+// Description What's New - END
