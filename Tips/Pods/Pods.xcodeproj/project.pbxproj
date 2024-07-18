@@ -704,7 +704,7 @@
 		1877F6970BB02CEE0037A09B1D3A4896 /* RLMSwiftValueStorage.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMSwiftValueStorage.mm; path = Realm/RLMSwiftValueStorage.mm; sourceTree = "<group>"; };
 		18B16E5E180F78879055D56E35DED5A8 /* ResourceBundle-realm_objc_privacy-Realm-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-realm_objc_privacy-Realm-Info.plist"; sourceTree = "<group>"; };
 		18CDF2E1193202EFE330FA764E8756F4 /* RLMAccessor.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMAccessor.mm; path = Realm/RLMAccessor.mm; sourceTree = "<group>"; };
-		19386EB9A834BFBE4E4A1A418E01075A /* Pods-EasyTips */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-EasyTips"; path = Pods_EasyTips.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19386EB9A834BFBE4E4A1A418E01075A /* Pods_EasyTips.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyTips.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19583AAF045B4809EB6D141826776425 /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OperationQueue+Alamofire.swift"; path = "Source/Extensions/OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		1AFC594BA8F7A6BF67C9A715020849EE /* Realm-realm_objc_privacy */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Realm-realm_objc_privacy"; path = realm_objc_privacy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CE5E2503BA994B1BB1E2E9997CC81C3 /* MultipartUpload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartUpload.swift; path = Source/Features/MultipartUpload.swift; sourceTree = "<group>"; };
@@ -1768,7 +1768,7 @@
 				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
 				085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire.bundle */,
 				0A6B4C225D81C3DF9F15F0B161EEFB57 /* Device.framework */,
-				19386EB9A834BFBE4E4A1A418E01075A /* Pods-EasyTips */,
+				19386EB9A834BFBE4E4A1A418E01075A /* Pods_EasyTips.framework */,
 				7B5EAB1960FFDD2A752B109006E558D8 /* Pods-EasyTips-EasyTipsUITests */,
 				EA45D8BF1225B0A7854887CCD5D24A97 /* Pods-EasyTipsTests */,
 				921BE4A82C4A7A5C72A0C6F8B8FEF200 /* Realm */,
@@ -2166,7 +2166,7 @@
 			);
 			name = "Pods-EasyTips";
 			productName = Pods_EasyTips;
-			productReference = 19386EB9A834BFBE4E4A1A418E01075A /* Pods-EasyTips */;
+			productReference = 19386EB9A834BFBE4E4A1A418E01075A /* Pods_EasyTips.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */

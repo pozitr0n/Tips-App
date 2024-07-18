@@ -185,17 +185,11 @@
 		4DE8617C2BAA6F9F002B2475 /* ModeChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeChangeView.swift; sourceTree = "<group>"; };
 		50FC959194EDE7A197A202C7 /* Pods-EasyTips-EasyTipsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTips-EasyTipsUITests.debug.xcconfig"; path = "Target Support Files/Pods-EasyTips-EasyTipsUITests/Pods-EasyTips-EasyTipsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7141729231B36DA8DAC0D861 /* Pods-EasyTips.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTips.release.xcconfig"; path = "Target Support Files/Pods-EasyTips/Pods-EasyTips.release.xcconfig"; sourceTree = "<group>"; };
-		7B868094F85477DF6F6F8156 /* Pods-Tips-TipsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tips-TipsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tips-TipsUITests/Pods-Tips-TipsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		838CCCA37FD782900C6ADD5A /* Pods_EasyTipsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyTipsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		853B120C12F4EC574809C2F5 /* Pods_EasyTips_EasyTipsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyTips_EasyTipsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2B3115DB3AEB980E0B6141E /* Pods-Tips-TipsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tips-TipsUITests.release.xcconfig"; path = "Target Support Files/Pods-Tips-TipsUITests/Pods-Tips-TipsUITests.release.xcconfig"; sourceTree = "<group>"; };
-		B3B8F6B713D819D1098FA582 /* Pods-Tips.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tips.debug.xcconfig"; path = "Target Support Files/Pods-Tips/Pods-Tips.debug.xcconfig"; sourceTree = "<group>"; };
 		C5BB2B3EE8B9D59099DCB31C /* Pods-EasyTips-EasyTipsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTips-EasyTipsUITests.release.xcconfig"; path = "Target Support Files/Pods-EasyTips-EasyTipsUITests/Pods-EasyTips-EasyTipsUITests.release.xcconfig"; sourceTree = "<group>"; };
-		C5FB4313C97FAD53454ABE97 /* Pods-Tips.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tips.release.xcconfig"; path = "Target Support Files/Pods-Tips/Pods-Tips.release.xcconfig"; sourceTree = "<group>"; };
 		CEB66C314CDBA3C73CF77BA9 /* Pods-EasyTips.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTips.debug.xcconfig"; path = "Target Support Files/Pods-EasyTips/Pods-EasyTips.debug.xcconfig"; sourceTree = "<group>"; };
 		D67FCFC1139659C6FF66E491 /* Pods_EasyTips.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyTips.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2ABCD3C128D15120737B594 /* Pods-TipsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TipsTests.release.xcconfig"; path = "Target Support Files/Pods-TipsTests/Pods-TipsTests.release.xcconfig"; sourceTree = "<group>"; };
-		E33668C013A3303FC3417A96 /* Pods-TipsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TipsTests.debug.xcconfig"; path = "Target Support Files/Pods-TipsTests/Pods-TipsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -560,12 +554,6 @@
 		86665EC783848114D02D9D70 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B3B8F6B713D819D1098FA582 /* Pods-Tips.debug.xcconfig */,
-				C5FB4313C97FAD53454ABE97 /* Pods-Tips.release.xcconfig */,
-				7B868094F85477DF6F6F8156 /* Pods-Tips-TipsUITests.debug.xcconfig */,
-				B2B3115DB3AEB980E0B6141E /* Pods-Tips-TipsUITests.release.xcconfig */,
-				E33668C013A3303FC3417A96 /* Pods-TipsTests.debug.xcconfig */,
-				E2ABCD3C128D15120737B594 /* Pods-TipsTests.release.xcconfig */,
 				CEB66C314CDBA3C73CF77BA9 /* Pods-EasyTips.debug.xcconfig */,
 				7141729231B36DA8DAC0D861 /* Pods-EasyTips.release.xcconfig */,
 				50FC959194EDE7A197A202C7 /* Pods-EasyTips-EasyTipsUITests.debug.xcconfig */,
