@@ -21,7 +21,7 @@
 - [ ] testing (Active working!)
 
 ### Another addiction tasks:
-- [ ] Write Privacy Policy
+- [x] Write Privacy Policy
 - [x] Add description to What's New section
 - [ ] Check all the code/design before sending to production to AppStore
 - [x] Buy subscription (API of currencies)

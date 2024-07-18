@@ -162,8 +162,7 @@ struct SettingsSwiftUIView: View {
                                 
                                 Button(array.title, systemImage: "lock.circle") {
                                     
-                                    // !!! change the link to privacy policy !!!
-                                    if let url = URL(string: "https://www.testgorilla.com/privacy-policy/") {
+                                    if let url = URL(string: "https://www.privacypolicies.com/live/6a2b1eee-8d08-4c1f-8be1-ad8e68bb35fd") {
                                         UIApplication.shared.open(url)
                                     }
                                     
