@@ -24,7 +24,7 @@
 - [ ] Write Privacy Policy
 - [x] Add description to What's New section
 - [ ] Check all the code/design before sending to production to AppStore
-- [ ] Buy subscription (API of currencies)
+- [x] Buy subscription (API of currencies)
 - [ ] Ready all the description at GitHub
 - [ ] Add test cases (Unit/UI)
 - [ ] Run the application source code through OpenAI to check for errors before uploading it to the AppStore (possibly with a subscription)
