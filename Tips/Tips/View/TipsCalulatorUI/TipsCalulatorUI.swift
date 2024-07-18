@@ -251,7 +251,7 @@ struct TipsCalulatorUI: View {
                     
                     HStack {
                         
-                        VStack(alignment: .center, spacing: -5) {
+                        VStack(alignment: .leading, spacing: -5) {
                             
                             Text("Bill-Summary.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                                 .font(.system(size: currentCurrencyTipsMainFont, weight: .bold))
@@ -304,7 +304,7 @@ struct TipsCalulatorUI: View {
 
                         HStack {
                             
-                            VStack(alignment: .center, spacing: 0) {
+                            VStack(alignment: .leading, spacing: 0) {
                                 
                                 Text("Per-person.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
                                     .font(.system(size: currentCurrencyTipsMainFont, weight: .bold))
