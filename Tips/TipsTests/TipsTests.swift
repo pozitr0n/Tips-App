@@ -1,12 +1,12 @@
 //
 //  TipsTests.swift
-//  TipsTests
+//  EasyTipsTests
 //
 //  Created by Raman Kozar on 11/03/2024.
 //
 
 import XCTest
-@testable import Tips
+@testable import EasyTips
 
 final class TipsTests: XCTestCase {
 

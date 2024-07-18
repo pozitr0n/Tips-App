@@ -1,22 +1,22 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '17.0'
 
-target 'Tips' do
+target 'EasyTips' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Tips
+  # Pods for EasyTips
   pod 'Alamofire'
   pod 'SwiftMessages'
   pod "Device", '~> 3.6.0'
   pod 'RealmSwift'
 
-  target 'TipsTests' do
+  target 'EasyTipsTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'TipsUITests' do
+  target 'EasyTipsUITests' do
     # Pods for testing
   end
 

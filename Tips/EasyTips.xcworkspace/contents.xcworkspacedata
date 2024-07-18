@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:/Users/romankozar/Documents/Dokumenty/&#x420;&#x430;&#x431;&#x43e;&#x442;&#x430;/iOS projects/Final Project App/Tips-App/Tips/EasyTips.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:EasyTips.xcodeproj">
+   </FileRef>
+</Workspace>

@@ -1,0 +1,209 @@
+/* 
+  Localizable.strings
+  EasyTips
+
+  Created by Raman Kozar on 18/03/2024.
+  
+*/
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "18x-2K-JfQ"; */
+"18x-2K-JfQ.title" = "Settings";
+
+/* Class = "UIBarButtonItem"; title = "Share"; ObjectID = "QAb-0s-j0x"; */
+"QAb-0s-j0x.title" = "Share";
+
+/* Class = "UITabBarItem"; title = "Tip Guide"; ObjectID = "Qq1-zl-SnJ"; */
+"Qq1-zl-SnJ.title" = "Tip Guide";
+
+/* Class = "UIBarButtonItem"; title = "Add to Favourite"; ObjectID = "Tyb-Nx-A4j"; */
+"Tyb-Nx-A4j.title" = "Add to Favourite";
+
+/* Class = "UITabBarItem"; title = "Tip Calculator"; ObjectID = "feV-wK-qce"; */
+"feV-wK-qce.title" = "Tip Calculator";
+
+/* Class = "UITabBarItem"; title = "Favoutite"; ObjectID = "fpD-qQ-uGK"; */
+"fpD-qQ-uGK.title" = "Favoutite";
+
+/* Class = "UIBarButtonItem"; title = "Refresh"; ObjectID = "gk0-cT-5Rs"; */
+"gk0-cT-5Rs.title" = "Refresh";
+
+/* Class = "UINavigationItem"; title = "Tips Calculator"; ObjectID = "hsB-TO-Q61"; */
+"hsB-TO-Q61.title" = "Tips Calculator";
+
+"navigationTitlle.Settings.title" = "Settings";
+
+"Application-Icon.title" = "Application Icon";
+
+"Application-Mode-Main-Screen.title" = "Choose from a list";
+
+"Application-Mode.title" = "Application Mode";
+
+"Language.title" = "Language";
+
+"Language-Choose.title" = "Choose the language";
+
+"Currency-format.title" = "Currency format";
+
+"Default-Percentage.title" = "Default Percentage";
+
+"Appearance.title" = "Appearance";
+
+"General.title" = "General settings";
+
+"Favourite.title" = "Favourite";
+
+"Tip-Guide.title" = "Tip Guide";
+
+"Tip-Guide-Welcome.title" = "Welcome!";
+
+"Change-Language-Alert.title" = "Changing the application language";
+
+"Change-Language-Alert.message" = "Are you sure you want to change the language?";
+
+"Change-Language.primaryButton" = "Change";
+
+"Cancel-Language-Alert.title" = "Cancel";
+
+"Choose-a-mode.title" = "Choose a Mode";
+
+"Choose-a-mode.message" = "Day or Night.\nCustomize your interface.";
+
+"Default-Mode.title" = "Default";
+
+"Light-Mode.title" = "Light";
+
+"Dark-Mode.title" = "Dark";
+
+"Icons.title" = "Icons";
+
+"Default.title" = "Default";
+
+"Choose-Currency.title" = "Choose";
+
+"Set-the-value" = "Set Percentage";
+
+"Default-%" = "%";
+
+"Change-the-default-percentage" = "Change the default percentage";
+
+"Choose-country-start" = "You can select a country on the map to get more information about tipping";
+
+"Country.title" = "Country";
+
+"Continent.title" = "Continent";
+
+"Country-Code.title" = "Country Code";
+
+"Restaurant.title" = "Restaurant";
+
+"Hotel.title" = "Hotel";
+
+"Driver.title" = "Driver";
+
+"Rate-your-experience.title" = "Rate your experience";
+
+"Angry.title" = "Angry";
+
+"Confused.title" = "Confused";
+
+"Happy.title" = "Happy";
+
+"Excited.title" = "Excited";
+
+"In-Love.title" = "In Love";
+
+"Send.title" = "Send";
+
+"Application-About.title" = "About";
+
+"Application-Rate.title" = "Rate the app and contact us";
+
+"Feedback-about" = "Feedback about the application";
+
+"Feedback-text" = "Please describe your experience using the application!";
+
+"Email-text" = "My impressions of using the application";
+
+"Application-Privacy-Policy.title" = "Privacy Policy";
+
+"Made-In-By.title" = "Made in 🇵🇱 by";
+
+"What-New.title" = "What's New";
+
+"Oops.title" = "Oops...";
+
+"Oops.body" = "Unfortunately, it was impossible to find information for this country";
+
+"Okay.button.title" = "Okay, I got it";
+
+"f4a-R0-T90.title" = "Bill Total";
+
+"Bill-Total.title" = "Bill";
+
+"Done-Numpad.title" = "Done";
+
+"Quick-Tips.title" = "Quick Tips";
+
+"Bill-Summary.title" = "Bill summary";
+
+"Per-person.title" = "Per person";
+
+"Tip-Total.title" = "Tip";
+
+"Total-Total.title" = "Total";
+
+"Alert-Refreshing.title" = "Refresh";
+
+"Alert-Refreshing.message" = "Are you sure you want to clear and refresh your data?";
+
+"Alert-Refreshing.primaryButton" = "Clear and refresh";
+
+"Alert-Refreshing.cancelButton" = "Cancel";
+
+"3tT-QF-MMy.title" = "Details";
+
+"LKO-ZR-Ir4.title" = "Receipt";
+
+"sMR-W3-hJp.title" = "Bill";
+
+"DYB-h6-QW8.title" = "Tip";
+
+"gl0-kh-bjo.title" = "Total";
+
+"1EH-gv-upV.title" = "People";
+
+"qeQ-Lf-lwt.title" = "Each Pay";
+
+"b1G-Tw-DDZ.title" = "Share";
+
+"Favourite-Description" = "Saved tips are displayed here";
+
+"Operation-At" = "Calculation on ";
+
+"Favourite-start" = "You currently have no tip data saved 🥺";
+
+"Search-Text" = "Search...";
+
+"Version-title" = "Version:";
+
+"Main-Text-Footer.title" = "
+I hope that you'll enjoy not only the update, but the app as a whole!
+- Raman";
+
+// Description What's New - BEGIN
+"WhatIsNewObject-Item-1" = "Calculating tips, print and save tip information in notes or reminders, etc";
+
+"WhatIsNewObject-Item-2" = "Saving tips to favorites + searching or deleting information";
+
+"WhatIsNewObject-Item-3" = "Guide with information on tipping from all countries of the world";
+
+"WhatIsNewObject-Item-4" = "Changing the application icon";
+
+"WhatIsNewObject-Item-5" = "Changing application mode (light or dark, or automatic)";
+
+"WhatIsNewObject-Item-6" = "Selecting the application localization language";
+
+"WhatIsNewObject-Item-7" = "Selecting the default currency + recalculate tips into the selected currency at the current exchange rate";
+
+"WhatIsNewObject-Item-8" = "Selecting the default tip percentage";
+// Description What's New - END

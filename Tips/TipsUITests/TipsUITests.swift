@@ -1,6 +1,6 @@
 //
 //  TipsUITests.swift
-//  TipsUITests
+//  EasyTipsUITests
 //
 //  Created by Raman Kozar on 11/03/2024.
 //

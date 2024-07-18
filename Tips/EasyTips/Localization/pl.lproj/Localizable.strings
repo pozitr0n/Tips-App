@@ -1,0 +1,209 @@
+/* 
+  Localizable.strings
+  EasyTips
+
+  Created by Raman Kozar on 18/03/2024.
+  
+*/
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "18x-2K-JfQ"; */
+"18x-2K-JfQ.title" = "Ustawienia";
+
+/* Class = "UIBarButtonItem"; title = "Share"; ObjectID = "QAb-0s-j0x"; */
+"QAb-0s-j0x.title" = "Udostępnij";
+
+/* Class = "UITabBarItem"; title = "Tip Guide"; ObjectID = "Qq1-zl-SnJ"; */
+"Qq1-zl-SnJ.title" = "Przewodnik";
+
+/* Class = "UIBarButtonItem"; title = "Add to Favourite"; ObjectID = "Tyb-Nx-A4j"; */
+"Tyb-Nx-A4j.title" = "Dodaj do ulubionych";
+
+/* Class = "UITabBarItem"; title = "Tip Calculator"; ObjectID = "feV-wK-qce"; */
+"feV-wK-qce.title" = "Kalkulator";
+
+/* Class = "UITabBarItem"; title = "Favoutite"; ObjectID = "fpD-qQ-uGK"; */
+"fpD-qQ-uGK.title" = "Ulubione";
+
+/* Class = "UIBarButtonItem"; title = "Refresh"; ObjectID = "gk0-cT-5Rs"; */
+"gk0-cT-5Rs.title" = "Zaktualizuj";
+
+/* Class = "UINavigationItem"; title = "Tips Calculator"; ObjectID = "hsB-TO-Q61"; */
+"hsB-TO-Q61.title" = "Kalkulator";
+
+"navigationTitlle.Settings.title" = "Ustawienia";
+
+"Application-Icon.title" = "Ikona aplikacji";
+
+"Application-Mode-Main-Screen.title" = "Wybrać z listy";
+
+"Application-Mode.title" = "Tryb aplikacji";
+
+"Language.title" = "Język";
+
+"Language-Choose.title" = "Proszę wybrać język";
+
+"Currency-format.title" = "Format waluty";
+
+"Default-Percentage.title" = "Domyślny procent";
+
+"Appearance.title" = "Wygląd";
+
+"General.title" = "Ogólne ustawienia";
+
+"Favourite.title" = "Ulubione";
+
+"Tip-Guide.title" = "Przewodnik";
+
+"Tip-Guide-Welcome.title" = "Witamy!";
+
+"Change-Language-Alert.title" = "Zmiana języka aplikacji";
+
+"Change-Language-Alert.message" = "Potwierdzić zmianę języka aplikacji?";
+
+"Change-Language.primaryButton" = "Zmiana języka";
+
+"Cancel-Language-Alert.title" = "Anuluj";
+
+"Choose-a-mode.title" = "Wybrać Tryb";
+
+"Choose-a-mode.message" = "Dzień czy Noc.\nDostosuj swój interfejs.";
+
+"Default-Mode.title" = "Domyślny";
+
+"Light-Mode.title" = "Jasny";
+
+"Dark-Mode.title" = "Ciemny";
+
+"Icons.title" = "Ikony";
+
+"Default.title" = "Domyślna";
+
+"Choose-Currency.title" = "Wybrać";
+
+"Set-the-value" = "Ustawić Procent";
+
+"Default-%" = "%";
+
+"Change-the-default-percentage" = "Zmienić domyślny procent";
+
+"Choose-country-start" = "Można wybrać kraj na mapie, aby uzyskać więcej informacji na temat napiwków";
+
+"Country.title" = "Kraj";
+
+"Continent.title" = "Kontynent";
+
+"Country-Code.title" = "Kod Kraju";
+
+"Restaurant.title" = "Restauracja";
+
+"Hotel.title" = "Hotel";
+
+"Driver.title" = "Kierowcy";
+
+"Rate-your-experience.title" = "Oceń swoje wrażenia";
+
+"Angry.title" = "Zły";
+
+"Confused.title" = "Pomieszany";
+
+"Happy.title" = "Szczęśliwy";
+
+"Excited.title" = "Wzbudzony";
+
+"In-Love.title" = "Zakochany";
+
+"Send.title" = "Przesłać";
+
+"Application-About.title" = "O aplikacji";
+
+"Application-Rate.title" = "Oceń aplikację i skontaktuj się z nami";
+
+"Feedback-about" = "Opinia na temat aplikacji";
+
+"Feedback-text" = "Proszę opisać swoje wrażenia z korzystania z aplikacji!";
+
+"Email-text" = "Moje wrażenia z użytkowania aplikacji";
+
+"Application-Privacy-Policy.title" = "Polityka Prywatności";
+
+"Made-In-By.title" = "Wykonane w 🇵🇱 przez";
+
+"What-New.title" = "Co Nowego";
+
+"Oops.title" = "Ups...";
+
+"Oops.body" = "Niestety nie udało się znaleźć informacji dla tego kraju";
+
+"Okay.button.title" = "Okay, rozumiem";
+
+"f4a-R0-T90.title" = "Razem (rachunek)";
+
+"Bill-Total.title" = "Rachunek";
+
+"Done-Numpad.title" = "Gotowe";
+
+"Quick-Tips.title" = "Szybki Napiwek";
+
+"Bill-Summary.title" = "Suma pośrednia";
+
+"Per-person.title" = "Za osobę";
+
+"Tip-Total.title" = "Napiwek";
+
+"Total-Total.title" = "Razem";
+
+"Alert-Refreshing.title" = "Zaktualizować";
+
+"Alert-Refreshing.message" = "Czy na pewno chcesz wyczyścić i zaktualizować swoje dane?";
+
+"Alert-Refreshing.primaryButton" = "Wyczyścić and zaktualizować";
+
+"Alert-Refreshing.cancelButton" = "Anuluj";
+
+"3tT-QF-MMy.title" = "Szczegóły";
+
+"LKO-ZR-Ir4.title" = "Rachunek";
+
+"sMR-W3-hJp.title" = "Rachunek";
+
+"DYB-h6-QW8.title" = "Napiwek";
+
+"gl0-kh-bjo.title" = "Razem";
+
+"1EH-gv-upV.title" = "Ilość osób";
+
+"qeQ-Lf-lwt.title" = "Za osobę";
+
+"b1G-Tw-DDZ.title" = "Udostępnić";
+
+"Favourite-Description" = "Tutaj wyświetlane są zapisane dane napiwków";
+
+"Operation-At" = "Naliczanie w dniu ";
+
+"Favourite-start" = "Obecnie nie masz zapisanych żadnych danych napiwków 🥺";
+
+"Search-Text" = "Szukaj...";
+
+"Version-title" = "Wersja:";
+
+"Main-Text-Footer.title" = "
+Mam nadzieję, że spodoba Ci się nie tylko aktualizacja, ale cała aplikacja!
+- Raman";
+
+// Description What's New - BEGIN
+"WhatIsNewObject-Item-1" = "Obliczanie napiwków, drukowanie i zapisywanie informacji o napiwkach w notatkach, przypomnieniach itp";
+
+"WhatIsNewObject-Item-2" = "Zapisywanie wskazówek w ulubionych + wyszukiwanie lub usuwanie informacji";
+
+"WhatIsNewObject-Item-3" = "Przewodnik z informacjami o napiwkach ze wszystkich krajów świata";
+
+"WhatIsNewObject-Item-4" = "Zmiana ikony aplikacji";
+
+"WhatIsNewObject-Item-5" = "Zmiana trybu aplikacji (jasny, ciemny lub automatyczny)";
+
+"WhatIsNewObject-Item-6" = "Wybór języka lokalizacji aplikacji";
+
+"WhatIsNewObject-Item-7" = "Wybór domyślnej waluty + przeliczenie napiwków na wybraną walutę po aktualnym kursie";
+
+"WhatIsNewObject-Item-8" = "Wybór procentu napiwków";
+// Description What's New - END
