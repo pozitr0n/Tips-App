@@ -248,7 +248,7 @@ struct DetailScreen: View {
                         .overlay(RoundedRectangle(cornerRadius: 8, style: .continuous).stroke(Color.gray,
                                                                                                lineWidth: 2))
                     
-                    Text("Saved by Tips")
+                    Text("Saved by Smart Tips Pro")
                         .font(.subheadline)
                     
                 }
