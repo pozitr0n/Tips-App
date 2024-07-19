@@ -101,8 +101,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0740A8EFD09E94AACEC5DB65 /* Pods-EasyTipsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTipsTests.release.xcconfig"; path = "Target Support Files/Pods-EasyTipsTests/Pods-EasyTipsTests.release.xcconfig"; sourceTree = "<group>"; };
-		1197D54F5FFBC0A0FC7692A0 /* Pods-EasyTipsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTipsTests.debug.xcconfig"; path = "Target Support Files/Pods-EasyTipsTests/Pods-EasyTipsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		12F7D857CF4CCB57797B4F11 /* Pods_SmartTipsPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartTipsPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D015CAF2BFD5BAE00B095BF /* TipsStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsStepper.swift; sourceTree = "<group>"; };
 		4D015CB12BFD5BE700B095BF /* TipsStepper+MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TipsStepper+MainButton.swift"; sourceTree = "<group>"; };
@@ -184,16 +182,12 @@
 		4DE4D6282BB1170600160224 /* DetailLanguages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLanguages.swift; sourceTree = "<group>"; };
 		4DE4D62B2BB1186700160224 /* CurrencyCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCodes.swift; sourceTree = "<group>"; };
 		4DE8617C2BAA6F9F002B2475 /* ModeChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeChangeView.swift; sourceTree = "<group>"; };
-		50FC959194EDE7A197A202C7 /* Pods-EasyTips-EasyTipsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTips-EasyTipsUITests.debug.xcconfig"; path = "Target Support Files/Pods-EasyTips-EasyTipsUITests/Pods-EasyTips-EasyTipsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5942BC24242D1287AEFA661B /* Pods-SmartTipsPro-SmartTipsProUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartTipsPro-SmartTipsProUITests.release.xcconfig"; path = "Target Support Files/Pods-SmartTipsPro-SmartTipsProUITests/Pods-SmartTipsPro-SmartTipsProUITests.release.xcconfig"; sourceTree = "<group>"; };
 		63ABB70D121DA9C814E01EFE /* Pods-SmartTipsPro-SmartTipsProUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartTipsPro-SmartTipsProUITests.debug.xcconfig"; path = "Target Support Files/Pods-SmartTipsPro-SmartTipsProUITests/Pods-SmartTipsPro-SmartTipsProUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		693C8EC8F107C029C13940C4 /* Pods-SmartTipsPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartTipsPro.release.xcconfig"; path = "Target Support Files/Pods-SmartTipsPro/Pods-SmartTipsPro.release.xcconfig"; sourceTree = "<group>"; };
 		6CD27E13AD5C54A6DFAD47D8 /* Pods-SmartTipsProTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartTipsProTests.release.xcconfig"; path = "Target Support Files/Pods-SmartTipsProTests/Pods-SmartTipsProTests.release.xcconfig"; sourceTree = "<group>"; };
-		7141729231B36DA8DAC0D861 /* Pods-EasyTips.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTips.release.xcconfig"; path = "Target Support Files/Pods-EasyTips/Pods-EasyTips.release.xcconfig"; sourceTree = "<group>"; };
 		B5A1359C55AF93709700EB6F /* Pods_SmartTipsPro_SmartTipsProUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartTipsPro_SmartTipsProUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BA6BFBE49DE2A202D03C00 /* Pods-SmartTipsPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartTipsPro.debug.xcconfig"; path = "Target Support Files/Pods-SmartTipsPro/Pods-SmartTipsPro.debug.xcconfig"; sourceTree = "<group>"; };
-		C5BB2B3EE8B9D59099DCB31C /* Pods-EasyTips-EasyTipsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTips-EasyTipsUITests.release.xcconfig"; path = "Target Support Files/Pods-EasyTips-EasyTipsUITests/Pods-EasyTips-EasyTipsUITests.release.xcconfig"; sourceTree = "<group>"; };
-		CEB66C314CDBA3C73CF77BA9 /* Pods-EasyTips.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTips.debug.xcconfig"; path = "Target Support Files/Pods-EasyTips/Pods-EasyTips.debug.xcconfig"; sourceTree = "<group>"; };
 		E5CCC4091DE201ECAB4DCA3D /* Pods-SmartTipsProTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartTipsProTests.debug.xcconfig"; path = "Target Support Files/Pods-SmartTipsProTests/Pods-SmartTipsProTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ECA2A3CB6D588E2A9C75E9CC /* Pods_SmartTipsProTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartTipsProTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -560,12 +554,6 @@
 		86665EC783848114D02D9D70 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CEB66C314CDBA3C73CF77BA9 /* Pods-EasyTips.debug.xcconfig */,
-				7141729231B36DA8DAC0D861 /* Pods-EasyTips.release.xcconfig */,
-				50FC959194EDE7A197A202C7 /* Pods-EasyTips-EasyTipsUITests.debug.xcconfig */,
-				C5BB2B3EE8B9D59099DCB31C /* Pods-EasyTips-EasyTipsUITests.release.xcconfig */,
-				1197D54F5FFBC0A0FC7692A0 /* Pods-EasyTipsTests.debug.xcconfig */,
-				0740A8EFD09E94AACEC5DB65 /* Pods-EasyTipsTests.release.xcconfig */,
 				B9BA6BFBE49DE2A202D03C00 /* Pods-SmartTipsPro.debug.xcconfig */,
 				693C8EC8F107C029C13940C4 /* Pods-SmartTipsPro.release.xcconfig */,
 				63ABB70D121DA9C814E01EFE /* Pods-SmartTipsPro-SmartTipsProUITests.debug.xcconfig */,
