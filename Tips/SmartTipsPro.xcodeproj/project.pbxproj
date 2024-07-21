@@ -14,6 +14,9 @@
 		4D1C119B2B9FF10A00FEAB9E /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C119A2B9FF10A00FEAB9E /* ShareViewController.swift */; };
 		4D1C119D2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C119C2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift */; };
 		4D3152382BBD6C7300FB41BE /* ComponentsForTipGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3152372BBD6C7300FB41BE /* ComponentsForTipGuide.swift */; };
+		4D3CCAAE2C4A7FBC0012E908 /* SmartTipsProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CCAAD2C4A7FBC0012E908 /* SmartTipsProTests.swift */; };
+		4D3CCAB02C4A7FD90012E908 /* SmartTipsProUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CCAAF2C4A7FD90012E908 /* SmartTipsProUITests.swift */; };
+		4D3CCAB22C4A803B0012E908 /* SmartTipsProLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CCAB12C4A803B0012E908 /* SmartTipsProLaunchTests.swift */; };
 		4D3D72112BAE4CFD00105F89 /* Green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3D71FF2BAE4CFD00105F89 /* Green@2x.png */; };
 		4D3D72122BAE4CFD00105F89 /* Teal.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3D72002BAE4CFD00105F89 /* Teal.png */; };
 		4D3D72132BAE4CFD00105F89 /* Green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3D72012BAE4CFD00105F89 /* Green@3x.png */; };
@@ -38,9 +41,6 @@
 		4D416FB82B9F398B00333567 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D416FB62B9F398B00333567 /* Main.storyboard */; };
 		4D416FBA2B9F399000333567 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D416FB92B9F399000333567 /* Assets.xcassets */; };
 		4D416FBD2B9F399000333567 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D416FBB2B9F399000333567 /* LaunchScreen.storyboard */; };
-		4D416FC82B9F399000333567 /* TipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D416FC72B9F399000333567 /* TipsTests.swift */; };
-		4D416FD22B9F399000333567 /* TipsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D416FD12B9F399000333567 /* TipsUITests.swift */; };
-		4D416FD42B9F399000333567 /* TipsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D416FD32B9F399000333567 /* TipsUITestsLaunchTests.swift */; };
 		4D47B8582BBC36D4008829DE /* ParseringMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47B8572BBC36D4008829DE /* ParseringMap.swift */; };
 		4D47B85A2BBC36DB008829DE /* DrawingMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47B8592BBC36DB008829DE /* DrawingMap.swift */; };
 		4D47B85C2BBC36E3008829DE /* ComponentsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47B85B2BBC36E3008829DE /* ComponentsMap.swift */; };
@@ -109,6 +109,10 @@
 		4D1C119A2B9FF10A00FEAB9E /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		4D1C119C2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteSwiftUIView.swift; sourceTree = "<group>"; };
 		4D3152372BBD6C7300FB41BE /* ComponentsForTipGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsForTipGuide.swift; sourceTree = "<group>"; };
+		4D3CCAAC2C4A7FBC0012E908 /* SmartTipsProTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartTipsProTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		4D3CCAAD2C4A7FBC0012E908 /* SmartTipsProTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTipsProTests.swift; sourceTree = "<group>"; };
+		4D3CCAAF2C4A7FD90012E908 /* SmartTipsProUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTipsProUITests.swift; sourceTree = "<group>"; };
+		4D3CCAB12C4A803B0012E908 /* SmartTipsProLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTipsProLaunchTests.swift; sourceTree = "<group>"; };
 		4D3D71FF2BAE4CFD00105F89 /* Green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Green@2x.png"; sourceTree = "<group>"; };
 		4D3D72002BAE4CFD00105F89 /* Teal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Teal.png; sourceTree = "<group>"; };
 		4D3D72012BAE4CFD00105F89 /* Green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Green@3x.png"; sourceTree = "<group>"; };
@@ -136,10 +140,7 @@
 		4D416FBC2B9F399000333567 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D416FBE2B9F399000333567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D416FC32B9F399000333567 /* SmartTipsProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartTipsProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D416FC72B9F399000333567 /* TipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTests.swift; sourceTree = "<group>"; };
 		4D416FCD2B9F399000333567 /* SmartTipsProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartTipsProUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D416FD12B9F399000333567 /* TipsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsUITests.swift; sourceTree = "<group>"; };
-		4D416FD32B9F399000333567 /* TipsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4D47B8572BBC36D4008829DE /* ParseringMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseringMap.swift; sourceTree = "<group>"; };
 		4D47B8592BBC36DB008829DE /* DrawingMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingMap.swift; sourceTree = "<group>"; };
 		4D47B85B2BBC36E3008829DE /* ComponentsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsMap.swift; sourceTree = "<group>"; };
@@ -383,7 +384,8 @@
 		4D416FC62B9F399000333567 /* TipsTests */ = {
 			isa = PBXGroup;
 			children = (
-				4D416FC72B9F399000333567 /* TipsTests.swift */,
+				4D3CCAAD2C4A7FBC0012E908 /* SmartTipsProTests.swift */,
+				4D3CCAAC2C4A7FBC0012E908 /* SmartTipsProTests-Bridging-Header.h */,
 			);
 			path = TipsTests;
 			sourceTree = "<group>";
@@ -391,8 +393,8 @@
 		4D416FD02B9F399000333567 /* TipsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				4D416FD12B9F399000333567 /* TipsUITests.swift */,
-				4D416FD32B9F399000333567 /* TipsUITestsLaunchTests.swift */,
+				4D3CCAAF2C4A7FD90012E908 /* SmartTipsProUITests.swift */,
+				4D3CCAB12C4A803B0012E908 /* SmartTipsProLaunchTests.swift */,
 			);
 			path = TipsUITests;
 			sourceTree = "<group>";
@@ -650,6 +652,7 @@
 					};
 					4D416FC22B9F399000333567 = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1540;
 						TestTargetID = 4D416FAC2B9F398B00333567;
 					};
 					4D416FCC2B9F399000333567 = {
@@ -887,7 +890,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D416FC82B9F399000333567 /* TipsTests.swift in Sources */,
+				4D3CCAAE2C4A7FBC0012E908 /* SmartTipsProTests.swift in Sources */,
+				4D3CCAB02C4A7FD90012E908 /* SmartTipsProUITests.swift in Sources */,
+				4D3CCAB22C4A803B0012E908 /* SmartTipsProLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -895,8 +900,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D416FD42B9F399000333567 /* TipsUITestsLaunchTests.swift in Sources */,
-				4D416FD22B9F399000333567 /* TipsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1197,6 +1200,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3JQPLE5ZEK;
@@ -1231,6 +1235,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.Raman-Kozar.SmartTipsPro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "TipsTests/SmartTipsProTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartTipsPro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmartTipsPro";
@@ -1243,6 +1249,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3JQPLE5ZEK;
@@ -1277,6 +1284,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.Raman-Kozar.SmartTipsPro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "TipsTests/SmartTipsProTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartTipsPro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmartTipsPro";

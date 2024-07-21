@@ -1,13 +1,13 @@
 //
-//  TipsUITests.swift
-//  SmartTipsProUITests
+//  SmartTipsProUITests.swift
+//  SmartTipsProTests
 //
-//  Created by Raman Kozar on 11/03/2024.
+//  Created by Raman Kozar on 19/07/2024.
 //
 
 import XCTest
 
-final class TipsUITests: XCTestCase {
+final class SmartTipsProUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

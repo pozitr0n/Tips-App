@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class TipsUITestsLaunchTests: XCTestCase {
+final class SmartTipsProLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
@@ -29,4 +29,5 @@ final class TipsUITestsLaunchTests: XCTestCase {
         attachment.lifetime = .keepAlways
         add(attachment)
     }
+    
 }
