@@ -18,7 +18,7 @@
 
 - [x] user interface development
 - [x] logic extension
-- [ ] testing (Active working!)
+- [x] testing (created Unit/UI)
 
 ### Another addiction tasks:
 - [x] Write Privacy Policy
