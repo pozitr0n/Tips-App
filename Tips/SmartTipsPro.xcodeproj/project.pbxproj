@@ -14,9 +14,6 @@
 		4D1C119B2B9FF10A00FEAB9E /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C119A2B9FF10A00FEAB9E /* ShareViewController.swift */; };
 		4D1C119D2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C119C2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift */; };
 		4D3152382BBD6C7300FB41BE /* ComponentsForTipGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3152372BBD6C7300FB41BE /* ComponentsForTipGuide.swift */; };
-		4D3CCAAE2C4A7FBC0012E908 /* SmartTipsProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CCAAD2C4A7FBC0012E908 /* SmartTipsProTests.swift */; };
-		4D3CCAB02C4A7FD90012E908 /* SmartTipsProUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CCAAF2C4A7FD90012E908 /* SmartTipsProUITests.swift */; };
-		4D3CCAB22C4A803B0012E908 /* SmartTipsProLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CCAB12C4A803B0012E908 /* SmartTipsProLaunchTests.swift */; };
 		4D3D72112BAE4CFD00105F89 /* Green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3D71FF2BAE4CFD00105F89 /* Green@2x.png */; };
 		4D3D72122BAE4CFD00105F89 /* Teal.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3D72002BAE4CFD00105F89 /* Teal.png */; };
 		4D3D72132BAE4CFD00105F89 /* Green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3D72012BAE4CFD00105F89 /* Green@3x.png */; };
@@ -53,6 +50,9 @@
 		4D6576DC2BF8C8A700A222C4 /* TipsCalulatorUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6576DB2BF8C8A700A222C4 /* TipsCalulatorUI.swift */; };
 		4D6576DF2BF8CD1600A222C4 /* CurrencyTipsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6576DE2BF8CD1600A222C4 /* CurrencyTipsTextField.swift */; };
 		4D6576E12BF8CD5000A222C4 /* CurrencyTipsUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6576E02BF8CD5000A222C4 /* CurrencyTipsUITextField.swift */; };
+		4D701B4E2C5146A000676AF7 /* SmartTipsProUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D701B4D2C5146A000676AF7 /* SmartTipsProUITests.swift */; };
+		4D701B502C5146A000676AF7 /* SmartTipsProUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D701B4F2C5146A000676AF7 /* SmartTipsProUITestsLaunchTests.swift */; };
+		4D701B5D2C5146B900676AF7 /* SmartTipsProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D701B5C2C5146B900676AF7 /* SmartTipsProTests.swift */; };
 		4D90AD2A2BCB7678000C373E /* Debug-Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D90AD292BCB7678000C373E /* Debug-Keys.plist */; };
 		4D90AD2C2BCB76BA000C373E /* Prod-Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D90AD2B2BCB76BA000C373E /* Prod-Keys.plist */; };
 		4D90AD2F2BCB7721000C373E /* SecureSavingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90AD2E2BCB7721000C373E /* SecureSavingAPI.swift */; };
@@ -78,25 +78,23 @@
 		4DE4D6292BB1170600160224 /* DetailLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4D6282BB1170600160224 /* DetailLanguages.swift */; };
 		4DE4D62C2BB1186700160224 /* CurrencyCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4D62B2BB1186700160224 /* CurrencyCodes.swift */; };
 		4DE8617D2BAA6F9F002B2475 /* ModeChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE8617C2BAA6F9F002B2475 /* ModeChangeView.swift */; };
-		74228B28B75D1229587E80A6 /* Pods_SmartTipsPro_SmartTipsProUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A1359C55AF93709700EB6F /* Pods_SmartTipsPro_SmartTipsProUITests.framework */; };
-		959258293CC2FDB4EFB5F4A4 /* Pods_SmartTipsProTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECA2A3CB6D588E2A9C75E9CC /* Pods_SmartTipsProTests.framework */; };
 		C2A9142725E2C24ECCB34780 /* Pods_SmartTipsPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12F7D857CF4CCB57797B4F11 /* Pods_SmartTipsPro.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4D416FC42B9F399000333567 /* PBXContainerItemProxy */ = {
+		4D701B512C5146A000676AF7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4D416FA52B9F398B00333567 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4D416FAC2B9F398B00333567;
-			remoteInfo = Tips;
+			remoteInfo = SmartTipsPro;
 		};
-		4D416FCE2B9F399000333567 /* PBXContainerItemProxy */ = {
+		4D701B5E2C5146B900676AF7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4D416FA52B9F398B00333567 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4D416FAC2B9F398B00333567;
-			remoteInfo = Tips;
+			remoteInfo = SmartTipsPro;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -109,10 +107,6 @@
 		4D1C119A2B9FF10A00FEAB9E /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		4D1C119C2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteSwiftUIView.swift; sourceTree = "<group>"; };
 		4D3152372BBD6C7300FB41BE /* ComponentsForTipGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsForTipGuide.swift; sourceTree = "<group>"; };
-		4D3CCAAC2C4A7FBC0012E908 /* SmartTipsProTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartTipsProTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		4D3CCAAD2C4A7FBC0012E908 /* SmartTipsProTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTipsProTests.swift; sourceTree = "<group>"; };
-		4D3CCAAF2C4A7FD90012E908 /* SmartTipsProUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTipsProUITests.swift; sourceTree = "<group>"; };
-		4D3CCAB12C4A803B0012E908 /* SmartTipsProLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTipsProLaunchTests.swift; sourceTree = "<group>"; };
 		4D3D71FF2BAE4CFD00105F89 /* Green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Green@2x.png"; sourceTree = "<group>"; };
 		4D3D72002BAE4CFD00105F89 /* Teal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Teal.png; sourceTree = "<group>"; };
 		4D3D72012BAE4CFD00105F89 /* Green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Green@3x.png"; sourceTree = "<group>"; };
@@ -139,8 +133,6 @@
 		4D416FB92B9F399000333567 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D416FBC2B9F399000333567 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D416FBE2B9F399000333567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D416FC32B9F399000333567 /* SmartTipsProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartTipsProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D416FCD2B9F399000333567 /* SmartTipsProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartTipsProUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D47B8572BBC36D4008829DE /* ParseringMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseringMap.swift; sourceTree = "<group>"; };
 		4D47B8592BBC36DB008829DE /* DrawingMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingMap.swift; sourceTree = "<group>"; };
 		4D47B85B2BBC36E3008829DE /* ComponentsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsMap.swift; sourceTree = "<group>"; };
@@ -153,6 +145,11 @@
 		4D6576DB2BF8C8A700A222C4 /* TipsCalulatorUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCalulatorUI.swift; sourceTree = "<group>"; };
 		4D6576DE2BF8CD1600A222C4 /* CurrencyTipsTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTipsTextField.swift; sourceTree = "<group>"; };
 		4D6576E02BF8CD5000A222C4 /* CurrencyTipsUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTipsUITextField.swift; sourceTree = "<group>"; };
+		4D701B4B2C5146A000676AF7 /* SmartTipsProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartTipsProUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D701B4D2C5146A000676AF7 /* SmartTipsProUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTipsProUITests.swift; sourceTree = "<group>"; };
+		4D701B4F2C5146A000676AF7 /* SmartTipsProUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTipsProUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4D701B5A2C5146B900676AF7 /* SmartTipsProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartTipsProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D701B5C2C5146B900676AF7 /* SmartTipsProTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTipsProTests.swift; sourceTree = "<group>"; };
 		4D90AD292BCB7678000C373E /* Debug-Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Debug-Keys.plist"; sourceTree = "<group>"; };
 		4D90AD2B2BCB76BA000C373E /* Prod-Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Prod-Keys.plist"; sourceTree = "<group>"; };
 		4D90AD2E2BCB7721000C373E /* SecureSavingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureSavingAPI.swift; sourceTree = "<group>"; };
@@ -202,19 +199,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D416FC02B9F399000333567 /* Frameworks */ = {
+		4D701B482C5146A000676AF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				959258293CC2FDB4EFB5F4A4 /* Pods_SmartTipsProTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D416FCA2B9F399000333567 /* Frameworks */ = {
+		4D701B572C5146B900676AF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74228B28B75D1229587E80A6 /* Pods_SmartTipsPro_SmartTipsProUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,8 +342,8 @@
 			isa = PBXGroup;
 			children = (
 				4D416FAF2B9F398B00333567 /* SmartTipsPro */,
-				4D416FC62B9F399000333567 /* TipsTests */,
-				4D416FD02B9F399000333567 /* TipsUITests */,
+				4D701B4C2C5146A000676AF7 /* SmartTipsProUITests */,
+				4D701B5B2C5146B900676AF7 /* SmartTipsProTests */,
 				4D416FAE2B9F398B00333567 /* Products */,
 				86665EC783848114D02D9D70 /* Pods */,
 				8825AEC6BB07C6CEC110095E /* Frameworks */,
@@ -359,8 +354,8 @@
 			isa = PBXGroup;
 			children = (
 				4D416FAD2B9F398B00333567 /* SmartTipsPro.app */,
-				4D416FC32B9F399000333567 /* SmartTipsProTests.xctest */,
-				4D416FCD2B9F399000333567 /* SmartTipsProUITests.xctest */,
+				4D701B4B2C5146A000676AF7 /* SmartTipsProUITests.xctest */,
+				4D701B5A2C5146B900676AF7 /* SmartTipsProTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -379,24 +374,6 @@
 				4D90AD2D2BCB76E7000C373E /* API-Keys */,
 			);
 			path = SmartTipsPro;
-			sourceTree = "<group>";
-		};
-		4D416FC62B9F399000333567 /* TipsTests */ = {
-			isa = PBXGroup;
-			children = (
-				4D3CCAAD2C4A7FBC0012E908 /* SmartTipsProTests.swift */,
-				4D3CCAAC2C4A7FBC0012E908 /* SmartTipsProTests-Bridging-Header.h */,
-			);
-			path = TipsTests;
-			sourceTree = "<group>";
-		};
-		4D416FD02B9F399000333567 /* TipsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				4D3CCAAF2C4A7FD90012E908 /* SmartTipsProUITests.swift */,
-				4D3CCAB12C4A803B0012E908 /* SmartTipsProLaunchTests.swift */,
-			);
-			path = TipsUITests;
 			sourceTree = "<group>";
 		};
 		4D47B8562BBC36B5008829DE /* Map */ = {
@@ -452,6 +429,23 @@
 				4DB7C8F92C0F75A9004049F0 /* AdditionsToMainUI.swift */,
 			);
 			path = TipsCalulatorUI;
+			sourceTree = "<group>";
+		};
+		4D701B4C2C5146A000676AF7 /* SmartTipsProUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4D701B4D2C5146A000676AF7 /* SmartTipsProUITests.swift */,
+				4D701B4F2C5146A000676AF7 /* SmartTipsProUITestsLaunchTests.swift */,
+			);
+			path = SmartTipsProUITests;
+			sourceTree = "<group>";
+		};
+		4D701B5B2C5146B900676AF7 /* SmartTipsProTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D701B5C2C5146B900676AF7 /* SmartTipsProTests.swift */,
+			);
+			path = SmartTipsProTests;
 			sourceTree = "<group>";
 		};
 		4D90AD2D2BCB76E7000C373E /* API-Keys */ = {
@@ -598,44 +592,41 @@
 			productReference = 4D416FAD2B9F398B00333567 /* SmartTipsPro.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4D416FC22B9F399000333567 /* SmartTipsProTests */ = {
+		4D701B4A2C5146A000676AF7 /* SmartTipsProUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D416FDA2B9F399000333567 /* Build configuration list for PBXNativeTarget "SmartTipsProTests" */;
+			buildConfigurationList = 4D701B532C5146A000676AF7 /* Build configuration list for PBXNativeTarget "SmartTipsProUITests" */;
 			buildPhases = (
-				71C718257924D3808B0118C1 /* [CP] Check Pods Manifest.lock */,
-				4D416FBF2B9F399000333567 /* Sources */,
-				4D416FC02B9F399000333567 /* Frameworks */,
-				4D416FC12B9F399000333567 /* Resources */,
+				4D701B472C5146A000676AF7 /* Sources */,
+				4D701B482C5146A000676AF7 /* Frameworks */,
+				4D701B492C5146A000676AF7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4D416FC52B9F399000333567 /* PBXTargetDependency */,
-			);
-			name = SmartTipsProTests;
-			productName = TipsTests;
-			productReference = 4D416FC32B9F399000333567 /* SmartTipsProTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		4D416FCC2B9F399000333567 /* SmartTipsProUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4D416FDD2B9F399000333567 /* Build configuration list for PBXNativeTarget "SmartTipsProUITests" */;
-			buildPhases = (
-				0C7BC1DE2BD521CF624191DB /* [CP] Check Pods Manifest.lock */,
-				4D416FC92B9F399000333567 /* Sources */,
-				4D416FCA2B9F399000333567 /* Frameworks */,
-				4D416FCB2B9F399000333567 /* Resources */,
-				3B2623D5F25E194BA8D0C992 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4D416FCF2B9F399000333567 /* PBXTargetDependency */,
+				4D701B522C5146A000676AF7 /* PBXTargetDependency */,
 			);
 			name = SmartTipsProUITests;
-			productName = TipsUITests;
-			productReference = 4D416FCD2B9F399000333567 /* SmartTipsProUITests.xctest */;
+			productName = SmartTipsProUITests;
+			productReference = 4D701B4B2C5146A000676AF7 /* SmartTipsProUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		4D701B592C5146B900676AF7 /* SmartTipsProTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D701B602C5146B900676AF7 /* Build configuration list for PBXNativeTarget "SmartTipsProTests" */;
+			buildPhases = (
+				4D701B562C5146B900676AF7 /* Sources */,
+				4D701B572C5146B900676AF7 /* Frameworks */,
+				4D701B582C5146B900676AF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D701B5F2C5146B900676AF7 /* PBXTargetDependency */,
+			);
+			name = SmartTipsProTests;
+			productName = SmartTipsProTests;
+			productReference = 4D701B5A2C5146B900676AF7 /* SmartTipsProTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -644,19 +635,18 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1520;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					4D416FAC2B9F398B00333567 = {
 						CreatedOnToolsVersion = 15.2;
 					};
-					4D416FC22B9F399000333567 = {
-						CreatedOnToolsVersion = 15.2;
-						LastSwiftMigration = 1540;
+					4D701B4A2C5146A000676AF7 = {
+						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 4D416FAC2B9F398B00333567;
 					};
-					4D416FCC2B9F399000333567 = {
-						CreatedOnToolsVersion = 15.2;
+					4D701B592C5146B900676AF7 = {
+						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 4D416FAC2B9F398B00333567;
 					};
 				};
@@ -677,8 +667,8 @@
 			projectRoot = "";
 			targets = (
 				4D416FAC2B9F398B00333567 /* SmartTipsPro */,
-				4D416FC22B9F399000333567 /* SmartTipsProTests */,
-				4D416FCC2B9F399000333567 /* SmartTipsProUITests */,
+				4D701B4A2C5146A000676AF7 /* SmartTipsProUITests */,
+				4D701B592C5146B900676AF7 /* SmartTipsProTests */,
 			);
 		};
 /* End PBXProject section */
@@ -717,14 +707,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D416FC12B9F399000333567 /* Resources */ = {
+		4D701B492C5146A000676AF7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D416FCB2B9F399000333567 /* Resources */ = {
+		4D701B582C5146B900676AF7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -734,45 +724,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C7BC1DE2BD521CF624191DB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SmartTipsPro-SmartTipsProUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3B2623D5F25E194BA8D0C992 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SmartTipsPro-SmartTipsProUITests/Pods-SmartTipsPro-SmartTipsProUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SmartTipsPro-SmartTipsProUITests/Pods-SmartTipsPro-SmartTipsProUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartTipsPro-SmartTipsProUITests/Pods-SmartTipsPro-SmartTipsProUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3CC591E1E7ABD64626E7268C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -788,28 +739,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartTipsPro/Pods-SmartTipsPro-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		71C718257924D3808B0118C1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SmartTipsProTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E9240C3CB6EBCA918896678D /* [CP] Check Pods Manifest.lock */ = {
@@ -886,35 +815,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D416FBF2B9F399000333567 /* Sources */ = {
+		4D701B472C5146A000676AF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D3CCAAE2C4A7FBC0012E908 /* SmartTipsProTests.swift in Sources */,
-				4D3CCAB02C4A7FD90012E908 /* SmartTipsProUITests.swift in Sources */,
-				4D3CCAB22C4A803B0012E908 /* SmartTipsProLaunchTests.swift in Sources */,
+				4D701B502C5146A000676AF7 /* SmartTipsProUITestsLaunchTests.swift in Sources */,
+				4D701B4E2C5146A000676AF7 /* SmartTipsProUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D416FC92B9F399000333567 /* Sources */ = {
+		4D701B562C5146B900676AF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D701B5D2C5146B900676AF7 /* SmartTipsProTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4D416FC52B9F399000333567 /* PBXTargetDependency */ = {
+		4D701B522C5146A000676AF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4D416FAC2B9F398B00333567 /* SmartTipsPro */;
-			targetProxy = 4D416FC42B9F399000333567 /* PBXContainerItemProxy */;
+			targetProxy = 4D701B512C5146A000676AF7 /* PBXContainerItemProxy */;
 		};
-		4D416FCF2B9F399000333567 /* PBXTargetDependency */ = {
+		4D701B5F2C5146B900676AF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4D416FAC2B9F398B00333567 /* SmartTipsPro */;
-			targetProxy = 4D416FCE2B9F399000333567 /* PBXContainerItemProxy */;
+			targetProxy = 4D701B5E2C5146B900676AF7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1194,142 +1123,81 @@
 			};
 			name = Release;
 		};
-		4D416FDB2B9F399000333567 /* Debug */ = {
+		4D701B542C5146A000676AF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5CCC4091DE201ECAB4DCA3D /* Pods-SmartTipsProTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3JQPLE5ZEK;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SmartTipsPro/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					"\"Alamofire\"",
-					"-framework",
-					"\"CFNetwork\"",
-					"-framework",
-					"\"Device\"",
-					"-framework",
-					"\"Realm\"",
-					"-framework",
-					"\"RealmSwift\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"SwiftMessages\"",
-					"-framework",
-					"\"UIKit\"",
-					"-weak_framework",
-					"\"SwiftUI\"",
-					"-weak_framework",
-					"\"UIKit\"",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "pl.Raman-Kozar.SmartTipsPro";
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.Raman-Kozar.SmartTipsProUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "TipsTests/SmartTipsProTests-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartTipsPro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmartTipsPro";
+				TEST_TARGET_NAME = SmartTipsPro;
 			};
 			name = Debug;
 		};
-		4D416FDC2B9F399000333567 /* Release */ = {
+		4D701B552C5146A000676AF7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6CD27E13AD5C54A6DFAD47D8 /* Pods-SmartTipsProTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3JQPLE5ZEK;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SmartTipsPro/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					"\"Alamofire\"",
-					"-framework",
-					"\"CFNetwork\"",
-					"-framework",
-					"\"Device\"",
-					"-framework",
-					"\"Realm\"",
-					"-framework",
-					"\"RealmSwift\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"SwiftMessages\"",
-					"-framework",
-					"\"UIKit\"",
-					"-weak_framework",
-					"\"SwiftUI\"",
-					"-weak_framework",
-					"\"UIKit\"",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "pl.Raman-Kozar.SmartTipsPro";
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.Raman-Kozar.SmartTipsProUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "TipsTests/SmartTipsProTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartTipsPro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmartTipsPro";
+				TEST_TARGET_NAME = SmartTipsPro;
 			};
 			name = Release;
 		};
-		4D416FDE2B9F399000333567 /* Debug */ = {
+		4D701B612C5146B900676AF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63ABB70D121DA9C814E01EFE /* Pods-SmartTipsPro-SmartTipsProUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3JQPLE5ZEK;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SmartTipsPro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "pl.Raman-Kozar.SmartTipsPro";
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.Raman-Kozar.SmartTipsProTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Tips;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartTipsPro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmartTipsPro";
 			};
 			name = Debug;
 		};
-		4D416FDF2B9F399000333567 /* Release */ = {
+		4D701B622C5146B900676AF7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5942BC24242D1287AEFA661B /* Pods-SmartTipsPro-SmartTipsProUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3JQPLE5ZEK;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SmartTipsPro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "pl.Raman-Kozar.SmartTipsPro";
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.Raman-Kozar.SmartTipsProTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Tips;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartTipsPro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmartTipsPro";
 			};
 			name = Release;
 		};
@@ -1354,20 +1222,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D416FDA2B9F399000333567 /* Build configuration list for PBXNativeTarget "SmartTipsProTests" */ = {
+		4D701B532C5146A000676AF7 /* Build configuration list for PBXNativeTarget "SmartTipsProUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4D416FDB2B9F399000333567 /* Debug */,
-				4D416FDC2B9F399000333567 /* Release */,
+				4D701B542C5146A000676AF7 /* Debug */,
+				4D701B552C5146A000676AF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D416FDD2B9F399000333567 /* Build configuration list for PBXNativeTarget "SmartTipsProUITests" */ = {
+		4D701B602C5146B900676AF7 /* Build configuration list for PBXNativeTarget "SmartTipsProTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4D416FDE2B9F399000333567 /* Debug */,
-				4D416FDF2B9F399000333567 /* Release */,
+				4D701B612C5146B900676AF7 /* Debug */,
+				4D701B622C5146B900676AF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

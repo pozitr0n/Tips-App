@@ -1,13 +1,13 @@
 //
-//  TipsUITestsLaunchTests.swift
+//  SmartTipsProUITestsLaunchTests.swift
 //  SmartTipsProUITests
 //
-//  Created by Raman Kozar on 11/03/2024.
+//  Created by Raman Kozar on 24/07/2024.
 //
 
 import XCTest
 
-final class SmartTipsProLaunchTests: XCTestCase {
+final class SmartTipsProUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
@@ -29,5 +29,4 @@ final class SmartTipsProLaunchTests: XCTestCase {
         attachment.lifetime = .keepAlways
         add(attachment)
     }
-    
 }

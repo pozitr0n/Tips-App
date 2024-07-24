@@ -2,7 +2,7 @@
 //  SmartTipsProTests.swift
 //  SmartTipsProTests
 //
-//  Created by Raman Kozar on 19/07/2024.
+//  Created by Raman Kozar on 24/07/2024.
 //
 
 import XCTest
@@ -27,7 +27,7 @@ final class SmartTipsProTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }

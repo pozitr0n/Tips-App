@@ -1,8 +1,8 @@
 //
 //  SmartTipsProUITests.swift
-//  SmartTipsProTests
+//  SmartTipsProUITests
 //
-//  Created by Raman Kozar on 19/07/2024.
+//  Created by Raman Kozar on 24/07/2024.
 //
 
 import XCTest

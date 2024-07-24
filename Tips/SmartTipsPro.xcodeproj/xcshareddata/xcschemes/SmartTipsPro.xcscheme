@@ -35,7 +35,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4D416FC22B9F399000333567"
+               BlueprintIdentifier = "4D701B592C5146B900676AF7"
                BuildableName = "SmartTipsProTests.xctest"
                BlueprintName = "SmartTipsProTests"
                ReferencedContainer = "container:SmartTipsPro.xcodeproj">
@@ -46,7 +46,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4D416FCC2B9F399000333567"
+               BlueprintIdentifier = "4D701B4A2C5146A000676AF7"
                BuildableName = "SmartTipsProUITests.xctest"
                BlueprintName = "SmartTipsProUITests"
                ReferencedContainer = "container:SmartTipsPro.xcodeproj">
