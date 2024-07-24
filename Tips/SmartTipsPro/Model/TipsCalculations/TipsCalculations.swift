@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class TipsCalculations {
+class TipsCalculations {
 
     // Summary Part
     // ============
