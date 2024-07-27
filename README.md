@@ -68,15 +68,47 @@
 | --- | --- | --- |
 | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/en/01.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/pl/01.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/ru/01.jpeg) |
 
+### Calculating tips
+
 | en | pl | ru |
 | --- | --- | --- |
 | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/en/02.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/pl/02.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/ru/02.jpeg) |
+
+### Displaying tip information
+
+| en | pl | ru |
+| --- | --- | --- |
 | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/en/03.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/pl/03.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/ru/03.jpeg) |
+
+### Saving the history of tips
+
+| en | pl | ru |
+| --- | --- | --- |
 | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/en/04.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/pl/04.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/ru/04.jpeg) |
+
+### View tipping information for all countries in the world
+
+| en | pl | ru |
+| --- | --- | --- |
 | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/en/05.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/pl/05.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/ru/05.jpeg) |
-| ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/en/06.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/pl/06.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/ru/06.jpeg) |
 | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/en/07.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/pl/07.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/ru/07.jpeg) |
+
+### Select any convenient currency
+
+| en | pl | ru |
+| --- | --- | --- |
+| ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/en/06.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/pl/06.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/ru/06.jpeg) |
+
+### Select language
+
+| en | pl | ru |
+| --- | --- | --- |
 | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/en/08.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/pl/08.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/ru/08.jpeg) |
+
+### Dark or light color - you decide
+
+| en | pl | ru |
+| --- | --- | --- |
 | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/en/09.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/pl/09.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/ru/09.jpeg) |
 
 # Author
