@@ -78,7 +78,9 @@
 		4DE4D6292BB1170600160224 /* DetailLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4D6282BB1170600160224 /* DetailLanguages.swift */; };
 		4DE4D62C2BB1186700160224 /* CurrencyCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4D62B2BB1186700160224 /* CurrencyCodes.swift */; };
 		4DE8617D2BAA6F9F002B2475 /* ModeChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE8617C2BAA6F9F002B2475 /* ModeChangeView.swift */; };
+		918C97CFB180798BBB151E50 /* Pods_SmartTipsProTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECA2A3CB6D588E2A9C75E9CC /* Pods_SmartTipsProTests.framework */; };
 		C2A9142725E2C24ECCB34780 /* Pods_SmartTipsPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12F7D857CF4CCB57797B4F11 /* Pods_SmartTipsPro.framework */; };
+		E0C05AE5DBB7DFF3D82F6A2A /* Pods_SmartTipsPro_SmartTipsProUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A1359C55AF93709700EB6F /* Pods_SmartTipsPro_SmartTipsProUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,6 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0C05AE5DBB7DFF3D82F6A2A /* Pods_SmartTipsPro_SmartTipsProUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +213,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				918C97CFB180798BBB151E50 /* Pods_SmartTipsProTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,9 +600,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D701B532C5146A000676AF7 /* Build configuration list for PBXNativeTarget "SmartTipsProUITests" */;
 			buildPhases = (
+				A22ECD8452BE25060BE9F738 /* [CP] Check Pods Manifest.lock */,
 				4D701B472C5146A000676AF7 /* Sources */,
 				4D701B482C5146A000676AF7 /* Frameworks */,
 				4D701B492C5146A000676AF7 /* Resources */,
+				37C64D4F7F05D764335A709C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -614,6 +620,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D701B602C5146B900676AF7 /* Build configuration list for PBXNativeTarget "SmartTipsProTests" */;
 			buildPhases = (
+				EC8606BDA5D547DA960EDA0F /* [CP] Check Pods Manifest.lock */,
 				4D701B562C5146B900676AF7 /* Sources */,
 				4D701B572C5146B900676AF7 /* Frameworks */,
 				4D701B582C5146B900676AF7 /* Resources */,
@@ -724,6 +731,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		37C64D4F7F05D764335A709C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartTipsPro-SmartTipsProUITests/Pods-SmartTipsPro-SmartTipsProUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartTipsPro-SmartTipsProUITests/Pods-SmartTipsPro-SmartTipsProUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartTipsPro-SmartTipsProUITests/Pods-SmartTipsPro-SmartTipsProUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3CC591E1E7ABD64626E7268C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -739,6 +763,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartTipsPro/Pods-SmartTipsPro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A22ECD8452BE25060BE9F738 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartTipsPro-SmartTipsProUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E9240C3CB6EBCA918896678D /* [CP] Check Pods Manifest.lock */ = {
@@ -757,6 +803,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-SmartTipsPro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC8606BDA5D547DA960EDA0F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartTipsProTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1127,6 +1195,7 @@
 		};
 		4D701B542C5146A000676AF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63ABB70D121DA9C814E01EFE /* Pods-SmartTipsPro-SmartTipsProUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1146,6 +1215,7 @@
 		};
 		4D701B552C5146A000676AF7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5942BC24242D1287AEFA661B /* Pods-SmartTipsPro-SmartTipsProUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1165,6 +1235,7 @@
 		};
 		4D701B612C5146B900676AF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5CCC4091DE201ECAB4DCA3D /* Pods-SmartTipsProTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1185,6 +1256,7 @@
 		};
 		4D701B622C5146B900676AF7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CD27E13AD5C54A6DFAD47D8 /* Pods-SmartTipsProTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
