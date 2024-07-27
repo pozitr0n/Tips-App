@@ -68,6 +68,7 @@
 | --- | --- | --- |
 | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/en/01.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/pl/01.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/ru/01.jpeg) |
 
+| en | pl | ru |
 | --- | --- | --- |
 | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/en/02.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/pl/02.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/ru/02.jpeg) |
 | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/en/03.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/pl/03.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/ru/03.jpeg) |
