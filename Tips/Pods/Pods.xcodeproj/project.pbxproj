@@ -2362,6 +2362,7 @@
 		};
 		EEE171D050415490EABE5B7B4F32C265 /* Create Symlinks to Header Folders */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);

@@ -2,12 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/romankozar/Documents/Dokumenty/&#x420;&#x430;&#x431;&#x43e;&#x442;&#x430;/iOS projects/Final Project App/Tips-App/Tips/SmartTipsPro.xcodeproj">
+      location = "group:SmartTipsPro.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:SmartTipsPro.xcodeproj">
    </FileRef>
 </Workspace>
