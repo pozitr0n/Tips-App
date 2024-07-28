@@ -19,7 +19,7 @@
 
 ### Why Choose Our App?
 
-`Our tip calculator app is designed to make tipping effortless and stress-free. With its sleek design and powerful features, you can focus on enjoying your meal without worrying about the math. Whether you’re splitting a bill with friends or simply want to ensure you’re leaving the right amount, our app has you covered. Also in our application you can find all the information you are interested in about tipping in all countries of the world. And it is in our application that you can save the entire history of your calculations.`
+> Our tip calculator app is designed to make tipping effortless and stress-free. With its sleek design and powerful features, you can focus on enjoying your meal without worrying about the math. Whether you’re splitting a bill with friends or simply want to ensure you’re leaving the right amount, our app has you covered. Also in our application you can find all the information you are interested in about tipping in all countries of the world. And it is in our application that you can save the entire history of your calculations.
 
 ### Perfect for Any Occasion
 
