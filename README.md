@@ -3,7 +3,8 @@
 [![Platform](http://img.shields.io/badge/platform-iOS-blue.svg?style=flat)](https://developer.apple.com/iphone/index.action)
 [![Language](http://img.shields.io/badge/language-Swift-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
 [![License](http://img.shields.io/badge/license-GPL-lightgrey.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.html)
-[![App Store](https://img.shields.io/badge/App_Store-0D96F6?style=for-the-badge&logo=app-store&logoColor=white)](https://apps.apple.com/app/smart-tips-pro/id6557035064)
+
+### Link to ![App Store](https://img.shields.io/badge/App_Store-0D96F6?style=for-the-badge&logo=app-store&logoColor=white)(https://apps.apple.com/app/smart-tips-pro/id6557035064)
 
 # Table of Contents
 
