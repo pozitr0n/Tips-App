@@ -8,6 +8,8 @@
 import Foundation
 import RealmSwift
 
+// Main logic class for TipsModelObject
+//
 final class TipsModel {
     
     // Realm object

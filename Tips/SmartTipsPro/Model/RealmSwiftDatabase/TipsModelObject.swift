@@ -8,6 +8,8 @@
 import Foundation
 import RealmSwift
 
+// Structure of TipsModelObject
+//
 final class TipsModelObject: Object, Identifiable {
     
     @objc dynamic var id = UUID().uuidString
