@@ -875,8 +875,9 @@ extension SwiftMessages {
         globalInstance.show(viewProvider: viewProvider)
     }
     
-    nonisolated public static func show(config: Config, viewProvider: @escaping ViewProvider) {
-        globalInstance.show(config: config, viewProvider: viewProvider)
+    // if I access a property or function annotated with @MainActor from an async context, I can use await
+    nonisolated public static func show(config: Config, viewProvider: @escaping ViewProvider) async {
+        await globalInstance.show(config: config, viewProvider: viewProvider)
     }
     
     public static func show(view: UIView) {

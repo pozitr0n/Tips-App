@@ -70,6 +70,13 @@
 		4DB69D312BC4B5FE005B5B68 /* MailSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB69D302BC4B5FE005B5B68 /* MailSwiftUIView.swift */; };
 		4DB7C8FA2C0F75A9004049F0 /* AdditionsToMainUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB7C8F92C0F75A9004049F0 /* AdditionsToMainUI.swift */; };
 		4DC8AB832BA27DF9002AB3BF /* SplashAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8AB822BA27DF9002AB3BF /* SplashAnimator.swift */; };
+		4DC957712C57F20200586D28 /* SmartTipsProWatchLandmarksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC957702C57F20200586D28 /* SmartTipsProWatchLandmarksApp.swift */; };
+		4DC957732C57F20200586D28 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC957722C57F20200586D28 /* ContentView.swift */; };
+		4DC957822C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC957812C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppTests.swift */; };
+		4DC9578C2C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9578B2C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppUITests.swift */; };
+		4DC9578E2C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9578D2C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppUITestsLaunchTests.swift */; };
+		4DC957912C57F20400586D28 /* SmartTipsProWatchLandmarks Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4DC9576E2C57F20200586D28 /* SmartTipsProWatchLandmarks Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4DC9579C2C57FA4F00586D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D416FB92B9F399000333567 /* Assets.xcassets */; };
 		4DE4B8892BB9E9A300894158 /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4B8882BB9E9A300894158 /* Currencies.swift */; };
 		4DE4B88C2BBA3B1200894158 /* DefaultPercentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4B88B2BBA3B1200894158 /* DefaultPercentage.swift */; };
 		4DE4D6212BAFCA5500160224 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4D6202BAFCA5500160224 /* Icons.swift */; };
@@ -78,6 +85,7 @@
 		4DE4D6292BB1170600160224 /* DetailLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4D6282BB1170600160224 /* DetailLanguages.swift */; };
 		4DE4D62C2BB1186700160224 /* CurrencyCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4D62B2BB1186700160224 /* CurrencyCodes.swift */; };
 		4DE8617D2BAA6F9F002B2475 /* ModeChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE8617C2BAA6F9F002B2475 /* ModeChangeView.swift */; };
+		4DF6A5722C59A3460093EAB3 /* AddAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF6A5712C59A3460093EAB3 /* AddAssets.xcassets */; };
 		6217CE8FA32B212D6F489740 /* Pods_SmartTipsPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66814B6A8B0A2D1E1E0B13D7 /* Pods_SmartTipsPro.framework */; };
 		A48C9A7C643FFA422C02F70B /* Pods_SmartTipsProTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8481DEEA97567B952409C36C /* Pods_SmartTipsProTests.framework */; };
 		E48055E3B1EB28DB487B8F5A /* Pods_SmartTipsPro_SmartTipsProUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9522774089E11D67C038D407 /* Pods_SmartTipsPro_SmartTipsProUITests.framework */; };
@@ -98,7 +106,42 @@
 			remoteGlobalIDString = 4D416FAC2B9F398B00333567;
 			remoteInfo = SmartTipsPro;
 		};
+		4DC9577E2C57F20400586D28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D416FA52B9F398B00333567 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DC9576D2C57F20200586D28;
+			remoteInfo = "SmartTipsProWatchLandmarks Watch App";
+		};
+		4DC957882C57F20400586D28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D416FA52B9F398B00333567 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DC9576D2C57F20200586D28;
+			remoteInfo = "SmartTipsProWatchLandmarks Watch App";
+		};
+		4DC9578F2C57F20400586D28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D416FA52B9F398B00333567 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DC9576D2C57F20200586D28;
+			remoteInfo = "SmartTipsProWatchLandmarks Watch App";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4DC957922C57F20400586D28 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				4DC957912C57F20400586D28 /* SmartTipsProWatchLandmarks Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		014314FE7BD1A1DCEF89ACB1 /* Pods-SmartTipsProTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartTipsProTests.debug.xcconfig"; path = "Target Support Files/Pods-SmartTipsProTests/Pods-SmartTipsProTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +218,14 @@
 		4DB69D302BC4B5FE005B5B68 /* MailSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailSwiftUIView.swift; sourceTree = "<group>"; };
 		4DB7C8F92C0F75A9004049F0 /* AdditionsToMainUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionsToMainUI.swift; sourceTree = "<group>"; };
 		4DC8AB822BA27DF9002AB3BF /* SplashAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAnimator.swift; sourceTree = "<group>"; };
+		4DC9576E2C57F20200586D28 /* SmartTipsProWatchLandmarks Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmartTipsProWatchLandmarks Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC957702C57F20200586D28 /* SmartTipsProWatchLandmarksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTipsProWatchLandmarksApp.swift; sourceTree = "<group>"; };
+		4DC957722C57F20200586D28 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4DC9577D2C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SmartTipsProWatchLandmarks Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC957812C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTipsProWatchLandmarks_Watch_AppTests.swift; sourceTree = "<group>"; };
+		4DC957872C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SmartTipsProWatchLandmarks Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC9578B2C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTipsProWatchLandmarks_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		4DC9578D2C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTipsProWatchLandmarks_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4DE4B8882BB9E9A300894158 /* Currencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
 		4DE4B88B2BBA3B1200894158 /* DefaultPercentage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPercentage.swift; sourceTree = "<group>"; };
 		4DE4D6202BAFCA5500160224 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
@@ -183,6 +234,8 @@
 		4DE4D6282BB1170600160224 /* DetailLanguages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLanguages.swift; sourceTree = "<group>"; };
 		4DE4D62B2BB1186700160224 /* CurrencyCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCodes.swift; sourceTree = "<group>"; };
 		4DE8617C2BAA6F9F002B2475 /* ModeChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeChangeView.swift; sourceTree = "<group>"; };
+		4DF6A56E2C5934BB0093EAB3 /* SmartTipsProWatchLandmarks-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SmartTipsProWatchLandmarks-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		4DF6A5712C59A3460093EAB3 /* AddAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AddAssets.xcassets; sourceTree = "<group>"; };
 		66814B6A8B0A2D1E1E0B13D7 /* Pods_SmartTipsPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartTipsPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D13A445908EE0C19080139 /* Pods-SmartTipsPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartTipsPro.debug.xcconfig"; path = "Target Support Files/Pods-SmartTipsPro/Pods-SmartTipsPro.debug.xcconfig"; sourceTree = "<group>"; };
 		8481DEEA97567B952409C36C /* Pods_SmartTipsProTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartTipsProTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +267,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				A48C9A7C643FFA422C02F70B /* Pods_SmartTipsProTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DC9576B2C57F20200586D28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DC9577A2C57F20400586D28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DC957842C57F20400586D28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,9 +366,9 @@
 		4D258AE32B9F43DC003B9F8F /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				4DF6A56D2C5867510093EAB3 /* MainAsset */,
 				4D47B85E2BBC39AC008829DE /* Map-svg */,
 				4D3D71DA2BAD2D8900105F89 /* Icons */,
-				4D416FB92B9F399000333567 /* Assets.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -348,6 +422,9 @@
 				4D416FAF2B9F398B00333567 /* SmartTipsPro */,
 				4D701B4C2C5146A000676AF7 /* SmartTipsProUITests */,
 				4D701B5B2C5146B900676AF7 /* SmartTipsProTests */,
+				4DC9576F2C57F20200586D28 /* SmartTipsProWatchLandmarks Watch App */,
+				4DC957802C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppTests */,
+				4DC9578A2C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppUITests */,
 				4D416FAE2B9F398B00333567 /* Products */,
 				86665EC783848114D02D9D70 /* Pods */,
 				8918B0F3DF8CBF9042DF1972 /* Frameworks */,
@@ -360,6 +437,9 @@
 				4D416FAD2B9F398B00333567 /* SmartTipsPro.app */,
 				4D701B4B2C5146A000676AF7 /* SmartTipsProUITests.xctest */,
 				4D701B5A2C5146B900676AF7 /* SmartTipsProTests.xctest */,
+				4DC9576E2C57F20200586D28 /* SmartTipsProWatchLandmarks Watch App.app */,
+				4DC9577D2C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppTests.xctest */,
+				4DC957872C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -504,6 +584,41 @@
 			path = SentEmailView;
 			sourceTree = "<group>";
 		};
+		4DC9576F2C57F20200586D28 /* SmartTipsProWatchLandmarks Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				4DF6A56E2C5934BB0093EAB3 /* SmartTipsProWatchLandmarks-Watch-App-Info.plist */,
+				4DC957702C57F20200586D28 /* SmartTipsProWatchLandmarksApp.swift */,
+				4DC957722C57F20200586D28 /* ContentView.swift */,
+				4DC957762C57F20400586D28 /* Preview Content */,
+			);
+			path = "SmartTipsProWatchLandmarks Watch App";
+			sourceTree = "<group>";
+		};
+		4DC957762C57F20400586D28 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4DC957802C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				4DC957812C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppTests.swift */,
+			);
+			path = "SmartTipsProWatchLandmarks Watch AppTests";
+			sourceTree = "<group>";
+		};
+		4DC9578A2C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4DC9578B2C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppUITests.swift */,
+				4DC9578D2C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "SmartTipsProWatchLandmarks Watch AppUITests";
+			sourceTree = "<group>";
+		};
 		4DE4B88A2BBA3ADC00894158 /* DefaultPercentage */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,6 +666,15 @@
 			path = AdditionsToTheSettings_UI;
 			sourceTree = "<group>";
 		};
+		4DF6A56D2C5867510093EAB3 /* MainAsset */ = {
+			isa = PBXGroup;
+			children = (
+				4D416FB92B9F399000333567 /* Assets.xcassets */,
+				4DF6A5712C59A3460093EAB3 /* AddAssets.xcassets */,
+			);
+			path = MainAsset;
+			sourceTree = "<group>";
+		};
 		86665EC783848114D02D9D70 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -586,10 +710,12 @@
 				4D416FAA2B9F398B00333567 /* Frameworks */,
 				4D416FAB2B9F398B00333567 /* Resources */,
 				2768207727428214621BBAA2 /* [CP] Embed Pods Frameworks */,
+				4DC957922C57F20400586D28 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4DC957902C57F20400586D28 /* PBXTargetDependency */,
 			);
 			name = SmartTipsPro;
 			productName = Tips;
@@ -635,6 +761,59 @@
 			productReference = 4D701B5A2C5146B900676AF7 /* SmartTipsProTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		4DC9576D2C57F20200586D28 /* SmartTipsProWatchLandmarks Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DC957992C57F20400586D28 /* Build configuration list for PBXNativeTarget "SmartTipsProWatchLandmarks Watch App" */;
+			buildPhases = (
+				4DC9576A2C57F20200586D28 /* Sources */,
+				4DC9576B2C57F20200586D28 /* Frameworks */,
+				4DC9576C2C57F20200586D28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SmartTipsProWatchLandmarks Watch App";
+			productName = "SmartTipsProWatchLandmarks Watch App";
+			productReference = 4DC9576E2C57F20200586D28 /* SmartTipsProWatchLandmarks Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4DC9577C2C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DC9579A2C57F20400586D28 /* Build configuration list for PBXNativeTarget "SmartTipsProWatchLandmarks Watch AppTests" */;
+			buildPhases = (
+				4DC957792C57F20400586D28 /* Sources */,
+				4DC9577A2C57F20400586D28 /* Frameworks */,
+				4DC9577B2C57F20400586D28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DC9577F2C57F20400586D28 /* PBXTargetDependency */,
+			);
+			name = "SmartTipsProWatchLandmarks Watch AppTests";
+			productName = "SmartTipsProWatchLandmarks Watch AppTests";
+			productReference = 4DC9577D2C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4DC957862C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DC9579B2C57F20400586D28 /* Build configuration list for PBXNativeTarget "SmartTipsProWatchLandmarks Watch AppUITests" */;
+			buildPhases = (
+				4DC957832C57F20400586D28 /* Sources */,
+				4DC957842C57F20400586D28 /* Frameworks */,
+				4DC957852C57F20400586D28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DC957892C57F20400586D28 /* PBXTargetDependency */,
+			);
+			name = "SmartTipsProWatchLandmarks Watch AppUITests";
+			productName = "SmartTipsProWatchLandmarks Watch AppUITests";
+			productReference = 4DC957872C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -656,6 +835,17 @@
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 4D416FAC2B9F398B00333567;
 					};
+					4DC9576D2C57F20200586D28 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					4DC9577C2C57F20400586D28 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 4DC9576D2C57F20200586D28;
+					};
+					4DC957862C57F20400586D28 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 4DC9576D2C57F20200586D28;
+					};
 				};
 			};
 			buildConfigurationList = 4D416FA82B9F398B00333567 /* Build configuration list for PBXProject "SmartTipsPro" */;
@@ -676,6 +866,9 @@
 				4D416FAC2B9F398B00333567 /* SmartTipsPro */,
 				4D701B4A2C5146A000676AF7 /* SmartTipsProUITests */,
 				4D701B592C5146B900676AF7 /* SmartTipsProTests */,
+				4DC9576D2C57F20200586D28 /* SmartTipsProWatchLandmarks Watch App */,
+				4DC9577C2C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppTests */,
+				4DC957862C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -697,6 +890,7 @@
 				4D90AD2C2BCB76BA000C373E /* Prod-Keys.plist in Resources */,
 				4D3D72172BAE4CFD00105F89 /* Jaundiced@3x.png in Resources */,
 				4D3D721B2BAE4CFD00105F89 /* Orange@2x.png in Resources */,
+				4DF6A5722C59A3460093EAB3 /* AddAssets.xcassets in Resources */,
 				4D3D72222BAE4CFD00105F89 /* Orange@3x.png in Resources */,
 				4D9ACDF72BA7E7FD0075C3F6 /* Localizable.strings in Resources */,
 				4D3D72192BAE4CFD00105F89 /* Sea.png in Resources */,
@@ -722,6 +916,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4D701B582C5146B900676AF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DC9576C2C57F20200586D28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DC9579C2C57FA4F00586D28 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DC9577B2C57F20400586D28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DC957852C57F20400586D28 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -900,6 +1116,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4DC9576A2C57F20200586D28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DC957732C57F20200586D28 /* ContentView.swift in Sources */,
+				4DC957712C57F20200586D28 /* SmartTipsProWatchLandmarksApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DC957792C57F20400586D28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DC957822C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DC957832C57F20400586D28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DC9578E2C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppUITestsLaunchTests.swift in Sources */,
+				4DC9578C2C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -912,6 +1154,21 @@
 			isa = PBXTargetDependency;
 			target = 4D416FAC2B9F398B00333567 /* SmartTipsPro */;
 			targetProxy = 4D701B5E2C5146B900676AF7 /* PBXContainerItemProxy */;
+		};
+		4DC9577F2C57F20400586D28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DC9576D2C57F20200586D28 /* SmartTipsProWatchLandmarks Watch App */;
+			targetProxy = 4DC9577E2C57F20400586D28 /* PBXContainerItemProxy */;
+		};
+		4DC957892C57F20400586D28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DC9576D2C57F20200586D28 /* SmartTipsProWatchLandmarks Watch App */;
+			targetProxy = 4DC957882C57F20400586D28 /* PBXContainerItemProxy */;
+		};
+		4DC957902C57F20400586D28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DC9576D2C57F20200586D28 /* SmartTipsProWatchLandmarks Watch App */;
+			targetProxy = 4DC9578F2C57F20400586D28 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1275,6 +1532,162 @@
 			};
 			name = Release;
 		};
+		4DC957932C57F20400586D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_AW;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartTipsProWatchLandmarks Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 3JQPLE5ZEK;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SmartTipsProWatchLandmarks-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = SmartTipsProWatchLandmarks;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "pl.Raman-Kozar.SmartTipsPro";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.Raman-Kozar.SmartTipsPro.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		4DC957942C57F20400586D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_AW;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartTipsProWatchLandmarks Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 3JQPLE5ZEK;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SmartTipsProWatchLandmarks-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = SmartTipsProWatchLandmarks;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "pl.Raman-Kozar.SmartTipsPro";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.Raman-Kozar.SmartTipsPro.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		4DC957952C57F20400586D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3JQPLE5ZEK;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.Raman-Kozar.SmartTipsProWatchLandmarks-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartTipsProWatchLandmarks Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmartTipsProWatchLandmarks Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		4DC957962C57F20400586D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3JQPLE5ZEK;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.Raman-Kozar.SmartTipsProWatchLandmarks-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartTipsProWatchLandmarks Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmartTipsProWatchLandmarks Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+		4DC957972C57F20400586D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3JQPLE5ZEK;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.Raman-Kozar.SmartTipsProWatchLandmarks-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "SmartTipsProWatchLandmarks Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		4DC957982C57F20400586D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3JQPLE5ZEK;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.Raman-Kozar.SmartTipsProWatchLandmarks-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "SmartTipsProWatchLandmarks Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1310,6 +1723,33 @@
 			buildConfigurations = (
 				4D701B612C5146B900676AF7 /* Debug */,
 				4D701B622C5146B900676AF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DC957992C57F20400586D28 /* Build configuration list for PBXNativeTarget "SmartTipsProWatchLandmarks Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DC957932C57F20400586D28 /* Debug */,
+				4DC957942C57F20400586D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DC9579A2C57F20400586D28 /* Build configuration list for PBXNativeTarget "SmartTipsProWatchLandmarks Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DC957952C57F20400586D28 /* Debug */,
+				4DC957962C57F20400586D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DC9579B2C57F20400586D28 /* Build configuration list for PBXNativeTarget "SmartTipsProWatchLandmarks Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DC957972C57F20400586D28 /* Debug */,
+				4DC957982C57F20400586D28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

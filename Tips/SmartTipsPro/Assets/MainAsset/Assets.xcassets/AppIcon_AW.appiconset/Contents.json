@@ -1,0 +1,147 @@
+{
+  "images" : [
+    {
+      "filename" : "icons8-donate-44.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "22x22"
+    },
+    {
+      "filename" : "icons8-donate-48.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "24x24"
+    },
+    {
+      "filename" : "icons8-donate-55.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "27.5x27.5"
+    },
+    {
+      "filename" : "icons8-donate-58 1.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "29x29"
+    },
+    {
+      "filename" : "icons8-donate-60 1.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "30x30"
+    },
+    {
+      "filename" : "icons8-donate-64.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "32x32"
+    },
+    {
+      "filename" : "icons8-donate-66.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "33x33"
+    },
+    {
+      "filename" : "icons8-donate-80 1.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "40x40"
+    },
+    {
+      "filename" : "icons8-donate-87 1.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "43.5x43.5"
+    },
+    {
+      "filename" : "icons8-donate-88.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "44x44"
+    },
+    {
+      "filename" : "icons8-donate-92.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "46x46"
+    },
+    {
+      "filename" : "icons8-donate-100.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "50x50"
+    },
+    {
+      "filename" : "icons8-donate-102.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "51x51"
+    },
+    {
+      "filename" : "icons8-donate-108.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "54x54"
+    },
+    {
+      "filename" : "icons8-donate-172.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "86x86"
+    },
+    {
+      "filename" : "icons8-donate-196.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "98x98"
+    },
+    {
+      "filename" : "icons8-donate-216.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "108x108"
+    },
+    {
+      "filename" : "icons8-donate-234.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "117x117"
+    },
+    {
+      "filename" : "icons8-donate-258.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "129x129"
+    },
+    {
+      "filename" : "icons8-donate-1024 1.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "size" : "1024x1024"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
