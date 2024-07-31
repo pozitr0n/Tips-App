@@ -64,14 +64,21 @@
 		4D9ACDEF2BA38A300075C3F6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9ACDEE2BA38A300075C3F6 /* SettingsViewController.swift */; };
 		4D9ACDF12BA3DC2E0075C3F6 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9ACDF02BA3DC2E0075C3F6 /* Languages.swift */; };
 		4D9ACDF72BA7E7FD0075C3F6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D9ACDF52BA7E7FD0075C3F6 /* Localizable.strings */; };
+		4D9D56402C59C9BA00DDDCFF /* SmartTipsProDecimalPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D563F2C59C9BA00DDDCFF /* SmartTipsProDecimalPad.swift */; };
+		4D9D56422C59CABF00DDDCFF /* SmartTipsProWatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D56412C59CABF00DDDCFF /* SmartTipsProWatchModel.swift */; };
+		4D9D56502C5A73C300DDDCFF /* SmartTipsProWatchExtensionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D564F2C5A73C300DDDCFF /* SmartTipsProWatchExtensionExtension.swift */; };
+		4D9D56522C5A73C300DDDCFF /* SmartTipsProWatchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D56512C5A73C300DDDCFF /* SmartTipsProWatchExtension.swift */; };
+		4D9D56562C5A73C300DDDCFF /* SmartTipsProWatchExtension.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 4D9D564D2C5A73C300DDDCFF /* SmartTipsProWatchExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4DA44B6E2BA264DB005EC103 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA44B6D2BA264DB005EC103 /* SplashViewController.swift */; };
 		4DA44B742BA26706005EC103 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA44B732BA26706005EC103 /* SplashPresenter.swift */; };
 		4DB69D2B2BC4B318005B5B68 /* ReviewEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB69D2A2BC4B318005B5B68 /* ReviewEmail.swift */; };
 		4DB69D312BC4B5FE005B5B68 /* MailSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB69D302BC4B5FE005B5B68 /* MailSwiftUIView.swift */; };
 		4DB7C8FA2C0F75A9004049F0 /* AdditionsToMainUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB7C8F92C0F75A9004049F0 /* AdditionsToMainUI.swift */; };
+		4DC7B6CF2C5A8C3F000AAF50 /* UI_Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7B6CE2C5A8C3F000AAF50 /* UI_Constants.swift */; };
+		4DC7B6D12C5A8FE8000AAF50 /* OutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7B6D02C5A8FE8000AAF50 /* OutputView.swift */; };
 		4DC8AB832BA27DF9002AB3BF /* SplashAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8AB822BA27DF9002AB3BF /* SplashAnimator.swift */; };
 		4DC957712C57F20200586D28 /* SmartTipsProWatchLandmarksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC957702C57F20200586D28 /* SmartTipsProWatchLandmarksApp.swift */; };
-		4DC957732C57F20200586D28 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC957722C57F20200586D28 /* ContentView.swift */; };
+		4DC957732C57F20200586D28 /* SmartTipsProContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC957722C57F20200586D28 /* SmartTipsProContentView.swift */; };
 		4DC957822C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC957812C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppTests.swift */; };
 		4DC9578C2C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9578B2C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppUITests.swift */; };
 		4DC9578E2C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9578D2C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppUITestsLaunchTests.swift */; };
@@ -106,6 +113,13 @@
 			remoteGlobalIDString = 4D416FAC2B9F398B00333567;
 			remoteInfo = SmartTipsPro;
 		};
+		4D9D56542C5A73C300DDDCFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D416FA52B9F398B00333567 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D9D564C2C5A73C300DDDCFF;
+			remoteInfo = SmartTipsProWatchExtension;
+		};
 		4DC9577E2C57F20400586D28 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4D416FA52B9F398B00333567 /* Project object */;
@@ -130,6 +144,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		4D9D565A2C5A73C300DDDCFF /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				4D9D56562C5A73C300DDDCFF /* SmartTipsProWatchExtension.appex in Embed ExtensionKit Extensions */,
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4DC957922C57F20400586D28 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -212,15 +237,23 @@
 		4D9ACDFB2BA8EE0B0075C3F6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4D9ACDFD2BA8F7230075C3F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		4D9ACDFF2BA8F8800075C3F6 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
+		4D9D563F2C59C9BA00DDDCFF /* SmartTipsProDecimalPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTipsProDecimalPad.swift; sourceTree = "<group>"; };
+		4D9D56412C59CABF00DDDCFF /* SmartTipsProWatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTipsProWatchModel.swift; sourceTree = "<group>"; };
+		4D9D564D2C5A73C300DDDCFF /* SmartTipsProWatchExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = SmartTipsProWatchExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D9D564F2C5A73C300DDDCFF /* SmartTipsProWatchExtensionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTipsProWatchExtensionExtension.swift; sourceTree = "<group>"; };
+		4D9D56512C5A73C300DDDCFF /* SmartTipsProWatchExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTipsProWatchExtension.swift; sourceTree = "<group>"; };
+		4D9D56532C5A73C300DDDCFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DA44B6D2BA264DB005EC103 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		4DA44B732BA26706005EC103 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		4DB69D2A2BC4B318005B5B68 /* ReviewEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewEmail.swift; sourceTree = "<group>"; };
 		4DB69D302BC4B5FE005B5B68 /* MailSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailSwiftUIView.swift; sourceTree = "<group>"; };
 		4DB7C8F92C0F75A9004049F0 /* AdditionsToMainUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionsToMainUI.swift; sourceTree = "<group>"; };
+		4DC7B6CE2C5A8C3F000AAF50 /* UI_Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI_Constants.swift; sourceTree = "<group>"; };
+		4DC7B6D02C5A8FE8000AAF50 /* OutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputView.swift; sourceTree = "<group>"; };
 		4DC8AB822BA27DF9002AB3BF /* SplashAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAnimator.swift; sourceTree = "<group>"; };
 		4DC9576E2C57F20200586D28 /* SmartTipsProWatchLandmarks Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmartTipsProWatchLandmarks Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC957702C57F20200586D28 /* SmartTipsProWatchLandmarksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTipsProWatchLandmarksApp.swift; sourceTree = "<group>"; };
-		4DC957722C57F20200586D28 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4DC957722C57F20200586D28 /* SmartTipsProContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTipsProContentView.swift; sourceTree = "<group>"; };
 		4DC9577D2C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SmartTipsProWatchLandmarks Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC957812C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTipsProWatchLandmarks_Watch_AppTests.swift; sourceTree = "<group>"; };
 		4DC957872C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SmartTipsProWatchLandmarks Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -267,6 +300,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A48C9A7C643FFA422C02F70B /* Pods_SmartTipsProTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D9D564A2C5A73C300DDDCFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +465,7 @@
 				4DC9576F2C57F20200586D28 /* SmartTipsProWatchLandmarks Watch App */,
 				4DC957802C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppTests */,
 				4DC9578A2C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppUITests */,
+				4D9D564E2C5A73C300DDDCFF /* SmartTipsProWatchExtension */,
 				4D416FAE2B9F398B00333567 /* Products */,
 				86665EC783848114D02D9D70 /* Pods */,
 				8918B0F3DF8CBF9042DF1972 /* Frameworks */,
@@ -440,6 +481,7 @@
 				4DC9576E2C57F20200586D28 /* SmartTipsProWatchLandmarks Watch App.app */,
 				4DC9577D2C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppTests.xctest */,
 				4DC957872C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppUITests.xctest */,
+				4D9D564D2C5A73C300DDDCFF /* SmartTipsProWatchExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -559,6 +601,16 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		4D9D564E2C5A73C300DDDCFF /* SmartTipsProWatchExtension */ = {
+			isa = PBXGroup;
+			children = (
+				4D9D564F2C5A73C300DDDCFF /* SmartTipsProWatchExtensionExtension.swift */,
+				4D9D56512C5A73C300DDDCFF /* SmartTipsProWatchExtension.swift */,
+				4D9D56532C5A73C300DDDCFF /* Info.plist */,
+			);
+			path = SmartTipsProWatchExtension;
+			sourceTree = "<group>";
+		};
 		4DA44B722BA2668B005EC103 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
@@ -584,13 +636,41 @@
 			path = SentEmailView;
 			sourceTree = "<group>";
 		};
+		4DC7B6CB2C5A8175000AAF50 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4DC7B6CC2C5A8187000AAF50 /* DecimalPad */,
+				4DC957722C57F20200586D28 /* SmartTipsProContentView.swift */,
+				4DC7B6D02C5A8FE8000AAF50 /* OutputView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4DC7B6CC2C5A8187000AAF50 /* DecimalPad */ = {
+			isa = PBXGroup;
+			children = (
+				4D9D563F2C59C9BA00DDDCFF /* SmartTipsProDecimalPad.swift */,
+			);
+			path = DecimalPad;
+			sourceTree = "<group>";
+		};
+		4DC7B6CD2C5A81D4000AAF50 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D9D56412C59CABF00DDDCFF /* SmartTipsProWatchModel.swift */,
+				4DC7B6CE2C5A8C3F000AAF50 /* UI_Constants.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4DC9576F2C57F20200586D28 /* SmartTipsProWatchLandmarks Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				4DC7B6CD2C5A81D4000AAF50 /* Model */,
+				4DC7B6CB2C5A8175000AAF50 /* View */,
 				4DF6A5732C59A6FA0093EAB3 /* Preview Content */,
 				4DF6A56E2C5934BB0093EAB3 /* SmartTipsProWatchLandmarks-Watch-App-Info.plist */,
 				4DC957702C57F20200586D28 /* SmartTipsProWatchLandmarksApp.swift */,
-				4DC957722C57F20200586D28 /* ContentView.swift */,
 			);
 			path = "SmartTipsProWatchLandmarks Watch App";
 			sourceTree = "<group>";
@@ -761,6 +841,23 @@
 			productReference = 4D701B5A2C5146B900676AF7 /* SmartTipsProTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		4D9D564C2C5A73C300DDDCFF /* SmartTipsProWatchExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D9D56572C5A73C300DDDCFF /* Build configuration list for PBXNativeTarget "SmartTipsProWatchExtension" */;
+			buildPhases = (
+				4D9D56492C5A73C300DDDCFF /* Sources */,
+				4D9D564A2C5A73C300DDDCFF /* Frameworks */,
+				4D9D564B2C5A73C300DDDCFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartTipsProWatchExtension;
+			productName = SmartTipsProWatchExtension;
+			productReference = 4D9D564D2C5A73C300DDDCFF /* SmartTipsProWatchExtension.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
+		};
 		4DC9576D2C57F20200586D28 /* SmartTipsProWatchLandmarks Watch App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DC957992C57F20400586D28 /* Build configuration list for PBXNativeTarget "SmartTipsProWatchLandmarks Watch App" */;
@@ -768,10 +865,12 @@
 				4DC9576A2C57F20200586D28 /* Sources */,
 				4DC9576B2C57F20200586D28 /* Frameworks */,
 				4DC9576C2C57F20200586D28 /* Resources */,
+				4D9D565A2C5A73C300DDDCFF /* Embed ExtensionKit Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4D9D56552C5A73C300DDDCFF /* PBXTargetDependency */,
 			);
 			name = "SmartTipsProWatchLandmarks Watch App";
 			productName = "SmartTipsProWatchLandmarks Watch App";
@@ -835,6 +934,9 @@
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 4D416FAC2B9F398B00333567;
 					};
+					4D9D564C2C5A73C300DDDCFF = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					4DC9576D2C57F20200586D28 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -867,6 +969,7 @@
 				4D701B4A2C5146A000676AF7 /* SmartTipsProUITests */,
 				4D701B592C5146B900676AF7 /* SmartTipsProTests */,
 				4DC9576D2C57F20200586D28 /* SmartTipsProWatchLandmarks Watch App */,
+				4D9D564C2C5A73C300DDDCFF /* SmartTipsProWatchExtension */,
 				4DC9577C2C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppTests */,
 				4DC957862C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppUITests */,
 			);
@@ -916,6 +1019,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4D701B582C5146B900676AF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D9D564B2C5A73C300DDDCFF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1116,12 +1226,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4D9D56492C5A73C300DDDCFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D9D56522C5A73C300DDDCFF /* SmartTipsProWatchExtension.swift in Sources */,
+				4D9D56502C5A73C300DDDCFF /* SmartTipsProWatchExtensionExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4DC9576A2C57F20200586D28 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DC957732C57F20200586D28 /* ContentView.swift in Sources */,
+				4DC7B6CF2C5A8C3F000AAF50 /* UI_Constants.swift in Sources */,
+				4DC957732C57F20200586D28 /* SmartTipsProContentView.swift in Sources */,
 				4DC957712C57F20200586D28 /* SmartTipsProWatchLandmarksApp.swift in Sources */,
+				4D9D56402C59C9BA00DDDCFF /* SmartTipsProDecimalPad.swift in Sources */,
+				4D9D56422C59CABF00DDDCFF /* SmartTipsProWatchModel.swift in Sources */,
+				4DC7B6D12C5A8FE8000AAF50 /* OutputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1154,6 +1277,11 @@
 			isa = PBXTargetDependency;
 			target = 4D416FAC2B9F398B00333567 /* SmartTipsPro */;
 			targetProxy = 4D701B5E2C5146B900676AF7 /* PBXContainerItemProxy */;
+		};
+		4D9D56552C5A73C300DDDCFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D9D564C2C5A73C300DDDCFF /* SmartTipsProWatchExtension */;
+			targetProxy = 4D9D56542C5A73C300DDDCFF /* PBXContainerItemProxy */;
 		};
 		4DC9577F2C57F20400586D28 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1532,9 +1660,70 @@
 			};
 			name = Release;
 		};
+		4D9D56582C5A73C300DDDCFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3JQPLE5ZEK;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SmartTipsProWatchExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SmartTipsProWatchExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.Raman-Kozar.SmartTipsPro.watchkitapp.SmartTipsProWatchExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		4D9D56592C5A73C300DDDCFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3JQPLE5ZEK;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SmartTipsProWatchExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SmartTipsProWatchExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.Raman-Kozar.SmartTipsPro.watchkitapp.SmartTipsProWatchExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
 		4DC957932C57F20400586D28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_AW;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1570,6 +1759,7 @@
 		4DC957942C57F20400586D28 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_AW;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1723,6 +1913,15 @@
 			buildConfigurations = (
 				4D701B612C5146B900676AF7 /* Debug */,
 				4D701B622C5146B900676AF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D9D56572C5A73C300DDDCFF /* Build configuration list for PBXNativeTarget "SmartTipsProWatchExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D9D56582C5A73C300DDDCFF /* Debug */,
+				4D9D56592C5A73C300DDDCFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

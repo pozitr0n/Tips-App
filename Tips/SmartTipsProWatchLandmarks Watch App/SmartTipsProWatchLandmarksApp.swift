@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct SmartTipsProWatchLandmarks_Watch_AppApp: App {
-    var body: some Scene {
+    
+    @StateObject private var model = SmartTipsProWatchModel()
+
+    @SceneBuilder var body: some Scene {
+
         WindowGroup {
-            ContentView()
+            NavigationView {
+                SmartTipsProContentView()
+                    .environmentObject(model)
+            }
         }
+        
     }
+    
 }
