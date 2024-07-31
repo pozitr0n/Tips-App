@@ -1,6 +1,7 @@
 # Smart Tips Pro
 
 [![Platform](http://img.shields.io/badge/platform-iOS-blue.svg?style=flat)](https://developer.apple.com/iphone/index.action)
+[![iOS](https://img.shields.io/badge/iOS-14.0%2B-blue)]
 [![Language](http://img.shields.io/badge/language-Swift-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
 [![License](http://img.shields.io/badge/license-GPL-lightgrey.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.html)
 

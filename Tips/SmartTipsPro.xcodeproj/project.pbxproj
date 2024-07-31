@@ -587,19 +587,12 @@
 		4DC9576F2C57F20200586D28 /* SmartTipsProWatchLandmarks Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				4DF6A5732C59A6FA0093EAB3 /* Preview Content */,
 				4DF6A56E2C5934BB0093EAB3 /* SmartTipsProWatchLandmarks-Watch-App-Info.plist */,
 				4DC957702C57F20200586D28 /* SmartTipsProWatchLandmarksApp.swift */,
 				4DC957722C57F20200586D28 /* ContentView.swift */,
-				4DC957762C57F20400586D28 /* Preview Content */,
 			);
 			path = "SmartTipsProWatchLandmarks Watch App";
-			sourceTree = "<group>";
-		};
-		4DC957762C57F20400586D28 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		4DC957802C57F20400586D28 /* SmartTipsProWatchLandmarks Watch AppTests */ = {
@@ -670,9 +663,16 @@
 			isa = PBXGroup;
 			children = (
 				4D416FB92B9F399000333567 /* Assets.xcassets */,
-				4DF6A5712C59A3460093EAB3 /* AddAssets.xcassets */,
 			);
 			path = MainAsset;
+			sourceTree = "<group>";
+		};
+		4DF6A5732C59A6FA0093EAB3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4DF6A5712C59A3460093EAB3 /* AddAssets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		86665EC783848114D02D9D70 /* Pods */ = {
