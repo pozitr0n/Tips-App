@@ -16,7 +16,7 @@ class UI_Constants {
     let smartTipsProDecimalPadButtonColor = Color(red: 0.085, green: 0.085, blue: 0.085)
     
     // Change to Percentage().getCurrentPercentage()
-    let tipsPercentage = 20.0
+    let tipsPercentage = 0.0
     
     let imageSpacerWidth: CGFloat = 8.0
     

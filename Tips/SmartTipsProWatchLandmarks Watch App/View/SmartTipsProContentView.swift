@@ -22,7 +22,7 @@ struct SmartTipsProContentView: View {
                 Image("icon-bill-applewatch")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 35, height: 35)
+                    .frame(width: 30, height: 30)
                     .font(.title2)
                 Spacer()
                     .frame(width: UI_Constants.shared.imageSpacerWidth)
@@ -54,7 +54,7 @@ struct SmartTipsProContentView: View {
                 Image("icon-persons-applewatch")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 35, height: 35)
+                    .frame(width: 30, height: 30)
                     .font(.title2)
                 
                 Spacer()
@@ -102,7 +102,7 @@ struct SmartTipsProContentView: View {
                 Image("icon-tips-applewatch")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 35, height: 35)
+                    .frame(width: 30, height: 30)
                     .font(.title2)
                
                 Spacer()
@@ -123,9 +123,9 @@ struct SmartTipsProContentView: View {
             // Output information
             Group {
                 
-                OutputView(label: "Tip", value: currentModel.amountOfTips, format: "$%0.2f")
-                OutputView(label: "Each", value: currentModel.amountPerPerson, format: "$%0.2f")
-                OutputView(label: "Total", value: currentModel.totalBill, format: "$%0.2f")
+                OutputView(label: "Tip", value: currentModel.amountOfTips, format: "%0.2f")
+                OutputView(label: "Each", value: currentModel.amountPerPerson, format: "%0.2f")
+                OutputView(label: "Total", value: currentModel.totalBill, format: "%0.2f")
                 
             }
             
