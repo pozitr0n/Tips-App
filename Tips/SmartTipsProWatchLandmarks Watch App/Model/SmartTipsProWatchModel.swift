@@ -84,10 +84,10 @@ final class SmartTipsProWatchModel: ObservableObject {
         if var amountOfPeopleValue = Int(amountOfPeople) {
             
             amountOfPeopleValue += 1
-            amountOfPeople = String(amountOfPeopleValue)
+            amountOfPeople      = String(amountOfPeopleValue)
             
         } else if amountOfPeople == "" {
-            amountOfPeople = "2"
+            amountOfPeople      = "2"
         }
         
     }
@@ -97,8 +97,10 @@ final class SmartTipsProWatchModel: ObservableObject {
         if var amountOfPeopleValue = Int(amountOfPeople) {
             
             if amountOfPeopleValue > 1 {
+                
                 amountOfPeopleValue -= 1
-                amountOfPeople = String(amountOfPeopleValue)
+                amountOfPeople      = String(amountOfPeopleValue)
+                
             }
             
         }
