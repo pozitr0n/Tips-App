@@ -129,6 +129,18 @@ struct SmartTipsProContentView: View {
                 
             }
             
+            Button(action: {
+                print("test")
+            }) {
+                Image(systemName: "folder.circle")
+                    .font(.title3)
+                Image(systemName: "arrow.forward")
+                    .font(.title3)
+                Image(systemName: "iphone.circle")
+                    .font(.title3)
+            }
+            .colorMultiply(.controlBackground)
+            
         }
         .fullScreenCover(isPresented: $showingBillInputView) {
             SmartTipsProDecimalPad(currentText: $currentModel.billTips)
