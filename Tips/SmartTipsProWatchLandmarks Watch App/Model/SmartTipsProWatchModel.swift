@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import WatchConnectivity
 
 final class SmartTipsProWatchModel: ObservableObject {
     
@@ -13,6 +14,8 @@ final class SmartTipsProWatchModel: ObservableObject {
     var amountOfTips: Double
     var amountPerPerson: Double
     var totalBill: Double
+    var billTipsValue: Double
+    var amountOfPeopleValue: Double
     
     // Initialization
     //
@@ -21,7 +24,9 @@ final class SmartTipsProWatchModel: ObservableObject {
         amountOfTips = 0.00
         amountPerPerson = 0.00
         totalBill = 0.00
-        
+        billTipsValue = 0.00
+        amountOfPeopleValue = 0.00
+
     }
     
     // Billing Tips
@@ -57,9 +62,12 @@ final class SmartTipsProWatchModel: ObservableObject {
     
     func updateTipsInfo() {
         
-        if let billTipsValue = Double(billTips) {
+        if let currBillTipsValue = Double(billTips) {
             
-            let amountOfPeopleValue = Double(amountOfPeople) ?? 1.0
+            billTipsValue = currBillTipsValue
+            
+            let curr_amountOfPeopleValue = Double(amountOfPeople) ?? 1.0
+            amountOfPeopleValue = curr_amountOfPeopleValue
             
             if billTipsValue >= 0 && amountOfPeopleValue > 0  {
                 
@@ -119,6 +127,25 @@ final class SmartTipsProWatchModel: ObservableObject {
     
     func decrementingAmountOfPeopleEnabled() -> Bool {
         return amountOfPeople == "" || amountOfPeople == "1" ? false : true
+    }
+    
+    func transferDataTo_iPhone() {
+    
+        if WCSession.isSupported() {
+        
+            let session = WCSession.default
+            
+            let dictionaryToTransfer: [String : Any] = ["bill" : billTipsValue,
+                                                        "amountOfPeople" : amountOfPeopleValue,
+                                                        "tipsPercent" : percentOfTips,
+                                                        "tip" : amountOfTips,
+                                                        "eachTip" : amountPerPerson,
+                                                        "total" : totalBill]
+            
+            session.transferUserInfo(dictionaryToTransfer)
+            
+        }
+        
     }
     
 }

@@ -130,7 +130,7 @@ struct SmartTipsProContentView: View {
             }
             
             Button(action: {
-                print("test")
+                currentModel.transferDataTo_iPhone()
             }) {
                 Image(systemName: "folder.circle")
                     .font(.title3)

@@ -72,4 +72,20 @@ extension AppDelegate: WCSessionDelegate {
         
     }
     
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+        
+        if let bill = userInfo["bill"] as? Double, 
+            let amountOfPeople = userInfo["amountOfPeople"] as? Double,
+            let tipsPercent = userInfo["tipsPercent"] as? Double,
+            let tip = userInfo["tip"] as? Double,
+            let eachTip = userInfo["eachTip"] as? Double,
+            let total = userInfo["total"] as? Double {
+            
+            // save/watch
+            print("\(bill) \(amountOfPeople) \(tipsPercent) \(tip) \(eachTip) \(total)")
+            
+        }
+        
+    }
+    
 }
