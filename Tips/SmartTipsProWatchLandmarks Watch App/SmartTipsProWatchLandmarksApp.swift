@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import WatchConnectivity
 
 @main
 struct SmartTipsProWatchLandmarks_Watch_AppApp: App {
     
+    @WKExtensionDelegateAdaptor(ExtensionDelegate.self) var extensionDelegate
     @StateObject private var model = SmartTipsProWatchModel()
 
     @SceneBuilder var body: some Scene {
@@ -19,6 +21,40 @@ struct SmartTipsProWatchLandmarks_Watch_AppApp: App {
                 SmartTipsProContentView()
                     .environmentObject(model)
             }
+        }
+        
+    }
+    
+}
+
+class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
+    
+    override init() {
+        
+        super.init()
+        setupWatchConnectivity()
+        
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: (any Error)?) {
+        
+        if let error = error {
+            fatalError("Can't activate session with error: \(error.localizedDescription)")
+        }
+        
+        print("WC Session activated with state: \(activationState.rawValue)")
+        
+    }
+    
+    func setupWatchConnectivity() {
+        
+        if WCSession.isSupported() {
+            
+            let session = WCSession.default
+            
+            session.delegate = self
+            session.activate()
+            
         }
         
     }
