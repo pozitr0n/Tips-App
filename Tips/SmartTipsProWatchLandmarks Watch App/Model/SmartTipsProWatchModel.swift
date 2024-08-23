@@ -131,6 +131,10 @@ final class SmartTipsProWatchModel: ObservableObject {
     
     func transferDataTo_iPhone() {
     
+        if amountOfTips == 0.00 && amountPerPerson == 0.00 && totalBill == 0.00 && billTipsValue == 0.00 && amountOfPeopleValue == 0.00 {
+            return
+        }
+        
         if WCSession.isSupported() {
         
             let session = WCSession.default
@@ -143,6 +147,8 @@ final class SmartTipsProWatchModel: ObservableObject {
                                                         "total" : totalBill]
             
             session.transferUserInfo(dictionaryToTransfer)
+            
+            // add "0" to all the parameters
             
         }
         
