@@ -28,7 +28,7 @@ final class SmartTipsProWatchModel: ObservableObject {
         amountOfPeopleValue = 0.00
 
     }
-    
+
     // Billing Tips
     @Published var billTips = "" {
         didSet {
@@ -129,10 +129,10 @@ final class SmartTipsProWatchModel: ObservableObject {
         return amountOfPeople == "" || amountOfPeople == "1" ? false : true
     }
     
-    func transferDataTo_iPhone() {
+    func transferDataTo_iPhone() -> Bool {
     
         if amountOfTips == 0.00 && amountPerPerson == 0.00 && totalBill == 0.00 && billTipsValue == 0.00 && amountOfPeopleValue == 0.00 {
-            return
+            return true
         }
         
         if WCSession.isSupported() {
@@ -148,9 +148,23 @@ final class SmartTipsProWatchModel: ObservableObject {
             
             session.transferUserInfo(dictionaryToTransfer)
             
-            // add "0" to all the parameters
+            // add clearing to all the parameters
+            percentOfTips = 0.00
+            
+            billTips = ""
+            billTipsValue = 0.00
+            
+            amountOfPeople = ""
+            amountOfPeopleValue = 0.00
+            
+            amountPerPerson = 0.00
+            totalBill = 0.00
+            
+            return false
             
         }
+        
+        return true
         
     }
     

@@ -11,6 +11,7 @@ struct SmartTipsProContentView: View {
 
     @EnvironmentObject private var currentModel: SmartTipsProWatchModel
     @State var showingBillInputView = false
+    @State private var showAlert = false
     
     var body: some View {
         
@@ -130,8 +131,9 @@ struct SmartTipsProContentView: View {
             }
             
             Button(action: {
-                currentModel.transferDataTo_iPhone()
-            }) {
+                showAlert = currentModel.transferDataTo_iPhone()
+            })
+            {
                 Image(systemName: "folder.circle")
                     .font(.title3)
                 Image(systemName: "arrow.forward")
@@ -140,6 +142,9 @@ struct SmartTipsProContentView: View {
                     .font(.title3)
             }
             .colorMultiply(.controlBackground)
+            .alert("There is no data for transfering", isPresented: $showAlert) {
+                Button("OK", role: .none) { }
+            }
             
         }
         .fullScreenCover(isPresented: $showingBillInputView) {
