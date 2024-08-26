@@ -79,11 +79,34 @@ extension AppDelegate: WCSessionDelegate {
             let tipsPercent = userInfo["tipsPercent"] as? Double,
             let tip = userInfo["tip"] as? Double,
             let eachTip = userInfo["eachTip"] as? Double,
-            let total = userInfo["total"] as? Double {
+            let total = userInfo["total"] as? Double,
+            let selectedCurrency = userInfo["selectedCurrency"] as? String {
             
-            // save/watch
-            print("\(bill) \(amountOfPeople) \(tipsPercent) \(tip) \(eachTip) \(total)")
+            // save from Apple Watch to Realm database to the main device
             
+            let currentDateTime = Date()
+
+            let formatterShort = DateFormatter()
+            formatterShort.timeStyle = .none
+            formatterShort.dateStyle = .medium
+            
+            let formatterLong = DateFormatter()
+            formatterLong.timeStyle = .medium
+            formatterLong.dateStyle = .medium
+
+            let currentShortDateTimeString = formatterShort.string(from: currentDateTime)
+            let currentLongDateTimeString  = formatterLong.string(from: currentDateTime)
+            
+            print(TransferData().addTransferingDataToRealm(idDate: currentLongDateTimeString,
+                                                     tipDate: currentShortDateTimeString,
+                                                     tipCurrency: selectedCurrency,
+                                                     tipBill: SmartTipsProWatchModelCalculations().getNSDecimalNumber(value: bill, maximumFractionDigits: 2),
+                                                     tipPercent: SmartTipsProWatchModelCalculations().getNSDecimalNumber(value: tipsPercent, maximumFractionDigits: 2),
+                                                     tipTips: SmartTipsProWatchModelCalculations().getNSDecimalNumber(value: tip, maximumFractionDigits: 2),
+                                                     tipTotal: SmartTipsProWatchModelCalculations().getNSDecimalNumber(value: total, maximumFractionDigits: 2),
+                                                     tipPeople: Int(SmartTipsProWatchModelCalculations().getNSDecimalNumber(value: amountOfPeople, maximumFractionDigits: 2)),
+                                                     tipEachPay: SmartTipsProWatchModelCalculations().getNSDecimalNumber(value: eachTip, maximumFractionDigits: 2)))
+                                                     
         }
         
     }

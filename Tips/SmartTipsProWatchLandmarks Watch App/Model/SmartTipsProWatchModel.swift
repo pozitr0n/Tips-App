@@ -16,6 +16,7 @@ final class SmartTipsProWatchModel: ObservableObject {
     var totalBill: Double
     var billTipsValue: Double
     var amountOfPeopleValue: Double
+    var selectedCurrencyValue: String
     
     // Initialization
     //
@@ -26,6 +27,7 @@ final class SmartTipsProWatchModel: ObservableObject {
         totalBill = 0.00
         billTipsValue = 0.00
         amountOfPeopleValue = 0.00
+        selectedCurrencyValue = ""
 
     }
 
@@ -33,6 +35,13 @@ final class SmartTipsProWatchModel: ObservableObject {
     @Published var billTips = "" {
         didSet {
             updateTipsInfo()
+        }
+    }
+    
+    // Currency
+    @Published var selectedCurrency = UI_Constants.shared.currentCurrency {
+        didSet {
+            selectedCurrencyValue = selectedCurrency
         }
     }
     
@@ -144,7 +153,8 @@ final class SmartTipsProWatchModel: ObservableObject {
                                                         "tipsPercent" : percentOfTips,
                                                         "tip" : amountOfTips,
                                                         "eachTip" : amountPerPerson,
-                                                        "total" : totalBill]
+                                                        "total" : totalBill,
+                                                        "selectedCurrency" : selectedCurrency]
             
             session.transferUserInfo(dictionaryToTransfer)
             
@@ -169,3 +179,5 @@ final class SmartTipsProWatchModel: ObservableObject {
     }
     
 }
+
+

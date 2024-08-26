@@ -20,6 +20,8 @@ class UI_Constants {
     
     let imageSpacerWidth: CGFloat = 8.0
     
+    let currentCurrency: String = "PLN"
+    
     private init () {}
     
 }

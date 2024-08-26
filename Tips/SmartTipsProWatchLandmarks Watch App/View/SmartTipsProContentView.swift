@@ -12,6 +12,12 @@ struct SmartTipsProContentView: View {
     @EnvironmentObject private var currentModel: SmartTipsProWatchModel
     @State var showingBillInputView = false
     @State private var showAlert = false
+    @State private var selectedCurrency = UI_Constants.shared.currentCurrency
+    
+    let availableCurrencies: [String] = {
+        let locales = Locale.availableIdentifiers.map { Locale(identifier: $0) }
+        return locales.compactMap { $0.currency?.identifier }.uniqued()
+    }()
     
     var body: some View {
         
@@ -48,6 +54,56 @@ struct SmartTipsProContentView: View {
             }
             .font(.title2)
             .padding(.bottom)
+            
+            HStack(alignment: .center) {
+                
+                Image("icon-currency-applewatch")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 30, height: 30)
+                    .font(.title2)
+                Spacer()
+                    .frame(width: UI_Constants.shared.imageSpacerWidth)
+                Text("Currency")
+                    .font(.title3)
+                Spacer()
+                
+            }
+            
+            HStack() {
+                
+                Picker("Select Currency", selection: $selectedCurrency) {
+                    
+                    ForEach(availableCurrencies, id: \.self) { currencyCode in
+                        
+                        let currSymbol = String(describing: smartTipsProWatchModelGetSymbol(forCurrencyCode: currencyCode))
+                        
+                        if currencyCode != currSymbol
+                            && !currSymbol.isEmpty {
+                            
+                            Text("\(currencyCode) (\(currSymbol))")
+                                .tag(currencyCode)
+                            
+                        } else {
+                            
+                            Text("\(currencyCode)")
+                                .tag(currencyCode)
+                            
+                        }
+                        
+                    }
+                    
+                }
+                .pickerStyle(WheelPickerStyle())
+                .labelsHidden()
+                .onSubmit {
+                    currentModel.selectedCurrency = selectedCurrency
+                }
+                
+            }
+            .font(.title2)
+            .padding(.bottom)
+            .frame(height: 45)
             
             // Amount of people (dividing the bill)
             HStack(alignment: .center) {
@@ -152,6 +208,30 @@ struct SmartTipsProContentView: View {
         }
         .lineLimit(1)
         .minimumScaleFactor(0.1)
+        
+    }
+ 
+    func smartTipsProWatchModelGetSymbol(forCurrencyCode code: String) -> String {
+        
+        let locale = NSLocale(localeIdentifier: code)
+        
+        if locale.displayName(forKey: .currencySymbol, value: code) == code {
+            
+            let newlocale = NSLocale(localeIdentifier: code.dropLast() + "_en")
+            
+            guard let _newlocale = newlocale.displayName(forKey: .currencySymbol, value: code) else {
+                return ""
+            }
+            
+            return _newlocale
+            
+        }
+        
+        guard let _newlocale = locale.displayName(forKey: .currencySymbol, value: code) else {
+            return ""
+        }
+        
+        return _newlocale
         
     }
     

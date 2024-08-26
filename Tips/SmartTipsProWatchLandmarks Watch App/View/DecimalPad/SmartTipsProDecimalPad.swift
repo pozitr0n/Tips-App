@@ -217,6 +217,7 @@ struct SmartTipsProDecimalPad: View {
                         .foregroundColor(.blue)
                 }
                 .frame(height: 20)
+                .padding(.top, 10)
                 
             }
             

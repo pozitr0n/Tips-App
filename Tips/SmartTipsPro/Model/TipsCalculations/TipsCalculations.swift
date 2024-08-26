@@ -78,3 +78,15 @@ class TipsCalculations {
     }
     
 }
+
+final class SmartTipsProWatchModelCalculations {
+    
+    func getNSDecimalNumber(value: Double, maximumFractionDigits: Int) -> Double {
+        
+        let decimalNumber = NSDecimalNumber(value: value)
+        let roundingBehavior = NSDecimalNumberHandler(roundingMode: .plain, scale: 2, raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false)
+        return Double(truncating: decimalNumber.rounding(accordingToBehavior: roundingBehavior))
+        
+    }
+    
+}

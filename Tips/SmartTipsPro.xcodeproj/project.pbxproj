@@ -86,6 +86,9 @@
 		4DC9579C2C57FA4F00586D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D416FB92B9F399000333567 /* Assets.xcassets */; };
 		4DCF3EF12C5C593B00D419E7 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCF3EF02C5C593B00D419E7 /* WatchConnectivity.framework */; };
 		4DCF3EF52C5C5E4B00D419E7 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCF3EF42C5C5E4B00D419E7 /* WatchConnectivity.framework */; };
+		4DD568182C7CC51600856D41 /* TransferData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD568172C7CC51600856D41 /* TransferData.swift */; };
+		4DD5681F2C7CCFD900856D41 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD5681E2C7CCFD900856D41 /* Extensions.swift */; };
+		4DD568202C7CCFD900856D41 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD5681E2C7CCFD900856D41 /* Extensions.swift */; };
 		4DE4B8892BB9E9A300894158 /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4B8882BB9E9A300894158 /* Currencies.swift */; };
 		4DE4B88C2BBA3B1200894158 /* DefaultPercentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4B88B2BBA3B1200894158 /* DefaultPercentage.swift */; };
 		4DE4D6212BAFCA5500160224 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4D6202BAFCA5500160224 /* Icons.swift */; };
@@ -265,6 +268,8 @@
 		4DCF3EF22C5C596600D419E7 /* SmartTipsPro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartTipsPro.entitlements; sourceTree = "<group>"; };
 		4DCF3EF32C5C5B1800D419E7 /* SmartTipsProWatchExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartTipsProWatchExtension.entitlements; sourceTree = "<group>"; };
 		4DCF3EF42C5C5E4B00D419E7 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		4DD568172C7CC51600856D41 /* TransferData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferData.swift; sourceTree = "<group>"; };
+		4DD5681E2C7CCFD900856D41 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4DE4B8882BB9E9A300894158 /* Currencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
 		4DE4B88B2BBA3B1200894158 /* DefaultPercentage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPercentage.swift; sourceTree = "<group>"; };
 		4DE4D6202BAFCA5500160224 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
@@ -669,6 +674,7 @@
 			children = (
 				4D9D56412C59CABF00DDDCFF /* SmartTipsProWatchModel.swift */,
 				4DC7B6CE2C5A8C3F000AAF50 /* UI_Constants.swift */,
+				4DD568172C7CC51600856D41 /* TransferData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -676,6 +682,7 @@
 		4DC9576F2C57F20200586D28 /* SmartTipsProWatchLandmarks Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				4DD5681D2C7CCFA700856D41 /* Extensions */,
 				4DC7B6CD2C5A81D4000AAF50 /* Model */,
 				4DC7B6CB2C5A8175000AAF50 /* View */,
 				4DF6A5732C59A6FA0093EAB3 /* Preview Content */,
@@ -700,6 +707,14 @@
 				4DC9578D2C57F20400586D28 /* SmartTipsProWatchLandmarks_Watch_AppUITestsLaunchTests.swift */,
 			);
 			path = "SmartTipsProWatchLandmarks Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		4DD5681D2C7CCFA700856D41 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4DD5681E2C7CCFD900856D41 /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4DE4B88A2BBA3ADC00894158 /* DefaultPercentage */ = {
@@ -1192,6 +1207,7 @@
 				4DE4D6232BB10C2900160224 /* Extensions.swift in Sources */,
 				4D9ACDEB2BA37B340075C3F6 /* TabBarViewController.swift in Sources */,
 				4D6576DC2BF8C8A700A222C4 /* TipsCalulatorUI.swift in Sources */,
+				4DD568182C7CC51600856D41 /* TransferData.swift in Sources */,
 				4D015CB02BFD5BAE00B095BF /* TipsStepper.swift in Sources */,
 				4D1C119D2B9FF21400FEAB9E /* FavouriteSwiftUIView.swift in Sources */,
 				4DA44B6E2BA264DB005EC103 /* SplashViewController.swift in Sources */,
@@ -1243,6 +1259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D9D56522C5A73C300DDDCFF /* SmartTipsProWatchExtension.swift in Sources */,
+				4DD568202C7CCFD900856D41 /* Extensions.swift in Sources */,
 				4D9D56502C5A73C300DDDCFF /* SmartTipsProWatchExtensionExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1257,6 +1274,7 @@
 				4D9D56402C59C9BA00DDDCFF /* SmartTipsProDecimalPad.swift in Sources */,
 				4D9D56422C59CABF00DDDCFF /* SmartTipsProWatchModel.swift in Sources */,
 				4DC7B6D12C5A8FE8000AAF50 /* OutputView.swift in Sources */,
+				4DD5681F2C7CCFD900856D41 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
