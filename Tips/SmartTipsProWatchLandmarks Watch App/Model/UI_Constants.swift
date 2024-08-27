@@ -15,12 +15,13 @@ class UI_Constants {
     // Default Decimal Pad button color
     let smartTipsProDecimalPadButtonColor = Color(red: 0.085, green: 0.085, blue: 0.085)
     
-    // Change to Percentage().getCurrentPercentage()
-    let tipsPercentage = 0.0
-    
     let imageSpacerWidth: CGFloat = 8.0
     
-    let currentCurrency: String = "PLN"
+    // Future settings for UserDefaults for Apple Watch
+    // **
+    let tipsPercentage = 0.0
+    let selectedCurrency: String = "PLN"
+    // **
     
     private init () {}
     

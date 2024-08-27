@@ -12,7 +12,6 @@ struct SmartTipsProContentView: View {
     @EnvironmentObject private var currentModel: SmartTipsProWatchModel
     @State var showingBillInputView = false
     @State private var showAlert = false
-    @State private var selectedCurrency = UI_Constants.shared.currentCurrency
     
     let availableCurrencies: [String] = {
         let locales = Locale.availableIdentifiers.map { Locale(identifier: $0) }
@@ -72,7 +71,7 @@ struct SmartTipsProContentView: View {
             
             HStack() {
                 
-                Picker("Select Currency", selection: $selectedCurrency) {
+                Picker("Select Currency", selection: $currentModel.selectedCurrency) {
                     
                     ForEach(availableCurrencies, id: \.self) { currencyCode in
                         
@@ -96,9 +95,6 @@ struct SmartTipsProContentView: View {
                 }
                 .pickerStyle(WheelPickerStyle())
                 .labelsHidden()
-                .onSubmit {
-                    currentModel.selectedCurrency = selectedCurrency
-                }
                 
             }
             .font(.title2)

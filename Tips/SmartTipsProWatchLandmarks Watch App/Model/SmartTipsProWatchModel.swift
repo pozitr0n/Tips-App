@@ -50,9 +50,9 @@ class SmartTipsProWatchModel: ObservableObject, CalculationsWatchOS {
     }
     
     // Currency
-    @Published var selectedCurrency = UI_Constants.shared.currentCurrency {
+    @Published var selectedCurrency = UI_Constants.shared.selectedCurrency {
         didSet {
-            selectedCurrencyValue = selectedCurrency
+            updateTipsInfo()
         }
     }
     
@@ -83,6 +83,8 @@ class SmartTipsProWatchModel: ObservableObject, CalculationsWatchOS {
     func updateTipsInfo() {
         
         if let currBillTipsValue = Double(billTips) {
+            
+            selectedCurrencyValue = selectedCurrency
             
             billTipsValue = currBillTipsValue
             
