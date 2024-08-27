@@ -8,7 +8,18 @@
 import Foundation
 import WatchConnectivity
 
-final class SmartTipsProWatchModel: ObservableObject {
+protocol CalculationsWatchOS {
+    
+    func updateTipsInfo()
+    func incrementingAmountOfPeople()
+    func incrementingAmountOfPeopleEnabled() -> Bool
+    func decrementingAmountOfPeople()
+    func decrementingAmountOfPeopleEnabled() -> Bool
+    func transferDataTo_iPhone() -> Bool
+    
+}
+
+class SmartTipsProWatchModel: ObservableObject, CalculationsWatchOS {
     
     // Calculated yet
     var amountOfTips: Double

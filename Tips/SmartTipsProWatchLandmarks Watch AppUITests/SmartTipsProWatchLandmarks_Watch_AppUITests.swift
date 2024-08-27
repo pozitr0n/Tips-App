@@ -23,42 +23,35 @@ final class SmartTipsProWatchLandmarks_Watch_AppUITests: XCTestCase {
     }
 
     func testExample() throws {
-        
+    
         let app = XCUIApplication()
+        app.launch()
+        
+        sleep(5)
+        
         let scrollViewsQuery = app.scrollViews
+        let iconBillApplewatchElement = scrollViewsQuery.otherElements.containing(.image, identifier:"icon-bill-applewatch").element
+        iconBillApplewatchElement.swipeUp()
+        
         let elementsQuery = scrollViewsQuery.otherElements
-        elementsQuery.buttons["0.00"].tap()
-        app.buttons["5"].tap()
-        
-        let button = app.buttons["0"]
-        button.tap()
-        button.tap()
-        button.tap()
-        app.buttons["Done"].tap()
-        scrollViewsQuery.otherElements.containing(.image, identifier:"icon-bill-applewatch").element.swipeUp()
-        elementsQuery.otherElements["Select Currency"].tap()
-        
-        let peopleStaticText = elementsQuery.staticTexts["People"]
-        peopleStaticText.tap()
-        peopleStaticText.swipeUp()
-        
         let addButton = elementsQuery.buttons["Add"]
         addButton.tap()
         addButton.tap()
         addButton.tap()
         addButton.tap()
-        addButton.tap()
-        elementsQuery.staticTexts["Quick Tips"].swipeUp()
         elementsQuery.sliders["0%"].tap()
-        elementsQuery.sliders["1%"].tap()
-        elementsQuery.sliders["2%"].tap()
-        elementsQuery.sliders["3%"].tap()
-        elementsQuery.sliders["4%"].tap()
         
-        let staticText = elementsQuery/*@START_MENU_TOKEN@*/.staticTexts["750.00"]/*[[".buttons[\"Tip, 750.00\"].staticTexts[\"750.00\"]",".staticTexts[\"750.00\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        staticText.tap()
-        staticText.swipeUp()
-        elementsQuery.buttons["Move, arrow.forward, iphone.circle"].tap()
+        let quickTipsStaticText = elementsQuery.staticTexts["Quick Tips"]
+        quickTipsStaticText.swipeUp()
+        quickTipsStaticText.swipeDown()
+        elementsQuery.buttons["0.00"].tap()
+        
+        _ = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 1).children(matching: .other).element(boundBy: 1).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
+
+        app.buttons["Done"].tap()
+        iconBillApplewatchElement.swipeUp()
+        elementsQuery/*@START_MENU_TOKEN@*/.images["iphone.circle"]/*[[".buttons[\"Move, arrow.forward, iphone.circle\"].images[\"iphone.circle\"]",".images[\"iphone.circle\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        elementsQuery.buttons["Total, 0.00"].swipeDown()
         
     }
 
@@ -70,4 +63,5 @@ final class SmartTipsProWatchLandmarks_Watch_AppUITests: XCTestCase {
             }
         }
     }
+    
 }

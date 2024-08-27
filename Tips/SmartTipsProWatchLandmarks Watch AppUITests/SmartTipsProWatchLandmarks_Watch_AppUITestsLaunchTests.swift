@@ -29,4 +29,5 @@ final class SmartTipsProWatchLandmarks_Watch_AppUITestsLaunchTests: XCTestCase {
         attachment.lifetime = .keepAlways
         add(attachment)
     }
+    
 }
