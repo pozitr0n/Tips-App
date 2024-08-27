@@ -10,6 +10,7 @@ import SwiftUI
 struct SmartTipsProContentView: View {
 
     @EnvironmentObject private var currentModel: SmartTipsProWatchModel
+    
     @State var showingBillInputView = false
     @State private var showAlert = false
     
@@ -172,7 +173,7 @@ struct SmartTipsProContentView: View {
             }
             Slider(value: $currentModel.percentOfTips, in: 0...100, step: 1)
                 .padding(.bottom)
-            
+
             // Output information
             Group {
                 

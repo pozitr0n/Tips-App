@@ -57,7 +57,7 @@ class SmartTipsProWatchModel: ObservableObject, CalculationsWatchOS {
     }
     
     // Tips Percentage
-    @Published var percentOfTips = UI_Constants.shared.tipsPercentage {
+    @Published var percentOfTips = 0.0 {
         didSet {
             updateTipsInfo()
         }
@@ -68,7 +68,7 @@ class SmartTipsProWatchModel: ObservableObject, CalculationsWatchOS {
         
         didSet {
             if let percentOfTipsValue = Double(tipPercentString) { percentOfTips = percentOfTipsValue }
-            else if tipPercentString == "" { percentOfTips = UI_Constants.shared.tipsPercentage }
+            else if tipPercentString == "" { percentOfTips = 0.0 }
         }
         
     }
@@ -85,6 +85,7 @@ class SmartTipsProWatchModel: ObservableObject, CalculationsWatchOS {
         if let currBillTipsValue = Double(billTips) {
             
             selectedCurrencyValue = selectedCurrency
+            AppleWatchCurrencies().setCurrentCurrency(currentCode: selectedCurrencyValue)
             
             billTipsValue = currBillTipsValue
             

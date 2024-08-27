@@ -32,7 +32,9 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
     override init() {
         
         super.init()
+        
         setupWatchConnectivity()
+        setupUserDefaultSettings()
         
     }
     
@@ -57,6 +59,10 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
             
         }
         
+    }
+    
+    func setupUserDefaultSettings() {
+        AppleWatchCurrencies().getCurrentCurrency()
     }
     
 }

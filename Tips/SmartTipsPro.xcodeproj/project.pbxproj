@@ -47,6 +47,8 @@
 		4D548F402BA00BAA00D07A9E /* TipGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D548F3F2BA00BAA00D07A9E /* TipGuideViewController.swift */; };
 		4D5716062BC614C100B0AD1C /* WhatIsNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5716052BC614C100B0AD1C /* WhatIsNew.swift */; };
 		4D5E1BC82BBEC9C5003D03F1 /* tips-worldwide.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5E1BC72BBEC9C5003D03F1 /* tips-worldwide.json */; };
+		4D60163F2C7E186A0028D9B3 /* AppleWatchLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60163E2C7E186A0028D9B3 /* AppleWatchLanguages.swift */; };
+		4D6016412C7E19860028D9B3 /* AppleWatchCurrencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6016402C7E19860028D9B3 /* AppleWatchCurrencies.swift */; };
 		4D6576DC2BF8C8A700A222C4 /* TipsCalulatorUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6576DB2BF8C8A700A222C4 /* TipsCalulatorUI.swift */; };
 		4D6576DF2BF8CD1600A222C4 /* CurrencyTipsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6576DE2BF8CD1600A222C4 /* CurrencyTipsTextField.swift */; };
 		4D6576E12BF8CD5000A222C4 /* CurrencyTipsUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6576E02BF8CD5000A222C4 /* CurrencyTipsUITextField.swift */; };
@@ -218,6 +220,8 @@
 		4D548F3F2BA00BAA00D07A9E /* TipGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipGuideViewController.swift; sourceTree = "<group>"; };
 		4D5716052BC614C100B0AD1C /* WhatIsNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatIsNew.swift; sourceTree = "<group>"; };
 		4D5E1BC72BBEC9C5003D03F1 /* tips-worldwide.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tips-worldwide.json"; sourceTree = "<group>"; };
+		4D60163E2C7E186A0028D9B3 /* AppleWatchLanguages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleWatchLanguages.swift; sourceTree = "<group>"; };
+		4D6016402C7E19860028D9B3 /* AppleWatchCurrencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleWatchCurrencies.swift; sourceTree = "<group>"; };
 		4D6576DB2BF8C8A700A222C4 /* TipsCalulatorUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCalulatorUI.swift; sourceTree = "<group>"; };
 		4D6576DE2BF8CD1600A222C4 /* CurrencyTipsTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTipsTextField.swift; sourceTree = "<group>"; };
 		4D6576E02BF8CD5000A222C4 /* CurrencyTipsUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTipsUITextField.swift; sourceTree = "<group>"; };
@@ -675,6 +679,8 @@
 				4D9D56412C59CABF00DDDCFF /* SmartTipsProWatchModel.swift */,
 				4DC7B6CE2C5A8C3F000AAF50 /* UI_Constants.swift */,
 				4DD568172C7CC51600856D41 /* TransferData.swift */,
+				4D60163E2C7E186A0028D9B3 /* AppleWatchLanguages.swift */,
+				4D6016402C7E19860028D9B3 /* AppleWatchCurrencies.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1272,6 +1278,8 @@
 				4DC957732C57F20200586D28 /* SmartTipsProContentView.swift in Sources */,
 				4DC957712C57F20200586D28 /* SmartTipsProWatchLandmarksApp.swift in Sources */,
 				4D9D56402C59C9BA00DDDCFF /* SmartTipsProDecimalPad.swift in Sources */,
+				4D6016412C7E19860028D9B3 /* AppleWatchCurrencies.swift in Sources */,
+				4D60163F2C7E186A0028D9B3 /* AppleWatchLanguages.swift in Sources */,
 				4D9D56422C59CABF00DDDCFF /* SmartTipsProWatchModel.swift in Sources */,
 				4DC7B6D12C5A8FE8000AAF50 /* OutputView.swift in Sources */,
 				4DD5681F2C7CCFD900856D41 /* Extensions.swift in Sources */,
@@ -1784,7 +1792,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
 			};
 			name = Debug;
 		};
@@ -1820,7 +1828,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
 			};
 			name = Release;
 		};

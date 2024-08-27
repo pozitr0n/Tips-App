@@ -19,8 +19,8 @@ class UI_Constants {
     
     // Future settings for UserDefaults for Apple Watch
     // **
-    let tipsPercentage = 0.0
-    let selectedCurrency: String = "PLN"
+    var selectedCurrency: String = ""
+    let currentLanguage = AppleWatchLanguageOptions.en
     // **
     
     private init () {}
