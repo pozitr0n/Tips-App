@@ -1,0 +1,6 @@
+LICENSE filter=lfs diff=lfs merge=lfs -text
+README.md filter=lfs diff=lfs merge=lfs -text
+Texts filter=lfs diff=lfs merge=lfs -text
+Tips filter=lfs diff=lfs merge=lfs -text
+images filter=lfs diff=lfs merge=lfs -text
+json filter=lfs diff=lfs merge=lfs -text
