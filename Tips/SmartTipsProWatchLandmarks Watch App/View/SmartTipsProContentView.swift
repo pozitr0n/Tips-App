@@ -5,6 +5,7 @@
 //  Created by Raman Kozar on 29/07/2024.
 //
 
+
 import SwiftUI
 
 struct SmartTipsProContentView: View {
@@ -13,14 +14,18 @@ struct SmartTipsProContentView: View {
     
     @State var showingBillInputView = false
     @State private var showAlert = false
+    @State private var showSucsessAlert = false
     
     let availableCurrencies: [String] = {
         let locales = Locale.availableIdentifiers.map { Locale(identifier: $0) }
         return locales.compactMap { $0.currency?.identifier }.uniqued()
     }()
     
+    @State private var showingLanguagesView = false
+    @State private var showingInfoView = false
+    
     var body: some View {
-        
+    
         ScrollView {
             
             // Bill tips
@@ -33,7 +38,7 @@ struct SmartTipsProContentView: View {
                     .font(.title2)
                 Spacer()
                     .frame(width: UI_Constants.shared.imageSpacerWidth)
-                Text("Bill")
+                Text("Bill-AppleWatch.title".appleWatchLocalizedSwiftUI(AppleWatchCurrentLanguage.shared.currentLanguage))
                     .font(.title3)
                 Spacer()
                 
@@ -64,7 +69,7 @@ struct SmartTipsProContentView: View {
                     .font(.title2)
                 Spacer()
                     .frame(width: UI_Constants.shared.imageSpacerWidth)
-                Text("Currency")
+                Text("Currency-AppleWatch.title".appleWatchLocalizedSwiftUI(AppleWatchCurrentLanguage.shared.currentLanguage))
                     .font(.title3)
                 Spacer()
                 
@@ -72,7 +77,7 @@ struct SmartTipsProContentView: View {
             
             HStack() {
                 
-                Picker("Select Currency", selection: $currentModel.selectedCurrency) {
+                Picker("Select-Currency-AppleWatch.title".appleWatchLocalizedSwiftUI(AppleWatchCurrentLanguage.shared.currentLanguage), selection: $currentModel.selectedCurrency) {
                     
                     ForEach(availableCurrencies, id: \.self) { currencyCode in
                         
@@ -114,7 +119,7 @@ struct SmartTipsProContentView: View {
                 Spacer()
                     .frame(width: UI_Constants.shared.imageSpacerWidth)
                 
-                Text("People")
+                Text("People-AppleWatch.title".appleWatchLocalizedSwiftUI(AppleWatchCurrentLanguage.shared.currentLanguage))
                     .font(.title3)
                 
                 Spacer()
@@ -158,11 +163,11 @@ struct SmartTipsProContentView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 30, height: 30)
                     .font(.title2)
-               
+                
                 Spacer()
                     .frame(width: UI_Constants.shared.imageSpacerWidth)
                 
-                Text("Quick Tips")
+                Text("Quick-Tips-AppleWatch.title".appleWatchLocalizedSwiftUI(AppleWatchCurrentLanguage.shared.currentLanguage))
                     .font(.title3)
                 
                 Spacer()
@@ -173,18 +178,19 @@ struct SmartTipsProContentView: View {
             }
             Slider(value: $currentModel.percentOfTips, in: 0...100, step: 1)
                 .padding(.bottom)
-
+            
             // Output information
             Group {
                 
-                OutputView(label: "Tip", value: currentModel.amountOfTips, format: "%0.2f")
-                OutputView(label: "Each", value: currentModel.amountPerPerson, format: "%0.2f")
-                OutputView(label: "Total", value: currentModel.totalBill, format: "%0.2f")
+                OutputView(label: "Tip-AppleWatch.title".appleWatchLocalizedSwiftUI(AppleWatchCurrentLanguage.shared.currentLanguage), value: currentModel.amountOfTips, format: "%0.2f")
+                OutputView(label: "Each-AppleWatch.title".appleWatchLocalizedSwiftUI(AppleWatchCurrentLanguage.shared.currentLanguage), value: currentModel.amountPerPerson, format: "%0.2f")
+                OutputView(label: "Total-AppleWatch.title".appleWatchLocalizedSwiftUI(AppleWatchCurrentLanguage.shared.currentLanguage), value: currentModel.totalBill, format: "%0.2f")
                 
             }
             
             Button(action: {
                 showAlert = currentModel.transferDataTo_iPhone()
+                showSucsessAlert = !showAlert
             })
             {
                 Image(systemName: "folder.circle")
@@ -195,10 +201,44 @@ struct SmartTipsProContentView: View {
                     .font(.title3)
             }
             .colorMultiply(.controlBackground)
-            .alert("There is no data for transfering", isPresented: $showAlert) {
+            .alert("No-Transfer-Message.title".appleWatchLocalizedSwiftUI(AppleWatchCurrentLanguage.shared.currentLanguage), isPresented: $showAlert) {
+                Button("OK", role: .none) { }
+            }
+            .alert("Sucsess-Transfer-Message.title".appleWatchLocalizedSwiftUI(AppleWatchCurrentLanguage.shared.currentLanguage), isPresented: $showSucsessAlert) {
                 Button("OK", role: .none) { }
             }
             
+            Button(action: {
+                showingLanguagesView.toggle()
+            }) {
+                Image(systemName: "globe")
+                    .font(.title3)
+                Text("Language-AppleWatch.title".appleWatchLocalizedSwiftUI(AppleWatchCurrentLanguage.shared.currentLanguage))
+                    .font(.title3)
+                .cornerRadius(8)
+            }
+            .colorMultiply(.controlBackground)
+            .sheet(isPresented: $showingLanguagesView) {
+                LanguagesView()
+            }
+            
+            Button(action: {
+                showingInfoView.toggle()
+            }) {
+                Image(systemName: "info.circle")
+                    .font(.title3)
+                Text("Info-AppleWatch.title".appleWatchLocalizedSwiftUI(AppleWatchCurrentLanguage.shared.currentLanguage))
+                    .font(.title3)
+                .cornerRadius(8)
+            }
+            .colorMultiply(.controlBackground)
+            .sheet(isPresented: $showingInfoView) {
+                InfoView()
+            }
+            
+        }
+        .onChange(of: showingLanguagesView) {
+            AppleWatchModelLanguages().getCurrentLanguage()
         }
         .fullScreenCover(isPresented: $showingBillInputView) {
             SmartTipsProDecimalPad(currentText: $currentModel.billTips)
@@ -207,7 +247,7 @@ struct SmartTipsProContentView: View {
         .minimumScaleFactor(0.1)
         
     }
- 
+
     func smartTipsProWatchModelGetSymbol(forCurrencyCode code: String) -> String {
         
         let locale = NSLocale(localeIdentifier: code)
@@ -229,6 +269,90 @@ struct SmartTipsProContentView: View {
         }
         
         return _newlocale
+        
+    }
+    
+}
+
+struct LanguagesView: View {
+    
+    let languagesDict = AppleWatchModelLanguages().languagesCodesWithValues
+    
+    @State var selectedLanguage = AppleWatchModelLanguages().languagesValuesWithCodes[AppleWatchCurrentLanguage.shared.currentLanguage.rawValue]!
+    
+    var body: some View {
+        
+        NavigationView {
+            
+            List(languagesDict.keys.sorted(), id: \.self) { key in
+                
+                HStack {
+                    
+                    Image(systemName: "globe")
+                        .foregroundColor(.blue)
+                    Text(languagesDict[key] ?? key)
+                    
+                    Spacer()
+                    
+                    if key == selectedLanguage {
+                        Image(systemName: "checkmark")
+                            .foregroundColor(.green)
+                    }
+                    
+                }
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    withAnimation {
+                        
+                        selectedLanguage = key
+                        saveSelectedLanguage()
+                        
+                    }
+                }
+            }
+            .navigationTitle("Language-AppleWatch.title".appleWatchLocalizedSwiftUI(AppleWatchCurrentLanguage.shared.currentLanguage))
+        }
+        .onAppear {
+            AppleWatchModelLanguages().getCurrentLanguage()
+        }
+        
+    }
+    
+    func saveSelectedLanguage() {
+        
+        guard let selectedLanguageString = languagesDict[selectedLanguage] else {
+            return
+        }
+        
+        AppleWatchModelLanguages().setCurrentLanguage(lang: AppleWatchModelLanguages().getLanguageByName(selectedLanguageString))
+        
+    }
+    
+}
+
+struct InfoView: View {
+    
+    var body: some View {
+    
+        VStack(alignment: .center) {
+            
+            Image("icon-tips-applewatch")
+                .resizable().renderingMode(.original).frame(width: 60, height: 60, alignment: .leading)
+            
+                .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                .overlay(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(Color.gray,
+                                                                                       lineWidth: 2))
+            
+            Text("v1.0.3")
+                .font(.subheadline)
+                .foregroundStyle(.gray)
+            Text("Made-In-By.title".appleWatchLocalizedSwiftUI(AppleWatchCurrentLanguage.shared.currentLanguage))
+                .font(.subheadline)
+                .foregroundStyle(.gray)
+            Text("Raman Kozar🧑🏻‍💻")
+                .font(.subheadline)
+            
+        }
         
     }
     

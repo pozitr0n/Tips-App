@@ -207,3 +207,39 @@
 
 "WhatIsNewObject-Item-8" = "Выбор процента чаевых по-умолчанию";
 // Description What's New - END
+
+/*
+  AppleWatchLocalization.strings
+  SmartTipsPro
+
+  Created by Raman Kozar on 28/08/2024.
+  
+*/
+
+"Enter-Bill-DecimalPad.title" = "Ввести сумму";
+
+"Done-DecimalPad.title" = "Готово";
+
+"Bill-AppleWatch.title" = "Счет";
+
+"Currency-AppleWatch.title" = "Валюта";
+
+"Select-Currency-AppleWatch.title" = "Выбрать валюту";
+
+"People-AppleWatch.title" = "Людей";
+
+"Quick-Tips-AppleWatch.title" = "Быстрые Чаевые";
+
+"Tip-AppleWatch.title" = "Чаевые";
+
+"Each-AppleWatch.title" = "На человека";
+
+"Total-AppleWatch.title" = "Всего";
+
+"No-Transfer-Message.title" = "Нет данных для отправки";
+
+"Sucsess-Transfer-Message.title" = "Отправка данных завершена 🙂";
+
+"Language-AppleWatch.title" = "Язык";
+
+"Info-AppleWatch.title" = "Информация";

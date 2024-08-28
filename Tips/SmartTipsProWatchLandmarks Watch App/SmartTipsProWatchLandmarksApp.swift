@@ -7,6 +7,7 @@
 
 import SwiftUI
 import WatchConnectivity
+import WatchKit
 
 @main
 struct SmartTipsProWatchLandmarks_Watch_AppApp: App {
@@ -63,6 +64,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
     
     func setupUserDefaultSettings() {
         AppleWatchCurrencies().getCurrentCurrency()
+        AppleWatchModelLanguages().getCurrentLanguage()
     }
     
 }

@@ -207,3 +207,39 @@ Mam nadzieję, że spodoba Ci się nie tylko aktualizacja, ale cała aplikacja!
 
 "WhatIsNewObject-Item-8" = "Wybór procentu napiwków";
 // Description What's New - END
+
+/*
+  AppleWatchLocalization.strings
+  SmartTipsPro
+
+  Created by Raman Kozar on 28/08/2024.
+  
+*/
+
+"Enter-Bill-DecimalPad.title" = "Wpisz kwotę";
+
+"Done-DecimalPad.title" = "Zrobione";
+
+"Bill-AppleWatch.title" = "Rachunek";
+
+"Currency-AppleWatch.title" = "Waluta";
+
+"Select-Currency-AppleWatch.title" = "Wybierz walutę";
+
+"People-AppleWatch.title" = "Ilość";
+
+"Quick-Tips-AppleWatch.title" = "Szybki Napiwek";
+
+"Tip-AppleWatch.title" = "Napiwek";
+
+"Each-AppleWatch.title" = "Za osobę";
+
+"Total-AppleWatch.title" = "Razem";
+
+"No-Transfer-Message.title" = "Brak danych do przesłania";
+
+"Sucsess-Transfer-Message.title" = "Przesyłanie danych zakończone 🙂";
+
+"Language-AppleWatch.title" = "Yęzyk";
+
+"Info-AppleWatch.title" = "Informacja";

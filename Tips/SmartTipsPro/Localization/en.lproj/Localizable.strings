@@ -207,3 +207,39 @@ I hope that you'll enjoy not only the update, but the app as a whole!
 
 "WhatIsNewObject-Item-8" = "Selecting the default tip percentage";
 // Description What's New - END
+
+/*
+  AppleWatchLocalization.strings
+  SmartTipsPro
+
+  Created by Raman Kozar on 28/08/2024.
+  
+*/
+
+"Enter-Bill-DecimalPad.title" = "Enter Bill";
+
+"Done-DecimalPad.title" = "Done";
+
+"Bill-AppleWatch.title" = "Bill";
+
+"Currency-AppleWatch.title" = "Currency";
+
+"Select-Currency-AppleWatch.title" = "Select Currency";
+
+"People-AppleWatch.title" = "People";
+
+"Quick-Tips-AppleWatch.title" = "Quick Tips";
+
+"Tip-AppleWatch.title" = "Tip";
+
+"Each-AppleWatch.title" = "Each";
+
+"Total-AppleWatch.title" = "Total";
+
+"No-Transfer-Message.title" = "There is no data for transferring";
+
+"Sucsess-Transfer-Message.title" = "Data sending completed 🙂";
+
+"Language-AppleWatch.title" = "Language";
+
+"Info-AppleWatch.title" = "Information";

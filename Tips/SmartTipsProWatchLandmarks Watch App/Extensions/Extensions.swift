@@ -41,4 +41,27 @@ extension String {
     }
     // * 1 *
     
+    // * 2 *
+    func appleWatchLocalizedSwiftUI(_ language: AppleWatchModelLanguagesOptions) -> String {
+        
+        let langCode = AppleWatchModelLanguages().languagesValuesWithCodes[language.rawValue]!
+        let path: String? = Bundle.main.path(forResource: langCode, ofType: "lproj")
+        
+        let bundle: Bundle
+        
+        if let path = path {
+            bundle = Bundle(path: path) ?? .main
+        } else {
+            bundle = .main
+        }
+        
+        return localizedSwiftUIPrivate(bundle: bundle)
+        
+    }
+
+    private func localizedSwiftUIPrivate(bundle: Bundle) -> String {
+        return NSLocalizedString(self, tableName: nil, bundle: bundle, value: "", comment: "")
+    }
+    // * 2 *
+    
 }

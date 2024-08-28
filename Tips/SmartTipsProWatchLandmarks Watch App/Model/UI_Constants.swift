@@ -20,7 +20,6 @@ class UI_Constants {
     // Future settings for UserDefaults for Apple Watch
     // **
     var selectedCurrency: String = ""
-    let currentLanguage = AppleWatchLanguageOptions.en
     // **
     
     private init () {}

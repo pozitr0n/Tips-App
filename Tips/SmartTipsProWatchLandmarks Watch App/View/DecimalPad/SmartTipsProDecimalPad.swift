@@ -19,7 +19,7 @@ struct SmartTipsProDecimalPad: View {
             Group {
                 
                 if (currentText.isEmpty) {
-                    Text("Enter Bill")
+                    Text("Enter-Bill-DecimalPad.title".appleWatchLocalizedSwiftUI(AppleWatchCurrentLanguage.shared.currentLanguage))
                 } else {
                     Text(currentText)
                         .bold()
@@ -213,7 +213,7 @@ struct SmartTipsProDecimalPad: View {
                 Button(action: {
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
-                    Text("Done")
+                    Text("Done-DecimalPad.title".appleWatchLocalizedSwiftUI(AppleWatchCurrentLanguage.shared.currentLanguage))
                         .foregroundColor(.blue)
                 }
                 .frame(height: 20)
