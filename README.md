@@ -12,7 +12,7 @@
 * [Overview](#overview)
 * [Main tasks](#main-tasks)
 * [Features](#features)
-* [Release v.1.0.3](#Release-v.1.0.3)
+* [Release v.1.0.3](#New Release)
 * [Author](#author)
 * [License](#license)
 
@@ -115,7 +115,7 @@
 | --- | --- | --- |
 | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/en/09.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/pl/09.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/ru/09.jpeg) |
 
-# Release-v.1.0.3
+# New Release
 Added version for Apple Watch (for watchOS).
 The watch app is a companion app that only complements the functionality of the main app. It has all the basic functionality of the main app, and also has the ability to sync data from watchOS to iOS. 
 
