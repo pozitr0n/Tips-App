@@ -12,7 +12,7 @@
 * [Overview](#overview)
 * [Main tasks](#main-tasks)
 * [Features](#features)
-* [Release v.1.0.3](#New Release)
+* [Release v.1.0.3](#new-release)
 * [Author](#author)
 * [License](#license)
 
