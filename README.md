@@ -125,6 +125,8 @@ The watch app is a companion app that only complements the functionality of the 
 | en | pl | ru |
 | --- | --- | --- |
 | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/en/10.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/pl/10.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/ru/10.jpeg) |
+| --- | --- | --- |
+| ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/en/11.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/pl/11.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/ru/11.jpeg) |
 
 # Author
 
