@@ -206,6 +206,11 @@ I hope that you'll enjoy not only the update, but the app as a whole!
 "WhatIsNewObject-Item-7" = "Selecting the default currency + recalculate tips into the selected currency at the current exchange rate";
 
 "WhatIsNewObject-Item-8" = "Selecting the default tip percentage";
+
+"WhatIsNewObject-Item-1-1" = "The new version of the application adds support for Apple Watch. A companion application with the ability to synchronize data between devices has been developed";
+
+"WhatIsNewObject-Item-1-2" = "Minor errors from the previous release have been fixed";
+
 // Description What's New - END
 
 /*

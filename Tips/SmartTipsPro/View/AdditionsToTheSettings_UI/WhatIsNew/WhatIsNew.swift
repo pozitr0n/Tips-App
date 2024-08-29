@@ -11,7 +11,7 @@ struct WhatIsNew: View {
     
     // Add all the new information about the logic of the application
     //
-    @State var whatIsNewArray: [WhatIsNewObject] = [WhatIsNewObject(whatNew: "WhatIsNewObject-Item-1".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
+    @State var whatIsNewArray_1_0_1: [WhatIsNewObject] = [WhatIsNewObject(whatNew: "WhatIsNewObject-Item-1".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
                                                     WhatIsNewObject(whatNew: "WhatIsNewObject-Item-2".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
                                                     WhatIsNewObject(whatNew: "WhatIsNewObject-Item-3".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
                                                     WhatIsNewObject(whatNew: "WhatIsNewObject-Item-4".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
@@ -19,6 +19,9 @@ struct WhatIsNew: View {
                                                     WhatIsNewObject(whatNew: "WhatIsNewObject-Item-6".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
                                                     WhatIsNewObject(whatNew: "WhatIsNewObject-Item-7".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
                                                     WhatIsNewObject(whatNew: "WhatIsNewObject-Item-8".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))]
+    
+    @State var whatIsNewArray_1_0_3: [WhatIsNewObject] = [WhatIsNewObject(whatNew: "WhatIsNewObject-Item-1-1".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
+                                                    WhatIsNewObject(whatNew: "WhatIsNewObject-Item-1-2".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))]
     
     var body: some View {
         
@@ -28,7 +31,25 @@ struct WhatIsNew: View {
                 
                 Section {
                     
-                    List($whatIsNewArray) { $currentNew in
+                    List($whatIsNewArray_1_0_3) { $currentNew in
+                        
+                        HStack {
+                            
+                            Image(systemName: "checkmark.circle")
+                                .foregroundStyle(.blue)
+                            Text(currentNew.whatNew)
+                            
+                        }
+                        
+                    }
+                    
+                } header: {
+                    Text("Version-title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) + " 1.0.3")
+                }
+                
+                Section {
+                    
+                    List($whatIsNewArray_1_0_1) { $currentNew in
                         
                         HStack {
                             
