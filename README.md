@@ -13,7 +13,7 @@
 * [Overview](#overview)
 * [Main tasks](#main-tasks)
 * [Features](#features)
-* [Release v.1.0.3](#new-release)
+* [Release v.1.0.4](#new-release)
 * [Author](#author)
 * [License](#license)
 
@@ -117,7 +117,7 @@
 | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/en/09.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/pl/09.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/ru/09.jpeg) |
 
 # New Release
-Added version for Apple Watch (for watchOS).
+Added version for Apple Watch (for watchOS). This is the new release 1.0.4 for iOS and 1.1 for watchOS.
 The watch app is a companion app that only complements the functionality of the main app. It has all the basic functionality of the main app, and also has the ability to sync data from watchOS to iOS. 
 
 ### Version for Apple Watch

@@ -343,9 +343,15 @@ struct InfoView: View {
                 .overlay(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(Color.gray,
                                                                                        lineWidth: 2))
             
-            Text("v1.0.3")
+            Text("iOS v1.0.4")
                 .font(.subheadline)
                 .foregroundStyle(.gray)
+            Text("watchOS v1.1")
+                .font(.subheadline)
+                .foregroundStyle(.gray)
+            
+            Spacer()
+            
             Text("Made-In-By.title".appleWatchLocalizedSwiftUI(AppleWatchCurrentLanguage.shared.currentLanguage))
                 .font(.subheadline)
                 .foregroundStyle(.gray)

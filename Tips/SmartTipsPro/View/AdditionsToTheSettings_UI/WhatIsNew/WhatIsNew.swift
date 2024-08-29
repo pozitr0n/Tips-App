@@ -20,7 +20,7 @@ struct WhatIsNew: View {
                                                     WhatIsNewObject(whatNew: "WhatIsNewObject-Item-7".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
                                                     WhatIsNewObject(whatNew: "WhatIsNewObject-Item-8".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))]
     
-    @State var whatIsNewArray_1_0_3: [WhatIsNewObject] = [WhatIsNewObject(whatNew: "WhatIsNewObject-Item-1-1".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
+    @State var whatIsNewArray_1_0_4: [WhatIsNewObject] = [WhatIsNewObject(whatNew: "WhatIsNewObject-Item-1-1".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
                                                     WhatIsNewObject(whatNew: "WhatIsNewObject-Item-1-2".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))]
     
     var body: some View {
@@ -31,7 +31,7 @@ struct WhatIsNew: View {
                 
                 Section {
                     
-                    List($whatIsNewArray_1_0_3) { $currentNew in
+                    List($whatIsNewArray_1_0_4) { $currentNew in
                         
                         HStack {
                             
@@ -44,7 +44,7 @@ struct WhatIsNew: View {
                     }
                     
                 } header: {
-                    Text("Version-title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) + " 1.0.3")
+                    Text("Version-title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) + " 1.0.4")
                 }
                 
                 Section {
