@@ -62,6 +62,8 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
         
     }
     
+    // setup user defaults settings before start the app
+    //
     func setupUserDefaultSettings() {
         AppleWatchCurrencies().getCurrentCurrency()
         AppleWatchModelLanguages().getCurrentLanguage()
