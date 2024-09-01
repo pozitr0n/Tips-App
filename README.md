@@ -124,6 +124,8 @@ Data sync realized using ```WatchConnectivity```.
 
 ## Code implementing
 
+### This is my implementation of connecting Apple Watch and iPhone via WatchConnectivity
+
 ```swift
 func setupWatchConnectivity() {
     if WCSession.isSupported() {
