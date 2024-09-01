@@ -118,7 +118,63 @@
 
 # New Release
 Added version for Apple Watch (for watchOS). This is the new release 1.0.4 for iOS and 1.1 for watchOS.
-The watch app is a companion app that only complements the functionality of the main app. It has all the basic functionality of the main app, and also has the ability to sync data from watchOS to iOS. 
+The watch app is a companion app that only complements the functionality of the main app. 
+It has all the basic functionality of the main app, and also has the ability to sync data from watchOS to iOS.
+Data sync realized using ```WatchConnectivity```.
+
+## Code implementing
+
+```swift
+func setupWatchConnectivity() {
+    if WCSession.isSupported() {
+        
+        let session = WCSession.default
+        session.delegate = self
+        session.activate()
+
+    }
+}
+
+func transferDataTo_iPhone() -> Bool {
+
+    if amountOfTips == 0.00 && amountPerPerson == 0.00 && totalBill == 0.00 && billTipsValue == 0.00 && amountOfPeopleValue == 0.00 {
+        return true
+    }
+
+    if WCSession.isSupported() {
+
+        let session = WCSession.default
+
+        let dictionaryToTransfer: [String : Any] = ["bill" : billTipsValue, 
+                                                    "amountOfPeople" : amountOfPeopleValue,
+                                                    "tipsPercent" : percentOfTips,
+                                                    "tip" : amountOfTips,
+                                                    "eachTip" : amountPerPerson,
+                                                    "total" : totalBill,
+                                                    "selectedCurrency" : selectedCurrency]
+
+        session.transferUserInfo(dictionaryToTransfer)
+
+        // add clearing to all the parameters
+        percentOfTips = 0.00
+
+        billTips = ""
+        billTipsValue = 0.00
+
+        amountOfPeople = ""
+        amountOfPeopleValue = 0.00
+
+        amountPerPerson = 0.00
+        totalBill = 0.00
+
+        return false
+
+    }
+
+    return true
+
+}
+```
 
 ### Version for Apple Watch
 
