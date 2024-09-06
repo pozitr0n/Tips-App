@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WatchKit
 
 struct SmartTipsProDecimalPad: View {
     
@@ -205,20 +206,42 @@ struct SmartTipsProDecimalPad: View {
                 
             }
             
-            ZStack {
-                
-                RoundedRectangle(cornerRadius: 9.0)
-                    .foregroundColor(.clear)
-                
-                Button(action: {
-                    self.presentationMode.wrappedValue.dismiss()
-                }) {
-                    Text("Done-DecimalPad.title".appleWatchLocalizedSwiftUI(AppleWatchCurrentLanguage.shared.currentLanguage))
-                        .foregroundColor(.blue)
+            HStack(alignment: .center) {
+             
+                ZStack(alignment: .bottom) {
+                    
+                    RoundedRectangle(cornerRadius: 9.0)
+                        .foregroundColor(.clear)
+                    
+                    Button(action: {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Text("Done-DecimalPad.title".appleWatchLocalizedSwiftUI(AppleWatchCurrentLanguage.shared.currentLanguage))
+                            .foregroundColor(.blue)
+                    }
+                    .frame(height: 20)
+                    .padding([.top, .bottom], 5)
+                    
                 }
-                .frame(height: 20)
-                .padding(.top, 10)
                 
+                ZStack(alignment: .center) {
+                
+                    Button(action: {
+                        presentKeyboardInput()
+                    }) {
+                        
+                        VStack() {
+                            HStack {
+                                Image(systemName: "mic.circle")
+                                    .foregroundColor(.white)
+                            }
+                        }
+                    
+                    }
+                    .padding()
+                    
+                }
+            
             }
             
         }
@@ -229,6 +252,10 @@ struct SmartTipsProDecimalPad: View {
         .font(.title3)
         .lineLimit(1)
         .minimumScaleFactor(0.1)
+        
+    }
+    
+    func presentKeyboardInput() {
         
     }
     
