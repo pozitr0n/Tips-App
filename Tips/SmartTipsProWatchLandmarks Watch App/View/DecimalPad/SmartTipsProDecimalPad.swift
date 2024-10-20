@@ -239,6 +239,7 @@ struct SmartTipsProDecimalPad: View {
                     
                     }
                     .padding()
+                    .padding([.trailing], 10)
                     
                 }
             
