@@ -238,8 +238,8 @@ struct SmartTipsProDecimalPad: View {
                         }
                     
                     }
-                    .padding()
-                    .padding([.trailing], 10)
+                    .padding() // common paddings
+                    .padding([.trailing], 10) // only right 
                     
                 }
             
