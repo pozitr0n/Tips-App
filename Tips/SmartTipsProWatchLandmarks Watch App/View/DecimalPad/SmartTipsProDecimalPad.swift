@@ -239,7 +239,7 @@ struct SmartTipsProDecimalPad: View {
                     
                     }
                     .padding() // common paddings
-                    .padding([.trailing], 10) // only right 
+                    .padding([.trailing], 10) // only right
                     
                 }
             
@@ -256,6 +256,7 @@ struct SmartTipsProDecimalPad: View {
         
     }
     
+    // presenting keyboard (voice) for inpunt data
     func presentKeyboardInput() {
         
     }
