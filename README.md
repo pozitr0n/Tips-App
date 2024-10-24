@@ -185,6 +185,10 @@ func transferDataTo_iPhone() -> Bool {
 | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/en/10.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/pl/10.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/ru/10.jpeg) |
 | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/en/11.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/pl/11.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/ru/11.jpeg) |
 
+### Another addiction tasks for Apple Watch:
+
+- [] Add voice-unput or keyboard
+
 # Author
 
 Raman Kozar, pozitr0n.kozarroman@gmail.com
