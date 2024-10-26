@@ -257,6 +257,7 @@ struct SmartTipsProDecimalPad: View {
     }
     
     // presenting keyboard (voice) for inpunt data
+    //
     func presentKeyboardInput() {
         
     }
