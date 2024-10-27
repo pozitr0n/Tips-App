@@ -13,7 +13,7 @@
 * [Overview](#overview)
 * [Main tasks](#main-tasks)
 * [Features](#features)
-* [Release v.1.0.4](#new-release)
+* [Release v.1.0.5](#new-release)
 * [Author](#author)
 * [License](#license)
 
@@ -187,7 +187,9 @@ func transferDataTo_iPhone() -> Bool {
 
 ### Another addiction tasks for Apple Watch:
 
-- [] Add voice-unput or keyboard
+- [x] Adding voice input to Apple Watch
+- [x] AppIcon doesn't show in UI when building with Xcode 16
+- [x] Adding a startup animation for the watchOS app
 
 # Author
 
