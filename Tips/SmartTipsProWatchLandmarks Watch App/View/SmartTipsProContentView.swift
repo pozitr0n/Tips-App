@@ -5,12 +5,11 @@
 //  Created by Raman Kozar on 29/07/2024.
 //
 
-
 import SwiftUI
 
 struct SmartTipsProContentView: View {
 
-    @EnvironmentObject private var currentModel: SmartTipsProWatchModel
+    @EnvironmentObject var currentModel: SmartTipsProWatchModel
     
     @State var showingBillInputView = false
     @State private var showAlert = false
@@ -24,8 +23,61 @@ struct SmartTipsProContentView: View {
     @State private var showingLanguagesView = false
     @State private var showingInfoView = false
     
+    @State private var scale: CGFloat = 0.3
+    @State private var opacity: Double = 0.0
+    @State private var rotation: Double = 0.0
+    @State private var showMainContent = false
+    
     var body: some View {
     
+        if !showMainContent {
+         
+            VStack {
+                
+                Image("icon-tips-applewatch")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 100, height: 100)
+                    .scaleEffect(scale)
+                    .rotationEffect(.degrees(rotation))
+                    .opacity(opacity)
+                    .onAppear {
+                       
+                        // Start the animation of the increase, rotation and fade in
+                        withAnimation(.easeInOut(duration: 1.5)) {
+                            scale = 1.0
+                            opacity = 1.0
+                        }
+                        withAnimation(.easeInOut(duration: 1.5).repeatForever(autoreverses: true)) {
+                            rotation = 360
+                        }
+                        
+                    }
+                
+                Text("Welcome-to-Smart-Tips-Pro".appleWatchLocalizedSwiftUI(AppleWatchCurrentLanguage.shared.currentLanguage))
+                    .font(.headline)
+                    .opacity(opacity)
+                    .onAppear {
+                        // Add a small delay to the text
+                        withAnimation(.easeInOut(duration: 5.0).delay(1.0)) {
+                            opacity = 1.0
+                        }
+                    }
+                
+            }
+            .onAppear {
+                
+                // Switch to main screen after animation ends
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5.5) {
+                    withAnimation {
+                        showMainContent = true
+                    }
+                }
+                
+            }
+            
+        }
+        
         ScrollView {
             
             // Bill tips
@@ -343,10 +395,10 @@ struct InfoView: View {
                 .overlay(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(Color.gray,
                                                                                        lineWidth: 2))
             
-            Text("iOS v1.0.4")
+            Text("iOS v1.0.5")
                 .font(.subheadline)
                 .foregroundStyle(.gray)
-            Text("watchOS v1.1")
+            Text("watchOS v1.2")
                 .font(.subheadline)
                 .foregroundStyle(.gray)
             

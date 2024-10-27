@@ -199,4 +199,10 @@ Mam nadzieję, że spodoba Ci się nie tylko aktualizacja, ale cała aplikacja!
 "WhatIsNewObject-Item-7" = "Wybór domyślnej waluty + przeliczenie napiwków na wybraną walutę po aktualnym kursie";
 
 "WhatIsNewObject-Item-8" = "Wybór procentu napiwków";
+
+"WhatIsNewObject-Item-1-1-1" = "Naprawiono błąd: AppIcon nie wyświetla się w interfejsie użytkownika podczas kompilacji za pomocą Xcode 16, naprawiono drobne błędy";
+
+"WhatIsNewObject-Item-1-1-2" = "Dodawanie wprowadzania głosowego do zegarka Apple Watch, dodawanie animacji uruchamiania aplikacji watchOS";
 // Description What's New - END
+
+"Welcome-to-Smart-Tips-Pro" = "Witamy w Smart Tips Pro";

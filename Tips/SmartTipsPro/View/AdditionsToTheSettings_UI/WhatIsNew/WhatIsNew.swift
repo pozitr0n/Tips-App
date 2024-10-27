@@ -23,11 +23,32 @@ struct WhatIsNew: View {
     @State var whatIsNewArray_1_0_4: [WhatIsNewObject] = [WhatIsNewObject(whatNew: "WhatIsNewObject-Item-1-1".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
                                                     WhatIsNewObject(whatNew: "WhatIsNewObject-Item-1-2".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))]
     
+    @State var whatIsNewArray_1_0_5: [WhatIsNewObject] = [WhatIsNewObject(whatNew: "WhatIsNewObject-Item-1-1-1".localizedSwiftUI(CurrentLanguage.shared.currentLanguage)),
+                                                    WhatIsNewObject(whatNew: "WhatIsNewObject-Item-1-1-2".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))]
+    
     var body: some View {
         
         VStack {
         
             Form {
+                
+                Section {
+                    
+                    List($whatIsNewArray_1_0_5) { $currentNew in
+                        
+                        HStack {
+                            
+                            Image(systemName: "checkmark.circle")
+                                .foregroundStyle(.blue)
+                            Text(currentNew.whatNew)
+                            
+                        }
+                        
+                    }
+                    
+                } header: {
+                    Text("Version-title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage) + " 1.0.5")
+                }
                 
                 Section {
                     

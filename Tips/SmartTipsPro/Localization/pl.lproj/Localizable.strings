@@ -210,6 +210,10 @@ Mam nadzieję, że spodoba Ci się nie tylko aktualizacja, ale cała aplikacja!
 "WhatIsNewObject-Item-1-1" = "Nowa wersja aplikacji dodaje obsługę Apple Watch. Opracowano aplikację towarzyszącą z możliwością synchronizacji danych pomiędzy urządzeniami";
 
 "WhatIsNewObject-Item-1-2" = "Naprawiono drobne błędy z poprzedniej wersji";
+
+"WhatIsNewObject-Item-1-1-1" = "Naprawiono błąd: AppIcon nie wyświetla się w interfejsie użytkownika podczas kompilacji za pomocą Xcode 16, naprawiono drobne błędy";
+
+"WhatIsNewObject-Item-1-1-2" = "Dodawanie wprowadzania głosowego do zegarka Apple Watch, dodawanie animacji uruchamiania aplikacji watchOS";
 // Description What's New - END
 
 /*
@@ -247,3 +251,5 @@ Mam nadzieję, że spodoba Ci się nie tylko aktualizacja, ale cała aplikacja!
 "Language-AppleWatch.title" = "Yęzyk";
 
 "Info-AppleWatch.title" = "Informacja";
+
+"Welcome-to-Smart-Tips-Pro" = "Witamy w Smart Tips Pro";

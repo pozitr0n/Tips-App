@@ -211,6 +211,10 @@ I hope that you'll enjoy not only the update, but the app as a whole!
 
 "WhatIsNewObject-Item-1-2" = "Minor errors from the previous release have been fixed";
 
+"WhatIsNewObject-Item-1-1-1" = "Bug fixed: AppIcon doesn't show in UI when building with Xcode 16, some minor bug fixed";
+
+"WhatIsNewObject-Item-1-1-2" = "Adding voice input to Apple Watch, adding a startup animation for the watchOS app";
+
 // Description What's New - END
 
 /*
@@ -248,3 +252,5 @@ I hope that you'll enjoy not only the update, but the app as a whole!
 "Language-AppleWatch.title" = "Language";
 
 "Info-AppleWatch.title" = "Information";
+
+"Welcome-to-Smart-Tips-Pro" = "Welcome to Smart Tips Pro";

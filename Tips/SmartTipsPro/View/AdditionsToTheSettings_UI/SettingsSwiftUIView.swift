@@ -50,6 +50,8 @@ struct SettingsSwiftUIView: View {
         MoreInfoObject(title: "Application-Privacy-Policy.title".localizedSwiftUI(CurrentLanguage.shared.currentLanguage))
     ]
     
+    @State private var iconFileName: String?
+    
     var body: some View {
         
         NavigationView {
@@ -185,17 +187,19 @@ struct SettingsSwiftUIView: View {
                         
                         VStack(alignment: .center) {
                             
-                            Image(uiImage: UIImage(named: "AppIcon") ?? UIImage())
-                                .resizable().renderingMode(.original).frame(width: 60, height: 60, alignment: .leading)
+                            if let iconFileName = iconFileName, let icon = UIImage(named: iconFileName) {
+                                Image(uiImage: icon)
+                                    .resizable().renderingMode(.original).frame(width: 60, height: 60, alignment: .leading)
+                                
+                                    .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                                    .overlay(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(Color.gray,
+                                                                                                           lineWidth: 2))
+                            }
                             
-                                .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                                .overlay(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(Color.gray,
-                                                                                                       lineWidth: 2))
-                            
-                            Text("iOS v1.0.4")
+                            Text("iOS v1.0.5")
                                 .font(.subheadline)
                                 .foregroundStyle(.gray)
-                            Text("watchOS v1.1")
+                            Text("watchOS v1.2")
                                 .font(.subheadline)
                                 .foregroundStyle(.gray)
                             
@@ -207,6 +211,20 @@ struct SettingsSwiftUIView: View {
                             Text("[Raman Kozar🧑🏻‍💻](https://about.me/r.kozar)")
                                 .font(.subheadline)
                             
+                        }
+                        // Fixed bug with an icon (main) - problem of xCode v.16
+                        // https://forums.developer.apple.com/forums/thread/757162
+                        .task {
+                            guard
+                                let icons = Bundle.main.object(forInfoDictionaryKey: "CFBundleIcons") as? [String: Any],
+                                let primaryIcon = icons["CFBundlePrimaryIcon"] as? [String: Any],
+                                let iconFiles = primaryIcon["CFBundleIconFiles"] as? [String],
+                                let iconFileName = iconFiles.last
+                            else {
+                                print("Could not find icons in bundle")
+                                return
+                            }
+                            self.iconFileName = iconFileName
                         }
                         
                         Spacer()

@@ -259,6 +259,20 @@ struct SmartTipsProDecimalPad: View {
     // presenting keyboard (voice) for inpunt data
     //
     func presentKeyboardInput() {
+       
+        WKExtension.shared().rootInterfaceController?.presentTextInputController(
+            withSuggestions: nil,
+            allowedInputMode: .allowEmoji
+        ) { results in
+            if let results = results, let text = results.first as? String {
+                print("Got: \(text)")
+                DispatchQueue.main.async {
+                    currentText = text
+                }
+            } else {
+                print("Nothing")
+            }
+        }
         
     }
     
