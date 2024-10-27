@@ -117,10 +117,15 @@
 | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/en/09.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/pl/09.jpeg) | ![Image alt](https://github.com/pozitr0n/Tips-App/raw/main/images/ForGithub/ru/09.jpeg) |
 
 # New Release
-Added version for Apple Watch (for watchOS). This is the new release 1.0.4 for iOS and 1.1 for watchOS.
+Added version for Apple Watch (for watchOS). This is the new release 1.0.5 for iOS and 1.2 for watchOS.
+
+### v.1.0.4
 The watch app is a companion app that only complements the functionality of the main app. 
 It has all the basic functionality of the main app, and also has the ability to sync data from watchOS to iOS.
 Data sync realized using ```WatchConnectivity```.
+
+### v.1.0.5
+Added voice input to Apple Watch. "AppIcon doesn't show in UI when building with Xcode 16" - bug fixed. Added a startup animation for the watchOS app.
 
 ## Code implementing
 
